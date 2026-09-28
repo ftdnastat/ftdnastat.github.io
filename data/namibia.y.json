@@ -1,0 +1,1 @@
+{"name":"Namibia","slug":"namibia","n":6,"l1":[{"k":"B","v":3},{"k":"A","v":2},{"k":"E","v":1}],"l2":[{"k":"A-PR2921*","v":5},{"k":"E-U175","v":1}],"tree":[{"name":"B-M181","label":"B","shown":"B","age":{"mean":-83028,"oldest":-95196,"youngest":-72382},"n":3,"depth":0}],"terminal":[["B-P6",3],["A-P262",1],["A-P4",1],["E-P277",1]]}
