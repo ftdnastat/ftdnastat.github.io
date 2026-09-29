@@ -1,1 +1,7 @@
-{"name":"Russia (Republic of Komi)","slug":"russia-komi","n":1,"l1":[{"k":"T","v":1}],"l2":[{"k":"T2a","v":1}],"tree":null,"terminal":[["T2a1a",1]]}
+{"name":"Russia (Republic of Komi)","slug":"russia-komi","n":1,"l1":[
+{"k":"T","v":1}
+],"l2":[
+{"k":"T2a","v":1}
+],"tree":null,"terminal":[
+["T2a1a",1]
+]}

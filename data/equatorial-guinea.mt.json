@@ -1,1 +1,10 @@
-{"name":"Equatorial Guinea","slug":"equatorial-guinea","n":2,"l1":[{"k":"L","v":1},{"k":"K","v":1}],"l2":[{"k":"L2a","v":1},{"k":"K1a","v":1}],"tree":null,"terminal":[["K1a1",1],["L2a1b1",1]]}
+{"name":"Equatorial Guinea","slug":"equatorial-guinea","n":2,"l1":[
+{"k":"L","v":1},
+{"k":"K","v":1}
+],"l2":[
+{"k":"L2a","v":1},
+{"k":"K1a","v":1}
+],"tree":null,"terminal":[
+["K1a1",1],
+["L2a1b1",1]
+]}

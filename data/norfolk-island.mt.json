@@ -1,1 +1,7 @@
-{"name":"Norfolk Island","slug":"norfolk-island","n":1,"l1":[{"k":"I","v":1}],"l2":[{"k":"I2c","v":1}],"tree":null,"terminal":[["I2c",1]]}
+{"name":"Norfolk Island","slug":"norfolk-island","n":1,"l1":[
+{"k":"I","v":1}
+],"l2":[
+{"k":"I2c","v":1}
+],"tree":null,"terminal":[
+["I2c",1]
+]}

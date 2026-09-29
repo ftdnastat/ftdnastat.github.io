@@ -1,1 +1,28 @@
-{"name":"Russia (Republic of Kabardino-Balkaria)","slug":"russia-kabardino-balkaria","n":9,"l1":[{"k":"H","v":4},{"k":"D","v":1},{"k":"N","v":1},{"k":"X","v":1},{"k":"T","v":1},{"k":"U","v":1}],"l2":[{"k":"D4g","v":1},{"k":"N1a","v":1},{"k":"X2","v":1},{"k":"H","v":1},{"k":"H1a","v":1},{"k":"H13a","v":1},{"k":"H79","v":1},{"k":"T1a","v":1},{"k":"U3b","v":1}],"tree":null,"terminal":[["D4g2",1],["H",1],["H13a1a1",1],["H1a",1],["H79",1],["N1a3a",1],["T1a1",1],["U3b2",1],["X2-G225A-G153A!",1]]}
+{"name":"Russia (Republic of Kabardino-Balkaria)","slug":"russia-kabardino-balkaria","n":9,"l1":[
+{"k":"H","v":4},
+{"k":"D","v":1},
+{"k":"N","v":1},
+{"k":"X","v":1},
+{"k":"T","v":1},
+{"k":"U","v":1}
+],"l2":[
+{"k":"D4g","v":1},
+{"k":"N1a","v":1},
+{"k":"X2","v":1},
+{"k":"H","v":1},
+{"k":"H1a","v":1},
+{"k":"H13a","v":1},
+{"k":"H79","v":1},
+{"k":"T1a","v":1},
+{"k":"U3b","v":1}
+],"tree":null,"terminal":[
+["D4g2",1],
+["H",1],
+["H13a1a1",1],
+["H1a",1],
+["H79",1],
+["N1a3a",1],
+["T1a1",1],
+["U3b2",1],
+["X2-G225A-G153A!",1]
+]}

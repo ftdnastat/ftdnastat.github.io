@@ -1,1 +1,10 @@
-{"name":"Northern Mariana Islands","slug":"northern-mariana-islands","n":2,"l1":[{"k":"E","v":1},{"k":"B","v":1}],"l2":[{"k":"E1a","v":1},{"k":"B4a","v":1}],"tree":null,"terminal":[["B4a1a1",1],["E1a1b",1]]}
+{"name":"Northern Mariana Islands","slug":"northern-mariana-islands","n":2,"l1":[
+{"k":"E","v":1},
+{"k":"B","v":1}
+],"l2":[
+{"k":"E1a","v":1},
+{"k":"B4a","v":1}
+],"tree":null,"terminal":[
+["B4a1a1",1],
+["E1a1b",1]
+]}

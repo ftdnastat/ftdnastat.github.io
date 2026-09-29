@@ -1,1 +1,30 @@
-{"name":"Benin","slug":"benin","n":89,"l1":[{"k":"E","v":87},{"k":"B","v":1},{"k":"T","v":1}],"l2":[{"k":"E-M2*","v":72},{"k":"E-M191*","v":5},{"k":"CT-M168*","v":4},{"k":"E-U175","v":3},{"k":"E-M35*","v":2},{"k":"A-PR2921*","v":1},{"k":"E-P2*","v":1},{"k":"T-CTS11451*","v":1}],"tree":[{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":87,"depth":0},{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":80,"depth":1},{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":5,"depth":2},{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":3,"depth":2}],"terminal":[["E-M2",72],["E-M191",5],["E-M132",2],["E-M35",2],["E-M96",2],["E-P277",2],["B-M181",1],["E-FT424300",1],["E-P2",1],["T-FTA78151",1]]}
+{"name":"Benin","slug":"benin","n":89,"l1":[
+{"k":"E","v":87},
+{"k":"B","v":1},
+{"k":"T","v":1}
+],"l2":[
+{"k":"E-M2*","v":72},
+{"k":"E-M191*","v":5},
+{"k":"CT-M168*","v":4},
+{"k":"E-U175","v":3},
+{"k":"E-M35*","v":2},
+{"k":"A-PR2921*","v":1},
+{"k":"E-P2*","v":1},
+{"k":"T-CTS11451*","v":1}
+],"tree":[
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":87,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":80,"depth":1},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":5,"depth":2},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":3,"depth":2}
+],"terminal":[
+["E-M2",72],
+["E-M191",5],
+["E-M132",2],
+["E-M35",2],
+["E-M96",2],
+["E-P277",2],
+["B-M181",1],
+["E-FT424300",1],
+["E-P2",1],
+["T-FTA78151",1]
+]}

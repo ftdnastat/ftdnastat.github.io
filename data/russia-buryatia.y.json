@@ -1,1 +1,18 @@
-{"name":"Russia (Republic of Buryatia)","slug":"russia-buryatia","n":5,"l1":[{"k":"R","v":2},{"k":"C","v":1},{"k":"N","v":1},{"k":"J","v":1}],"l2":[{"k":"C-M217","v":1},{"k":"NO-M214*","v":1},{"k":"R-DF88","v":1},{"k":"R-YP256","v":1},{"k":"J-YSC0000076","v":1}],"tree":[],"terminal":[["C-M217",1],["J-BY109545",1],["N-FT171068",1],["R-FTC28990",1],["R-FTF6919",1]]}
+{"name":"Russia (Republic of Buryatia)","slug":"russia-buryatia","n":5,"l1":[
+{"k":"R","v":2},
+{"k":"C","v":1},
+{"k":"N","v":1},
+{"k":"J","v":1}
+],"l2":[
+{"k":"C-M217","v":1},
+{"k":"NO-M214*","v":1},
+{"k":"R-DF88","v":1},
+{"k":"R-YP256","v":1},
+{"k":"J-YSC0000076","v":1}
+],"tree":[],"terminal":[
+["C-M217",1],
+["J-BY109545",1],
+["N-FT171068",1],
+["R-FTC28990",1],
+["R-FTF6919",1]
+]}

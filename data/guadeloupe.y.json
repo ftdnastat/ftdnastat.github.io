@@ -1,1 +1,9 @@
-{"name":"Guadeloupe","slug":"guadeloupe","n":2,"l1":[{"k":"E","v":2}],"l2":[{"k":"E-M2*","v":1},{"k":"E-U175","v":1}],"tree":[],"terminal":[["E-CTS6143",1],["E-M2",1]]}
+{"name":"Guadeloupe","slug":"guadeloupe","n":2,"l1":[
+{"k":"E","v":2}
+],"l2":[
+{"k":"E-M2*","v":1},
+{"k":"E-U175","v":1}
+],"tree":[],"terminal":[
+["E-CTS6143",1],
+["E-M2",1]
+]}

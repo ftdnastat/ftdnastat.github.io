@@ -1,1 +1,28 @@
-{"name":"Australia (Aboriginal Australian)","slug":"australia-aboriginal-australian","n":34,"l1":[{"k":"S","v":18},{"k":"C","v":11},{"k":"R","v":3},{"k":"K","v":1},{"k":"G","v":1}],"l2":[{"k":"K-M526*","v":18},{"k":"C-M216*","v":11},{"k":"K-M9*","v":1},{"k":"R-M417*","v":1},{"k":"R-S744","v":1},{"k":"G-L141*","v":1},{"k":"R-FTT8*","v":1}],"tree":[{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41684,"oldest":-48483,"youngest":-35796},"n":18,"depth":0},{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":11,"depth":0},{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":3,"depth":0}],"terminal":[["S-P308",18],["C-M216",9],["C-M347",2],["G-Z7016",1],["K-M9",1],["R-BY69488",1],["R-L664",1],["R-S691",1]]}
+{"name":"Australia (Aboriginal Australian)","slug":"australia-aboriginal-australian","n":34,"l1":[
+{"k":"S","v":18},
+{"k":"C","v":11},
+{"k":"R","v":3},
+{"k":"K","v":1},
+{"k":"G","v":1}
+],"l2":[
+{"k":"K-M526*","v":18},
+{"k":"C-M216*","v":11},
+{"k":"K-M9*","v":1},
+{"k":"R-M417*","v":1},
+{"k":"R-S744","v":1},
+{"k":"G-L141*","v":1},
+{"k":"R-FTT8*","v":1}
+],"tree":[
+{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41684,"oldest":-48483,"youngest":-35796},"n":18,"depth":0},
+{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":11,"depth":0},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":3,"depth":0}
+],"terminal":[
+["S-P308",18],
+["C-M216",9],
+["C-M347",2],
+["G-Z7016",1],
+["K-M9",1],
+["R-BY69488",1],
+["R-L664",1],
+["R-S691",1]
+]}

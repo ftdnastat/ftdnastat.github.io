@@ -1,1 +1,29 @@
-{"name":"Russia (Republic of Karachay-Cherkessia)","slug":"russia-karachay-cherkessia","n":10,"l1":[{"k":"U","v":4},{"k":"M","v":1},{"k":"W","v":1},{"k":"H","v":1},{"k":"R","v":1},{"k":"T","v":1},{"k":"K","v":1}],"l2":[{"k":"U1a","v":2},{"k":"M7b","v":1},{"k":"W1i","v":1},{"k":"H1u","v":1},{"k":"R1a","v":1},{"k":"T2d","v":1},{"k":"U5a","v":1},{"k":"U3a","v":1},{"k":"K1a","v":1}],"tree":null,"terminal":[["U1a1a-G16129A!",2],["H1u",1],["K1a3",1],["M7b1b",1],["R1a",1],["T2d2",1],["U3a",1],["U5a1b1",1],["W1i",1]]}
+{"name":"Russia (Republic of Karachay-Cherkessia)","slug":"russia-karachay-cherkessia","n":10,"l1":[
+{"k":"U","v":4},
+{"k":"M","v":1},
+{"k":"W","v":1},
+{"k":"H","v":1},
+{"k":"R","v":1},
+{"k":"T","v":1},
+{"k":"K","v":1}
+],"l2":[
+{"k":"U1a","v":2},
+{"k":"M7b","v":1},
+{"k":"W1i","v":1},
+{"k":"H1u","v":1},
+{"k":"R1a","v":1},
+{"k":"T2d","v":1},
+{"k":"U5a","v":1},
+{"k":"U3a","v":1},
+{"k":"K1a","v":1}
+],"tree":null,"terminal":[
+["U1a1a-G16129A!",2],
+["H1u",1],
+["K1a3",1],
+["M7b1b",1],
+["R1a",1],
+["T2d2",1],
+["U3a",1],
+["U5a1b1",1],
+["W1i",1]
+]}

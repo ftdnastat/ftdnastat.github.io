@@ -1,1 +1,17 @@
-{"name":"Cote D'Ivoire (Republic of the Ivory Coast)","slug":"cote-d-ivoire-the-ivory-coast","n":26,"l1":[{"k":"E","v":26}],"l2":[{"k":"E-M2*","v":21},{"k":"CT-M168*","v":3},{"k":"E-M81*","v":1},{"k":"E-U174","v":1}],"tree":[{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":26,"depth":0},{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":22,"depth":1}],"terminal":[["E-M2",21],["E-M132",2],["E-CTS5299",1],["E-M54",1],["E-M81",1]]}
+{"name":"Cote D'Ivoire (Republic of the Ivory Coast)","slug":"cote-d-ivoire-the-ivory-coast","n":26,"l1":[
+{"k":"E","v":26}
+],"l2":[
+{"k":"E-M2*","v":21},
+{"k":"CT-M168*","v":3},
+{"k":"E-M81*","v":1},
+{"k":"E-U174","v":1}
+],"tree":[
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":26,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":22,"depth":1}
+],"terminal":[
+["E-M2",21],
+["E-M132",2],
+["E-CTS5299",1],
+["E-M54",1],
+["E-M81",1]
+]}

@@ -1,1 +1,7 @@
-{"name":"Palau","slug":"palau","n":1,"l1":[{"k":"P","v":1}],"l2":[{"k":"P1d","v":1}],"tree":null,"terminal":[["P1d1",1]]}
+{"name":"Palau","slug":"palau","n":1,"l1":[
+{"k":"P","v":1}
+],"l2":[
+{"k":"P1d","v":1}
+],"tree":null,"terminal":[
+["P1d1",1]
+]}

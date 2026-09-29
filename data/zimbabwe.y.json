@@ -1,1 +1,24 @@
-{"name":"Zimbabwe","slug":"zimbabwe","n":25,"l1":[{"k":"E","v":23},{"k":"R","v":2}],"l2":[{"k":"E-M2*","v":10},{"k":"E-M191*","v":8},{"k":"E-U175","v":3},{"k":"E-M4706*","v":2},{"k":"R-Z338","v":1},{"k":"R-S1688*","v":1}],"tree":[{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":23,"depth":0},{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":8,"depth":1},{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":3,"depth":1}],"terminal":[["E-M2",10],["E-M191",8],["E-M58",2],["E-CTS10652",1],["E-FT209507",1],["E-Z1777",1],["R-FGC12057",1],["R-FTC65531",1]]}
+{"name":"Zimbabwe","slug":"zimbabwe","n":25,"l1":[
+{"k":"E","v":23},
+{"k":"R","v":2}
+],"l2":[
+{"k":"E-M2*","v":10},
+{"k":"E-M191*","v":8},
+{"k":"E-U175","v":3},
+{"k":"E-M4706*","v":2},
+{"k":"R-Z338","v":1},
+{"k":"R-S1688*","v":1}
+],"tree":[
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":23,"depth":0},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":8,"depth":1},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":3,"depth":1}
+],"terminal":[
+["E-M2",10],
+["E-M191",8],
+["E-M58",2],
+["E-CTS10652",1],
+["E-FT209507",1],
+["E-Z1777",1],
+["R-FGC12057",1],
+["R-FTC65531",1]
+]}

@@ -1,1 +1,29 @@
-{"name":"Sierra Leone","slug":"sierra-leone","n":33,"l1":[{"k":"E","v":32},{"k":"R","v":1}],"l2":[{"k":"E-M2*","v":23},{"k":"E-U175","v":4},{"k":"CT-M168*","v":1},{"k":"E-L485*","v":1},{"k":"R-L151*","v":1},{"k":"E-PF2179*","v":1},{"k":"E-M191*","v":1},{"k":"E-L19*","v":1}],"tree":[{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":32,"depth":0},{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":29,"depth":1},{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":4,"depth":2}],"terminal":[["E-M2",23],["E-CTS1433",1],["E-CTS6667",1],["E-CTS8026",1],["E-FT327292",1],["E-L485",1],["E-M191",1],["E-M3905",1],["E-M96",1],["E-PH4137",1],["R-L151",1]]}
+{"name":"Sierra Leone","slug":"sierra-leone","n":33,"l1":[
+{"k":"E","v":32},
+{"k":"R","v":1}
+],"l2":[
+{"k":"E-M2*","v":23},
+{"k":"E-U175","v":4},
+{"k":"CT-M168*","v":1},
+{"k":"E-L485*","v":1},
+{"k":"R-L151*","v":1},
+{"k":"E-PF2179*","v":1},
+{"k":"E-M191*","v":1},
+{"k":"E-L19*","v":1}
+],"tree":[
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":32,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":29,"depth":1},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":4,"depth":2}
+],"terminal":[
+["E-M2",23],
+["E-CTS1433",1],
+["E-CTS6667",1],
+["E-CTS8026",1],
+["E-FT327292",1],
+["E-L485",1],
+["E-M191",1],
+["E-M3905",1],
+["E-M96",1],
+["E-PH4137",1],
+["R-L151",1]
+]}

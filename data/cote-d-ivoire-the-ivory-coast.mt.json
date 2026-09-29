@@ -1,1 +1,10 @@
-{"name":"Cote D'Ivoire (Republic of the Ivory Coast)","slug":"cote-d-ivoire-the-ivory-coast","n":3,"l1":[{"k":"L","v":3}],"l2":[{"k":"L2a","v":2},{"k":"L3e","v":1}],"tree":null,"terminal":[["L2a1a2",1],["L2a1f1",1],["L3e3b",1]]}
+{"name":"Cote D'Ivoire (Republic of the Ivory Coast)","slug":"cote-d-ivoire-the-ivory-coast","n":3,"l1":[
+{"k":"L","v":3}
+],"l2":[
+{"k":"L2a","v":2},
+{"k":"L3e","v":1}
+],"tree":null,"terminal":[
+["L2a1a2",1],
+["L2a1f1",1],
+["L3e3b",1]
+]}

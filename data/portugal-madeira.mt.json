@@ -1,1 +1,19 @@
-{"name":"Portugal (Madeira)","slug":"portugal-madeira","n":6,"l1":[{"k":"H","v":3},{"k":"U","v":2},{"k":"K","v":1}],"l2":[{"k":"H1e","v":1},{"k":"H1u","v":1},{"k":"H7","v":1},{"k":"U5a","v":1},{"k":"U3a","v":1},{"k":"K2a","v":1}],"tree":null,"terminal":[["H1e1a6",1],["H1u",1],["H7",1],["K2a5a1",1],["U3a1",1],["U5a1",1]]}
+{"name":"Portugal (Madeira)","slug":"portugal-madeira","n":6,"l1":[
+{"k":"H","v":3},
+{"k":"U","v":2},
+{"k":"K","v":1}
+],"l2":[
+{"k":"H1e","v":1},
+{"k":"H1u","v":1},
+{"k":"H7","v":1},
+{"k":"U5a","v":1},
+{"k":"U3a","v":1},
+{"k":"K2a","v":1}
+],"tree":null,"terminal":[
+["H1e1a6",1],
+["H1u",1],
+["H7",1],
+["K2a5a1",1],
+["U3a1",1],
+["U5a1",1]
+]}

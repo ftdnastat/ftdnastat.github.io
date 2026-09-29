@@ -1,1 +1,10 @@
-{"name":"Seychelles","slug":"seychelles","n":2,"l1":[{"k":"E","v":1},{"k":"R","v":1}],"l2":[{"k":"E-U175","v":1},{"k":"R-FGC83504*","v":1}],"tree":[],"terminal":[["E-U290",1],["R-BY43325",1]]}
+{"name":"Seychelles","slug":"seychelles","n":2,"l1":[
+{"k":"E","v":1},
+{"k":"R","v":1}
+],"l2":[
+{"k":"E-U175","v":1},
+{"k":"R-FGC83504*","v":1}
+],"tree":[],"terminal":[
+["E-U290",1],
+["R-BY43325",1]
+]}

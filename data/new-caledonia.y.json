@@ -1,1 +1,9 @@
-{"name":"New Caledonia","slug":"new-caledonia","n":2,"l1":[{"k":"R","v":2}],"l2":[{"k":"R-L20","v":1},{"k":"R-U106*","v":1}],"tree":[],"terminal":[["R-L20",1],["R-U106",1]]}
+{"name":"New Caledonia","slug":"new-caledonia","n":2,"l1":[
+{"k":"R","v":2}
+],"l2":[
+{"k":"R-L20","v":1},
+{"k":"R-U106*","v":1}
+],"tree":[],"terminal":[
+["R-L20",1],
+["R-U106",1]
+]}

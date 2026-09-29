@@ -1,1 +1,22 @@
-{"name":"Georgia (Republic of Abkhazia)","slug":"georgia-abkhazia","n":7,"l1":[{"k":"U","v":4},{"k":"D","v":1},{"k":"I","v":1},{"k":"H","v":1}],"l2":[{"k":"D4g","v":1},{"k":"I4a","v":1},{"k":"H","v":1},{"k":"U5a","v":1},{"k":"U2e","v":1},{"k":"U3b","v":1},{"k":"U4b","v":1}],"tree":null,"terminal":[["D4g",1],["H",1],["I4a",1],["U2e1h",1],["U3b2a1",1],["U4b1b2",1],["U5a1f1a",1]]}
+{"name":"Georgia (Republic of Abkhazia)","slug":"georgia-abkhazia","n":7,"l1":[
+{"k":"U","v":4},
+{"k":"D","v":1},
+{"k":"I","v":1},
+{"k":"H","v":1}
+],"l2":[
+{"k":"D4g","v":1},
+{"k":"I4a","v":1},
+{"k":"H","v":1},
+{"k":"U5a","v":1},
+{"k":"U2e","v":1},
+{"k":"U3b","v":1},
+{"k":"U4b","v":1}
+],"tree":null,"terminal":[
+["D4g",1],
+["H",1],
+["I4a",1],
+["U2e1h",1],
+["U3b2a1",1],
+["U4b1b2",1],
+["U5a1f1a",1]
+]}

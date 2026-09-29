@@ -1,1 +1,18 @@
-{"name":"Spain (Murcia)","slug":"spain-murcia","n":6,"l1":[{"k":"R","v":5},{"k":"E","v":1}],"l2":[{"k":"R-DF21*","v":2},{"k":"R-Z205","v":1},{"k":"E-L19*","v":1},{"k":"R-Z278","v":1},{"k":"R-M12149*","v":1}],"tree":[{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":4,"depth":0}],"terminal":[["R-DF21",2],["E-Y10547",1],["R-CTS4299",1],["R-CTS6315",1],["R-FGC14629",1]]}
+{"name":"Spain (Murcia)","slug":"spain-murcia","n":6,"l1":[
+{"k":"R","v":5},
+{"k":"E","v":1}
+],"l2":[
+{"k":"R-DF21*","v":2},
+{"k":"R-Z205","v":1},
+{"k":"E-L19*","v":1},
+{"k":"R-Z278","v":1},
+{"k":"R-M12149*","v":1}
+],"tree":[
+{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":4,"depth":0}
+],"terminal":[
+["R-DF21",2],
+["E-Y10547",1],
+["R-CTS4299",1],
+["R-CTS6315",1],
+["R-FGC14629",1]
+]}

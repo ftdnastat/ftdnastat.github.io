@@ -1,1 +1,12 @@
-{"name":"Liechtenstein","slug":"liechtenstein","n":3,"l1":[{"k":"U","v":2},{"k":"N","v":1}],"l2":[{"k":"N1a","v":1},{"k":"U5b","v":1},{"k":"U7b","v":1}],"tree":null,"terminal":[["N1a1a1a2",1],["U5b1b1d",1],["U7b",1]]}
+{"name":"Liechtenstein","slug":"liechtenstein","n":3,"l1":[
+{"k":"U","v":2},
+{"k":"N","v":1}
+],"l2":[
+{"k":"N1a","v":1},
+{"k":"U5b","v":1},
+{"k":"U7b","v":1}
+],"tree":null,"terminal":[
+["N1a1a1a2",1],
+["U5b1b1d",1],
+["U7b",1]
+]}

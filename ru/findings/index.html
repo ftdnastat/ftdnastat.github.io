@@ -27,18 +27,156 @@
 <meta name="twitter:title" content="Находки">
 <meta name="twitter:description" content="Автоматические находки по данным FTDNA: сигнатурные ветки, ближайшие страны, кластеры, молодые и древние клады.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-
 </head>
 <body data-lang="ru">
-<header class="top"><div class="wrap topin">
+<header class="top">
+<div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/" aria-current="page">Находки</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →"><div id="q-out" class="q-out" role="listbox" hidden></div></form>
+<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="listbox" hidden></div>
+</form>
 <a class="lang" href="/en/findings/" data-lang-switch="en">English</a>
-</div></header>
-<main class="wrap"><div class="head"><h1>Находки</h1><p>Автоматически пересчитываются при каждой сборке. Это наблюдения над клиентами FTDNA, а не над популяциями; методика в разделе о данных.</p></div><section><div class="sec-head"><h2>Самые сильные сигнатуры</h2><p>Ветка и регион, где её доля превышает мировую сильнее всего, минимум 20 китов.</p></div><ol class="plain"><li><a href="/ru/c/chile/">Чили</a> · <b>D1g</b> (мт): 17,7% ×885 · 25 китов</li><li><a href="/ru/c/chile/">Чили</a> · <b>B2i</b> (мт): 22,0% ×780 · 31 китов</li><li><a href="/ru/c/nicaragua/">Никарагуа</a> · <b>A2w</b> (мт): 41,2% ×495 · 21 китов</li><li><a href="/ru/c/south-africa/">ЮАР</a> · <b>L0d</b> (мт): 19,9% ×448 · 52 китов</li><li><a href="/ru/c/japan/">Япония</a> · <b>M7a</b> (мт): 8,4% ×379 · 25 китов</li><li><a href="/ru/c/philippines/">Филиппины</a> · <b>E1a</b> (мт): 12,3% ×377 · 23 китов</li><li><a href="/ru/c/colombia/">Колумбия</a> · <b>B2d</b> (мт): 25,8% ×370 · 55 китов</li><li><a href="/ru/c/new-zealand/">Новая Зеландия</a> · <b>B4a</b> (мт): 44,2% ×253 · 46 китов</li><li><a href="/ru/c/japan/">Япония</a> · <b>D4a</b> (мт): 7,1% ×245 · 21 китов</li><li><a href="/ru/c/philippines/">Филиппины</a> · <b>M7c</b> (мт): 12,8% ×240 · 24 китов</li><li><a href="/ru/c/japan/">Япония</a> · <b>D4e</b> (мт): 7,4% ×204 · 22 китов</li><li><a href="/ru/c/japan/">Япония</a> · <b>D4b</b> (мт): 8,1% ×195 · 24 китов</li><li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2z</b> (мт): 7,6% ×179 · 47 китов</li><li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2k</b> (мт): 9,8% ×179 · 61 китов</li><li><a href="/ru/c/canada-first-nations/">Канада · коренные народы</a> · <b>C-M217</b> <small>C2</small> (Y): 76,0% ×177 · 38 китов</li><li><a href="/ru/c/colombia/">Колумбия</a> · <b>A2w</b> (мт): 14,1% ×169 · 30 китов</li><li><a href="/ru/c/russia-ingushetia/">Ингушетия</a> · <b>J-CTS6619</b> (Y): 61,0% ×152 · 72 китов</li><li><a href="/ru/c/china/">Китай</a> · <b>M7b</b> (мт): 7,7% ×149 · 24 китов</li><li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M324</b> (Y): 57,9% ×138 · 55 китов</li><li><a href="/ru/c/panama/">Панама</a> · <b>Q-M3</b> <small>Q-M3</small> (Y): 65,1% ×130 · 41 китов</li><li><a href="/ru/c/india/">Индия</a> · <b>M5a</b> (мт): 5,4% ×127 · 20 китов</li><li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M217</b> <small>C2</small> (Y): 49,3% ×115 · 224 китов</li><li><a href="/ru/c/russia-dagestan/">Дагестан</a> · <b>J-Z1842</b> <small>J1-Z1842</small> (Y): 52,5% ×110 · 509 китов</li><li><a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a> · <b>L-M22</b> <small>L-M22</small> (Y): 58,9% ×104 · 113 китов</li><li><a href="/ru/c/china/">Китай</a> · <b>O-M324</b> (Y): 40,5% ×97 · 434 китов</li><li><a href="/ru/c/china/">Китай</a> · <b>O-M122</b> <small>O2</small> (Y): 45,4% ×96 · 487 китов</li><li><a href="/ru/c/peru/">Перу</a> · <b>B2</b> (мт): 23,8% ×96 · 20 китов</li><li><a href="/ru/c/kazakhstan/">Казахстан</a> · <b>C-M217</b> <small>C2</small> (Y): 39,7% ×92 · 295 китов</li><li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M216</b> <small>C</small> (Y): 56,8% ×89 · 258 китов</li><li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M175</b> <small>O</small> (Y): 87,4% ×88 · 83 китов</li></ol></section><section><div class="sec-head"><h2>Молодые, но широкие клады</h2><p>TMRCA моложе 2 000 лет, а доля не меньше 1% в 5 и более странах с выборкой от 100 китов. Недавняя экспансия, диаспора или ошибки самозаявленного происхождения.</p></div><ol class="plain"><li><b>J-FGC1</b>: 1 800 лет · 1 465 китов · 17 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a></li><li><b>J-FGC2</b>: 1 500 лет · 1 117 китов · 14 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a></li><li><b>R-DF105</b>: 1 800 лет · 4 775 китов · 10 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/united-kingdom/">Великобритания</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/iceland/">Исландия</a></li><li><b>J-FGC7</b>: 2 000 лет · 1 142 китов · 10 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a>, <a href="/ru/c/morocco/">Марокко</a></li><li><b>R-L1065</b>: 1 800 лет · 2 505 китов · 9 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/south-africa/">ЮАР</a>, <a href="/ru/c/jamaica/">Ямайка</a></li><li><b>R-S744</b>: 1 600 лет · 1 849 китов · 8 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/south-africa/">ЮАР</a>, <a href="/ru/c/jamaica/">Ямайка</a>, <a href="/ru/c/new-zealand/">Новая Зеландия</a></li><li><b>R-ZZ87</b>: 1 800 лет · 3 160 китов · 7 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/isle-of-man/">Остров Мэн</a></li><li><b>R-DF85</b>: 1 700 лет · 1 467 китов · 5 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a></li></ol></section><section><div class="sec-head"><h2>Древние и сосредоточенные клады</h2><p>TMRCA старше 4 000 лет, при этом не меньше 50% китов клады приходится на одну страну, от 200 китов в мире. Изоляты и линии, не покинувшие родину.</p></div><ol class="plain"><li><b>N-CTS3103</b>: 4 700 лет · 8 858 китов · <a href="/ru/c/finland/">Финляндия</a> 68%</li><li><b>R-FGC12055</b>: 4 200 лет · 2 329 китов · <a href="/ru/c/ireland/">Ирландия</a> 57%</li><li><b>J-FGC7638</b>: 4 700 лет · 9 118 китов · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> 52%</li><li><b>R-Z2961</b>: 4 100 лет · 7 659 китов · <a href="/ru/c/ireland/">Ирландия</a> 52%</li></ol></section><section><div class="sec-head"><h2>Страны, где мужская и женская линии смотрят в разные стороны</h2><p>Пять ближайших стран по Y и по мт почти не пересекаются.</p></div><ul class="plain"><li><a href="/ru/c/india/">Индия</a> · общих 0 · Y: <a href="/ru/c/sri-lanka/">Шри-Ланка</a>, <a href="/ru/c/pakistan/">Пакистан</a>, <a href="/ru/c/afghanistan/">Афганистан</a> · мт: <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a></li><li><a href="/ru/c/jamaica/">Ямайка</a> · общих 0 · Y: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ghana/">Гана</a>, <a href="/ru/c/south-africa/">ЮАР</a> · мт: <a href="/ru/c/dominican-republic/">Доминикана</a>, <a href="/ru/c/israel/">Израиль</a>, <a href="/ru/c/brazil/">Бразилия</a></li><li><a href="/ru/c/israel/">Израиль</a> · общих 0 · Y: <a href="/ru/c/romania/">Румыния</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/lebanon/">Ливан</a> · мт: <a href="/ru/c/egypt/">Египет</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/united-states/">США</a></li><li><a href="/ru/c/russia-chechnya/">Чечня</a> · общих 1 · Y: <a href="/ru/c/russia-ingushetia/">Ингушетия</a>, <a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a>, <a href="/ru/c/russia-dagestan/">Дагестан</a> · мт: <a href="/ru/c/turkey/">Турция</a>, <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/italy/">Италия</a></li><li><a href="/ru/c/bulgaria/">Болгария</a> · общих 1 · Y: <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/ukraine/">Украина</a>, <a href="/ru/c/hungary/">Венгрия</a> · мт: <a href="/ru/c/italy/">Италия</a>, <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/czech-republic/">Чехия</a></li><li><a href="/ru/c/croatia/">Хорватия</a> · общих 1 · Y: <a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>, <a href="/ru/c/serbia/">Сербия</a>, <a href="/ru/c/slovenia/">Словения</a> · мт: <a href="/ru/c/czech-republic/">Чехия</a>, <a href="/ru/c/poland/">Польша</a>, <a href="/ru/c/hungary/">Венгрия</a></li><li><a href="/ru/c/morocco/">Марокко</a> · общих 1 · Y: <a href="/ru/c/algeria/">Алжир</a>, <a href="/ru/c/tunisia/">Тунис</a>, <a href="/ru/c/libya/">Ливия</a> · мт: <a href="/ru/c/algeria/">Алжир</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/spain/">Испания</a></li><li><a href="/ru/c/egypt/">Египет</a> · общих 1 · Y: <a href="/ru/c/palestinian-territory/">Палестина</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iraq/">Ирак</a> · мт: <a href="/ru/c/israel/">Израиль</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/algeria/">Алжир</a></li><li><a href="/ru/c/algeria/">Алжир</a> · общих 1 · Y: <a href="/ru/c/morocco/">Марокко</a>, <a href="/ru/c/tunisia/">Тунис</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> · мт: <a href="/ru/c/morocco/">Марокко</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/italy/">Италия</a></li><li><a href="/ru/c/serbia/">Сербия</a> · общих 1 · Y: <a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>, <a href="/ru/c/croatia/">Хорватия</a>, <a href="/ru/c/bulgaria/">Болгария</a> · мт: <a href="/ru/c/bulgaria/">Болгария</a>, <a href="/ru/c/czech-republic/">Чехия</a>, <a href="/ru/c/germany/">Германия</a></li><li><a href="/ru/c/south-africa/">ЮАР</a> · общих 1 · Y: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/belgium/">Бельгия</a>, <a href="/ru/c/canada/">Канада</a> · мт: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/united-states-native-american/">США · коренные американцы</a>, <a href="/ru/c/dominican-republic/">Доминикана</a></li></ul></section><section><div class="sec-head"><h2>Кто тестирует отца, а кто мать</h2><p>Отношение числа мт-китов к Y-китам. Только выборки от 150 китов в обоих деревьях.</p></div><div class="two"><ul class="plain"><li><a href="/ru/c/united-states-native-american/">США · коренные американцы</a> <span class="mono">1,29</span> <small>2 353 / 1 831</small></li><li><a href="/ru/c/canada/">Канада</a> <span class="mono">1,28</span> <small>2 113 / 1 647</small></li><li><a href="/ru/c/south-africa/">ЮАР</a> <span class="mono">1,13</span> <small>261 / 230</small></li><li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> <span class="mono">1,05</span> <small>621 / 591</small></li><li><a href="/ru/c/australia/">Австралия</a> <span class="mono">1,03</span> <small>378 / 366</small></li><li><a href="/ru/c/cuba/">Куба</a> <span class="mono">1,00</span> <small>216 / 216</small></li><li><a href="/ru/c/norway/">Норвегия</a> <span class="mono">0,85</span> <small>3 850 / 4 540</small></li><li><a href="/ru/c/estonia/">Эстония</a> <span class="mono">0,83</span> <small>244 / 293</small></li><li><a href="/ru/c/austria/">Австрия</a> <span class="mono">0,79</span> <small>857 / 1 078</small></li><li><a href="/ru/c/mexico/">Мексика</a> <span class="mono">0,79</span> <small>1 793 / 2 281</small></li></ul><ul class="plain"><li><a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> <span class="mono">0,07</span> <small>807 / 11 913</small></li><li><a href="/ru/c/kuwait/">Кувейт</a> <span class="mono">0,07</span> <small>157 / 2 248</small></li><li><a href="/ru/c/united-arab-emirates/">ОАЭ</a> <span class="mono">0,12</span> <small>166 / 1 354</small></li><li><a href="/ru/c/armenia/">Армения</a> <span class="mono">0,19</span> <small>223 / 1 174</small></li><li><a href="/ru/c/northern-ireland/">Северная Ирландия</a> <span class="mono">0,21</span> <small>614 / 2 970</small></li><li><a href="/ru/c/lebanon/">Ливан</a> <span class="mono">0,23</span> <small>155 / 671</small></li><li><a href="/ru/c/iran/">Иран</a> <span class="mono">0,23</span> <small>177 / 756</small></li><li><a href="/ru/c/india/">Индия</a> <span class="mono">0,25</span> <small>372 / 1 477</small></li><li><a href="/ru/c/russia-chechnya/">Чечня</a> <span class="mono">0,27</span> <small>457 / 1 681</small></li><li><a href="/ru/c/china/">Китай</a> <span class="mono">0,29</span> <small>310 / 1 072</small></li></ul></div></section><section><div class="sec-head"><h2>Крупнейшие кластеры одного узла</h2><p>Доля китов региона на одном терминальном узле.</p></div><ol class="plain"><li><a href="/ru/c/colombia/">Колумбия</a> · <b>B2d</b> (мт): 25,8% · 55 китов</li><li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>C1b2</b> (мт): 17,2% · 107 китов</li><li><a href="/ru/c/belarus/">Беларусь</a> · <b>K1a1b1a</b> (мт): 11,2% · 83 китов</li></ol></section></main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-28.</footer>
+</div>
+</header>
+<main class="wrap">
+<div class="head">
+<h1>Находки</h1>
+<p>Автоматически пересчитываются при каждой сборке. Это наблюдения над клиентами FTDNA, а не над популяциями; методика в разделе о данных.</p>
+</div>
+<section>
+<div class="sec-head">
+<h2>Самые сильные сигнатуры</h2>
+<p>Ветка и регион, где её доля превышает мировую сильнее всего, минимум 20 китов.</p>
+</div>
+<ol class="plain">
+<li><a href="/ru/c/chile/">Чили</a> · <b>D1g</b> (мт): 17,7% ×885 · 25 китов</li>
+<li><a href="/ru/c/chile/">Чили</a> · <b>B2i</b> (мт): 22,0% ×780 · 31 китов</li>
+<li><a href="/ru/c/nicaragua/">Никарагуа</a> · <b>A2w</b> (мт): 41,2% ×495 · 21 китов</li>
+<li><a href="/ru/c/south-africa/">ЮАР</a> · <b>L0d</b> (мт): 19,9% ×448 · 52 китов</li>
+<li><a href="/ru/c/japan/">Япония</a> · <b>M7a</b> (мт): 8,4% ×379 · 25 китов</li>
+<li><a href="/ru/c/philippines/">Филиппины</a> · <b>E1a</b> (мт): 12,3% ×377 · 23 китов</li>
+<li><a href="/ru/c/colombia/">Колумбия</a> · <b>B2d</b> (мт): 25,8% ×370 · 55 китов</li>
+<li><a href="/ru/c/new-zealand/">Новая Зеландия</a> · <b>B4a</b> (мт): 44,2% ×253 · 46 китов</li>
+<li><a href="/ru/c/japan/">Япония</a> · <b>D4a</b> (мт): 7,1% ×245 · 21 китов</li>
+<li><a href="/ru/c/philippines/">Филиппины</a> · <b>M7c</b> (мт): 12,8% ×240 · 24 китов</li>
+<li><a href="/ru/c/japan/">Япония</a> · <b>D4e</b> (мт): 7,4% ×204 · 22 китов</li>
+<li><a href="/ru/c/japan/">Япония</a> · <b>D4b</b> (мт): 8,1% ×195 · 24 китов</li>
+<li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2z</b> (мт): 7,6% ×179 · 47 китов</li>
+<li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2k</b> (мт): 9,8% ×179 · 61 китов</li>
+<li><a href="/ru/c/canada-first-nations/">Канада · коренные народы</a> · <b>C-M217</b> <small>C2</small> (Y): 76,0% ×177 · 38 китов</li>
+<li><a href="/ru/c/colombia/">Колумбия</a> · <b>A2w</b> (мт): 14,1% ×169 · 30 китов</li>
+<li><a href="/ru/c/russia-ingushetia/">Ингушетия</a> · <b>J-CTS6619</b> (Y): 61,0% ×152 · 72 китов</li>
+<li><a href="/ru/c/china/">Китай</a> · <b>M7b</b> (мт): 7,7% ×149 · 24 китов</li>
+<li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M324</b> (Y): 57,9% ×138 · 55 китов</li>
+<li><a href="/ru/c/panama/">Панама</a> · <b>Q-M3</b> <small>Q-M3</small> (Y): 65,1% ×130 · 41 китов</li>
+<li><a href="/ru/c/india/">Индия</a> · <b>M5a</b> (мт): 5,4% ×127 · 20 китов</li>
+<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M217</b> <small>C2</small> (Y): 49,3% ×115 · 224 китов</li>
+<li><a href="/ru/c/russia-dagestan/">Дагестан</a> · <b>J-Z1842</b> <small>J1-Z1842</small> (Y): 52,5% ×110 · 509 китов</li>
+<li><a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a> · <b>L-M22</b> <small>L-M22</small> (Y): 58,9% ×104 · 113 китов</li>
+<li><a href="/ru/c/china/">Китай</a> · <b>O-M324</b> (Y): 40,5% ×97 · 434 китов</li>
+<li><a href="/ru/c/china/">Китай</a> · <b>O-M122</b> <small>O2</small> (Y): 45,4% ×96 · 487 китов</li>
+<li><a href="/ru/c/peru/">Перу</a> · <b>B2</b> (мт): 23,8% ×96 · 20 китов</li>
+<li><a href="/ru/c/kazakhstan/">Казахстан</a> · <b>C-M217</b> <small>C2</small> (Y): 39,7% ×92 · 295 китов</li>
+<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M216</b> <small>C</small> (Y): 56,8% ×89 · 258 китов</li>
+<li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M175</b> <small>O</small> (Y): 87,4% ×88 · 83 китов</li>
+</ol>
+</section>
+<section>
+<div class="sec-head">
+<h2>Молодые, но широкие клады</h2>
+<p>TMRCA моложе 2 000 лет, а доля не меньше 1% в 5 и более странах с выборкой от 100 китов. Недавняя экспансия, диаспора или ошибки самозаявленного происхождения.</p>
+</div>
+<ol class="plain">
+<li><b>J-FGC1</b>: 1 800 лет · 1 465 китов · 17 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a></li>
+<li><b>J-FGC2</b>: 1 500 лет · 1 117 китов · 14 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a></li>
+<li><b>R-DF105</b>: 1 800 лет · 4 775 китов · 10 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/united-kingdom/">Великобритания</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/iceland/">Исландия</a></li>
+<li><b>J-FGC7</b>: 2 000 лет · 1 142 китов · 10 стран · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/iraq/">Ирак</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/bahrain/">Бахрейн</a>, <a href="/ru/c/qatar/">Катар</a>, <a href="/ru/c/morocco/">Марокко</a></li>
+<li><b>R-L1065</b>: 1 800 лет · 2 505 китов · 9 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/south-africa/">ЮАР</a>, <a href="/ru/c/jamaica/">Ямайка</a></li>
+<li><b>R-S744</b>: 1 600 лет · 1 849 китов · 8 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/south-africa/">ЮАР</a>, <a href="/ru/c/jamaica/">Ямайка</a>, <a href="/ru/c/new-zealand/">Новая Зеландия</a></li>
+<li><b>R-ZZ87</b>: 1 800 лет · 3 160 китов · 7 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a>, <a href="/ru/c/australia/">Австралия</a>, <a href="/ru/c/isle-of-man/">Остров Мэн</a></li>
+<li><b>R-DF85</b>: 1 700 лет · 1 467 китов · 5 стран · <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ireland/">Ирландия</a>, <a href="/ru/c/scotland/">Шотландия</a>, <a href="/ru/c/canada/">Канада</a>, <a href="/ru/c/northern-ireland/">Северная Ирландия</a></li>
+</ol>
+</section>
+<section>
+<div class="sec-head">
+<h2>Древние и сосредоточенные клады</h2>
+<p>TMRCA старше 4 000 лет, при этом не меньше 50% китов клады приходится на одну страну, от 200 китов в мире. Изоляты и линии, не покинувшие родину.</p>
+</div>
+<ol class="plain">
+<li><b>N-CTS3103</b>: 4 700 лет · 8 858 китов · <a href="/ru/c/finland/">Финляндия</a> 68%</li>
+<li><b>R-FGC12055</b>: 4 200 лет · 2 329 китов · <a href="/ru/c/ireland/">Ирландия</a> 57%</li>
+<li><b>J-FGC7638</b>: 4 700 лет · 9 118 китов · <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> 52%</li>
+<li><b>R-Z2961</b>: 4 100 лет · 7 659 китов · <a href="/ru/c/ireland/">Ирландия</a> 52%</li>
+</ol>
+</section>
+<section>
+<div class="sec-head">
+<h2>Страны, где мужская и женская линии смотрят в разные стороны</h2>
+<p>Пять ближайших стран по Y и по мт почти не пересекаются.</p>
+</div>
+<ul class="plain">
+<li><a href="/ru/c/india/">Индия</a> · общих 0 · Y: <a href="/ru/c/sri-lanka/">Шри-Ланка</a>, <a href="/ru/c/pakistan/">Пакистан</a>, <a href="/ru/c/afghanistan/">Афганистан</a> · мт: <a href="/ru/c/united-arab-emirates/">ОАЭ</a>, <a href="/ru/c/kuwait/">Кувейт</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a></li>
+<li><a href="/ru/c/jamaica/">Ямайка</a> · общих 0 · Y: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/ghana/">Гана</a>, <a href="/ru/c/south-africa/">ЮАР</a> · мт: <a href="/ru/c/dominican-republic/">Доминикана</a>, <a href="/ru/c/israel/">Израиль</a>, <a href="/ru/c/brazil/">Бразилия</a></li>
+<li><a href="/ru/c/israel/">Израиль</a> · общих 0 · Y: <a href="/ru/c/romania/">Румыния</a>, <a href="/ru/c/iran/">Иран</a>, <a href="/ru/c/lebanon/">Ливан</a> · мт: <a href="/ru/c/egypt/">Египет</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/united-states/">США</a></li>
+<li><a href="/ru/c/russia-chechnya/">Чечня</a> · общих 1 · Y: <a href="/ru/c/russia-ingushetia/">Ингушетия</a>, <a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a>, <a href="/ru/c/russia-dagestan/">Дагестан</a> · мт: <a href="/ru/c/turkey/">Турция</a>, <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/italy/">Италия</a></li>
+<li><a href="/ru/c/bulgaria/">Болгария</a> · общих 1 · Y: <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/ukraine/">Украина</a>, <a href="/ru/c/hungary/">Венгрия</a> · мт: <a href="/ru/c/italy/">Италия</a>, <a href="/ru/c/greece/">Греция</a>, <a href="/ru/c/czech-republic/">Чехия</a></li>
+<li><a href="/ru/c/croatia/">Хорватия</a> · общих 1 · Y: <a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>, <a href="/ru/c/serbia/">Сербия</a>, <a href="/ru/c/slovenia/">Словения</a> · мт: <a href="/ru/c/czech-republic/">Чехия</a>, <a href="/ru/c/poland/">Польша</a>, <a href="/ru/c/hungary/">Венгрия</a></li>
+<li><a href="/ru/c/morocco/">Марокко</a> · общих 1 · Y: <a href="/ru/c/algeria/">Алжир</a>, <a href="/ru/c/tunisia/">Тунис</a>, <a href="/ru/c/libya/">Ливия</a> · мт: <a href="/ru/c/algeria/">Алжир</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/spain/">Испания</a></li>
+<li><a href="/ru/c/egypt/">Египет</a> · общих 1 · Y: <a href="/ru/c/palestinian-territory/">Палестина</a>, <a href="/ru/c/syrian-arab-republic/">Сирия</a>, <a href="/ru/c/iraq/">Ирак</a> · мт: <a href="/ru/c/israel/">Израиль</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a>, <a href="/ru/c/algeria/">Алжир</a></li>
+<li><a href="/ru/c/algeria/">Алжир</a> · общих 1 · Y: <a href="/ru/c/morocco/">Марокко</a>, <a href="/ru/c/tunisia/">Тунис</a>, <a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> · мт: <a href="/ru/c/morocco/">Марокко</a>, <a href="/ru/c/portugal/">Португалия</a>, <a href="/ru/c/italy/">Италия</a></li>
+<li><a href="/ru/c/serbia/">Сербия</a> · общих 1 · Y: <a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>, <a href="/ru/c/croatia/">Хорватия</a>, <a href="/ru/c/bulgaria/">Болгария</a> · мт: <a href="/ru/c/bulgaria/">Болгария</a>, <a href="/ru/c/czech-republic/">Чехия</a>, <a href="/ru/c/germany/">Германия</a></li>
+<li><a href="/ru/c/south-africa/">ЮАР</a> · общих 1 · Y: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/belgium/">Бельгия</a>, <a href="/ru/c/canada/">Канада</a> · мт: <a href="/ru/c/united-states/">США</a>, <a href="/ru/c/united-states-native-american/">США · коренные американцы</a>, <a href="/ru/c/dominican-republic/">Доминикана</a></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2>Кто тестирует отца, а кто мать</h2>
+<p>Отношение числа мт-китов к Y-китам. Только выборки от 150 китов в обоих деревьях.</p>
+</div>
+<div class="two">
+<ul class="plain">
+<li><a href="/ru/c/united-states-native-american/">США · коренные американцы</a> <span class="mono">1,29</span> <small>2 353 / 1 831</small></li>
+<li><a href="/ru/c/canada/">Канада</a> <span class="mono">1,28</span> <small>2 113 / 1 647</small></li>
+<li><a href="/ru/c/south-africa/">ЮАР</a> <span class="mono">1,13</span> <small>261 / 230</small></li>
+<li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> <span class="mono">1,05</span> <small>621 / 591</small></li>
+<li><a href="/ru/c/australia/">Австралия</a> <span class="mono">1,03</span> <small>378 / 366</small></li>
+<li><a href="/ru/c/cuba/">Куба</a> <span class="mono">1,00</span> <small>216 / 216</small></li>
+<li><a href="/ru/c/norway/">Норвегия</a> <span class="mono">0,85</span> <small>3 850 / 4 540</small></li>
+<li><a href="/ru/c/estonia/">Эстония</a> <span class="mono">0,83</span> <small>244 / 293</small></li>
+<li><a href="/ru/c/austria/">Австрия</a> <span class="mono">0,79</span> <small>857 / 1 078</small></li>
+<li><a href="/ru/c/mexico/">Мексика</a> <span class="mono">0,79</span> <small>1 793 / 2 281</small></li>
+</ul>
+<ul class="plain">
+<li><a href="/ru/c/saudi-arabia/">Саудовская Аравия</a> <span class="mono">0,07</span> <small>807 / 11 913</small></li>
+<li><a href="/ru/c/kuwait/">Кувейт</a> <span class="mono">0,07</span> <small>157 / 2 248</small></li>
+<li><a href="/ru/c/united-arab-emirates/">ОАЭ</a> <span class="mono">0,12</span> <small>166 / 1 354</small></li>
+<li><a href="/ru/c/armenia/">Армения</a> <span class="mono">0,19</span> <small>223 / 1 174</small></li>
+<li><a href="/ru/c/northern-ireland/">Северная Ирландия</a> <span class="mono">0,21</span> <small>614 / 2 970</small></li>
+<li><a href="/ru/c/lebanon/">Ливан</a> <span class="mono">0,23</span> <small>155 / 671</small></li>
+<li><a href="/ru/c/iran/">Иран</a> <span class="mono">0,23</span> <small>177 / 756</small></li>
+<li><a href="/ru/c/india/">Индия</a> <span class="mono">0,25</span> <small>372 / 1 477</small></li>
+<li><a href="/ru/c/russia-chechnya/">Чечня</a> <span class="mono">0,27</span> <small>457 / 1 681</small></li>
+<li><a href="/ru/c/china/">Китай</a> <span class="mono">0,29</span> <small>310 / 1 072</small></li>
+</ul>
+</div>
+</section>
+<section>
+<div class="sec-head">
+<h2>Крупнейшие кластеры одного узла</h2>
+<p>Доля китов региона на одном терминальном узле.</p>
+</div>
+<ol class="plain">
+<li><a href="/ru/c/colombia/">Колумбия</a> · <b>B2d</b> (мт): 25,8% · 55 китов</li>
+<li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>C1b2</b> (мт): 17,2% · 107 китов</li>
+<li><a href="/ru/c/belarus/">Беларусь</a> · <b>K1a1b1a</b> (мт): 11,2% · 83 китов</li>
+</ol>
+</section>
+</main>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
 <script src="/assets/site.js" defer></script>
-</body></html>
+</body>
+</html>

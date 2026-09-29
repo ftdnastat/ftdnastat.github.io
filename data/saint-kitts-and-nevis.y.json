@@ -1,1 +1,32 @@
-{"name":"Saint Kitts and Nevis","slug":"saint-kitts-and-nevis","n":12,"l1":[{"k":"R","v":9},{"k":"E","v":2},{"k":"N","v":1}],"l2":[{"k":"R-DF21*","v":2},{"k":"R-Z8168","v":2},{"k":"E-U175","v":1},{"k":"E-U174","v":1},{"k":"N-L550*","v":1},{"k":"R-L151*","v":1},{"k":"R-CTS4466*","v":1},{"k":"R-Z295*","v":1},{"k":"R-U106*","v":1},{"k":"R-M417*","v":1}],"tree":[{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":8,"depth":0},{"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2973,"oldest":-3681,"youngest":-2352},"n":3,"depth":1},{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2560,"oldest":-3209,"youngest":-1991},"n":3,"depth":1}],"terminal":[["R-BY105622",2],["E-P277",1],["E-U174",1],["N-L550",1],["R-CTS4065",1],["R-CTS4466",1],["R-FTH42190",1],["R-L1336",1],["R-L151",1],["R-U106",1],["R-YP441",1]]}
+{"name":"Saint Kitts and Nevis","slug":"saint-kitts-and-nevis","n":12,"l1":[
+{"k":"R","v":9},
+{"k":"E","v":2},
+{"k":"N","v":1}
+],"l2":[
+{"k":"R-DF21*","v":2},
+{"k":"R-Z8168","v":2},
+{"k":"E-U175","v":1},
+{"k":"E-U174","v":1},
+{"k":"N-L550*","v":1},
+{"k":"R-L151*","v":1},
+{"k":"R-CTS4466*","v":1},
+{"k":"R-Z295*","v":1},
+{"k":"R-U106*","v":1},
+{"k":"R-M417*","v":1}
+],"tree":[
+{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":8,"depth":0},
+{"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2973,"oldest":-3681,"youngest":-2352},"n":3,"depth":1},
+{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2560,"oldest":-3209,"youngest":-1991},"n":3,"depth":1}
+],"terminal":[
+["R-BY105622",2],
+["E-P277",1],
+["E-U174",1],
+["N-L550",1],
+["R-CTS4065",1],
+["R-CTS4466",1],
+["R-FTH42190",1],
+["R-L1336",1],
+["R-L151",1],
+["R-U106",1],
+["R-YP441",1]
+]}
