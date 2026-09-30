@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Y-ДНК × мтДНК: сочетания отцовских и материнских линий на YFull · ftdnastat</title>
-<meta name="description" content="Сочетания Y-клад и мт-веток у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
+<meta name="description" content="Сочетания веток Y и мт у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ftdnastat">
 <meta property="og:title" content="Y-ДНК × мтДНК: сочетания отцовских и материнских линий на YFull">
-<meta property="og:description" content="Сочетания Y-клад и мт-веток у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
+<meta property="og:description" content="Сочетания веток Y и мт у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
 <meta property="og:url" content="https://ftdnastat.github.io/ru/pairs/">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
@@ -28,7 +28,7 @@
 <meta property="og:image:alt" content="ftdnastat — статистика гаплогрупп FTDNA по странам и регионам: стековые полоски макрогрупп Y-ДНК для Дагестана, Турции, Ирландии и Финляндии">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Y-ДНК × мтДНК: сочетания отцовских и материнских линий на YFull">
-<meta name="twitter:description" content="Сочетания Y-клад и мт-веток у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
+<meta name="twitter:description" content="Сочетания веток Y и мт у людей с двумя тестами на YFull: наблюдаемое против ожидаемого.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
@@ -54,12 +54,12 @@
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
 <h1>Y × мт: сочетания линий</h1>
-<p>На YFull один и тот же номер образца связывает отцовскую и материнскую линии человека. Здесь 15 383 таких пар. Строка: клада Y и ветка мт, число пар, ожидание при независимости линий и отношение к нему. Больше 1 — сочетание встречается чаще случайного, обычно из-за общего происхождения в одной популяции.</p>
+<p>На YFull у одного человека можно увидеть обе линии — отцовскую (Y) и материнскую (мт). Здесь 15 383 таких людей. В строке: ветка Y и ветка мт, сколько раз такое сочетание встретилось, сколько встретилось бы, если бы линии никак не были связаны, и отношение первого ко второму. Больше 1 — сочетание встречается чаще случайного; обычно потому, что обе линии из одного народа.</p>
 </div>
 <section>
 <div class="sec-head">
 <h2 id="заметно-чаще-случайного">Заметно чаще случайного <a class="anchor" href="#заметно-чаще-случайного" aria-label="Ссылка на раздел «Заметно чаще случайного»">#</a></h2>
-<p>Пары от 5 человек с отношением не меньше 1,5 и p ≤ 0,01 по гипергеометрическому тесту.</p>
+<p>Сочетания, которые встретились не меньше чем у 5 человек и в 1,5 раза чаще случайного или больше. При этом p ≤ 0,01: p — вероятность получить такое совпадение случайно.</p>
 </div>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Y × мт: сочетания линий">
 <table class="list"><caption class="sr-only">Y × мт: сочетания линий</caption>
@@ -68,9 +68,9 @@
 <th scope="col">Y</th>
 <th scope="col">мт</th>
 <th scope="col" class="num">пар</th>
-<th scope="col" class="num">ожидание</th>
+<th scope="col" class="num">ожидалось бы</th>
 <th scope="col" class="num">×</th>
-<th scope="col" class="num">p</th>
+<th scope="col">случайно?</th>
 </tr>
 </thead>
 <tbody>
@@ -80,7 +80,7 @@
 <td class="num">194</td>
 <td class="num">31,8</td>
 <td class="num">6,10</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -88,7 +88,7 @@
 <td class="num">103</td>
 <td class="num">26,4</td>
 <td class="num">3,90</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -96,7 +96,7 @@
 <td class="num">44</td>
 <td class="num">8,4</td>
 <td class="num">5,25</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -104,7 +104,7 @@
 <td class="num">65</td>
 <td class="num">17,4</td>
 <td class="num">3,74</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -112,7 +112,7 @@
 <td class="num">66</td>
 <td class="num">19,8</td>
 <td class="num">3,34</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>O2</td>
@@ -120,7 +120,7 @@
 <td class="num">11</td>
 <td class="num">0,2</td>
 <td class="num">54,53</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -128,7 +128,7 @@
 <td class="num">25</td>
 <td class="num">3,9</td>
 <td class="num">6,45</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>N-Z1936</td>
@@ -136,7 +136,7 @@
 <td class="num">42</td>
 <td class="num">10,1</td>
 <td class="num">4,16</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -144,7 +144,7 @@
 <td class="num">43</td>
 <td class="num">11,7</td>
 <td class="num">3,67</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>E-M191</td>
@@ -152,7 +152,7 @@
 <td class="num">12</td>
 <td class="num">0,5</td>
 <td class="num">22,10</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -160,7 +160,7 @@
 <td class="num">33</td>
 <td class="num">8,1</td>
 <td class="num">4,07</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>E-V32</td>
@@ -168,7 +168,7 @@
 <td class="num">9</td>
 <td class="num">0,2</td>
 <td class="num">38,70</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J2a-Z7671</td>
@@ -176,7 +176,7 @@
 <td class="num">18</td>
 <td class="num">2,1</td>
 <td class="num">8,76</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>H-M82</td>
@@ -184,7 +184,7 @@
 <td class="num">7</td>
 <td class="num">0,1</td>
 <td class="num">77,69</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>E-U175</td>
@@ -192,7 +192,7 @@
 <td class="num">8</td>
 <td class="num">0,2</td>
 <td class="num">41,27</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 </tbody>
 </table>
@@ -209,9 +209,9 @@
 <th scope="col">Y</th>
 <th scope="col">мт</th>
 <th scope="col" class="num">пар</th>
-<th scope="col" class="num">ожидание</th>
+<th scope="col" class="num">ожидалось бы</th>
 <th scope="col" class="num">×</th>
-<th scope="col" class="num">p</th>
+<th scope="col">случайно?</th>
 </tr>
 </thead>
 <tbody>
@@ -221,7 +221,7 @@
 <td class="num">194</td>
 <td class="num">31,8</td>
 <td class="num">6,10</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -229,7 +229,7 @@
 <td class="num">103</td>
 <td class="num">26,4</td>
 <td class="num">3,90</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -237,7 +237,7 @@
 <td class="num">66</td>
 <td class="num">19,8</td>
 <td class="num">3,34</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -245,7 +245,7 @@
 <td class="num">65</td>
 <td class="num">17,4</td>
 <td class="num">3,74</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -253,7 +253,7 @@
 <td class="num">55</td>
 <td class="num">48,6</td>
 <td class="num">1,13</td>
-<td class="num dim">0,182</td>
+<td class="dim"><span title="p = 0,182">может быть случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF13</td>
@@ -261,7 +261,7 @@
 <td class="num">53</td>
 <td class="num">36,3</td>
 <td class="num">1,46</td>
-<td class="num dim">0,004</td>
+<td class="dim"><span title="p = 0,004">не случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF13</td>
@@ -269,7 +269,7 @@
 <td class="num">50</td>
 <td class="num">32,5</td>
 <td class="num">1,54</td>
-<td class="num dim">0,002</td>
+<td class="dim"><span title="p = 0,002">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -277,7 +277,7 @@
 <td class="num">44</td>
 <td class="num">8,4</td>
 <td class="num">5,25</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -285,7 +285,7 @@
 <td class="num">43</td>
 <td class="num">11,7</td>
 <td class="num">3,67</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>R1a-CTS1211</td>
@@ -293,7 +293,7 @@
 <td class="num">43</td>
 <td class="num">25,4</td>
 <td class="num">1,69</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>N-Z1936</td>
@@ -301,7 +301,7 @@
 <td class="num">42</td>
 <td class="num">10,1</td>
 <td class="num">4,16</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF27</td>
@@ -309,7 +309,7 @@
 <td class="num">42</td>
 <td class="num">33,6</td>
 <td class="num">1,25</td>
-<td class="num dim">0,081</td>
+<td class="dim"><span title="p = 0,081">может быть случайно</span></td>
 </tr>
 <tr>
 <td>E-V13</td>
@@ -317,7 +317,7 @@
 <td class="num">40</td>
 <td class="num">24,8</td>
 <td class="num">1,62</td>
-<td class="num dim">0,002</td>
+<td class="dim"><span title="p = 0,002">не случайно</span></td>
 </tr>
 <tr>
 <td>I2a-CTS10228</td>
@@ -325,7 +325,7 @@
 <td class="num">38</td>
 <td class="num">22,9</td>
 <td class="num">1,66</td>
-<td class="num dim">0,002</td>
+<td class="dim"><span title="p = 0,002">не случайно</span></td>
 </tr>
 <tr>
 <td>R1a-CTS1211</td>
@@ -333,7 +333,7 @@
 <td class="num">37</td>
 <td class="num">28,4</td>
 <td class="num">1,30</td>
-<td class="num dim">0,059</td>
+<td class="dim"><span title="p = 0,059">может быть случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF13</td>
@@ -341,7 +341,7 @@
 <td class="num">37</td>
 <td class="num">27,4</td>
 <td class="num">1,35</td>
-<td class="num dim">0,040</td>
+<td class="dim"><span title="p = 0,040">может быть случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF13</td>
@@ -349,7 +349,7 @@
 <td class="num">35</td>
 <td class="num">18,1</td>
 <td class="num">1,94</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>I1-Z58</td>
@@ -357,7 +357,7 @@
 <td class="num">33</td>
 <td class="num">25,5</td>
 <td class="num">1,29</td>
-<td class="num dim">0,078</td>
+<td class="dim"><span title="p = 0,078">может быть случайно</span></td>
 </tr>
 <tr>
 <td>J1-L858</td>
@@ -365,7 +365,7 @@
 <td class="num">33</td>
 <td class="num">8,1</td>
 <td class="num">4,07</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>R1b-L48</td>
@@ -373,7 +373,7 @@
 <td class="num">33</td>
 <td class="num">9,9</td>
 <td class="num">3,32</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>I1-L22</td>
@@ -381,7 +381,7 @@
 <td class="num">31</td>
 <td class="num">14,3</td>
 <td class="num">2,17</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>R1b-DF27</td>
@@ -389,7 +389,7 @@
 <td class="num">31</td>
 <td class="num">24,0</td>
 <td class="num">1,29</td>
-<td class="num dim">0,088</td>
+<td class="dim"><span title="p = 0,088">может быть случайно</span></td>
 </tr>
 <tr>
 <td>R1b-U152</td>
@@ -397,7 +397,7 @@
 <td class="num">31</td>
 <td class="num">19,3</td>
 <td class="num">1,61</td>
-<td class="num dim">0,006</td>
+<td class="dim"><span title="p = 0,006">не случайно</span></td>
 </tr>
 <tr>
 <td>I1-Z58</td>
@@ -405,7 +405,7 @@
 <td class="num">30</td>
 <td class="num">16,2</td>
 <td class="num">1,85</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 <tr>
 <td>R1a-CTS1211</td>
@@ -413,7 +413,7 @@
 <td class="num">30</td>
 <td class="num">13,9</td>
 <td class="num">2,15</td>
-<td class="num dim">< 0,001</td>
+<td class="dim"><span title="p < 0,001">не случайно</span></td>
 </tr>
 </tbody>
 </table>
@@ -422,7 +422,7 @@
 <section>
 <div class="sec-head">
 <h2 id="по-странам">По странам <a class="anchor" href="#по-странам" aria-label="Ссылка на раздел «По странам»">#</a></h2>
-<p>Страны с 50 и более парами: три самых заметных сочетания.</p>
+<p>Страны, где обе линии известны у 50 и более человек: три сочетания, которые сильнее всего превышают случайное.</p>
 </div>
 <ul class="plain">
 <li><a href="/ru/c/united-states/">США</a> <span class="dim mono">n=1 078</span>: E-M191 × L3e (6, ×18,0); E-U175 × L1c (5, ×19,6); I1-Z58 × T2b (8, ×2,8)</li>
