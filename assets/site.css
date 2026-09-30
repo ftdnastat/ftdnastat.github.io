@@ -120,8 +120,7 @@ ul.plain.cols{columns:2;gap:24px}
 .p-dot{width:10px;height:10px;border-radius:2px;display:inline-block}.p-dot.y{background:var(--s1)}.p-dot.mt{background:var(--s2)}
 .p-lead{font-size:12.5px;color:var(--ink-3);line-height:1.35}
 .panel .bars,.panel .tree{border:0;padding:0;background:transparent}
-.panel .more{font-size:13px;justify-self:end}
-.tree.compact .tree-row{font-size:12.5px}
+.panel .more,.tree.compact .tree-row{font-size:12.5px}
 .panel .bar-row{font-size:12.5px}
 .tree.compact .tree-lab{padding-left:calc(var(--d) * 8px)}
 .tree.compact .tree-row .age{display:inline}
@@ -133,6 +132,7 @@ ul.plain.cols{columns:2;gap:24px}
 .ccard .panel{border:0;padding:0;background:transparent}
 .ccard[hidden]{display:none}
 .ccard{content-visibility:auto;contain-intrinsic-size:1px 700px}
+.ccard.light,.ccard.small{padding:12px 16px;gap:8px;contain-intrinsic-size:1px 130px}
 .empty{color:var(--ink-2);padding:24px 0}
 .q-none{display:block;padding:7px 12px}
 .note.small{font-size:13px;margin-top:10px}
