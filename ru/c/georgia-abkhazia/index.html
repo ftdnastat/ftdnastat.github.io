@@ -7,7 +7,7 @@
 <meta name="description" content="Абхазия. Y-ДНК: 94 кита, ведущие клады G-Z6779 28,7%, R-Z2124 12,8%, G-P15* 10,6%. мтДНК: 7 китов, ведущие ветки D4g 14,3%, I4a 14,3%, H 14,3%.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,24 +30,26 @@
 <meta name="twitter:title" content="Абхазия: гаплогруппы FTDNA">
 <meta name="twitter:description" content="Абхазия. Y-ДНК: 94 кита, ведущие клады G-Z6779 28,7%, R-Z2124 12,8%, G-P15* 10,6%. мтДНК: 7 китов, ведущие ветки D4g 14,3%, I4a 14,3%, H 14,3%.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Страны","item":"https://ftdnastat.github.io/ru/countries/"},{"@type":"ListItem","position":2,"name":"Грузия","item":"https://ftdnastat.github.io/ru/c/georgia/"},{"@type":"ListItem","position":3,"name":"Абхазия","item":"https://ftdnastat.github.io/ru/c/georgia-abkhazia/"}]}</script>
 </head>
 <body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
 </form>
-<a class="lang" href="/en/c/georgia-abkhazia/" data-lang-switch="en">English</a>
+<a class="lang" href="/en/c/georgia-abkhazia/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <nav class="crumbs" aria-label="Вы здесь"><a href="/ru/countries/">Страны</a><span class="sep">›</span><a href="/ru/c/georgia/">Грузия</a><span class="sep">›</span><span>Абхазия</span></nav>
 <div class="head">
 <h1>Абхазия: сводка</h1>
@@ -56,127 +58,131 @@
 </div>
 <div class="two-panels">
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot y"></i>Мужская линия · Y-ДНК</span><span class="dim mono">n=94 · показано 16 веток</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot y"></i>Мужская линия · Y-ДНК</h2>
+<span class="dim mono">n=94 · показано 16 веток</span></div>
 <div class="p-lead">Ключевые SNP накопительно: у каждой ветки все киты под ней, дети с отступом, возраст TMRCA.</div>
 <div class="tree compact">
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>G2a</b></div>
+<div class="tree-lab" title="G2a"><b>G2a</b></div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s6);opacity:1.00"></i></div>
 <div class="bar-val">38 · 40,4% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>L1266</b></div>
+<div class="tree-lab" title="└ L1266">└ <b>L1266</b></div>
 <div class="bar-track"><i style="width:71.1%;background:var(--s6);opacity:0.85"></i></div>
 <div class="bar-val">27 · 28,7% <span class="age">8 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>L1264</b></div>
+<div class="tree-lab" title="└ L1264">└ <b>L1264</b></div>
 <div class="bar-track"><i style="width:57.9%;background:var(--s6);opacity:0.70"></i></div>
 <div class="bar-val">22 · 23,4% <span class="age">4 200 лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>G2a1-Z6552</b></div>
+<div class="tree-lab" title="└ G2a1-Z6552">└ <b>G2a1-Z6552</b></div>
 <div class="bar-track"><i style="width:26.3%;background:var(--s6);opacity:0.85"></i></div>
 <div class="bar-val">10 · 10,6% <span class="age">17 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>FGC719</b></div>
+<div class="tree-lab" title="└ FGC719">└ <b>FGC719</b></div>
 <div class="bar-track"><i style="width:7.9%;background:var(--s6);opacity:0.70"></i></div>
 <div class="bar-val">3 · 3,2% <span class="age">3 700 лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>J2</b></div>
+<div class="tree-lab" title="J2"><b>J2</b></div>
 <div class="bar-track"><i style="width:55.3%;background:var(--s3);opacity:1.00"></i></div>
 <div class="bar-val">21 · 22,3% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>J2a</b></div>
+<div class="tree-lab" title="└ J2a">└ <b>J2a</b></div>
 <div class="bar-track"><i style="width:44.7%;background:var(--s3);opacity:0.85"></i></div>
 <div class="bar-val">17 · 18,1% <span class="age">20 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>Z7671</b></div>
+<div class="tree-lab" title="└ Z7671">└ <b>Z7671</b></div>
 <div class="bar-track"><i style="width:13.2%;background:var(--s3);opacity:0.70"></i></div>
 <div class="bar-val">5 · 5,3% <span class="age">13 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>Z6049</b></div>
+<div class="tree-lab" title="└ Z6049">└ <b>Z6049</b></div>
 <div class="bar-track"><i style="width:10.5%;background:var(--s3);opacity:0.70"></i></div>
 <div class="bar-val">4 · 4,3% <span class="age">17 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>L25</b></div>
+<div class="tree-lab" title="└ L25">└ <b>L25</b></div>
 <div class="bar-track"><i style="width:7.9%;background:var(--s3);opacity:0.70"></i></div>
 <div class="bar-val">3 · 3,2% <span class="age">8 800 лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>R</b></div>
+<div class="tree-lab" title="R"><b>R</b></div>
 <div class="bar-track"><i style="width:52.6%;background:var(--s1);opacity:1.00"></i></div>
 <div class="bar-val">20 · 21,3% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>R1a-Z2124</b></div>
+<div class="tree-lab" title="└ R1a-Z2124">└ <b>R1a-Z2124</b></div>
 <div class="bar-track"><i style="width:31.6%;background:var(--s1);opacity:0.85"></i></div>
 <div class="bar-val">12 · 12,8% <span class="age">4 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>Z2123</b></div>
+<div class="tree-lab" title="└ Z2123">└ <b>Z2123</b></div>
 <div class="bar-track"><i style="width:21.1%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">8 · 8,5% <span class="age">4 300 лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>R1b-Z2103 (M12149)</b></div>
+<div class="tree-lab" title="└ R1b-Z2103 (M12149)">└ <b>R1b-Z2103 (M12149)</b></div>
 <div class="bar-track"><i style="width:13.2%;background:var(--s1);opacity:0.85"></i></div>
 <div class="bar-val">5 · 5,3% <span class="age">5 700 лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>L-M317</b></div>
+<div class="tree-lab" title="L-M317"><b>L-M317</b></div>
 <div class="bar-track"><i style="width:13.2%;background:var(--s0);opacity:1.00"></i></div>
 <div class="bar-val">5 · 5,3% <span class="age">14 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>I</b></div>
+<div class="tree-lab" title="I"><b>I</b></div>
 <div class="bar-track"><i style="width:10.5%;background:var(--s2);opacity:1.00"></i></div>
 <div class="bar-val">4 · 4,3% <span class="age">35 тыс. лет</span></div>
 </div>
 </div>
 <a class="more" href="/ru/c/georgia-abkhazia/y/">Абхазия: подробно по Y-ДНК →</a></div>
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot mt"></i>Женская линия · мтДНК</span><span class="dim mono">n=7 · показано 7 веток</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot mt"></i>Женская линия · мтДНК</h2>
+<span class="dim mono">n=7 · показано 7 веток</span></div>
 <div class="p-lead">Самые частые ветки: макрогруппа, число и первая буква, как U5a или H13a. Возраст TMRCA по Mitotree FTDNA, где известен.</div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab">D4g</div>
+<div class="bar-lab" title="D4g">D4g</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s0)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">20 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">I4a</div>
+<div class="bar-lab" title="I4a">I4a</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s8)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">5 000 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H</div>
+<div class="bar-lab" title="H">H</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s1)"></i></div>
 <div class="bar-val">1 · 14,3%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U5a</div>
+<div class="bar-lab" title="U5a">U5a</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s2)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">21 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U2e</div>
+<div class="bar-lab" title="U2e">U2e</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s2)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">23 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U3b</div>
+<div class="bar-lab" title="U3b">U3b</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s2)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">14 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U4b</div>
+<div class="bar-lab" title="U4b">U4b</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s2)"></i></div>
 <div class="bar-val">1 · 14,3% <span class="age">11 тыс. лет</span></div>
 </div>
@@ -185,7 +191,9 @@
 </div>
 <div class="legend"><span class="dim">Цвет полоски это макрогруппа, восемь самых частых в мире; остальные серым.</span><span><i style="background:var(--s1)"></i>R</span><span><i style="background:var(--s2)"></i>I</span><span><i style="background:var(--s3)"></i>J</span><span><i style="background:var(--s4)"></i>E</span><span><i style="background:var(--s5)"></i>N</span><span><i style="background:var(--s6)"></i>G</span><span><i style="background:var(--s7)"></i>Q</span><span><i style="background:var(--s8)"></i>T</span><span><i style="background:var(--s0)"></i>прочие</span></div>
 <section class="panel cmp-card" id="yfull">
-<div class="panel-head"><span class="p-title"><i class="p-dot yf"></i>FTDNA против YFull</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot yf"></i>FTDNA против YFull</h2>
+</div>
 <div class="p-lead">Клиенты двух компаний рядом: сплошная полоса FTDNA, штрихованная YFull, разница в процентных пунктах. Крупные клады уровня 2, топ-8.</div>
 <div class="two">
 <div>
@@ -261,6 +269,12 @@
 <a class="more" href="/ru/c/georgia-abkhazia/y/#yfull">полное сравнение по Y-ДНК →</a></div>
 </div>
 </section>
+<aside class="panel cta">
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot pr"></i>Проверить свою гаплогруппу</h2>
+</div>
+<div class="p-lead">Абхазия: 107 китов уже в корпусе предиктора ypredictor. Вставьте свои STR-маркеры, и он найдёт ближайших совпаденцев и предскажет ветвь Y-дерева.</div>
+<a class="btn" href="https://ypredictor.github.io/?lang=ru">Открыть предиктор</a></aside>
 <div class="metrics">
 <div class="metric">
 <div class="m-val">0,96</div>
@@ -286,7 +300,7 @@
 <section id="peoples">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="народы-и-языки-по-yfull">Народы и языки по YFull <a class="anchor" href="#народы-и-языки-по-yfull" aria-label="#">#</a></h2>
+<h2 id="народы-и-языки-по-yfull">Народы и языки по YFull <a class="anchor" href="#народы-и-языки-по-yfull" aria-label="Ссылка на раздел «Народы и языки по YFull»">#</a></h2>
 <p>Родной язык, который клиенты YFull указали вместе с этим регионом. Это самоопределение тестируемых, не перепись.</p>
 </div>
 <ul class="plain cols">
@@ -294,7 +308,7 @@
 </ul>
 </section>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

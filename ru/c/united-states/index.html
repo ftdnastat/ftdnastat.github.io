@@ -7,7 +7,7 @@
 <meta name="description" content="США. Y-ДНК: 30 662 кита, ведущие клады R-L151* 4,8%, R-Z39589* 2,4%, R-L21* 2,4%. мтДНК: 20 067 китов, ведущие ветки J1c 5,8%, T2b 5,0%, U5a 4,4%.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,24 +30,26 @@
 <meta name="twitter:title" content="США: гаплогруппы FTDNA">
 <meta name="twitter:description" content="США. Y-ДНК: 30 662 кита, ведущие клады R-L151* 4,8%, R-Z39589* 2,4%, R-L21* 2,4%. мтДНК: 20 067 китов, ведущие ветки J1c 5,8%, T2b 5,0%, U5a 4,4%.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og/c-united-states-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Страны","item":"https://ftdnastat.github.io/ru/countries/"},{"@type":"ListItem","position":2,"name":"США","item":"https://ftdnastat.github.io/ru/c/united-states/"}]}</script>
 </head>
 <body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
 </form>
-<a class="lang" href="/en/c/united-states/" data-lang-switch="en">English</a>
+<a class="lang" href="/en/c/united-states/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <nav class="crumbs" aria-label="Вы здесь"><a href="/ru/countries/">Страны</a><span class="sep">›</span><span>США</span></nav>
 <div class="head">
 <h1>США: сводка</h1>
@@ -56,207 +58,211 @@
 </div>
 <div class="two-panels">
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot y"></i>Мужская линия · Y-ДНК</span><span class="dim mono">n=30 662 · показано 24 веток</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot y"></i>Мужская линия · Y-ДНК</h2>
+<span class="dim mono">n=30 662 · показано 24 веток</span></div>
 <div class="p-lead">Ключевые SNP накопительно: у каждой ветки все киты под ней, дети с отступом, возраст TMRCA.</div>
 <div class="tree compact">
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>R</b></div>
+<div class="tree-lab" title="R"><b>R</b></div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s1);opacity:1.00"></i></div>
 <div class="bar-val">20 228 · 66,0% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>R1b-L51</b></div>
+<div class="tree-lab" title="└ R1b-L51">└ <b>R1b-L51</b></div>
 <div class="bar-track"><i style="width:91.4%;background:var(--s1);opacity:0.85"></i></div>
 <div class="bar-val">18 490 · 60,3% <span class="age">6 100 лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>P312</b></div>
+<div class="tree-lab" title="└ P312">└ <b>P312</b></div>
 <div class="bar-track"><i style="width:58.6%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">11 850 · 38,6% <span class="age">4 900 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>L21</b></div>
+<div class="tree-lab" title="└ L21">└ <b>L21</b></div>
 <div class="bar-track"><i style="width:36.3%;background:var(--s1);opacity:0.55"></i></div>
 <div class="bar-val">7 346 · 24,0% <span class="age">4 700 лет</span></div>
 </div>
 <div class="tree-row" style="--d:4">
-<div class="tree-lab">└ <b>DF13</b></div>
+<div class="tree-lab" title="└ DF13">└ <b>DF13</b></div>
 <div class="bar-track"><i style="width:32.7%;background:var(--s1);opacity:0.45"></i></div>
 <div class="bar-val">6 622 · 21,6% <span class="age">4 600 лет</span></div>
 </div>
 <div class="tree-row" style="--d:5">
-<div class="tree-lab">└ <b>M222</b></div>
+<div class="tree-lab" title="└ M222">└ <b>M222</b></div>
 <div class="bar-track"><i style="width:5.8%;background:var(--s1);opacity:0.45"></i></div>
 <div class="bar-val">1 182 · 3,9% <span class="age">2 100 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>DF27</b></div>
+<div class="tree-lab" title="└ DF27">└ <b>DF27</b></div>
 <div class="bar-track"><i style="width:10.8%;background:var(--s1);opacity:0.55"></i></div>
 <div class="bar-val">2 184 · 7,1% <span class="age">4 700 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>U152</b></div>
+<div class="tree-lab" title="└ U152">└ <b>U152</b></div>
 <div class="bar-track"><i style="width:8.6%;background:var(--s1);opacity:0.55"></i></div>
 <div class="bar-val">1 748 · 5,7% <span class="age">4 700 лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>U106</b></div>
+<div class="tree-lab" title="└ U106">└ <b>U106</b></div>
 <div class="bar-track"><i style="width:24.9%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">5 032 · 16,4% <span class="age">5 000 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>L48</b></div>
+<div class="tree-lab" title="└ L48">└ <b>L48</b></div>
 <div class="bar-track"><i style="width:12.1%;background:var(--s1);opacity:0.55"></i></div>
 <div class="bar-val">2 440 · 8,0% <span class="age">4 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>R1a-M198</b></div>
+<div class="tree-lab" title="└ R1a-M198">└ <b>R1a-M198</b></div>
 <div class="bar-track"><i style="width:6.1%;background:var(--s1);opacity:0.85"></i></div>
 <div class="bar-val">1 233 · 4,0% <span class="age">8 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>Z282</b></div>
+<div class="tree-lab" title="└ Z282">└ <b>Z282</b></div>
 <div class="bar-track"><i style="width:4.0%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">815 · 2,7% <span class="age">4 800 лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>I</b></div>
+<div class="tree-lab" title="I"><b>I</b></div>
 <div class="bar-track"><i style="width:27.9%;background:var(--s2);opacity:1.00"></i></div>
 <div class="bar-val">5 644 · 18,4% <span class="age">35 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>I1</b></div>
+<div class="tree-lab" title="└ I1">└ <b>I1</b></div>
 <div class="bar-track"><i style="width:17.3%;background:var(--s2);opacity:0.85"></i></div>
 <div class="bar-val">3 504 · 11,4% <span class="age">20 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>DF29</b></div>
+<div class="tree-lab" title="└ DF29">└ <b>DF29</b></div>
 <div class="bar-track"><i style="width:14.4%;background:var(--s2);opacity:0.70"></i></div>
 <div class="bar-val">2 911 · 9,5% <span class="age">4 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>Z58</b></div>
+<div class="tree-lab" title="└ Z58">└ <b>Z58</b></div>
 <div class="bar-track"><i style="width:7.2%;background:var(--s2);opacity:0.55"></i></div>
 <div class="bar-val">1 456 · 4,7% <span class="age">4 500 лет</span></div>
 </div>
 <div class="tree-row" style="--d:3">
-<div class="tree-lab">└ <b>L22</b></div>
+<div class="tree-lab" title="└ L22">└ <b>L22</b></div>
 <div class="bar-track"><i style="width:4.0%;background:var(--s2);opacity:0.55"></i></div>
 <div class="bar-val">800 · 2,6% <span class="age">3 900 лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>I2b</b></div>
+<div class="tree-lab" title="└ I2b">└ <b>I2b</b></div>
 <div class="bar-track"><i style="width:6.5%;background:var(--s2);opacity:0.85"></i></div>
 <div class="bar-val">1 305 · 4,3% <span class="age">17 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>E</b></div>
+<div class="tree-lab" title="E"><b>E</b></div>
 <div class="bar-track"><i style="width:12.0%;background:var(--s4);opacity:1.00"></i></div>
 <div class="bar-val">2 420 · 7,9% <span class="age">52 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>M2 (E1b1a)</b></div>
+<div class="tree-lab" title="└ M2 (E1b1a)">└ <b>M2 (E1b1a)</b></div>
 <div class="bar-track"><i style="width:6.3%;background:var(--s4);opacity:0.85"></i></div>
 <div class="bar-val">1 280 · 4,2% <span class="age">18 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>E1b1b-M35</b></div>
+<div class="tree-lab" title="└ E1b1b-M35">└ <b>E1b1b-M35</b></div>
 <div class="bar-track"><i style="width:4.5%;background:var(--s4);opacity:0.85"></i></div>
 <div class="bar-val">912 · 3,0% <span class="age">25 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>J</b></div>
+<div class="tree-lab" title="J"><b>J</b></div>
 <div class="bar-track"><i style="width:4.9%;background:var(--s3);opacity:1.00"></i></div>
 <div class="bar-val">995 · 3,2% <span class="age">30 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>J2</b></div>
+<div class="tree-lab" title="└ J2">└ <b>J2</b></div>
 <div class="bar-track"><i style="width:3.9%;background:var(--s3);opacity:0.85"></i></div>
 <div class="bar-val">795 · 2,6% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>G</b></div>
+<div class="tree-lab" title="G"><b>G</b></div>
 <div class="bar-track"><i style="width:3.4%;background:var(--s6);opacity:1.00"></i></div>
 <div class="bar-val">683 · 2,2% <span class="age">28 тыс. лет</span></div>
 </div>
 </div>
 <a class="more" href="/ru/c/united-states/y/">США: подробно по Y-ДНК →</a></div>
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot mt"></i>Женская линия · мтДНК</span><span class="dim mono">n=20 067 · показано 15 веток</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot mt"></i>Женская линия · мтДНК</h2>
+<span class="dim mono">n=20 067 · показано 15 веток</span></div>
 <div class="p-lead">Самые частые ветки: макрогруппа, число и первая буква, как U5a или H13a. Возраст TMRCA по Mitotree FTDNA, где известен.</div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab">J1c</div>
+<div class="bar-lab" title="J1c">J1c</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s4)"></i></div>
 <div class="bar-val">1 171 · 5,8% <span class="age">13 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">T2b</div>
+<div class="bar-lab" title="T2b">T2b</div>
 <div class="bar-track"><i style="width:86.2%;background:var(--s3)"></i></div>
 <div class="bar-val">1 009 · 5,0% <span class="age">8 500 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U5a</div>
+<div class="bar-lab" title="U5a">U5a</div>
 <div class="bar-track"><i style="width:75.0%;background:var(--s2)"></i></div>
 <div class="bar-val">878 · 4,4% <span class="age">21 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">K1a</div>
+<div class="bar-lab" title="K1a">K1a</div>
 <div class="bar-track"><i style="width:72.2%;background:var(--s5)"></i></div>
 <div class="bar-val">846 · 4,2% <span class="age">11 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1a</div>
+<div class="bar-lab" title="H1a">H1a</div>
 <div class="bar-track"><i style="width:66.3%;background:var(--s1)"></i></div>
 <div class="bar-val">776 · 3,9% <span class="age">5 800 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U5b</div>
+<div class="bar-lab" title="U5b">U5b</div>
 <div class="bar-track"><i style="width:60.3%;background:var(--s2)"></i></div>
 <div class="bar-val">706 · 3,5% <span class="age">22 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1c</div>
+<div class="bar-lab" title="H1c">H1c</div>
 <div class="bar-track"><i style="width:45.3%;background:var(--s1)"></i></div>
 <div class="bar-val">530 · 2,6% <span class="age">5 300 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1b</div>
+<div class="bar-lab" title="H1b">H1b</div>
 <div class="bar-track"><i style="width:44.9%;background:var(--s1)"></i></div>
 <div class="bar-val">526 · 2,6% <span class="age">5 100 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H2a</div>
+<div class="bar-lab" title="H2a">H2a</div>
 <div class="bar-track"><i style="width:40.9%;background:var(--s1)"></i></div>
 <div class="bar-val">479 · 2,4% <span class="age">8 200 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H5a</div>
+<div class="bar-lab" title="H5a">H5a</div>
 <div class="bar-track"><i style="width:37.6%;background:var(--s1)"></i></div>
 <div class="bar-val">440 · 2,2% <span class="age">7 800 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H6a</div>
+<div class="bar-lab" title="H6a">H6a</div>
 <div class="bar-track"><i style="width:35.8%;background:var(--s1)"></i></div>
 <div class="bar-val">419 · 2,1% <span class="age">7 900 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">T1a</div>
+<div class="bar-lab" title="T1a">T1a</div>
 <div class="bar-track"><i style="width:35.8%;background:var(--s3)"></i></div>
 <div class="bar-val">419 · 2,1% <span class="age">13 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1</div>
+<div class="bar-lab" title="H1">H1</div>
 <div class="bar-track"><i style="width:35.4%;background:var(--s1)"></i></div>
 <div class="bar-val">415 · 2,1% <span class="age">7 200 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H4a</div>
+<div class="bar-lab" title="H4a">H4a</div>
 <div class="bar-track"><i style="width:24.9%;background:var(--s1)"></i></div>
 <div class="bar-val">291 · 1,5% <span class="age">9 500 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">L3e</div>
+<div class="bar-lab" title="L3e">L3e</div>
 <div class="bar-track"><i style="width:23.7%;background:var(--s7)"></i></div>
 <div class="bar-val">278 · 1,4% <span class="age">36 тыс. лет</span></div>
 </div>
@@ -265,7 +271,9 @@
 </div>
 <div class="legend"><span class="dim">Цвет полоски это макрогруппа, восемь самых частых в мире; остальные серым.</span><span><i style="background:var(--s1)"></i>R</span><span><i style="background:var(--s2)"></i>I</span><span><i style="background:var(--s3)"></i>J</span><span><i style="background:var(--s4)"></i>E</span><span><i style="background:var(--s5)"></i>N</span><span><i style="background:var(--s6)"></i>G</span><span><i style="background:var(--s7)"></i>Q</span><span><i style="background:var(--s8)"></i>T</span><span><i style="background:var(--s0)"></i>прочие</span></div>
 <section class="panel cmp-card" id="yfull">
-<div class="panel-head"><span class="p-title"><i class="p-dot yf"></i>FTDNA против YFull</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot yf"></i>FTDNA против YFull</h2>
+</div>
 <div class="p-lead">Клиенты двух компаний рядом: сплошная полоса FTDNA, штрихованная YFull, разница в процентных пунктах. Крупные клады уровня 2, топ-8.</div>
 <div class="two">
 <div>
@@ -412,6 +420,12 @@
 <a class="more" href="/ru/c/united-states/mt/#yfull">полное сравнение по мтДНК →</a></div>
 </div>
 </section>
+<aside class="panel cta">
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot pr"></i>Проверить свою гаплогруппу</h2>
+</div>
+<div class="p-lead">США: 124 кита уже в корпусе предиктора ypredictor. Вставьте свои STR-маркеры, и он найдёт ближайших совпаденцев и предскажет ветвь Y-дерева.</div>
+<a class="btn" href="https://ypredictor.github.io/?lang=ru">Открыть предиктор</a></aside>
 <div class="metrics">
 <div class="metric">
 <div class="m-val">0,77</div>
@@ -451,7 +465,7 @@
 </div>
 <section>
 <div class="sec-head">
-<h2 id="субрегионы">Субрегионы <a class="anchor" href="#субрегионы" aria-label="#">#</a></h2>
+<h2 id="субрегионы">Субрегионы <a class="anchor" href="#субрегионы" aria-label="Ссылка на раздел «Субрегионы»">#</a></h2>
 </div>
 <ul class="plain cols">
 <li><a href="/ru/c/united-states-native-american/">США · коренные американцы</a> <span class="dim mono">1 831 / 2 353</span></li>
@@ -461,10 +475,10 @@
 <section id="regions">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="регионы-по-yfull">Регионы по YFull <a class="anchor" href="#регионы-по-yfull" aria-label="#">#</a></h2>
+<h2 id="регионы-по-yfull">Регионы по YFull <a class="anchor" href="#регионы-по-yfull" aria-label="Ссылка на раздел «Регионы по YFull»">#</a></h2>
 <p>У FTDNA этих регионов нет как отдельных сущностей, у YFull они указаны у 20 и более образцов. Только клиенты YFull, современные образцы.</p>
 </div>
-<div class="tablewrap">
+<div class="tablewrap" tabindex="0" role="region" aria-label="Регионы по YFull">
 <table class="list"><caption class="sr-only">Регионы по YFull</caption>
 <thead>
 <tr>
@@ -650,7 +664,7 @@
 <section id="peoples">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="народы-и-языки-по-yfull">Народы и языки по YFull <a class="anchor" href="#народы-и-языки-по-yfull" aria-label="#">#</a></h2>
+<h2 id="народы-и-языки-по-yfull">Народы и языки по YFull <a class="anchor" href="#народы-и-языки-по-yfull" aria-label="Ссылка на раздел «Народы и языки по YFull»">#</a></h2>
 <p>Родной язык, который клиенты YFull указали вместе со страной; образцы регионов с собственной страницей (республики, автономии) показаны на их страницах. Это самоопределение тестируемых, не перепись.</p>
 </div>
 <ul class="plain cols">
@@ -661,11 +675,11 @@
 <section id="pairs">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="отцовская-и-материнская-линии-вместе">Отцовская и материнская линии вместе <a class="anchor" href="#отцовская-и-материнская-линии-вместе" aria-label="#">#</a></h2>
+<h2 id="отцовская-и-материнская-линии-вместе">Отцовская и материнская линии вместе <a class="anchor" href="#отцовская-и-материнская-линии-вместе" aria-label="Ссылка на раздел «Отцовская и материнская линии вместе»">#</a></h2>
 <p>Люди, сдавшие на YFull и Y, и мт: сочетания клада Y × ветка мт, наблюдаемое против ожидаемого при независимости. <a href="/ru/pairs/">Y × мт →</a> <span class="dim mono">n=1 078</span></p>
 </div>
 <h3>Самые частые сочетания</h3>
-<div class="tablewrap">
+<div class="tablewrap" tabindex="0" role="region" aria-label="Y × мт: сочетания линий">
 <table class="list"><caption class="sr-only">Y × мт: сочетания линий</caption>
 <thead>
 <tr>
@@ -738,7 +752,7 @@
 </div>
 </section>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

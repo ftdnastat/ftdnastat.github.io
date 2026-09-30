@@ -7,7 +7,7 @@
 <meta name="description" content="Y clade and mt branch combinations of people with both tests on YFull: observed against expected.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,24 +30,24 @@
 <meta name="twitter:title" content="Y-DNA × mtDNA: paternal and maternal line combinations on YFull">
 <meta name="twitter:description" content="Y clade and mt branch combinations of people with both tests on YFull: observed against expected.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ftdnastat.github.io/en/"},{"@type":"ListItem","position":2,"name":"Y × mt","item":"https://ftdnastat.github.io/en/pairs/"}]}</script>
 </head>
 <body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
 <nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/" aria-current="page">Y × mt</a><a href="/en/about/">About the data</a></nav>
-<form class="search" action="/en/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Nothing found" data-all="All countries →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" data-none="Nothing found" data-all="All countries →">
+<div id="q-out" class="q-out" role="region" aria-label="Search results" hidden></div>
 </form>
-<a class="lang" href="/ru/pairs/" data-lang-switch="ru">Русский</a>
+<a class="lang" href="/ru/pairs/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <nav class="crumbs" aria-label="You are here"><a href="/en/">Home</a><span class="sep">›</span><span>Y × mt</span></nav>
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
@@ -56,10 +56,10 @@
 </div>
 <section>
 <div class="sec-head">
-<h2 id="notably-above-chance">Notably above chance <a class="anchor" href="#notably-above-chance" aria-label="#">#</a></h2>
+<h2 id="notably-above-chance">Notably above chance <a class="anchor" href="#notably-above-chance" aria-label="Link to section “Notably above chance”">#</a></h2>
 <p>Pairs from 20 or more people with a ratio of at least 1.5.</p>
 </div>
-<div class="tablewrap">
+<div class="tablewrap" tabindex="0" role="region" aria-label="Y × mt: line combinations">
 <table class="list"><caption class="sr-only">Y × mt: line combinations</caption>
 <thead>
 <tr>
@@ -182,9 +182,9 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="most-frequent-combinations">Most frequent combinations <a class="anchor" href="#most-frequent-combinations" aria-label="#">#</a></h2>
+<h2 id="most-frequent-combinations">Most frequent combinations <a class="anchor" href="#most-frequent-combinations" aria-label="Link to section “Most frequent combinations”">#</a></h2>
 </div>
-<div class="tablewrap">
+<div class="tablewrap" tabindex="0" role="region" aria-label="Y × mt: line combinations">
 <table class="list"><caption class="sr-only">Y × mt: line combinations</caption>
 <thead>
 <tr>
@@ -377,7 +377,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="by-country">By country <a class="anchor" href="#by-country" aria-label="#">#</a></h2>
+<h2 id="by-country">By country <a class="anchor" href="#by-country" aria-label="Link to section “By country”">#</a></h2>
 <p>Countries with 50 or more pairs: the three most notable combinations.</p>
 </div>
 <ul class="plain">
@@ -427,7 +427,7 @@
 </ul>
 </section>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-29.</footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

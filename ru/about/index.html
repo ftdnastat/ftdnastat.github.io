@@ -7,7 +7,7 @@
 <meta name="description" content="Источники, методика и оговорки статистики гаплогрупп FTDNA по странам.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,23 +30,25 @@
 <meta name="twitter:title" content="О данных">
 <meta name="twitter:description" content="Источники, методика и оговорки статистики гаплогрупп FTDNA по странам.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/" aria-current="page">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
 </form>
-<a class="lang" href="/en/about/" data-lang-switch="en">English</a>
+<a class="lang" href="/en/about/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="head">
 <h1>О данных</h1>
 </div>
@@ -60,15 +62,17 @@
 <p>Вложенные клады никогда не показываются рядом как сиблинги: либо накопительное дерево, где у узла все киты под ним, либо взаимоисключающие бакеты со звёздочкой.</p>
 <p>Возраст ветки — это TMRCA по оценке FTDNA Discover, средняя точка оценки, округлённая до столетия; выше 10 тысяч лет округление вверх до тысячи. Возрасты мт-веток взяты из Mitotree FTDNA там, где ветка в нём есть.</p>
 <p>Порог достоверности один на сайт: выборки меньше 50 китов помечены как малые и не участвуют в находках; ближайшие страны считаются от 100 китов, сигнатурная ветка — от 10 китов.</p>
-<h2 id="данные-yfull">Данные YFull <a class="anchor" href="#данные-yfull" aria-label="#">#</a></h2>
+<h2 id="данные-yfull">Данные YFull <a class="anchor" href="#данные-yfull" aria-label="Ссылка на раздел «Данные YFull»">#</a></h2>
 <p>Второй источник — публичные деревья YFull (Y-дерево и мт-дерево), снапшот от 2026-09-29, обновляется раз в месяц. YFull — это платный анализ полных Y-хромосом и мт-геномов, выборка ещё сильнее смещена к энтузиастам и проектам, чем у FTDNA: Саудовская Аравия даёт больше образцов, чем любая другая страна.</p>
 <p>В сравнениях со страницами FTDNA участвуют только клиенты YFull с номером YF и только современные образцы: палео-ДНК и образцы из GenBank и публикаций исключены, потому что у FTDNA считаются только клиенты. По мт таких образцов у YFull меньше трети, поэтому мт-сравнения скромнее Y.</p>
 <p>Деревья YFull и FTDNA ветвятся по-разному и называют узлы разными SNP. Образец YFull размещается на дереве FTDNA по SNP, общим для двух деревьев: 88% узлов YFull находят узел FTDNA прямо, остальные через ближайшего резолвленного предка. Доли на уровнях считаются потом тем же кодом, что для китов FTDNA.</p>
 <p>Страна и регион у YFull, как и у FTDNA, указаны тестируемым. Коды регионов сопоставлены с сущностями FTDNA вручную: республики России, автономии Испании через провинции, регионы Италии, части Соединённого Королевства. Образцы из региона, который у FTDNA является отдельной сущностью, из выборки страны вычтены.</p>
 <p>Язык у YFull — это самоопределение тестируемого по ISO 639-3, у FTDNA такого поля нет. Язык не равен этносу и не равен региону: чеченцы Иордании считаются вместе с чеченцами Чечни, а «арабский» объединяет все арабские страны.</p>
+<h2 id="предиктор-ypredictor">Предиктор ypredictor <a class="anchor" href="#предиктор-ypredictor" aria-label="Ссылка на раздел «Предиктор ypredictor»">#</a></h2>
+<p>Родственный проект <a href="https://ypredictor.github.io/?lang=ru">ypredictor.github.io</a>: вставьте STR-маркеры из FTDNA и получите предсказанную ветвь Y-дерева с ближайшими совпаденцами. Страны совпаденцев там ведут на страницы этого сайта, а отсюда можно проверить свою гаплогруппу по маркерам.</p>
 </div>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

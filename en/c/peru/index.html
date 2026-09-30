@@ -7,7 +7,7 @@
 <meta name="description" content="Peru. Y-DNA: 128 kits, leading clades Q-M3 28.1%, R-Z278 10.2%, R-L151* 5.5%. mtDNA: 84 kits, leading branches B2 23.8%, C1b 16.7%, A2 9.5%.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,24 +30,24 @@
 <meta name="twitter:title" content="Peru: FTDNA haplogroups">
 <meta name="twitter:description" content="Peru. Y-DNA: 128 kits, leading clades Q-M3 28.1%, R-Z278 10.2%, R-L151* 5.5%. mtDNA: 84 kits, leading branches B2 23.8%, C1b 16.7%, A2 9.5%.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og/c-peru-en.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Countries","item":"https://ftdnastat.github.io/en/countries/"},{"@type":"ListItem","position":2,"name":"Peru","item":"https://ftdnastat.github.io/en/c/peru/"}]}</script>
 </head>
 <body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
 <nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
-<form class="search" action="/en/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Nothing found" data-all="All countries →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" data-none="Nothing found" data-all="All countries →">
+<div id="q-out" class="q-out" role="region" aria-label="Search results" hidden></div>
 </form>
-<a class="lang" href="/ru/c/peru/" data-lang-switch="ru">Русский</a>
+<a class="lang" href="/ru/c/peru/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <nav class="crumbs" aria-label="You are here"><a href="/en/countries/">Countries</a><span class="sep">›</span><span>Peru</span></nav>
 <div class="head">
 <h1>Peru: summary</h1>
@@ -55,177 +55,181 @@
 </div>
 <div class="two-panels">
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot y"></i>Paternal line · Y-DNA</span><span class="dim mono">n=128 · 18 branches shown</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot y"></i>Paternal line · Y-DNA</h2>
+<span class="dim mono">n=128 · 18 branches shown</span></div>
 <div class="p-lead">Key SNPs, cumulative: each branch counts all kits below it, children indented, TMRCA age.</div>
 <div class="tree compact">
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>R1b-L51</b></div>
+<div class="tree-lab" title="R1b-L51"><b>R1b-L51</b></div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s1);opacity:1.00"></i></div>
 <div class="bar-val">47 · 36.7% <span class="age">6,100 years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>P312</b></div>
+<div class="tree-lab" title="└ P312">└ <b>P312</b></div>
 <div class="bar-track"><i style="width:83.0%;background:var(--s1);opacity:0.85"></i></div>
 <div class="bar-val">39 · 30.5% <span class="age">4,900 years</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>DF27</b></div>
+<div class="tree-lab" title="└ DF27">└ <b>DF27</b></div>
 <div class="bar-track"><i style="width:63.8%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">30 · 23.4% <span class="age">4,700 years</span></div>
 </div>
 <div class="tree-row" style="--d:2">
-<div class="tree-lab">└ <b>U152</b></div>
+<div class="tree-lab" title="└ U152">└ <b>U152</b></div>
 <div class="bar-track"><i style="width:10.6%;background:var(--s1);opacity:0.70"></i></div>
 <div class="bar-val">5 · 3.9% <span class="age">4,700 years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>Q-L54</b></div>
+<div class="tree-lab" title="Q-L54"><b>Q-L54</b></div>
 <div class="bar-track"><i style="width:83.0%;background:var(--s7);opacity:1.00"></i></div>
 <div class="bar-val">39 · 30.5% <span class="age">17k years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>M3</b></div>
+<div class="tree-lab" title="└ M3">└ <b>M3</b></div>
 <div class="bar-track"><i style="width:76.6%;background:var(--s7);opacity:0.85"></i></div>
 <div class="bar-val">36 · 28.1% <span class="age">14k years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>E1b1b-M35</b></div>
+<div class="tree-lab" title="E1b1b-M35"><b>E1b1b-M35</b></div>
 <div class="bar-track"><i style="width:21.3%;background:var(--s4);opacity:1.00"></i></div>
 <div class="bar-val">10 · 7.8% <span class="age">25k years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>E-V13</b></div>
+<div class="tree-lab" title="└ E-V13">└ <b>E-V13</b></div>
 <div class="bar-track"><i style="width:8.5%;background:var(--s4);opacity:0.85"></i></div>
 <div class="bar-val">4 · 3.1% <span class="age">5,200 years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>E-PF2546</b></div>
+<div class="tree-lab" title="└ E-PF2546">└ <b>E-PF2546</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s4);opacity:0.85"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">2,400 years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>E-M34</b></div>
+<div class="tree-lab" title="└ E-M34">└ <b>E-M34</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s4);opacity:0.85"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">16k years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>J</b></div>
+<div class="tree-lab" title="J"><b>J</b></div>
 <div class="bar-track"><i style="width:19.1%;background:var(--s3);opacity:1.00"></i></div>
 <div class="bar-val">9 · 7.0% <span class="age">30k years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>J2a-M67</b></div>
+<div class="tree-lab" title="└ J2a-M67">└ <b>J2a-M67</b></div>
 <div class="bar-track"><i style="width:8.5%;background:var(--s3);opacity:0.85"></i></div>
 <div class="bar-val">4 · 3.1% <span class="age">13k years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>J1</b></div>
+<div class="tree-lab" title="└ J1">└ <b>J1</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s3);opacity:0.85"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">19k years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>G2a-P303</b></div>
+<div class="tree-lab" title="G2a-P303"><b>G2a-P303</b></div>
 <div class="bar-track"><i style="width:12.8%;background:var(--s6);opacity:1.00"></i></div>
 <div class="bar-val">6 · 4.7% <span class="age">12k years</span></div>
 </div>
 <div class="tree-row" style="--d:1">
-<div class="tree-lab">└ <b>L497</b></div>
+<div class="tree-lab" title="└ L497">└ <b>L497</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s6);opacity:0.85"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">7,700 years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>T</b></div>
+<div class="tree-lab" title="T"><b>T</b></div>
 <div class="bar-track"><i style="width:10.6%;background:var(--s8);opacity:1.00"></i></div>
 <div class="bar-val">5 · 3.9% <span class="age">28k years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>I</b></div>
+<div class="tree-lab" title="I"><b>I</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s2);opacity:1.00"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">35k years</span></div>
 </div>
 <div class="tree-row" style="--d:0">
-<div class="tree-lab"><b>O2</b></div>
+<div class="tree-lab" title="O2"><b>O2</b></div>
 <div class="bar-track"><i style="width:6.4%;background:var(--s0);opacity:1.00"></i></div>
 <div class="bar-val">3 · 2.3% <span class="age">29k years</span></div>
 </div>
 </div>
 <a class="more" href="/en/c/peru/y/">Peru: Y-DNA details →</a></div>
 <div class="panel">
-<div class="panel-head"><span class="p-title"><i class="p-dot mt"></i>Maternal line · mtDNA</span><span class="dim mono">n=84 · 15 branches shown</span></div>
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot mt"></i>Maternal line · mtDNA</h2>
+<span class="dim mono">n=84 · 15 branches shown</span></div>
 <div class="p-lead">Most frequent branches: macro-haplogroup, number and first letter, like U5a or H13a. TMRCA age from FTDNA Mitotree where known.</div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab">B2</div>
+<div class="bar-lab" title="B2">B2</div>
 <div class="bar-track"><i style="width:100.0%;background:var(--s0)"></i></div>
 <div class="bar-val">20 · 23.8% <span class="age">19k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">C1b</div>
+<div class="bar-lab" title="C1b">C1b</div>
 <div class="bar-track"><i style="width:70.0%;background:var(--s0)"></i></div>
 <div class="bar-val">14 · 16.7% <span class="age">19k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">A2</div>
+<div class="bar-lab" title="A2">A2</div>
 <div class="bar-track"><i style="width:40.0%;background:var(--s0)"></i></div>
 <div class="bar-val">8 · 9.5% <span class="age">17k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">D1</div>
+<div class="bar-lab" title="D1">D1</div>
 <div class="bar-track"><i style="width:35.0%;background:var(--s0)"></i></div>
 <div class="bar-val">7 · 8.3% <span class="age">21k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">B2b</div>
+<div class="bar-lab" title="B2b">B2b</div>
 <div class="bar-track"><i style="width:35.0%;background:var(--s0)"></i></div>
 <div class="bar-val">7 · 8.3% <span class="age">17k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">L3e</div>
+<div class="bar-lab" title="L3e">L3e</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s7)"></i></div>
 <div class="bar-val">2 · 2.4% <span class="age">36k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">C1c</div>
+<div class="bar-lab" title="C1c">C1c</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s0)"></i></div>
 <div class="bar-val">2 · 2.4% <span class="age">19k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">C1d</div>
+<div class="bar-lab" title="C1d">C1d</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s0)"></i></div>
 <div class="bar-val">2 · 2.4% <span class="age">19k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">A</div>
+<div class="bar-lab" title="A">A</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s0)"></i></div>
 <div class="bar-val">2 · 2.4%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">A2u</div>
+<div class="bar-lab" title="A2u">A2u</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s0)"></i></div>
 <div class="bar-val">2 · 2.4% <span class="age">16k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H</div>
+<div class="bar-lab" title="H">H</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s1)"></i></div>
 <div class="bar-val">2 · 2.4%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">B2y</div>
+<div class="bar-lab" title="B2y">B2y</div>
 <div class="bar-track"><i style="width:10.0%;background:var(--s0)"></i></div>
 <div class="bar-val">2 · 2.4% <span class="age">18k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">L1c</div>
+<div class="bar-lab" title="L1c">L1c</div>
 <div class="bar-track"><i style="width:5.0%;background:var(--s7)"></i></div>
 <div class="bar-val">1 · 1.2% <span class="age">77k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">L2a</div>
+<div class="bar-lab" title="L2a">L2a</div>
 <div class="bar-track"><i style="width:5.0%;background:var(--s7)"></i></div>
 <div class="bar-val">1 · 1.2% <span class="age">76k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">L2c</div>
+<div class="bar-lab" title="L2c">L2c</div>
 <div class="bar-track"><i style="width:5.0%;background:var(--s7)"></i></div>
 <div class="bar-val">1 · 1.2% <span class="age">19k years</span></div>
 </div>
@@ -233,6 +237,12 @@
 <a class="more" href="/en/c/peru/mt/">Peru: mtDNA details →</a></div>
 </div>
 <div class="legend"><span class="dim">Bar colour is the macro-haplogroup, the eight most common worldwide; the rest are grey.</span><span><i style="background:var(--s1)"></i>R</span><span><i style="background:var(--s2)"></i>I</span><span><i style="background:var(--s3)"></i>J</span><span><i style="background:var(--s4)"></i>E</span><span><i style="background:var(--s5)"></i>N</span><span><i style="background:var(--s6)"></i>G</span><span><i style="background:var(--s7)"></i>Q</span><span><i style="background:var(--s8)"></i>T</span><span><i style="background:var(--s0)"></i>other</span></div>
+<aside class="panel cta">
+<div class="panel-head">
+<h2 class="p-title"><i class="p-dot pr"></i>Test your own haplogroup</h2>
+</div>
+<div class="p-lead">Peru: 5 kits already in the ypredictor corpus. Paste your STR markers and it finds the closest matches and predicts the Y-tree branch.</div>
+<a class="btn" href="https://ypredictor.github.io/?lang=en">Open the predictor</a></aside>
 <div class="metrics">
 <div class="metric">
 <div class="m-val">12%</div>
@@ -251,7 +261,7 @@
 </div>
 </div>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-29.</footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

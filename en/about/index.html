@@ -7,7 +7,7 @@
 <meta name="description" content="Sources, method and caveats of FTDNA haplogroup statistics by country.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,23 +30,23 @@
 <meta name="twitter:title" content="About the data">
 <meta name="twitter:description" content="Sources, method and caveats of FTDNA haplogroup statistics by country.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
 <nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/" aria-current="page">About the data</a></nav>
-<form class="search" action="/en/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Nothing found" data-all="All countries →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" data-none="Nothing found" data-all="All countries →">
+<div id="q-out" class="q-out" role="region" aria-label="Search results" hidden></div>
 </form>
-<a class="lang" href="/ru/about/" data-lang-switch="ru">Русский</a>
+<a class="lang" href="/ru/about/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="head">
 <h1>About the data</h1>
 </div>
@@ -60,15 +60,17 @@
 <p>Nested clades are never shown side by side as siblings: either a cumulative tree where a node counts everything below it, or mutually exclusive buckets with an asterisk.</p>
 <p>Branch age is the TMRCA estimated by FTDNA Discover, the midpoint rounded to a century; above 10,000 years it is rounded up to a whole thousand. mt branch ages come from FTDNA's Mitotree where the branch exists there.</p>
 <p>One reliability threshold for the whole site: samples under 50 kits are flagged as small and excluded from findings; closest countries need 100+ kits, a signature branch needs at least 10 kits.</p>
-<h2 id="yfull-data">YFull data <a class="anchor" href="#yfull-data" aria-label="#">#</a></h2>
+<h2 id="yfull-data">YFull data <a class="anchor" href="#yfull-data" aria-label="Link to section “YFull data”">#</a></h2>
 <p>The second source is the public YFull trees (Y tree and mt tree), snapshot of 2026-09-29, refreshed monthly. YFull is a paid analysis of full Y chromosomes and mt genomes, so the sample is skewed towards enthusiasts and projects even more than FTDNA's: Saudi Arabia contributes more samples than any other country.</p>
 <p>Comparisons with FTDNA pages use only YFull customers with a YF number and only modern samples: ancient DNA and samples from GenBank and publications are excluded, because FTDNA counts customers only. For mt fewer than a third of YFull samples qualify, so mt comparisons are thinner than Y.</p>
 <p>The YFull and FTDNA trees branch differently and name nodes after different SNPs. A YFull sample is placed on the FTDNA tree through SNPs the two trees share: 88% of YFull nodes find an FTDNA node directly, the rest through the nearest resolved ancestor. Level shares are then computed with the same code as for FTDNA kits.</p>
 <p>Country and region on YFull, as on FTDNA, are reported by the tested person. Region codes are mapped to FTDNA entities by hand: republics of Russia, Spanish autonomies through provinces, Italian regions, parts of the United Kingdom. Samples from a region that is an FTDNA entity of its own are taken out of the country sample.</p>
 <p>Language on YFull is the tested person's self-identification by ISO 639-3; FTDNA has no such field. Language is neither ethnicity nor region: Chechens of Jordan are counted with Chechens of Chechnya, and “Arabic” spans every Arab country.</p>
+<h2 id="the-ypredictor-tool">The ypredictor tool <a class="anchor" href="#the-ypredictor-tool" aria-label="Link to section “The ypredictor tool”">#</a></h2>
+<p>Sister project <a href="https://ypredictor.github.io/?lang=en">ypredictor.github.io</a>: paste your FTDNA STR markers to get a predicted Y-tree branch with the closest matches. Match countries there link to pages of this site, and from here you can test your haplogroup from markers.</p>
 </div>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-29.</footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

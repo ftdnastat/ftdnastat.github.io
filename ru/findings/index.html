@@ -7,7 +7,7 @@
 <meta name="description" content="Автоматические находки по данным FTDNA: сигнатурные ветки, ближайшие страны, кластеры, молодые и древние клады.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,30 +30,32 @@
 <meta name="twitter:title" content="Находки">
 <meta name="twitter:description" content="Автоматические находки по данным FTDNA: сигнатурные ветки, ближайшие страны, кластеры, молодые и древние клады.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/" aria-current="page">Находки</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
 </form>
-<a class="lang" href="/en/findings/" data-lang-switch="en">English</a>
+<a class="lang" href="/en/findings/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="head">
 <h1>Находки</h1>
 <p>Автоматически пересчитываются при каждой сборке. Это наблюдения над клиентами FTDNA, а не над популяциями; методика в разделе о данных.</p>
 </div>
 <section>
 <div class="sec-head">
-<h2 id="самые-сильные-сигнатуры">Самые сильные сигнатуры <a class="anchor" href="#самые-сильные-сигнатуры" aria-label="#">#</a></h2>
+<h2 id="самые-сильные-сигнатуры">Самые сильные сигнатуры <a class="anchor" href="#самые-сильные-сигнатуры" aria-label="Ссылка на раздел «Самые сильные сигнатуры»">#</a></h2>
 <p>Ветка и регион, где её доля превышает мировую сильнее всего, минимум 20 китов.</p>
 </div>
 <ul class="plain">
@@ -91,7 +93,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="молодые-но-широкие-клады">Молодые, но широкие клады <a class="anchor" href="#молодые-но-широкие-клады" aria-label="#">#</a></h2>
+<h2 id="молодые-но-широкие-клады">Молодые, но широкие клады <a class="anchor" href="#молодые-но-широкие-клады" aria-label="Ссылка на раздел «Молодые, но широкие клады»">#</a></h2>
 <p>TMRCA моложе 2 000 лет, а доля не меньше 1% в 5 и более странах с выборкой от 100 китов. Недавняя экспансия, диаспора или ошибки самозаявленного происхождения.</p>
 </div>
 <ul class="plain">
@@ -107,7 +109,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="древние-и-сосредоточенные-клады">Древние и сосредоточенные клады <a class="anchor" href="#древние-и-сосредоточенные-клады" aria-label="#">#</a></h2>
+<h2 id="древние-и-сосредоточенные-клады">Древние и сосредоточенные клады <a class="anchor" href="#древние-и-сосредоточенные-клады" aria-label="Ссылка на раздел «Древние и сосредоточенные клады»">#</a></h2>
 <p>TMRCA старше 4 000 лет, при этом не меньше 50% китов клады приходится на одну страну, от 200 китов в мире. Изоляты и линии, не покинувшие родину.</p>
 </div>
 <ul class="plain">
@@ -119,7 +121,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="страны-где-мужская-и-женская-линии-смотрят-в-разные-стороны">Страны, где мужская и женская линии смотрят в разные стороны <a class="anchor" href="#страны-где-мужская-и-женская-линии-смотрят-в-разные-стороны" aria-label="#">#</a></h2>
+<h2 id="страны-где-мужская-и-женская-линии-смотрят-в-разные-стороны">Страны, где мужская и женская линии смотрят в разные стороны <a class="anchor" href="#страны-где-мужская-и-женская-линии-смотрят-в-разные-стороны" aria-label="Ссылка на раздел «Страны, где мужская и женская линии смотрят в разные стороны»">#</a></h2>
 <p>Пять ближайших стран по Y и по мт почти не пересекаются.</p>
 </div>
 <ul class="plain">
@@ -138,7 +140,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="кто-тестирует-отца-а-кто-мать">Кто тестирует отца, а кто мать <a class="anchor" href="#кто-тестирует-отца-а-кто-мать" aria-label="#">#</a></h2>
+<h2 id="кто-тестирует-отца-а-кто-мать">Кто тестирует отца, а кто мать <a class="anchor" href="#кто-тестирует-отца-а-кто-мать" aria-label="Ссылка на раздел «Кто тестирует отца, а кто мать»">#</a></h2>
 <p>Отношение числа мт-китов к Y-китам. Только выборки от 150 китов в обоих деревьях.</p>
 </div>
 <div class="two">
@@ -170,7 +172,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="крупнейшие-кластеры-одного-узла">Крупнейшие кластеры одного узла <a class="anchor" href="#крупнейшие-кластеры-одного-узла" aria-label="#">#</a></h2>
+<h2 id="крупнейшие-кластеры-одного-узла">Крупнейшие кластеры одного узла <a class="anchor" href="#крупнейшие-кластеры-одного-узла" aria-label="Ссылка на раздел «Крупнейшие кластеры одного узла»">#</a></h2>
 <p>Доля китов региона на одном терминальном узле.</p>
 </div>
 <ul class="plain">
@@ -182,7 +184,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="возраст-веток-yfull-против-ftdna-discover">Возраст веток: YFull против FTDNA Discover <a class="anchor" href="#возраст-веток-yfull-против-ftdna-discover" aria-label="#">#</a></h2>
+<h2 id="возраст-веток-yfull-против-ftdna-discover">Возраст веток: YFull против FTDNA Discover <a class="anchor" href="#возраст-веток-yfull-против-ftdna-discover" aria-label="Ссылка на раздел «Возраст веток: YFull против FTDNA Discover»">#</a></h2>
 <p>Узлы с одним именем в обоих деревьях: 19 277. Сравниваются TMRCA двух источников (возраст общего предка тестируемых); дата отделения ветки (formed) у YFull в сравнение не входит. Медианное отношение YFull/FTDNA 0,93, YFull моложе в 67% узлов; доверительные интервалы пересекаются у 98%.</p>
 </div>
 <h3>Несогласия</h3>
@@ -199,7 +201,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="y-мт-сколько-связи-объясняет-география">Y × мт: сколько связи объясняет география <a class="anchor" href="#y-мт-сколько-связи-объясняет-география" aria-label="#">#</a></h2>
+<h2 id="y-мт-сколько-связи-объясняет-география">Y × мт: сколько связи объясняет география <a class="anchor" href="#y-мт-сколько-связи-объясняет-география" aria-label="Ссылка на раздел «Y × мт: сколько связи объясняет география»">#</a></h2>
 <p>Взаимная информация между отцовской и материнской линиями одного человека по 10 473 парам YFull с известной страной (в 40 странах от 80 пар), минус то же на перемешанных парах. Без деления 0,41 бита; внутри стран 0,08; на тех же парах со случайно перетасованными странами 0,11 — дробление само по себе съедает часть сигнала. Против этой честной базы страна объясняет 27% связи. Регион (2 259 пар в 24 регионах от 50 пар) — 51%: чем мельче география, тем больше связи она забирает; остаток — структура внутри регионов, а не родство пар.</p>
 </div>
 <h3>Как исчезает связь внутри страны</h3>
@@ -212,7 +214,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="по-отцам-народ-узнаётся-по-матерям-нет">По отцам народ узнаётся, по матерям нет <a class="anchor" href="#по-отцам-народ-узнаётся-по-матерям-нет" aria-label="#">#</a></h2>
+<h2 id="по-отцам-народ-узнаётся-по-матерям-нет">По отцам народ узнаётся, по матерям нет <a class="anchor" href="#по-отцам-народ-узнаётся-по-матерям-нет" aria-label="Ссылка на раздел «По отцам народ узнаётся, по матерям нет»">#</a></h2>
 <p>Ожидаемая энтропия крупных клад в выборке из 40 человек одного народа, в скобках доля от мирового эталона FTDNA (Y 4,83 бита, мт 4,75). Из 14 народов самый однородный по матерям держит 92% мирового разнообразия, самый однородный по отцам — 35%.</p>
 </div>
 <h3>Самые однородные по отцам</h3>
@@ -238,7 +240,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="страны-своеобразие-по-отцам-и-по-матерям">Страны: своеобразие по отцам и по матерям <a class="anchor" href="#страны-своеобразие-по-отцам-и-по-матерям" aria-label="#">#</a></h2>
+<h2 id="страны-своеобразие-по-отцам-и-по-матерям">Страны: своеобразие по отцам и по матерям <a class="anchor" href="#страны-своеобразие-по-отцам-и-по-матерям" aria-label="Ссылка на раздел «Страны: своеобразие по отцам и по матерям»">#</a></h2>
 <p>Расстояние состава страны от мирового (дивергенция Йенсена–Шеннона) отдельно по Y и по мт, киты FTDNA, 49 стран от 150 китов на каждой линии. У 44 из 49 отцовская линия своеобразнее материнской.</p>
 </div>
 <ul class="plain">
@@ -263,7 +265,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="глубина-выборки-как-далеко-в-дерево-забираются-образцы">Глубина выборки: как далеко в дерево забираются образцы <a class="anchor" href="#глубина-выборки-как-далеко-в-дерево-забираются-образцы" aria-label="#">#</a></h2>
+<h2 id="глубина-выборки-как-далеко-в-дерево-забираются-образцы">Глубина выборки: как далеко в дерево забираются образцы <a class="anchor" href="#глубина-выборки-как-далеко-в-дерево-забираются-образцы" aria-label="Ссылка на раздел «Глубина выборки: как далеко в дерево забираются образцы»">#</a></h2>
 <p>Образцы YFull размещены на дереве FTDNA. Медиана по 66 странам: глубина 37,1 уровней у YFull против 31,5 у китов FTDNA, на терминальных узлах 35% против 23%. Это объясняет, почему две карты одной страны различаются: полногеномные тесты сидят глубже. По мтДНК разрыва нет: медиана разницы глубины −0,1 уровня по 27 странам против +4,6 по Y — полные митогеномы секвенируют обе компании.</p>
 </div>
 <h3>Наибольший разрыв</h3>
@@ -289,7 +291,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="где-источники-расходятся-не-по-шуму">Где источники расходятся не по шуму <a class="anchor" href="#где-источники-расходятся-не-по-шуму" aria-label="#">#</a></h2>
+<h2 id="где-источники-расходятся-не-по-шуму">Где источники расходятся не по шуму <a class="anchor" href="#где-источники-расходятся-не-по-шуму" aria-label="Ссылка на раздел «Где источники расходятся не по шуму»">#</a></h2>
 <p>Дивергенция Йенсена–Шеннона долей крупных клад FTDNA и YFull без голых остатков минус то же для двух случайных выборок такого размера (120 повторов). 29 стран с выборкой от 150 с обеих сторон, медиана превышения 0,024.</p>
 </div>
 <h3>Расходятся сильнее всего</h3>
@@ -328,7 +330,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="слепые-пятна-клада-есть-у-одного-источника-и-почти-нет-у-дру">Слепые пятна: клада есть у одного источника и почти нет у другого <a class="anchor" href="#слепые-пятна-клада-есть-у-одного-источника-и-почти-нет-у-дру" aria-label="#">#</a></h2>
+<h2 id="слепые-пятна-клада-есть-у-одного-источника-и-почти-нет-у-дру">Слепые пятна: клада есть у одного источника и почти нет у другого <a class="anchor" href="#слепые-пятна-клада-есть-у-одного-источника-и-почти-нет-у-дру" aria-label="Ссылка на раздел «Слепые пятна: клада есть у одного источника и почти нет у другого»">#</a></h2>
 <p>Доля клады не меньше 4% хотя бы у одного источника и разница статистически значима (|z| ≥ 4). Обычно это след одного крупного проекта или разных ворот набора клиентов.</p>
 </div>
 <ul class="plain">
@@ -355,7 +357,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="ветка-народ">Ветка = народ <a class="anchor" href="#ветка-народ" aria-label="#">#</a></h2>
+<h2 id="ветка-народ">Ветка = народ <a class="anchor" href="#ветка-народ" aria-label="Ссылка на раздел «Ветка = народ»">#</a></h2>
 <p>Верхние узлы дерева YFull, где не меньше 80% образцов с указанным языком принадлежат одному языку, минимум 10 таких образцов и не меньше 25% поддерева с языком. Язык самозаявленный и указан лишь у четверти клиентов: список говорит и о проектах, и о генетике.</p>
 </div>
 <ul class="plain">
@@ -376,7 +378,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="разнообразие-отцовских-линий-у-народов">Разнообразие отцовских линий у народов <a class="anchor" href="#разнообразие-отцовских-линий-у-народов" aria-label="#">#</a></h2>
+<h2 id="разнообразие-отцовских-линий-у-народов">Разнообразие отцовских линий у народов <a class="anchor" href="#разнообразие-отцовских-линий-у-народов" aria-label="Ссылка на раздел «Разнообразие отцовских линий у народов»">#</a></h2>
 <p>Ожидаемая энтропия (бит) и число крупных клад в случайной выборке из 40 образцов, чтобы большие народы не казались разнообразнее только из-за размера.</p>
 </div>
 <h3>Самые однородные</h3>
@@ -403,7 +405,7 @@
 </ul>
 </section>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

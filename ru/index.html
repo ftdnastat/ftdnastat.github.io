@@ -7,7 +7,7 @@
 <meta name="description" content="Статистика гаплогрупп Y-ДНК и мтДНК по странам, регионам и народам: публичные деревья FamilyTreeDNA и YFull, возрасты веток, сравнение источников.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,24 +30,26 @@
 <meta name="twitter:title" content="Статистика гаплогрупп FTDNA по странам и регионам">
 <meta name="twitter:description" content="Статистика гаплогрупп Y-ДНК и мтДНК по странам, регионам и народам: публичные деревья FamilyTreeDNA и YFull, возрасты веток, сравнение источников.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ftdnastat","url":"https://ftdnastat.github.io/ru/","inLanguage":"ru","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ftdnastat.github.io/ru/countries/#q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ftdnastat","url":"https://ftdnastat.github.io/ru/","inLanguage":"ru","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ftdnastat.github.io/ru/countries/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 </head>
 <body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
 </form>
-<a class="lang" href="/en/" data-lang-switch="en">English</a>
+<a class="lang" href="/en/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="hero">
 <div class="eyebrow">FamilyTreeDNA · Y-DNA Haplotree · mtDNA Haplotree · Discover</div>
 <h1>Статистика гаплогрупп FTDNA по странам и регионам</h1>
@@ -68,14 +70,19 @@
 <div class="eyebrow">Находки</div>
 <div class="big">56</div>
 <div class="sub">сигнатуры, соседи, кластеры, молодые и древние клады</div>
+</a>
+<a class="tile tile-ext" href="https://ypredictor.github.io/?lang=ru">
+<div class="eyebrow">ypredictor</div>
+<div class="big">Предсказать гаплогруппу</div>
+<div class="sub">По STR-маркерам FTDNA: ближайшие совпаденцы и ветвь Y-дерева</div>
 </a></div>
 </div>
 <section>
 <div class="sec-head">
-<h2 id="крупнейшие-выборки">Крупнейшие выборки <a class="anchor" href="#крупнейшие-выборки" aria-label="#">#</a></h2>
+<h2 id="крупнейшие-выборки">Крупнейшие выборки <a class="anchor" href="#крупнейшие-выборки" aria-label="Ссылка на раздел «Крупнейшие выборки»">#</a></h2>
 </div>
-<div class="tablewrap">
-<table class="list">
+<div class="tablewrap" tabindex="0" role="region" aria-label="Крупнейшие выборки">
+<table class="list"><caption class="sr-only">Крупнейшие выборки</caption>
 <thead>
 <tr>
 <th scope="col">Страна / регион</th>
@@ -422,7 +429,7 @@
 <p class="note small">Звёздочка у клады: киты под узлом, не попавшие ни в одну из его крупных субклад.</p>
 </section>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-29.</footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

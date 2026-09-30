@@ -7,7 +7,7 @@
 <meta name="description" content="Automatic findings from FTDNA data: signature branches, closest countries, clusters, young and ancient clades.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -30,30 +30,30 @@
 <meta name="twitter:title" content="Findings">
 <meta name="twitter:description" content="Automatic findings from FTDNA data: signature branches, closest countries, clusters, young and ancient clades.">
 <meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
 <nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/">Countries</a><a href="/en/findings/" aria-current="page">Findings</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
-<form class="search" action="/en/countries/" onsubmit="return false" role="search"><input type="search" id="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="q-out" data-none="Nothing found" data-all="All countries →">
-<div id="q-out" class="q-out" role="listbox" hidden></div>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" data-none="Nothing found" data-all="All countries →">
+<div id="q-out" class="q-out" role="region" aria-label="Search results" hidden></div>
 </form>
-<a class="lang" href="/ru/findings/" data-lang-switch="ru">Русский</a>
+<a class="lang" href="/ru/findings/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
 </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="head">
 <h1>Findings</h1>
 <p>Recomputed on every build. These are observations about FTDNA customers, not populations; see the methodology on the data page.</p>
 </div>
 <section>
 <div class="sec-head">
-<h2 id="strongest-signatures">Strongest signatures <a class="anchor" href="#strongest-signatures" aria-label="#">#</a></h2>
+<h2 id="strongest-signatures">Strongest signatures <a class="anchor" href="#strongest-signatures" aria-label="Link to section “Strongest signatures”">#</a></h2>
 <p>Branch and region where its share exceeds the world share the most, at least 20 kits.</p>
 </div>
 <ul class="plain">
@@ -91,7 +91,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="young-but-widespread-clades">Young but widespread clades <a class="anchor" href="#young-but-widespread-clades" aria-label="#">#</a></h2>
+<h2 id="young-but-widespread-clades">Young but widespread clades <a class="anchor" href="#young-but-widespread-clades" aria-label="Link to section “Young but widespread clades”">#</a></h2>
 <p>TMRCA younger than 2,000 years, yet 1%+ share in 5 or more countries with 100+ kits. Recent expansion, diaspora, or self-reported origin errors.</p>
 </div>
 <ul class="plain">
@@ -107,7 +107,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="ancient-and-concentrated-clades">Ancient and concentrated clades <a class="anchor" href="#ancient-and-concentrated-clades" aria-label="#">#</a></h2>
+<h2 id="ancient-and-concentrated-clades">Ancient and concentrated clades <a class="anchor" href="#ancient-and-concentrated-clades" aria-label="Link to section “Ancient and concentrated clades”">#</a></h2>
 <p>TMRCA older than 4,000 years, yet 50%+ of the clade's kits come from a single country, with 200+ kits worldwide. Isolates and lineages that never left home.</p>
 </div>
 <ul class="plain">
@@ -119,7 +119,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="countries-whose-male-and-female-lines-point-different-ways">Countries whose male and female lines point different ways <a class="anchor" href="#countries-whose-male-and-female-lines-point-different-ways" aria-label="#">#</a></h2>
+<h2 id="countries-whose-male-and-female-lines-point-different-ways">Countries whose male and female lines point different ways <a class="anchor" href="#countries-whose-male-and-female-lines-point-different-ways" aria-label="Link to section “Countries whose male and female lines point different ways”">#</a></h2>
 <p>The five closest countries by Y and by mt barely overlap.</p>
 </div>
 <ul class="plain">
@@ -138,7 +138,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="who-tests-the-father-and-who-tests-the-mother">Who tests the father and who tests the mother <a class="anchor" href="#who-tests-the-father-and-who-tests-the-mother" aria-label="#">#</a></h2>
+<h2 id="who-tests-the-father-and-who-tests-the-mother">Who tests the father and who tests the mother <a class="anchor" href="#who-tests-the-father-and-who-tests-the-mother" aria-label="Link to section “Who tests the father and who tests the mother”">#</a></h2>
 <p>Ratio of mt kits to Y kits. Only samples of 150+ kits in both trees.</p>
 </div>
 <div class="two">
@@ -170,7 +170,7 @@
 </section>
 <section>
 <div class="sec-head">
-<h2 id="largest-single-node-clusters">Largest single-node clusters <a class="anchor" href="#largest-single-node-clusters" aria-label="#">#</a></h2>
+<h2 id="largest-single-node-clusters">Largest single-node clusters <a class="anchor" href="#largest-single-node-clusters" aria-label="Link to section “Largest single-node clusters”">#</a></h2>
 <p>Share of a region's kits on one terminal node.</p>
 </div>
 <ul class="plain">
@@ -182,7 +182,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="branch-ages-yfull-against-ftdna-discover">Branch ages: YFull against FTDNA Discover <a class="anchor" href="#branch-ages-yfull-against-ftdna-discover" aria-label="#">#</a></h2>
+<h2 id="branch-ages-yfull-against-ftdna-discover">Branch ages: YFull against FTDNA Discover <a class="anchor" href="#branch-ages-yfull-against-ftdna-discover" aria-label="Link to section “Branch ages: YFull against FTDNA Discover”">#</a></h2>
 <p>Nodes bearing the same name in both trees: 19,277. TMRCA (age of the tested descendants' common ancestor) is compared with TMRCA; YFull's branch split date (formed) is separate. Median YFull/FTDNA ratio 0.93, YFull younger on 67% of nodes; confidence intervals overlap on 98%.</p>
 </div>
 <h3>Disagreements</h3>
@@ -199,7 +199,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="y-mt-how-much-of-the-link-is-geography">Y × mt: how much of the link is geography <a class="anchor" href="#y-mt-how-much-of-the-link-is-geography" aria-label="#">#</a></h2>
+<h2 id="y-mt-how-much-of-the-link-is-geography">Y × mt: how much of the link is geography <a class="anchor" href="#y-mt-how-much-of-the-link-is-geography" aria-label="Link to section “Y × mt: how much of the link is geography”">#</a></h2>
 <p>Mutual information between a person's paternal and maternal lines over 10,473 YFull pairs with a known country (40 countries with 80+ pairs), minus the same on shuffled pairs. Undivided 0.41 bits; within countries 0.08; on the same pairs with countries shuffled at random 0.11 — splitting alone eats part of the signal. Against that honest baseline the country explains 27% of the link. The region (2,259 pairs in 24 regions with 50+ pairs) — 51%: the finer the geography, the more of the link it takes; the rest is structure inside regions, not kinship of pairs.</p>
 </div>
 <h3>How the link vanishes inside a country</h3>
@@ -212,7 +212,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="fathers-tell-the-people-apart-mothers-do-not">Fathers tell the people apart, mothers do not <a class="anchor" href="#fathers-tell-the-people-apart-mothers-do-not" aria-label="#">#</a></h2>
+<h2 id="fathers-tell-the-people-apart-mothers-do-not">Fathers tell the people apart, mothers do not <a class="anchor" href="#fathers-tell-the-people-apart-mothers-do-not" aria-label="Link to section “Fathers tell the people apart, mothers do not”">#</a></h2>
 <p>Expected entropy of major clades in a draw of 40 members of one people, in brackets the share of the FTDNA world reference (Y 4.83 bits, mt 4.75). Of 14 peoples the most homogeneous by mothers keeps 92% of the world's diversity, the most homogeneous by fathers 35%.</p>
 </div>
 <h3>Most homogeneous by fathers</h3>
@@ -238,7 +238,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="countries-distinctiveness-by-fathers-and-by-mothers">Countries: distinctiveness by fathers and by mothers <a class="anchor" href="#countries-distinctiveness-by-fathers-and-by-mothers" aria-label="#">#</a></h2>
+<h2 id="countries-distinctiveness-by-fathers-and-by-mothers">Countries: distinctiveness by fathers and by mothers <a class="anchor" href="#countries-distinctiveness-by-fathers-and-by-mothers" aria-label="Link to section “Countries: distinctiveness by fathers and by mothers”">#</a></h2>
 <p>Distance of a country's composition from the world's (Jensen–Shannon divergence) separately for Y and mt, FTDNA kits, 49 countries with 150+ kits on each line. In 44 of 49 the paternal line is the more distinctive one.</p>
 </div>
 <ul class="plain">
@@ -263,7 +263,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="sampling-depth-how-far-down-the-tree-the-samples-sit">Sampling depth: how far down the tree the samples sit <a class="anchor" href="#sampling-depth-how-far-down-the-tree-the-samples-sit" aria-label="#">#</a></h2>
+<h2 id="sampling-depth-how-far-down-the-tree-the-samples-sit">Sampling depth: how far down the tree the samples sit <a class="anchor" href="#sampling-depth-how-far-down-the-tree-the-samples-sit" aria-label="Link to section “Sampling depth: how far down the tree the samples sit”">#</a></h2>
 <p>YFull samples placed on the FTDNA tree. Median over 66 countries: depth 37.1 levels for YFull against 31.5 for FTDNA kits, 35% against 23% on terminal nodes. This is why two maps of one country differ: whole-genome tests sit deeper. There is no mtDNA gap: median depth difference −0.1 levels over 27 countries against +4.6 for Y — both companies sequence full mitogenomes.</p>
 </div>
 <h3>Largest gap</h3>
@@ -289,7 +289,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="where-the-sources-disagree-beyond-noise">Where the sources disagree beyond noise <a class="anchor" href="#where-the-sources-disagree-beyond-noise" aria-label="#">#</a></h2>
+<h2 id="where-the-sources-disagree-beyond-noise">Where the sources disagree beyond noise <a class="anchor" href="#where-the-sources-disagree-beyond-noise" aria-label="Link to section “Where the sources disagree beyond noise”">#</a></h2>
 <p>Jensen–Shannon divergence of FTDNA and YFull major-clade shares without bare remainders, minus the same for two random samples of these sizes (120 draws). 29 countries with 150+ on both sides, median excess 0.024.</p>
 </div>
 <h3>Disagree most</h3>
@@ -328,7 +328,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="blind-spots-a-clade-one-source-has-and-the-other-nearly-lack">Blind spots: a clade one source has and the other nearly lacks <a class="anchor" href="#blind-spots-a-clade-one-source-has-and-the-other-nearly-lack" aria-label="#">#</a></h2>
+<h2 id="blind-spots-a-clade-one-source-has-and-the-other-nearly-lack">Blind spots: a clade one source has and the other nearly lacks <a class="anchor" href="#blind-spots-a-clade-one-source-has-and-the-other-nearly-lack" aria-label="Link to section “Blind spots: a clade one source has and the other nearly lacks”">#</a></h2>
 <p>Clade share of at least 4% on one side and a significant difference (|z| ≥ 4). Usually the mark of one large project or of different customer gateways.</p>
 </div>
 <ul class="plain">
@@ -355,7 +355,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="branch-people">Branch = people <a class="anchor" href="#branch-people" aria-label="#">#</a></h2>
+<h2 id="branch-people">Branch = people <a class="anchor" href="#branch-people" aria-label="Link to section “Branch = people”">#</a></h2>
 <p>Top-most YFull nodes where at least 80% of language-tagged samples belong to one language, with 10+ such samples and at least 25% of the subtree tagged. Language is self-reported and given by a quarter of customers: the list speaks about projects as much as about genetics.</p>
 </div>
 <ul class="plain">
@@ -376,7 +376,7 @@
 <section class="yf-find">
 <div class="sec-head">
 <div class="eyebrow">YFull</div>
-<h2 id="diversity-of-paternal-lines-by-people">Diversity of paternal lines by people <a class="anchor" href="#diversity-of-paternal-lines-by-people" aria-label="#">#</a></h2>
+<h2 id="diversity-of-paternal-lines-by-people">Diversity of paternal lines by people <a class="anchor" href="#diversity-of-paternal-lines-by-people" aria-label="Link to section “Diversity of paternal lines by people”">#</a></h2>
 <p>Expected entropy (bits) and number of major clades in a random draw of 40 samples, so that large peoples do not look more diverse merely by size.</p>
 </div>
 <h3>Most uniform</h3>
@@ -403,7 +403,7 @@
 </ul>
 </section>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-29.</footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>
