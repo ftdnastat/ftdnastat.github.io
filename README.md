@@ -50,6 +50,10 @@ The public Y-DNA and mtDNA Haplotree dumps supply per-node kit counts by country
 - [FamilyTreeDNA Y-DNA Haplotree](https://www.familytreedna.com/public/y-dna-haplotree/) and [mtDNA Haplotree](https://www.familytreedna.com/public/mt-dna-haplotree/).
 - [FamilyTreeDNA Discover](https://discover.familytreedna.com/) for TMRCA estimates and the Million Mito Project's Mitotree.
 
+## Sister project: ypredictor
+
+[ypredictor.github.io](https://ypredictor.github.io/?lang=en) predicts a Y-tree branch from FTDNA STR markers and lists the closest matches. The two sites link to each other: match flags in the predictor open the country's Y-DNA page here, and country pages here carry a "test your own haplogroup" card with the number of kits from that country in the predictor corpus. Rows J-Z1842, J2-M172, R1b-M269 and R1a-M417 in the country trees link to the predictor's interactive clade trees.
+
 ## About this repository
 
 Only the generated site lives here; the generator, the clade dictionary and the acceptance tests are in a separate, private repository, and the next build overwrites the HTML. Corrections of country labels and requests for new findings are welcome in the issues.

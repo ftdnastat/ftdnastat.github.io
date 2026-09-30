@@ -50,6 +50,10 @@
 - [Y-DNA Haplotree](https://www.familytreedna.com/public/y-dna-haplotree/) и [mtDNA Haplotree](https://www.familytreedna.com/public/mt-dna-haplotree/) FamilyTreeDNA.
 - [FamilyTreeDNA Discover](https://discover.familytreedna.com/) для оценок TMRCA и Mitotree проекта Million Mito.
 
+## Родственный проект: ypredictor
+
+[ypredictor.github.io](https://ypredictor.github.io/?lang=ru) предсказывает ветвь Y-дерева по STR-маркерам FTDNA и показывает ближайших совпаденцев. Сайты ссылаются друг на друга: флаги совпаденцев в предикторе открывают страницу Y-ДНК страны здесь, а страницы стран здесь несут карточку «Проверить свою гаплогруппу» с числом китов этой страны в корпусе предиктора. Строки J-Z1842, J2-M172, R1b-M269 и R1a-M417 в деревьях стран ведут на интерактивные клад-деревья предиктора.
+
 ## Об этом репозитории
 
 Здесь лежит только сгенерированный сайт; генератор, словарь клад и приёмочные тесты — в отдельном закрытом репозитории, следующая сборка перезаписывает HTML. Поправки к названиям стран и запросы новых находок ждём в issues.
