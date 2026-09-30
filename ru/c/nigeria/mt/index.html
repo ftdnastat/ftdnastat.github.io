@@ -30,7 +30,6 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"мтДНК","item":"https://ftdnastat.github.io/ru/mt/"},{"@type":"ListItem","position":2,"name":"Нигерия","item":"https://ftdnastat.github.io/ru/c/nigeria/"},{"@type":"ListItem","position":3,"name":"мт","item":"https://ftdnastat.github.io/ru/c/nigeria/mt/"}]}</script>
@@ -40,9 +39,9 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
-<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
+<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/" aria-current="page">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
 </form>
 <a class="lang" href="/en/c/nigeria/mt/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
@@ -71,12 +70,12 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab" title="L">L</div>
+<div class="bar-lab">L</div>
 <div class="bar-track"><i class="c7" style="width:100.0%"></i></div>
 <div class="bar-val">18 · 94,7%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="U">U</div>
+<div class="bar-lab">U</div>
 <div class="bar-track"><i class="c2" style="width:5.6%"></i></div>
 <div class="bar-val">1 · 5,3%</div>
 </div>
@@ -90,47 +89,47 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab" title="L3e">L3e</div>
+<div class="bar-lab">L3e</div>
 <div class="bar-track"><i class="c7" style="width:100.0%"></i></div>
 <div class="bar-val">6 · 31,6% <span class="age">36 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L2a">L2a</div>
+<div class="bar-lab">L2a</div>
 <div class="bar-track"><i class="c7" style="width:66.7%"></i></div>
 <div class="bar-val">4 · 21,1% <span class="age">76 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L1b">L1b</div>
+<div class="bar-lab">L1b</div>
 <div class="bar-track"><i class="c7" style="width:50.0%"></i></div>
 <div class="bar-val">3 · 15,8% <span class="age">39 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L1c">L1c</div>
+<div class="bar-lab">L1c</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">77 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L2c">L2c</div>
+<div class="bar-lab">L2c</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L2d">L2d</div>
+<div class="bar-lab">L2d</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">15 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L3b">L3b</div>
+<div class="bar-lab">L3b</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">24 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L3d">L3d</div>
+<div class="bar-lab">L3d</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="U6a">U6a</div>
+<div class="bar-lab">U6a</div>
 <div class="bar-track"><i class="c2" style="width:16.7%"></i></div>
 <div class="bar-val">1 · 5,3% <span class="age">23 тыс. лет</span></div>
 </div>

@@ -33,7 +33,6 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"мтДНК","item":"https://ftdnastat.github.io/ru/mt/"},{"@type":"ListItem","position":2,"name":"Венесуэла","item":"https://ftdnastat.github.io/ru/c/venezuela/"},{"@type":"ListItem","position":3,"name":"мт","item":"https://ftdnastat.github.io/ru/c/venezuela/mt/"}]}</script>
@@ -43,9 +42,9 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
-<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
+<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/" aria-current="page">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
 </form>
 <a class="lang" href="/en/c/venezuela/mt/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
@@ -78,42 +77,42 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab" title="A">A</div>
+<div class="bar-lab">A</div>
 <div class="bar-track"><i class="c0" style="width:100.0%"></i></div>
 <div class="bar-val">24 · 38,1%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L">L</div>
+<div class="bar-lab">L</div>
 <div class="bar-track"><i class="c7" style="width:45.8%"></i></div>
 <div class="bar-val">11 · 17,5%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="C">C</div>
+<div class="bar-lab">C</div>
 <div class="bar-track"><i class="c0" style="width:37.5%"></i></div>
 <div class="bar-val">9 · 14,3%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="D">D</div>
+<div class="bar-lab">D</div>
 <div class="bar-track"><i class="c0" style="width:33.3%"></i></div>
 <div class="bar-val">8 · 12,7%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="B">B</div>
+<div class="bar-lab">B</div>
 <div class="bar-track"><i class="c0" style="width:25.0%"></i></div>
 <div class="bar-val">6 · 9,5%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="H">H</div>
+<div class="bar-lab">H</div>
 <div class="bar-track"><i class="c1" style="width:12.5%"></i></div>
 <div class="bar-val">3 · 4,8%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="R">R</div>
+<div class="bar-lab">R</div>
 <div class="bar-track"><i class="c0" style="width:4.2%"></i></div>
 <div class="bar-val">1 · 1,6%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="U">U</div>
+<div class="bar-lab">U</div>
 <div class="bar-track"><i class="c2" style="width:4.2%"></i></div>
 <div class="bar-val">1 · 1,6%</div>
 </div>
@@ -127,102 +126,102 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab" title="A2">A2</div>
+<div class="bar-lab">A2</div>
 <div class="bar-track"><i class="c0" style="width:100.0%"></i></div>
 <div class="bar-val">12 · 19,0% <span class="age">17 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="A2a">A2a</div>
+<div class="bar-lab">A2a</div>
 <div class="bar-track"><i class="c0" style="width:58.3%"></i></div>
 <div class="bar-val">7 · 11,1% <span class="age">4 900 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="C1b">C1b</div>
+<div class="bar-lab">C1b</div>
 <div class="bar-track"><i class="c0" style="width:33.3%"></i></div>
 <div class="bar-val">4 · 6,3% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="C1d">C1d</div>
+<div class="bar-lab">C1d</div>
 <div class="bar-track"><i class="c0" style="width:33.3%"></i></div>
 <div class="bar-val">4 · 6,3% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="D1">D1</div>
+<div class="bar-lab">D1</div>
 <div class="bar-track"><i class="c0" style="width:33.3%"></i></div>
 <div class="bar-val">4 · 6,3% <span class="age">21 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="A2k">A2k</div>
+<div class="bar-lab">A2k</div>
 <div class="bar-track"><i class="c0" style="width:33.3%"></i></div>
 <div class="bar-val">4 · 6,3%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L2a">L2a</div>
+<div class="bar-lab">L2a</div>
 <div class="bar-track"><i class="c7" style="width:25.0%"></i></div>
 <div class="bar-val">3 · 4,8% <span class="age">76 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L1b">L1b</div>
+<div class="bar-lab">L1b</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">39 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L3d">L3d</div>
+<div class="bar-lab">L3d</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L3e">L3e</div>
+<div class="bar-lab">L3e</div>
 <div class="bar-track"><i class="c7" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">36 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="D1b">D1b</div>
+<div class="bar-lab">D1b</div>
 <div class="bar-track"><i class="c0" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">1 800 лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="D4h">D4h</div>
+<div class="bar-lab">D4h</div>
 <div class="bar-track"><i class="c0" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">23 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="B2">B2</div>
+<div class="bar-lab">B2</div>
 <div class="bar-track"><i class="c0" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="B2b">B2b</div>
+<div class="bar-lab">B2b</div>
 <div class="bar-track"><i class="c0" style="width:16.7%"></i></div>
 <div class="bar-val">2 · 3,2% <span class="age">17 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L2c">L2c</div>
+<div class="bar-lab">L2c</div>
 <div class="bar-track"><i class="c7" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="L3f">L3f</div>
+<div class="bar-lab">L3f</div>
 <div class="bar-track"><i class="c7" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">52 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="C1c">C1c</div>
+<div class="bar-lab">C1c</div>
 <div class="bar-track"><i class="c0" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">19 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="A2w">A2w</div>
+<div class="bar-lab">A2w</div>
 <div class="bar-track"><i class="c0" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">14 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="R0a">R0a</div>
+<div class="bar-lab">R0a</div>
 <div class="bar-track"><i class="c0" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">28 тыс. лет</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab" title="H1">H1</div>
+<div class="bar-lab">H1</div>
 <div class="bar-track"><i class="c1" style="width:8.3%"></i></div>
 <div class="bar-val">1 · 1,6% <span class="age">7 200 лет</span></div>
 </div>

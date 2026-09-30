@@ -33,7 +33,6 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-600-cyrillic.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -43,8 +42,8 @@
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
 <nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/" aria-current="page">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
-<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" data-none="Ничего не найдено" data-all="Все страны →">
-<div id="q-out" class="q-out" role="region" aria-label="Результаты поиска" hidden></div>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
 </form>
 <a class="lang" href="/en/findings/" lang="en" hreflang="en" data-lang-switch="en">English</a>
 </div>
@@ -74,22 +73,22 @@
 <li><a href="/ru/c/japan/">Япония</a> · <b>D4b</b> (мт): 8,1% ×195 · 24 кита</li>
 <li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2z</b> (мт): 7,6% ×179 · 47 китов</li>
 <li><a href="/ru/c/puerto-rico/">Пуэрто-Рико</a> · <b>A2k</b> (мт): 9,8% ×179 · 61 кит</li>
-<li><a href="/ru/c/canada-first-nations/">Канада · коренные народы</a> · <b>C-M217</b> <small>C2</small> (Y): 76,0% ×177 · 38 китов</li>
+<li><a href="/ru/c/canada-first-nations/">Канада · коренные народы</a> · <b>C-M217</b> <small lang="en">C2</small> (Y): 76,0% ×177 · 38 китов</li>
 <li><a href="/ru/c/colombia/">Колумбия</a> · <b>A2w</b> (мт): 14,1% ×169 · 30 китов</li>
 <li><a href="/ru/c/russia-ingushetia/">Ингушетия</a> · <b>J-CTS6619</b> (Y): 61,0% ×152 · 72 кита</li>
 <li><a href="/ru/c/china/">Китай</a> · <b>M7b</b> (мт): 7,7% ×149 · 24 кита</li>
 <li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M324</b> (Y): 57,9% ×138 · 55 китов</li>
-<li><a href="/ru/c/panama/">Панама</a> · <b>Q-M3</b> <small>Q-M3</small> (Y): 65,1% ×130 · 41 кит</li>
+<li><a href="/ru/c/panama/">Панама</a> · <b>Q-M3</b> <small lang="en">Q-M3</small> (Y): 65,1% ×130 · 41 кит</li>
 <li><a href="/ru/c/india/">Индия</a> · <b>M5a</b> (мт): 5,4% ×127 · 20 китов</li>
-<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M217</b> <small>C2</small> (Y): 49,3% ×115 · 224 кита</li>
-<li><a href="/ru/c/russia-dagestan/">Дагестан</a> · <b>J-Z1842</b> <small>J1-Z1842</small> (Y): 52,5% ×110 · 509 китов</li>
-<li><a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a> · <b>L-M22</b> <small>L-M22</small> (Y): 58,9% ×104 · 113 китов</li>
+<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M217</b> <small lang="en">C2</small> (Y): 49,3% ×115 · 224 кита</li>
+<li><a href="/ru/c/russia-dagestan/">Дагестан</a> · <b>J-Z1842</b> <small lang="en">J1-Z1842</small> (Y): 52,5% ×110 · 509 китов</li>
+<li><a href="/ru/c/italy-aosta-valley/">Орстхой (указано как Italy · Aosta Valley)</a> · <b>L-M22</b> <small lang="en">L-M22</small> (Y): 58,9% ×104 · 113 китов</li>
 <li><a href="/ru/c/china/">Китай</a> · <b>O-M324</b> (Y): 40,5% ×97 · 434 кита</li>
-<li><a href="/ru/c/china/">Китай</a> · <b>O-M122</b> <small>O2</small> (Y): 45,4% ×96 · 487 китов</li>
+<li><a href="/ru/c/china/">Китай</a> · <b>O-M122</b> <small lang="en">O2</small> (Y): 45,4% ×96 · 487 китов</li>
 <li><a href="/ru/c/peru/">Перу</a> · <b>B2</b> (мт): 23,8% ×96 · 20 китов</li>
-<li><a href="/ru/c/kazakhstan/">Казахстан</a> · <b>C-M217</b> <small>C2</small> (Y): 39,7% ×92 · 295 китов</li>
-<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M216</b> <small>C</small> (Y): 56,8% ×89 · 258 китов</li>
-<li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M175</b> <small>O</small> (Y): 87,4% ×88 · 83 кита</li>
+<li><a href="/ru/c/kazakhstan/">Казахстан</a> · <b>C-M217</b> <small lang="en">C2</small> (Y): 39,7% ×92 · 295 китов</li>
+<li><a href="/ru/c/mongolia/">Монголия</a> · <b>C-M216</b> <small lang="en">C</small> (Y): 56,8% ×89 · 258 китов</li>
+<li><a href="/ru/c/taiwan/">Тайвань</a> · <b>O-M175</b> <small lang="en">O</small> (Y): 87,4% ×88 · 83 кита</li>
 </ul>
 </section>
 <section>
@@ -193,10 +192,10 @@
 <ul class="plain">
 <li><b>T-Y7381</b>: YFull 1 300 лет <small>1 650–950</small> · FTDNA 4 500 лет <small>5 254–3 826</small> <span class="dim mono">−72,1% · n=148</span></li>
 <li><b>I-L233</b>: YFull 2 100 лет <small>2 600–1 650</small> · FTDNA 6 600 лет <small>7 583–5 700</small> <span class="dim mono">−68,1% · n=171</span></li>
-<li><b>I-L621</b> <small>I2a-L621</small>: YFull 6 400 лет <small>7 600–5 300</small> · FTDNA 12 тыс. лет <small>13 513–10 309</small> <span class="dim mono">−45,8% · n=1 027</span></li>
+<li><b>I-L621</b> <small lang="en">I2a-L621</small>: YFull 6 400 лет <small>7 600–5 300</small> · FTDNA 12 тыс. лет <small>13 513–10 309</small> <span class="dim mono">−45,8% · n=1 027</span></li>
 <li><b>I-L161</b>: YFull 7 200 лет <small>8 200–6 200</small> · FTDNA 11 тыс. лет <small>12 517–9 481</small> <span class="dim mono">−33,9% · n=179</span></li>
 <li><b>Q-M378</b>: YFull 9 300 лет <small>10 800–7 900</small> · FTDNA 6 300 лет <small>7 213–5 416</small> <span class="dim mono">+48,8% · n=168</span></li>
-<li><b>I-M284</b> <small>I2b-M284</small>: YFull 7 100 лет <small>8 200–6 000</small> · FTDNA 9 800 лет <small>11 221–8 529</small> <span class="dim mono">−27,4% · n=317</span></li>
+<li><b>I-M284</b> <small lang="en">I2b-M284</small>: YFull 7 100 лет <small>8 200–6 000</small> · FTDNA 9 800 лет <small>11 221–8 529</small> <span class="dim mono">−27,4% · n=317</span></li>
 </ul>
 </section>
 <section class="yf-find">
@@ -297,35 +296,35 @@
 </div>
 <h3>Расходятся сильнее всего</h3>
 <ul class="plain">
-<li><a href="/ru/c/scotland/">Шотландия</a>: <span class="mono" title="расхождение целиком 11,0%, из них случайность 2,8%">8,1%</span> · <b>I-L137</b> 5% → 12%</li>
-<li><a href="/ru/c/china/">Китай</a>: <span class="mono" title="расхождение целиком 8,3%, из них случайность 1,2%">7,1%</span> · <b>O-M324</b> 82% → 57%</li>
-<li><a href="/ru/c/ireland/">Ирландия</a>: <span class="mono" title="расхождение целиком 9,4%, из них случайность 2,8%">6,6%</span> · <b>R-A541</b> 13% → 6%</li>
-<li><a href="/ru/c/england/">Англия</a>: <span class="mono" title="расхождение целиком 7,8%, из них случайность 1,7%">6,1%</span> · <b>R-Z31644</b> 2% → 7%</li>
-<li><a href="/ru/c/russian-federation/">Россия</a>: <span class="mono" title="расхождение целиком 7,5%, из них случайность 1,8%">5,7%</span> · <b>R-Y2898</b> 13% → 22%</li>
-<li><a href="/ru/c/united-arab-emirates/">ОАЭ</a>: <span class="mono" title="расхождение целиком 5,7%, из них случайность 1,4%">4,3%</span> · <b>T-Z709</b> 39% → 19%</li>
-<li><a href="/ru/c/united-states/">США</a>: <span class="mono" title="расхождение целиком 5,3%, из них случайность 1,2%">4,0%</span> · <b>I-CTS595</b> 2% → 5%</li>
-<li><a href="/ru/c/bahrain/">Бахрейн</a>: <span class="mono" title="расхождение целиком 7,0%, из них случайность 3,2%">3,8%</span> · <b>T-Z709</b> 26% → 9%</li>
+<li><a href="/ru/c/scotland/">Шотландия</a>: <span class="mono">8,1%</span> <small class="dim mono">факт 11,0% · случайность 2,8%</small> · <b>I-L137</b> 5% → 12%</li>
+<li><a href="/ru/c/china/">Китай</a>: <span class="mono">7,1%</span> <small class="dim mono">факт 8,3% · случайность 1,2%</small> · <b>O-M324</b> 82% → 57%</li>
+<li><a href="/ru/c/ireland/">Ирландия</a>: <span class="mono">6,6%</span> <small class="dim mono">факт 9,4% · случайность 2,8%</small> · <b>R-A541</b> 13% → 6%</li>
+<li><a href="/ru/c/england/">Англия</a>: <span class="mono">6,1%</span> <small class="dim mono">факт 7,8% · случайность 1,7%</small> · <b>R-Z31644</b> 2% → 7%</li>
+<li><a href="/ru/c/russian-federation/">Россия</a>: <span class="mono">5,7%</span> <small class="dim mono">факт 7,5% · случайность 1,8%</small> · <b>R-Y2898</b> 13% → 22%</li>
+<li><a href="/ru/c/united-arab-emirates/">ОАЭ</a>: <span class="mono">4,3%</span> <small class="dim mono">факт 5,7% · случайность 1,4%</small> · <b>T-Z709</b> 39% → 19%</li>
+<li><a href="/ru/c/united-states/">США</a>: <span class="mono">4,0%</span> <small class="dim mono">факт 5,3% · случайность 1,2%</small> · <b>I-CTS595</b> 2% → 5%</li>
+<li><a href="/ru/c/bahrain/">Бахрейн</a>: <span class="mono">3,8%</span> <small class="dim mono">факт 7,0% · случайность 3,2%</small> · <b>T-Z709</b> 26% → 9%</li>
 </ul>
 <h3>Сходятся</h3>
 <ul class="plain">
-<li><a href="/ru/c/oman/">Оман</a>: <span class="mono" title="расхождение целиком 1,8%, из них случайность 2,6%">-0,8%</span> · <b>J-FGC2</b> 44% → 57%</li>
-<li><a href="/ru/c/armenia/">Армения</a>: <span class="mono" title="расхождение целиком 2,6%, из них случайность 3,0%">-0,5%</span> · <b>J-CTS6619</b> 8% → 13%</li>
-<li><a href="/ru/c/yemen/">Йемен</a>: <span class="mono" title="расхождение целиком 1,9%, из них случайность 2,1%">-0,2%</span> · <b>J-YSC0000076</b> 1% → 4%</li>
-<li><a href="/ru/c/ukraine/">Украина</a>: <span class="mono" title="расхождение целиком 4,5%, из них случайность 4,4%">0,1%</span> · <b>R-Z2124</b> <small>R1a-Z2124</small> 9% → 5%</li>
-<li><a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>: <span class="mono" title="расхождение целиком 4,1%, из них случайность 3,8%">0,3%</span> · <b>I-Y3548</b> 50% → 56%</li>
-<li><a href="/ru/c/norway/">Норвегия</a>: <span class="mono" title="расхождение целиком 5,2%, из них случайность 4,8%">0,4%</span> · <b>I-BY266</b> 12% → 17%</li>
+<li><a href="/ru/c/oman/">Оман</a>: <span class="mono">-0,8%</span> <small class="dim mono">факт 1,8% · случайность 2,6%</small> · <b>J-FGC2</b> 44% → 57%</li>
+<li><a href="/ru/c/armenia/">Армения</a>: <span class="mono">-0,5%</span> <small class="dim mono">факт 2,6% · случайность 3,0%</small> · <b>J-CTS6619</b> 8% → 13%</li>
+<li><a href="/ru/c/yemen/">Йемен</a>: <span class="mono">-0,2%</span> <small class="dim mono">факт 1,9% · случайность 2,1%</small> · <b>J-YSC0000076</b> 1% → 4%</li>
+<li><a href="/ru/c/ukraine/">Украина</a>: <span class="mono">0,1%</span> <small class="dim mono">факт 4,5% · случайность 4,4%</small> · <b>R-Z2124</b> <small lang="en">R1a-Z2124</small> 9% → 5%</li>
+<li><a href="/ru/c/bosnia-and-herzegovina/">Босния и Герцеговина</a>: <span class="mono">0,3%</span> <small class="dim mono">факт 4,1% · случайность 3,8%</small> · <b>I-Y3548</b> 50% → 56%</li>
+<li><a href="/ru/c/norway/">Норвегия</a>: <span class="mono">0,4%</span> <small class="dim mono">факт 5,2% · случайность 4,8%</small> · <b>I-BY266</b> 12% → 17%</li>
 </ul>
 <h3>То же по мтДНК</h3>
 <p>То же для материнской линии. Не учтены недотипированные образцы с голой буквой (H, U, J без цифры); ветки меньше 0,5% у обеих компаний объединены в «прочее». 16 стран.</p>
 <ul class="plain">
-<li><a href="/ru/c/ireland/">Ирландия</a>: <span class="mono" title="расхождение целиком 23,0%, из них случайность 8,7%">14,3%</span> · <b>X2b</b> 1% → 5%</li>
-<li><a href="/ru/c/italy/">Италия</a>: <span class="mono" title="расхождение целиком 25,1%, из них случайность 11,5%">13,6%</span> · <b>K1a</b> 5% → 8%</li>
-<li><a href="/ru/c/norway/">Норвегия</a>: <span class="mono" title="расхождение целиком 17,8%, из них случайность 9,5%">8,2%</span> · <b>K1c</b> 1% → 4%</li>
-<li><a href="/ru/c/ukraine/">Украина</a>: <span class="mono" title="расхождение целиком 12,0%, из них случайность 5,8%">6,2%</span> · <b>K1a</b> 12% → 4%</li>
-<li><a href="/ru/c/russian-federation/">Россия</a>: <span class="mono" title="расхождение целиком 8,1%, из них случайность 2,0%">6,1%</span> · <b>K1a</b> 8% → 1%</li>
-<li><a href="/ru/c/turkey/">Турция</a>: <span class="mono" title="расхождение целиком 13,1%, из них случайность 8,0%">5,1%</span> · <b>K1a</b> 7% → 9%</li>
-<li><a href="/ru/c/poland/">Польша</a>: <span class="mono" title="расхождение целиком 7,5%, из них случайность 2,9%">4,7%</span> · <b>K1a</b> 8% → 4%</li>
-<li><a href="/ru/c/china/">Китай</a>: <span class="mono" title="расхождение целиком 13,1%, из них случайность 8,5%">4,5%</span> · <b>D5a</b> 1% → 5%</li>
+<li><a href="/ru/c/ireland/">Ирландия</a>: <span class="mono">14,3%</span> <small class="dim mono">факт 23,0% · случайность 8,7%</small> · <b>X2b</b> 1% → 5%</li>
+<li><a href="/ru/c/italy/">Италия</a>: <span class="mono">13,6%</span> <small class="dim mono">факт 25,1% · случайность 11,5%</small> · <b>K1a</b> 5% → 8%</li>
+<li><a href="/ru/c/norway/">Норвегия</a>: <span class="mono">8,2%</span> <small class="dim mono">факт 17,8% · случайность 9,5%</small> · <b>K1c</b> 1% → 4%</li>
+<li><a href="/ru/c/ukraine/">Украина</a>: <span class="mono">6,2%</span> <small class="dim mono">факт 12,0% · случайность 5,8%</small> · <b>K1a</b> 12% → 4%</li>
+<li><a href="/ru/c/russian-federation/">Россия</a>: <span class="mono">6,1%</span> <small class="dim mono">факт 8,1% · случайность 2,0%</small> · <b>K1a</b> 8% → 1%</li>
+<li><a href="/ru/c/turkey/">Турция</a>: <span class="mono">5,1%</span> <small class="dim mono">факт 13,1% · случайность 8,0%</small> · <b>K1a</b> 7% → 9%</li>
+<li><a href="/ru/c/poland/">Польша</a>: <span class="mono">4,7%</span> <small class="dim mono">факт 7,5% · случайность 2,9%</small> · <b>K1a</b> 8% → 4%</li>
+<li><a href="/ru/c/china/">Китай</a>: <span class="mono">4,5%</span> <small class="dim mono">факт 13,1% · случайность 8,5%</small> · <b>D5a</b> 1% → 5%</li>
 </ul>
 </section>
 <section class="yf-find">
@@ -335,24 +334,24 @@
 <p>Ветка составляет не меньше 4% хотя бы у одной компании, а разница между компаниями слишком велика, чтобы быть случайной: она хотя бы в 4 раз больше ожидаемого случайного разброса. Обычно так выглядит один крупный проект или разные пути, которыми клиенты приходят в компанию.</p>
 </div>
 <ul class="plain">
-<li><a href="/ru/c/china/">Китай</a> · <b>O-M324</b>: 81,9% → 57,2% <span title="z=-9,2">(−24,7)</span> <span class="dim mono">n=530 / 694</span></li>
-<li><a href="/ru/c/united-arab-emirates/">ОАЭ</a> · <b>T-Z709</b>: 38,9% → 18,9% <span title="z=-6,2">(−20)</span> <span class="dim mono">n=550 / 333</span></li>
-<li><a href="/ru/c/bahrain/">Бахрейн</a> · <b>T-Z709</b>: 25,6% → 9,4% <span title="z=-4,2">(−16,3)</span> <span class="dim mono">n=281 / 171</span></li>
-<li><a href="/ru/c/kuwait/">Кувейт</a> · <b>J-FGC2</b>: 20,5% → 34,1% <span title="z=5,9">(+13,7)</span> <span class="dim mono">n=738 / 718</span></li>
-<li><a href="/ru/c/china/">Китай</a> · <b>C-M217</b> <small>C2</small>: 17,2% → 29,0% <span title="z=4,8">(+11,8)</span> <span class="dim mono">n=530 / 694</span></li>
-<li><a href="/ru/c/russia-chechnya/">Чечня</a> · <b>L-M22</b>: 28,3% → 16,6% <span title="z=-6,0">(−11,7)</span> <span class="dim mono">n=1 146 / 826</span></li>
-<li><a href="/ru/c/sweden/">Швеция</a> · <b>I-BY266</b>: 16,5% → 28,1% <span title="z=7,9">(+11,6)</span> <span class="dim mono">n=5 607 / 784</span></li>
-<li><a href="/ru/c/russian-federation/">Россия</a> · <b>R-Y2898</b>: 13,1% → 21,8% <span title="z=6,2">(+8,7)</span> <span class="dim mono">n=2 760 / 859</span></li>
-<li><a href="/ru/c/ireland/">Ирландия</a> · <b>R-A541</b>: 13,4% → 5,9% <span title="z=-4,4">(−7,5)</span> <span class="dim mono">n=7 331 / 421</span></li>
-<li><a href="/ru/c/scotland/">Шотландия</a> · <b>I-L137</b>: 4,6% → 11,8% <span title="z=6,6">(+7,2)</span> <span class="dim mono">n=5 156 / 456</span></li>
-<li><a href="/ru/c/ireland/">Ирландия</a> · <b>I-L137</b>: 4,8% → 11,9% <span title="z=6,3">(+7)</span> <span class="dim mono">n=7 331 / 421</span></li>
-<li><a href="/ru/c/poland/">Польша</a> · <b>R-Y2898</b>: 9,4% → 15,5% <span title="z=4,8">(+6,2)</span> <span class="dim mono">n=3 036 / 708</span></li>
+<li><a href="/ru/c/china/">Китай</a> · <b>O-M324</b>: 81,9% → 57,2% (−24,7) <small class="dim mono">z=-9,2</small> <span class="dim mono">n=530 / 694</span></li>
+<li><a href="/ru/c/united-arab-emirates/">ОАЭ</a> · <b>T-Z709</b>: 38,9% → 18,9% (−20) <small class="dim mono">z=-6,2</small> <span class="dim mono">n=550 / 333</span></li>
+<li><a href="/ru/c/bahrain/">Бахрейн</a> · <b>T-Z709</b>: 25,6% → 9,4% (−16,3) <small class="dim mono">z=-4,2</small> <span class="dim mono">n=281 / 171</span></li>
+<li><a href="/ru/c/kuwait/">Кувейт</a> · <b>J-FGC2</b>: 20,5% → 34,1% (+13,7) <small class="dim mono">z=5,9</small> <span class="dim mono">n=738 / 718</span></li>
+<li><a href="/ru/c/china/">Китай</a> · <b>C-M217</b> <small lang="en">C2</small>: 17,2% → 29,0% (+11,8) <small class="dim mono">z=4,8</small> <span class="dim mono">n=530 / 694</span></li>
+<li><a href="/ru/c/russia-chechnya/">Чечня</a> · <b>L-M22</b>: 28,3% → 16,6% (−11,7) <small class="dim mono">z=-6,0</small> <span class="dim mono">n=1 146 / 826</span></li>
+<li><a href="/ru/c/sweden/">Швеция</a> · <b>I-BY266</b>: 16,5% → 28,1% (+11,6) <small class="dim mono">z=7,9</small> <span class="dim mono">n=5 607 / 784</span></li>
+<li><a href="/ru/c/russian-federation/">Россия</a> · <b>R-Y2898</b>: 13,1% → 21,8% (+8,7) <small class="dim mono">z=6,2</small> <span class="dim mono">n=2 760 / 859</span></li>
+<li><a href="/ru/c/ireland/">Ирландия</a> · <b>R-A541</b>: 13,4% → 5,9% (−7,5) <small class="dim mono">z=-4,4</small> <span class="dim mono">n=7 331 / 421</span></li>
+<li><a href="/ru/c/scotland/">Шотландия</a> · <b>I-L137</b>: 4,6% → 11,8% (+7,2) <small class="dim mono">z=6,6</small> <span class="dim mono">n=5 156 / 456</span></li>
+<li><a href="/ru/c/ireland/">Ирландия</a> · <b>I-L137</b>: 4,8% → 11,9% (+7) <small class="dim mono">z=6,3</small> <span class="dim mono">n=7 331 / 421</span></li>
+<li><a href="/ru/c/poland/">Польша</a> · <b>R-Y2898</b>: 9,4% → 15,5% (+6,2) <small class="dim mono">z=4,8</small> <span class="dim mono">n=3 036 / 708</span></li>
 </ul>
 <h3>То же по мтДНК</h3>
 <ul class="plain">
-<li><a href="/ru/c/russian-federation/">Россия</a> · <b>K1a</b>: 7,6% → 1,2% <span title="z=-6,2">(−6,3)</span> <span class="dim mono">n=2 731 / 721</span></li>
-<li><a href="/ru/c/ireland/">Ирландия</a> · <b>X2b</b>: 0,9% → 5,2% <span title="z=5,4">(+4,3)</span> <span class="dim mono">n=9 917 / 153</span></li>
-<li><a href="/ru/c/poland/">Польша</a> · <b>U4a</b>: 2,0% → 5,4% <span title="z=4,3">(+3,3)</span> <span class="dim mono">n=4 285 / 410</span></li>
+<li><a href="/ru/c/russian-federation/">Россия</a> · <b>K1a</b>: 7,6% → 1,2% (−6,3) <small class="dim mono">z=-6,2</small> <span class="dim mono">n=2 731 / 721</span></li>
+<li><a href="/ru/c/ireland/">Ирландия</a> · <b>X2b</b>: 0,9% → 5,2% (+4,3) <small class="dim mono">z=5,4</small> <span class="dim mono">n=9 917 / 153</span></li>
+<li><a href="/ru/c/poland/">Польша</a> · <b>U4a</b>: 2,0% → 5,4% (+3,3) <small class="dim mono">z=4,3</small> <span class="dim mono">n=4 285 / 410</span></li>
 </ul>
 </section>
 <section class="yf-find">
@@ -363,12 +362,12 @@
 </div>
 <ul class="plain">
 <li><b>J-FGC4415</b>: <a href="/ru/ethnic/ara/">Арабы</a> 454 / 481 (94%) <span class="dim mono">всего образцов 1 085 · TMRCA 2 900 лет</span></li>
-<li><b>J-Y7291</b> <small>J-BY1147</small>: <a href="/ru/ethnic/che/">Чеченцы</a> 238 / 293 (81%) <span class="dim mono">всего образцов 296 · TMRCA 2 000 лет</span></li>
+<li><b>J-Y7291</b> <small lang="en">J-BY1147</small>: <a href="/ru/ethnic/che/">Чеченцы</a> 238 / 293 (81%) <span class="dim mono">всего образцов 296 · TMRCA 2 000 лет</span></li>
 <li><b>E-CTS10880</b>: <a href="/ru/ethnic/ara/">Арабы</a> 138 / 172 (80%) <span class="dim mono">всего образцов 344 · TMRCA 13 тыс. лет</span></li>
 <li><b>L-Y6288</b>: <a href="/ru/ethnic/che/">Чеченцы</a> 128 / 148 (86%) <span class="dim mono">всего образцов 167 · TMRCA 7 200 лет</span></li>
 <li><b>J-FGC39213</b>: <a href="/ru/ethnic/ara/">Арабы</a> 124 / 124 (100%) <span class="dim mono">всего образцов 180 · TMRCA 2 200 лет</span></li>
 <li><b>J-CTS7188</b>: <a href="/ru/ethnic/che/">Чеченцы</a> 111 / 136 (82%) <span class="dim mono">всего образцов 146 · TMRCA 5 600 лет</span></li>
-<li><b>J-V2639</b> <small>J-Y13637</small>: <a href="/ru/ethnic/che/">Чеченцы</a> 96 / 111 (86%) <span class="dim mono">всего образцов 112 · TMRCA 9 900 лет</span></li>
+<li><b>J-V2639</b> <small lang="en">J-Y13637</small>: <a href="/ru/ethnic/che/">Чеченцы</a> 96 / 111 (86%) <span class="dim mono">всего образцов 112 · TMRCA 9 900 лет</span></li>
 <li><b>J-FT6639</b>: <a href="/ru/ethnic/che/">Чеченцы</a> 91 / 94 (97%) <span class="dim mono">всего образцов 94 · TMRCA 1 500 лет</span></li>
 <li><b>J-FGC4453</b>: <a href="/ru/ethnic/ara/">Арабы</a> 90 / 104 (87%) <span class="dim mono">всего образцов 251 · TMRCA 1 900 лет</span></li>
 <li><b>J-CTS1460a</b>: <a href="/ru/ethnic/che/">Чеченцы</a> 87 / 100 (87%) <span class="dim mono">всего образцов 116 · TMRCA 5 900 лет</span></li>
@@ -384,25 +383,25 @@
 </div>
 <h3>Самые однородные</h3>
 <ul class="plain">
-<li><a href="/ru/ethnic/inh/">Ингуши</a>: <span class="mono" title="0,55 бит">3,1</span> веток · <b>J-CTS6619</b> 90% <span class="dim mono">n=163</span></li>
-<li><a href="/ru/ethnic/acw/">Арабы Хиджаза</a>: <span class="mono" title="1,55 бит">6,1</span> веток · <b>J-FGC7</b> 66% <span class="dim mono">n=97</span></li>
-<li><a href="/ru/ethnic/abk/">Абхазы</a>: <span class="mono" title="1,58 бит">6,0</span> веток · <b>G-Z6779</b> 68% <span class="dim mono">n=40</span></li>
-<li><a href="/ru/ethnic/che/">Чеченцы</a>: <span class="mono" title="1,70 бит">4,8</span> веток · <b>J-CTS6619</b> 46% <span class="dim mono">n=818</span></li>
-<li><a href="/ru/ethnic/ars/">Арабы Неджда</a>: <span class="mono" title="1,72 бит">6,1</span> веток · <b>J-FGC7</b> 62% <span class="dim mono">n=81</span></li>
-<li><a href="/ru/ethnic/krc/">Карачаево-балкарцы</a>: <span class="mono" title="1,88 бит">9,2</span> веток · <b>R-Z2124</b> <small>R1a-Z2124</small> 66% <span class="dim mono">n=64</span></li>
-<li><a href="/ru/ethnic/ady/">Адыгейцы</a>: <span class="mono" title="1,90 бит">8,1</span> веток · <b>G-Z6779</b> 57% <span class="dim mono">n=145</span></li>
-<li><a href="/ru/ethnic/srp/">Сербы</a>: <span class="mono" title="2,23 бит">10,5</span> веток · <b>I-Y3548</b> 58% <span class="dim mono">n=252</span></li>
+<li><a href="/ru/ethnic/inh/">Ингуши</a>: <span class="mono">3,1</span> веток <small class="dim mono">0,55 бит</small> · <b>J-CTS6619</b> 90% <span class="dim mono">n=163</span></li>
+<li><a href="/ru/ethnic/acw/">Арабы Хиджаза</a>: <span class="mono">6,1</span> веток <small class="dim mono">1,55 бит</small> · <b>J-FGC7</b> 66% <span class="dim mono">n=97</span></li>
+<li><a href="/ru/ethnic/abk/">Абхазы</a>: <span class="mono">6,0</span> веток <small class="dim mono">1,58 бит</small> · <b>G-Z6779</b> 68% <span class="dim mono">n=40</span></li>
+<li><a href="/ru/ethnic/che/">Чеченцы</a>: <span class="mono">4,8</span> веток <small class="dim mono">1,70 бит</small> · <b>J-CTS6619</b> 46% <span class="dim mono">n=818</span></li>
+<li><a href="/ru/ethnic/ars/">Арабы Неджда</a>: <span class="mono">6,1</span> веток <small class="dim mono">1,72 бит</small> · <b>J-FGC7</b> 62% <span class="dim mono">n=81</span></li>
+<li><a href="/ru/ethnic/krc/">Карачаево-балкарцы</a>: <span class="mono">9,2</span> веток <small class="dim mono">1,88 бит</small> · <b>R-Z2124</b> <small lang="en">R1a-Z2124</small> 66% <span class="dim mono">n=64</span></li>
+<li><a href="/ru/ethnic/ady/">Адыгейцы</a>: <span class="mono">8,1</span> веток <small class="dim mono">1,90 бит</small> · <b>G-Z6779</b> 57% <span class="dim mono">n=145</span></li>
+<li><a href="/ru/ethnic/srp/">Сербы</a>: <span class="mono">10,5</span> веток <small class="dim mono">2,23 бит</small> · <b>I-Y3548</b> 58% <span class="dim mono">n=252</span></li>
 </ul>
 <h3>Самые разнообразные</h3>
 <ul class="plain">
-<li><a href="/ru/ethnic/eng/">Англичане</a>: <span class="mono" title="4,66 бит">28,2</span> веток · <b>R-Z287</b> 5% <span class="dim mono">n=476</span></li>
-<li><a href="/ru/ethnic/fra/">Французы</a>: <span class="mono" title="4,23 бит">21,6</span> веток · <b>R-Z205</b> 12% <span class="dim mono">n=42</span></li>
-<li><a href="/ru/ethnic/deu/">Немцы</a>: <span class="mono" title="4,14 бит">21,1</span> веток · <b>R-L1029</b> 12% <span class="dim mono">n=118</span></li>
-<li><a href="/ru/ethnic/hun/">Венгры</a>: <span class="mono" title="3,77 бит">17,2</span> веток · <b>I-Y3548</b> 16% <span class="dim mono">n=51</span></li>
-<li><a href="/ru/ethnic/spa/">Испанцы</a>: <span class="mono" title="3,72 бит">17,5</span> веток · <b>E-S2979</b> 22% <span class="dim mono">n=64</span></li>
-<li><a href="/ru/ethnic/bul/">Болгары</a>: <span class="mono" title="3,69 бит">17,3</span> веток · <b>I-Y3548</b> 24% <span class="dim mono">n=49</span></li>
-<li><a href="/ru/ethnic/tur/">Турки</a>: <span class="mono" title="3,68 бит">16,5</span> веток · <b>J-Z1842</b> <small>J1-Z1842</small> 21% <span class="dim mono">n=43</span></li>
-<li><a href="/ru/ethnic/tat/">Татары</a>: <span class="mono" title="3,51 бит">14,7</span> веток · <b>R-Z2124</b> <small>R1a-Z2124</small> 18% <span class="dim mono">n=160</span></li>
+<li><a href="/ru/ethnic/eng/">Англичане</a>: <span class="mono">28,2</span> веток <small class="dim mono">4,66 бит</small> · <b>R-Z287</b> 5% <span class="dim mono">n=476</span></li>
+<li><a href="/ru/ethnic/fra/">Французы</a>: <span class="mono">21,6</span> веток <small class="dim mono">4,23 бит</small> · <b>R-Z205</b> 12% <span class="dim mono">n=42</span></li>
+<li><a href="/ru/ethnic/deu/">Немцы</a>: <span class="mono">21,1</span> веток <small class="dim mono">4,14 бит</small> · <b>R-L1029</b> 12% <span class="dim mono">n=118</span></li>
+<li><a href="/ru/ethnic/hun/">Венгры</a>: <span class="mono">17,2</span> веток <small class="dim mono">3,77 бит</small> · <b>I-Y3548</b> 16% <span class="dim mono">n=51</span></li>
+<li><a href="/ru/ethnic/spa/">Испанцы</a>: <span class="mono">17,5</span> веток <small class="dim mono">3,72 бит</small> · <b>E-S2979</b> 22% <span class="dim mono">n=64</span></li>
+<li><a href="/ru/ethnic/bul/">Болгары</a>: <span class="mono">17,3</span> веток <small class="dim mono">3,69 бит</small> · <b>I-Y3548</b> 24% <span class="dim mono">n=49</span></li>
+<li><a href="/ru/ethnic/tur/">Турки</a>: <span class="mono">16,5</span> веток <small class="dim mono">3,68 бит</small> · <b>J-Z1842</b> <small lang="en">J1-Z1842</small> 21% <span class="dim mono">n=43</span></li>
+<li><a href="/ru/ethnic/tat/">Татары</a>: <span class="mono">14,7</span> веток <small class="dim mono">3,51 бит</small> · <b>R-Z2124</b> <small lang="en">R1a-Z2124</small> 18% <span class="dim mono">n=160</span></li>
 </ul>
 </section>
 </main>

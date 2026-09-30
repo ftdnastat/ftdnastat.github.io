@@ -75,7 +75,7 @@
 
   var q = document.getElementById("q"), out = document.getElementById("q-out"), idx = null;
   if (q && out) {
-    var close = function () { out.hidden = true; };
+    var close = function () { out.hidden = true; q.setAttribute("aria-expanded", "false"); };
     var render = function () {
       var v = q.value.trim().toLowerCase();
       if (!v || !idx) { close(); return; }
@@ -85,6 +85,7 @@
         ? hits.map(function (e) { return '<a href="/' + lang + "/c/" + esc(e.s) + '/"><span>' + esc(lang === "ru" ? e.ru : e.en) + '</span><span class="mono dim">' + (+e.y) + " / " + (+e.mt) + "</span></a>"; }).join("")
         : '<span class="q-none dim">' + esc(q.getAttribute("data-none")) + '</span><a href="/' + lang + "/countries/?q=" + encodeURIComponent(v) + '">' + esc(q.getAttribute("data-all")) + "</a>";
       out.hidden = false;
+      q.setAttribute("aria-expanded", "true");
     };
     q.addEventListener("input", function () {
       if (idx) return render();
