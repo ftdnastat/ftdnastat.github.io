@@ -42,13 +42,13 @@ p{margin:0}
 .dim{color:var(--ink-3)}
 small{color:var(--ink-3);font-weight:400}
 .top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
-.topin{display:flex;align-items:center;gap:18px;min-height:52px;flex-wrap:wrap;padding-block:6px}
+.topin{display:flex;align-items:center;gap:12px;min-height:52px;flex-wrap:wrap;padding-block:6px}
 .brand{font-family:"IBM Plex Mono",monospace;font-weight:500;color:var(--ink);font-size:16px}
-.nav{display:flex;gap:4px;flex-wrap:wrap}
-.nav a{padding:5px 10px;border-radius:999px;color:var(--ink-2);font-size:14px}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{padding:5px 8px;border-radius:999px;color:var(--ink-2);font-size:14px}
 .nav a[aria-current]{background:var(--tab-on);color:var(--tab-on-ink)}
 .search{margin-left:auto;position:relative}
-.search input{font:inherit;font-size:14px;padding:6px 10px;border:1px solid var(--ink-3);border-radius:6px;background:var(--bg);color:var(--ink);width:240px}
+.search input{font:inherit;font-size:14px;padding:6px 10px;border:1px solid var(--ink-3);border-radius:6px;background:var(--bg);color:var(--ink);width:160px}
 .q-out{position:absolute;top:100%;right:0;min-width:280px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:30;max-height:320px;overflow:auto}
 .q-out a{display:flex;justify-content:space-between;gap:12px;padding:7px 12px;color:var(--ink);border-bottom:1px solid var(--grid)}
 .q-out a:hover{background:var(--bg);text-decoration:none}
@@ -56,17 +56,28 @@ small{color:var(--ink-3);font-weight:400}
 .crumbs{font-size:13px;color:var(--ink-3);display:flex;gap:6px;flex-wrap:wrap}.crumbs .sep{color:var(--ink-3)}
 .foot{color:var(--ink-3);font-size:13px;padding-block:18px 32px;border-top:1px solid var(--line)}
 .hero{display:grid;gap:14px}.lede{color:var(--ink-2);max-width:66ch;font-size:16px}
-.head{display:grid;gap:8px}.head p{color:var(--ink-2);max-width:70ch}
+.head{display:grid;gap:8px}.head>*{min-width:0}.head p{color:var(--ink-2);max-width:70ch}
 .sec-head{display:grid;gap:4px;margin-bottom:12px}.sec-head p{color:var(--ink-2);max-width:72ch;font-size:14px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
-.tile-ext .big{font-size:24px;line-height:1.15}
+.tiles.t3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tile-txt .big{font-size:22px;line-height:1.15;overflow-wrap:anywhere}
+.tile-txt .chips{margin-top:4px}
 .cta{border-color:var(--acc)}.p-dot.pr{background:var(--acc)}
+.hero .search{margin:0;max-width:560px;display:grid;gap:6px}
+.hero .search label{font-size:13px;font-weight:500;color:var(--ink-2)}
+.hero .search input{width:100%;font-size:16px;padding:10px 12px}
+.hero .q-out{left:0;right:auto;width:100%;min-width:0}
+.sec-head.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
+.sec-head.row p{flex-basis:100%}
 .clade-link{font-size:12px;white-space:nowrap;margin-left:6px}
 .more,.clade-link{display:inline-block;padding-block:3px}
 .tree:not(.compact) .bar-val{white-space:normal}
 .foot a{margin-left:8px}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:6px;color:var(--ink);align-content:start}
 .tile:hover{text-decoration:none;border-color:var(--acc)}
+/* palette tones are too light for text on white: darken them with ink; dark mode keeps the plain tone */
+.tile.hue{border-left:4px solid var(--c)}.tile.hue .big{color:var(--ink);color:color-mix(in srgb,var(--c) 55%,var(--ink))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tile.hue .big{color:var(--c)}}.tile .sub .chip{vertical-align:middle}
 .big{font-family:"Fira Sans Condensed",sans-serif;font-size:36px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}.big small{font-size:14px;font-family:"IBM Plex Sans",sans-serif}
 .sub{color:var(--ink-2);font-size:13px}
 .btn{display:inline-block;margin-top:6px;padding:6px 12px;border-radius:999px;background:var(--tab-on);color:var(--tab-on-ink);font-size:13.5px;font-weight:500;justify-self:start}
@@ -77,10 +88,10 @@ small{color:var(--ink-3);font-weight:400}
 .m-lab{font-size:13px;font-weight:500;margin-top:2px}.m-note{font-size:12px;color:var(--ink-3);line-height:1.35}
 .chips{display:flex;gap:5px;flex-wrap:wrap}
 .chip{background:var(--bg);border:1px solid var(--grid);color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:1px 7px 1px 5px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
-.chip .sw{width:8px;height:8px;border-radius:2px;display:inline-block;margin:0}
+.chip .sw{width:8px;height:8px;border-radius:2px;display:inline-block;margin:0}.chip a{color:inherit}
 .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-block:8px 10px}
 .legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
-/* 53px = .topin min-height (border-box) + 1px border; the header is sticky only while it fits on one line (see ≤999px) */
+/* 53px = .topin min-height (border-box) + 1px border; the header is sticky only while it fits on one line (see ≤1119px) */
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;position:sticky;top:53px;z-index:5;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--line)}
 .tabs{display:flex;gap:6px;flex-wrap:wrap}
 .tab{font:inherit;font-weight:500;font-size:13.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
@@ -93,9 +104,14 @@ table.list{border-collapse:collapse;width:100%;font-size:14px}
 .list th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:500;position:sticky;top:0;background:var(--surface);z-index:1}
 .list td.num,.list th.num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}.list th.num{font-weight:400}
 .list td.name{font-weight:500}.list td.name small{margin-left:6px;font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+/* peoples index: ethnonyms wrap, the language sits under the name, the long country lists wrap and hide on phones */
+.list.peoples td.name{white-space:normal}.list.peoples td.name small{display:block;margin-left:0}
+.list td.lead{white-space:normal}.nw{white-space:nowrap}.list td.col-countries{white-space:normal;max-width:36ch}
 .list tr.small td{color:var(--ink-3)}.list tr.small td a{color:var(--acc)}
 .list tr:last-child td{border-bottom:0}
-.stack{display:flex;height:12px;width:min(320px,38vw);border-radius:3px;overflow:hidden;gap:1px;background:var(--grid)}
+/* the name column takes only what its text needs; the free width goes to the composition bar */
+.list td.name{width:1%}.list td.comp{width:36%}
+.stack{display:flex;height:12px;width:100%;min-width:100px;max-width:320px;border-radius:3px;overflow:hidden;gap:1px;background:var(--grid)}
 .stack i{display:block;height:100%;min-width:0}
 .bars,.tree{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px;display:grid;gap:5px 10px;grid-template-columns:fit-content(230px) minmax(100px,1fr) auto}
 .tree{grid-template-columns:fit-content(280px) minmax(100px,1fr) auto}
@@ -116,7 +132,7 @@ table.list{border-collapse:collapse;width:100%;font-size:14px}
 .bar-val{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
 .age{color:var(--ink-3);font-size:11.5px;margin-left:4px}
 ul.plain,ol.plain{margin:0;padding-left:20px;display:grid;gap:5px;font-size:14px}
-ul.plain.cols{columns:2;gap:24px}
+ul.plain.cols{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
 ul.plain+ul.plain{margin-top:8px}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
 .note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:6px;padding:10px 14px;font-size:14px;color:var(--ink-2)}
@@ -144,6 +160,10 @@ ul.plain+ul.plain{margin-top:8px}
 .ccard.light,.ccard.small{padding:12px 16px;gap:8px;contain-intrinsic-size:1px 130px}
 .empty{color:var(--ink-2);padding:24px 0}
 .q-none{display:block;padding:7px 12px}
+.q-group{display:block;padding:6px 12px 2px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--grid)}.q-out a small{margin-left:6px}
+.equiv{font-size:13.5px}
+.path{font-size:13.5px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline}.path .sep{color:var(--ink-3)}.path b{font-weight:500}
+.share{display:flex;align-items:center;gap:8px}.share .bar-track{width:120px;flex:none}.share .mono{font-size:12px;color:var(--ink-2)}
 .note.small{font-size:13px;margin-top:10px}
 .legend .dim{flex-basis:100%}
 
@@ -159,6 +179,7 @@ ul.plain+ul.plain{margin-top:8px}
 
 .grid2{display:grid;gap:36px}
 @media (min-width:1000px){.grid2{grid-template-columns:1fr 1fr;gap:24px 28px}.grid2 .span2{grid-column:1 / -1}}
+.ym{position:absolute;left:-9999px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .skip{position:absolute;left:8px;top:-100px;z-index:50;padding:8px 14px;border-radius:8px;background:var(--tab-on);color:var(--tab-on-ink);font-weight:500}.skip:focus{top:8px;text-decoration:none}
 .prose,.lede,.note{hyphens:auto}
@@ -169,8 +190,10 @@ h2 .anchor{margin-left:6px;color:var(--ink-3);text-decoration:none;opacity:0;tra
 .toc ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}.toc summary{font-weight:500;color:var(--ink-2);cursor:pointer}.toc a{color:var(--ink-2)}
 details{margin-top:8px}details summary{cursor:pointer;font-weight:500;font-size:14px;color:var(--ink-2)}details[open] summary{margin-bottom:6px}
 
-@media (max-width:1120px){.topin{gap:12px}.nav{gap:2px}.nav a{padding:5px 8px}.search input{width:160px}}
-/* below ~1000px the header cannot stay on one line (8 nav items), so it stops being sticky rather than hiding .controls */
-@media (max-width:999px){.top{position:static}.controls{top:0}}
+/* below 1120px the English header (9 nav items) wraps to two lines, so it stops being sticky rather than hiding .controls */
+/* index tables up to 1119px: names wrap, the leading-branches column goes, the stack narrows; phones also tighten the cell padding */
+@media (max-width:1119px){.top{position:static}.controls{top:0}.list .col-lead{display:none}.list td.name{white-space:normal}.list td.name small{display:block;margin-left:0}}
 @media (max-width:900px){.search input{width:120px}}
-@media (max-width:640px){.tab,.lang{padding-block:9px}.bars,.tree,.tree.compact,.panel .bars{grid-template-columns:1fr}.bar-row,.tree-row{gap:3px}.stack{width:110px}.list .col-yf,.list .col-lead{display:none}.list td.name{white-space:normal}.list td.name small{display:block;margin-left:0}ul.plain.cols{columns:1}.search input{width:160px}.cmp-head,.cmp-row{grid-template-columns:1fr;gap:3px}.cmp-head{display:none}}
+/* peoples index on phones: each row becomes a card — name, Y, mt on one line, the leading branches below; the header row stays for screen readers */
+@media (max-width:640px){.list.peoples thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.list.peoples tr{display:grid;grid-template-columns:1fr auto auto;gap:2px 12px;align-items:baseline;padding:8px 12px;border-bottom:1px solid var(--grid)}.list.peoples tr[hidden]{display:none}.list.peoples td{display:block;padding:0;border:0}.list.peoples td.lead{grid-column:1/-1;font-size:13px}.list.peoples td.num::before{color:var(--ink-3);font-size:11px;margin-right:3px}.list.peoples td.num:nth-child(2)::before{content:"Y"}[data-lang=ru] .list.peoples td.num:nth-child(3)::before{content:"мт"}[data-lang=en] .list.peoples td.num:nth-child(3)::before{content:"mt"}}
+@media (max-width:640px){.tab,.lang{padding-block:9px}.bars,.tree,.tree.compact,.panel .bars{grid-template-columns:1fr}.bar-row,.tree-row{gap:3px}.list .col-yf,.list .col-countries{display:none}.list th,.list td{padding:7px 8px}ul.plain.cols{grid-template-columns:1fr}.search input{width:160px}.cmp-head,.cmp-row{grid-template-columns:1fr;gap:3px}.cmp-head{display:none}}

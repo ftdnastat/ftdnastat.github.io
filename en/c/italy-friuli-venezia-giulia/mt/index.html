@@ -37,8 +37,8 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
-<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/" aria-current="page">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
-<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →">
+<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/" aria-current="page">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-kits="kits">
 <div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
 </form>
 <a class="lang" href="/ru/c/italy-friuli-venezia-giulia/mt/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
@@ -91,52 +91,52 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab">H</div>
+<div class="bar-lab"><a href="/en/mt-clade/h/">H</a></div>
 <div class="bar-track"><i class="c1" style="width:100.0%"></i></div>
 <div class="bar-val">2 · 16.7%</div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1</div>
+<div class="bar-lab"><a href="/en/mt-clade/h1/">H1</a></div>
 <div class="bar-track"><i class="c1" style="width:100.0%"></i></div>
 <div class="bar-val">2 · 16.7% <span class="age">7,200 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1e</div>
+<div class="bar-lab"><a href="/en/mt-clade/h1e/">H1e</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">6,300 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H1j</div>
+<div class="bar-lab"><a href="/en/mt-clade/h1j/">H1j</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">6,500 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H5</div>
+<div class="bar-lab"><a href="/en/mt-clade/h5/">H5</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">8,400 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">H41a</div>
+<div class="bar-lab"><a href="/en/mt-clade/h41a/">H41a</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">5,300 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">T1a</div>
+<div class="bar-lab"><a href="/en/mt-clade/t1a/">T1a</a></div>
 <div class="bar-track"><i class="c3" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">13k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">T2f</div>
+<div class="bar-lab"><a href="/en/mt-clade/t2f/">T2f</a></div>
 <div class="bar-track"><i class="c3" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">9,400 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U5b</div>
+<div class="bar-lab"><a href="/en/mt-clade/u5b/">U5b</a></div>
 <div class="bar-track"><i class="c2" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">22k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">U3b</div>
+<div class="bar-lab"><a href="/en/mt-clade/u3b/">U3b</a></div>
 <div class="bar-track"><i class="c2" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 8.3% <span class="age">14k years</span></div>
 </div>
@@ -145,7 +145,11 @@
 <p class="note small" id="yfull">YFull has fewer than 30 samples from this country, too few to compare. 10 samples on YFull</p>
 <p class="warn">Fewer than 50 kits: the percentages are too shaky to trust, so no conclusions are drawn here.</p>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-10-01. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
 </body>
 </html>

@@ -37,8 +37,8 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
-<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/" aria-current="page">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
-<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →">
+<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/" aria-current="page">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-kits="kits">
 <div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
 </form>
 <a class="lang" href="/ru/c/spain-aragon/y/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
@@ -91,42 +91,42 @@
 </div>
 <div class="bars">
 <div class="bar-row">
-<div class="bar-lab">R-L151* <small>R1b-L151</small></div>
+<div class="bar-lab"><a href="/en/clade/r-l151/">R-L151*</a> <small>R1b-L151</small></div>
 <div class="bar-track"><i class="c1" style="width:100.0%"></i></div>
 <div class="bar-val">2 · 20.0% <span class="age">5,100 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">R-P312* <small>R1b-P312</small></div>
+<div class="bar-lab"><a href="/en/clade/r-p312/">R-P312*</a> <small>R1b-P312</small></div>
 <div class="bar-track"><i class="c1" style="width:100.0%"></i></div>
 <div class="bar-val">2 · 20.0% <span class="age">4,900 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">R-Z205</div>
+<div class="bar-lab"><a href="/en/clade/r-z205/">R-Z205</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">3,500 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">R-ZZ12_1*</div>
+<div class="bar-lab"><a href="/en/clade/r-zz12-1/">R-ZZ12_1*</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">4,600 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">R-Z94* <small>R1a-Z94</small></div>
+<div class="bar-lab"><a href="/en/clade/r-z94/">R-Z94*</a> <small>R1a-Z94</small></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">4,600 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">I-CTS595</div>
+<div class="bar-lab"><a href="/en/clade/i-cts595/">I-CTS595</a></div>
 <div class="bar-track"><i class="c2" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">20k years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">R-Z31644</div>
+<div class="bar-lab"><a href="/en/clade/r-z31644/">R-Z31644</a></div>
 <div class="bar-track"><i class="c1" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">4,400 years</span></div>
 </div>
 <div class="bar-row">
-<div class="bar-lab">J-YSC0000076</div>
+<div class="bar-lab"><a href="/en/clade/j-ysc0000076/">J-YSC0000076</a></div>
 <div class="bar-track"><i class="c3" style="width:50.0%"></i></div>
 <div class="bar-val">1 · 10.0% <span class="age">4,600 years</span></div>
 </div>
@@ -140,7 +140,7 @@
 </div>
 <div class="tree">
 <div class="tree-row d0">
-<div class="tree-lab"><b>R1b-DF27</b> <small>R-DF27</small></div>
+<div class="tree-lab"><a href="/en/clade/r-df27/"><b>R1b-DF27</b></a> <small>R-DF27</small></div>
 <div class="bar-track"><i class="c1" style="width:100.0%"></i></div>
 <div class="bar-val">3 · 30.0% <span class="age">4,700 years</span></div>
 </div>
@@ -149,7 +149,11 @@
 <p class="note small" id="yfull">YFull has fewer than 30 samples from this country, too few to compare. 15 samples on YFull</p>
 <p class="warn">Fewer than 50 kits: the percentages are too shaky to trust, so no conclusions are drawn here.</p>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-10-01. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
 </body>
 </html>

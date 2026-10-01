@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /search.json
+Disallow: /search/
 Disallow: /data/
 Sitemap: https://ftdnastat.github.io/sitemap.xml

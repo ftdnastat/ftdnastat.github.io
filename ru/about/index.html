@@ -41,8 +41,8 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/ru/">ftdnastat</a>
-<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/" aria-current="page">О данных</a></nav>
-<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна или регион" aria-label="Страна или регион" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →">
+<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/clade/">Ветки</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/" aria-current="page">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна, регион или SNP" aria-label="Страна, регион или SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →" data-clades="Ветки Y" data-clades-mt="Ветки мт" data-kits="китов">
 <div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
 </form>
 <a class="lang" href="/en/about/" lang="en" hreflang="en" data-lang-switch="en">English</a>
@@ -63,7 +63,7 @@
 <p>Возраст ветки — сколько лет назад жил общий предок всех её тестируемых (TMRCA), по оценке FTDNA Discover. Берётся середина оценки, округлённая до ста лет; свыше 10 тысяч лет — вверх до тысячи. Возраст мт-веток взят из Mitotree FTDNA, где он там есть.</p>
 <p>Единые пороги для всего сайта: страны меньше 50 китов помечены как малые и не попадают в находки; похожие страны считаются от 100 китов; характерная ветка — от 10 китов.</p>
 <h2 id="данные-yfull">Данные YFull <a class="anchor" href="#данные-yfull" aria-label="Ссылка на раздел «Данные YFull»">#</a></h2>
-<p>Второй источник — публичные деревья YFull (Y и мт), копия от 2026-09-29, обновляется раз в месяц. YFull — платная расшифровка полной Y-хромосомы и полной мтДНК, поэтому её клиенты ещё в большей степени энтузиасты и участники проектов, чем у FTDNA. Например, из Саудовской Аравии там больше образцов, чем из любой другой страны.</p>
+<p>Второй источник — публичные деревья YFull (Y и мт), копия от 2026-10-01, обновляется раз в месяц. YFull — платная расшифровка полной Y-хромосомы и полной мтДНК, поэтому её клиенты ещё в большей степени энтузиасты и участники проектов, чем у FTDNA. Например, из Саудовской Аравии там больше образцов, чем из любой другой страны.</p>
 <p>В сравнениях с FTDNA участвуют только клиенты YFull (образцы с номером YF) и только современные люди. Древняя ДНК и образцы из научных статей и базы GenBank исключены, потому что у FTDNA считаются только клиенты. По мтДНК таких образцов у YFull меньше трети, поэтому сравнения по материнской линии беднее.</p>
 <p>Деревья YFull и FTDNA ветвятся по-разному и называют ветки разными мутациями. Чтобы их сравнивать, каждый образец YFull поставлен на дерево FTDNA по мутациям, общим для обоих деревьев: 88% веток YFull находят свою ветку FTDNA напрямую, остальные — через ближайшую ветку выше, для которой соответствие нашлось. Дальше доли считаются так же, как для китов FTDNA.</p>
 <p>Страну и регион на YFull, как и на FTDNA, указывает сам тестируемый. Регионы YFull привязаны к страницам FTDNA вручную: республики России, автономии Испании (через провинции), области Италии, части Соединённого Королевства. Образцы из региона, у которого на FTDNA есть своя страница, из страны вычтены.</p>
@@ -72,7 +72,11 @@
 <p>Родственный проект <a href="https://ypredictor.github.io/?lang=ru">ypredictor.github.io</a>: вставьте STR-маркеры из FTDNA — получите предсказанную ветвь Y-дерева и ближайших совпаденцев. Страны совпаденцев там ведут на страницы этого сайта.</p>
 </div>
 </main>
-<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-09-30. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-10-01. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
 </body>
 </html>

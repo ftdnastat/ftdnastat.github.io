@@ -73,23 +73,68 @@
     apply();
   }
 
-  var q = document.getElementById("q"), out = document.getElementById("q-out"), idx = null;
+  var q = document.getElementById("q"), out = document.getElementById("q-out"), idx = null, shards = {};
   if (q && out) {
     var close = function () { out.hidden = true; q.setAttribute("aria-expanded", "false"); };
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+    // "Z1842", "J-Z1842", "J1-Z1842", "R-L23": the SNP part after the dash names the shard /search/clade-<letter>.json
+    var SNP_RE = /^(?:[A-Z]{1,5}\d*[A-Z]?-)?([A-Z]{1,4}\d[A-Z0-9._-]*)$/;
+    // a starred remainder label (G-CTS574*) copied from a page still finds its branch
+    var snpOf = function (v) { var m = v.toUpperCase().replace(/\*$/, "").match(SNP_RE); return m ? m[1] : null; };
+    // mt names are letters and digits with ' . ! - (H1a1, L3'4'6, H1-T16189C!): the shard is the first letter
+    var MT_RE = /^[A-Z][A-Z0-9'.!-]*$/;
+    var mtKey = function (v) { var u = v.toUpperCase(); return MT_RE.test(u) ? "mt:" + u[0] : null; };
+    var mtHits = function (v) {
+      var key = mtKey(v), shard = key && shards[key];
+      if (!shard) return [];
+      var up = v.toUpperCase();
+      return shard.filter(function (e) { return e[0].toUpperCase().indexOf(up) === 0; }).slice(0, 6);
+    };
+    var cladeHits = function (v) {
+      var snp = snpOf(v);
+      if (!snp) return [];
+      var shard = shards[snp[0]];
+      if (!shard) return [];
+      var up = v.toUpperCase().replace(/\*$/, "");
+      var exact = function (e) { var name = e[0].toUpperCase(), dash = name.indexOf("-"); return name === up || name.slice(dash + 1) === snp || (e[3] && e[3].toUpperCase() === up); };
+      var hits = shard.filter(function (e) {
+        var name = e[0].toUpperCase(), dash = name.indexOf("-");
+        return name.indexOf(up) === 0 || (dash >= 0 && name.slice(dash + 1).indexOf(snp) === 0) || (e[3] && e[3].toUpperCase().indexOf(up) === 0);
+      });
+      // the shard is sorted by kits; an exact SNP match still goes first (Z1842 before Z18426)
+      return hits.filter(exact).concat(hits.filter(function (e) { return !exact(e); })).slice(0, 8);
+    };
     var render = function () {
       var v = q.value.trim().toLowerCase();
-      if (!v || !idx) { close(); return; }
-      var hits = idx.filter(function (e) { return e.en.toLowerCase().indexOf(v) >= 0 || e.ru.toLowerCase().indexOf(v) >= 0; }).slice(0, 12);
-      var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-      out.innerHTML = hits.length
-        ? hits.map(function (e) { return '<a href="/' + lang + "/c/" + esc(e.s) + '/"><span>' + esc(lang === "ru" ? e.ru : e.en) + '</span><span class="mono dim">' + (+e.y) + " / " + (+e.mt) + "</span></a>"; }).join("")
+      var clades = v ? cladeHits(v) : [], mts = v ? mtHits(v) : [];
+      // the country index and the branch shards arrive independently: render whichever is ready
+      if (!v || (!idx && !clades.length && !mts.length)) { close(); return; }
+      var hits = (idx || []).filter(function (e) { return e.en.toLowerCase().indexOf(v) >= 0 || e.ru.toLowerCase().indexOf(v) >= 0; }).slice(0, clades.length || mts.length ? 6 : 12);
+      var rows = hits.map(function (e) { return '<a href="/' + lang + "/c/" + esc(e.s) + '/"><span>' + esc(lang === "ru" ? e.ru : e.en) + '</span><span class="mono dim">' + (+e.y) + " / " + (+e.mt) + "</span></a>"; });
+      if (clades.length) rows.push('<span class="q-group dim">' + esc(q.getAttribute("data-clades")) + "</span>", clades.map(function (e) { return '<a href="/' + lang + "/clade/" + esc(e[1]) + '/"><span lang="en">' + esc(e[0]) + (e[3] && e[3] !== e[0] ? ' <small>' + esc(e[3]) + "</small>" : "") + (e[4] ? ' <small>→ ' + esc(e[4]) + "</small>" : "") + '</span><span class="mono dim">' + (+e[2]).toLocaleString(lang === "ru" ? "ru-RU" : "en-US") + " " + esc(q.getAttribute("data-kits")) + "</span></a>"; }).join(""));
+      if (mts.length) rows.push('<span class="q-group dim">' + esc(q.getAttribute("data-clades-mt")) + "</span>", mts.map(function (e) { return '<a href="/' + lang + "/mt-clade/" + esc(e[1]) + '/"><span lang="en">' + esc(e[0]) + (e[4] ? ' <small>→ ' + esc(e[4]) + "</small>" : "") + '</span><span class="mono dim">' + (+e[2]).toLocaleString(lang === "ru" ? "ru-RU" : "en-US") + " " + esc(q.getAttribute("data-kits")) + "</span></a>"; }).join(""));
+      out.innerHTML = rows.length
+        ? rows.join("")
         : '<span class="q-none dim">' + esc(q.getAttribute("data-none")) + '</span><a href="/' + lang + "/countries/?q=" + encodeURIComponent(v) + '">' + esc(q.getAttribute("data-all")) + "</a>";
       out.hidden = false;
       q.setAttribute("aria-expanded", "true");
     };
+    var loadShard = function (letter) {
+      if (shards[letter] !== undefined) return;
+      shards[letter] = null;
+      var file = letter.indexOf("mt:") === 0 ? "mt-clade-" + letter.slice(3).toLowerCase() : "clade-" + letter.toLowerCase();
+      // a failed fetch is forgotten so the next keystroke retries it
+      fetch("/search/" + file + ".json").then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }).then(function (j) { shards[letter] = j; render(); }).catch(function () { delete shards[letter]; });
+    };
+    var idxLoading = false;
     q.addEventListener("input", function () {
-      if (idx) return render();
-      fetch("/search.json").then(function (r) { return r.json(); }).then(function (j) { idx = j; render(); }).catch(function () {});
+      var snp = snpOf(q.value.trim()), mk = mtKey(q.value.trim());
+      if (snp) loadShard(snp[0]);
+      if (mk) loadShard(mk);
+      render();
+      if (idx || idxLoading) return;
+      idxLoading = true;
+      fetch("/search.json").then(function (r) { return r.json(); }).then(function (j) { idx = j; render(); }).catch(function () { idxLoading = false; });
     });
     // arrows walk the result links; Escape closes and returns to the field
     var move = function (e, dir) {

@@ -39,8 +39,8 @@
 <header class="top">
 <div class="wrap topin">
 <a class="brand" href="/en/">ftdnastat</a>
-<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/" aria-current="page">About the data</a></nav>
-<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country or region" aria-label="Country or region" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →">
+<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/" aria-current="page">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-kits="kits">
 <div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
 </form>
 <a class="lang" href="/ru/about/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
@@ -61,7 +61,7 @@
 <p>Branch age is how many years ago the common ancestor of all its testers lived (TMRCA), as estimated by FTDNA Discover. The midpoint of the estimate is taken, rounded to a hundred years; above 10,000 years it is rounded up to a whole thousand. mt branch ages come from FTDNA's Mitotree where the branch exists there.</p>
 <p>One set of thresholds for the whole site: countries under 50 kits are flagged as small and left out of the findings; similar countries are computed from 100 kits; a distinctive branch needs at least 10 kits.</p>
 <h2 id="yfull-data">YFull data <a class="anchor" href="#yfull-data" aria-label="Link to section “YFull data”">#</a></h2>
-<p>The second source is the public YFull trees (Y and mt), copy of 2026-09-29, refreshed monthly. YFull is a paid analysis of the full Y chromosome and the full mtDNA, so its customers are even more of enthusiasts and project members than FTDNA's. Saudi Arabia, for example, contributes more samples there than any other country.</p>
+<p>The second source is the public YFull trees (Y and mt), copy of 2026-10-01, refreshed monthly. YFull is a paid analysis of the full Y chromosome and the full mtDNA, so its customers are even more of enthusiasts and project members than FTDNA's. Saudi Arabia, for example, contributes more samples there than any other country.</p>
 <p>Comparisons with FTDNA use only YFull customers (samples with a YF number) and only living people. Ancient DNA and samples from scientific papers and the GenBank database are excluded, because FTDNA counts customers only. For mtDNA fewer than a third of YFull samples qualify, so maternal-line comparisons are thinner.</p>
 <p>The YFull and FTDNA trees branch differently and name branches after different mutations. To compare them, every YFull sample is placed on the FTDNA tree by mutations the two trees share: 88% of YFull branches find their FTDNA branch directly, the rest through the nearest branch above for which a match was found. Shares are then computed the same way as for FTDNA kits.</p>
 <p>Country and region on YFull, as on FTDNA, are given by the tested person. YFull regions are linked to FTDNA pages by hand: republics of Russia, Spanish autonomies (through provinces), regions of Italy, parts of the United Kingdom. Samples from a region that has its own FTDNA page are taken out of the country.</p>
@@ -70,7 +70,11 @@
 <p>Sister project <a href="https://ypredictor.github.io/?lang=en">ypredictor.github.io</a>: paste your FTDNA STR markers to get a predicted Y-tree branch and your closest matches. Match countries there link back to pages of this site.</p>
 </div>
 </main>
-<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-09-30. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-10-01. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
 <script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
 </body>
 </html>
