@@ -75,7 +75,7 @@
     apply();
   }
 
-  var q = document.getElementById("q"), out = document.getElementById("q-out"), idx = null, shards = {};
+  var q = document.getElementById("q"), out = document.getElementById("q-out"), idx = null, labels = null, shards = {};
   if (q && out) {
     var close = function () { out.hidden = true; q.setAttribute("aria-expanded", "false"); };
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
@@ -106,9 +106,23 @@
       // the shard is sorted by kits; an exact SNP match still goes first (Z1842 before Z18426)
       return hits.filter(exact).concat(hits.filter(function (e) { return !exact(e); })).slice(0, 8);
     };
+    // "J1", "R1b", "G2a": a label prefix, exact label first, one row per page
+    var labelHits = function (v) {
+      if (!labels) return [];
+      var up = v.toUpperCase().replace(/\*$/, ""), seen = {};
+      var hits = labels.filter(function (e) { return e[3].toUpperCase().indexOf(up) === 0; });
+      var exact = function (e) { return e[3].toUpperCase() === up; };
+      return hits.filter(exact).concat(hits.filter(function (e) { return !exact(e) && !e[4]; }), hits.filter(function (e) { return !exact(e) && e[4]; }))
+        .filter(function (e) { if (seen[e[1]]) return false; seen[e[1]] = true; return true; });
+    };
+    var yHits = function (v) {
+      var byLabel = labelHits(v), names = {};
+      byLabel.forEach(function (e) { names[e[0]] = true; });
+      return byLabel.concat(cladeHits(v).filter(function (e) { return !names[e[0]]; })).slice(0, 8);
+    };
     var render = function () {
       var v = q.value.trim().toLowerCase();
-      var clades = v ? cladeHits(v) : [], mts = v ? mtHits(v) : [];
+      var clades = v ? yHits(v) : [], mts = v ? mtHits(v) : [];
       // the country index and the branch shards arrive independently: render whichever is ready
       if (!v || (!idx && !clades.length && !mts.length)) { close(); return; }
       var hits = (idx || []).filter(function (e) { return e.en.toLowerCase().indexOf(v) >= 0 || e.ru.toLowerCase().indexOf(v) >= 0; }).slice(0, clades.length || mts.length ? 6 : 12);
@@ -137,6 +151,7 @@
       if (idx || idxLoading) return;
       idxLoading = true;
       fetch("/search.json").then(function (r) { return r.json(); }).then(function (j) { idx = j; render(); }).catch(function () { idxLoading = false; });
+      fetch("/search/clade-labels.json").then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }).then(function (j) { labels = j; render(); }).catch(function () { idxLoading = false; });
     });
     // arrows walk the result links; Escape closes and returns to the field
     var move = function (e, dir) {
