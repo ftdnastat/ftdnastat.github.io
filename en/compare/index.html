@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare countries and peoples by haplogroups · ftdnastat</title>
+<meta name="description" content="Compare up to four countries, regions and peoples by Y-DNA or mtDNA: letters, main branches and similarity.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://ftdnastat.github.io/en/compare/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/compare/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/compare/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/compare/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Compare countries and peoples by haplogroups">
+<meta property="og:description" content="Compare up to four countries, regions and peoples by Y-DNA or mtDNA: letters, main branches and similarity.">
+<meta property="og:url" content="https://ftdnastat.github.io/en/compare/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — FTDNA haplogroup statistics by country and region: stacked bars of Y-DNA macro-haplogroups for Dagestan, Turkey, Ireland and Finland">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare countries and peoples by haplogroups">
+<meta name="twitter:description" content="Compare up to four countries, regions and peoples by Y-DNA or mtDNA: letters, main branches and similarity.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/compare-core.js" defer></script>
+<script src="/assets/compare.js" defer></script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<nav class="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/pairs/">Y × mt</a><a href="/en/about/">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-kits="kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/compare/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>Compare countries and peoples</h1>
+<p>Pick up to four countries, FTDNA regions or YFull peoples and compare their haplogroups. The selection lives in the page address: copy the link and the same comparison opens.</p>
+</div>
+<div id="cmp" class="cp">
+<div class="cp-bar-top">
+<div class="cp-pick"><label for="cmp-input">What to compare</label><input type="text" id="cmp-input" role="combobox" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="cmp-list" placeholder="Country, region or people">
+<ul id="cmp-list" class="cp-list" role="listbox" aria-label="What to compare" hidden></ul>
+</div>
+</div>
+<ul id="cmp-chips" class="cp-chips"></ul>
+<div id="cmp-empty" class="cp-empty">
+<h2 id="pick-what-to-compare">Pick what to compare <a class="anchor" href="#pick-what-to-compare" aria-label="Link to section “Pick what to compare”">#</a></h2>
+<p>Start typing a name in the field above or open a ready example.</p>
+<h3>Examples</h3>
+<ul class="plain">
+<li><a href="#a=c:russia-dagestan,c:russia-chechnya,c:russia-ingushetia">Russia (Republic of Dagestan) — Russia (Republic of Chechnya) — Russia (Republic of Ingushetia)</a></li>
+<li><a href="#a=c:armenia,c:georgia,c:azerbaijan,c:turkey">Armenia — Georgia — Azerbaijan — Turkey</a></li>
+<li><a href="#a=p:che,p:inh">Chechens — Ingush</a></li>
+</ul>
+</div>
+<div id="cmp-out" class="cp-out"></div>
+</div>
+<script type="application/json" id="compare-data">{"lang":"en","i18n":{"kindY":"Y","kindMt":"mt","other":"other","cmpPlaceholder":"Country, region or people","cmpMax":"Maximum of 4 selected","cmpTypeC":"FTDNA country/region","cmpTypeP":"YFull people","cmpSrcC":"FTDNA kits","cmpSrcP":"YFull samples","cmpRemove":"Remove {name}","cmpNoMatch":"Nothing found","cmpNoData":"No {kind} data","cmpError":"Could not load the comparison data.","cmpLettersTitle":"Macro-haplogroups","cmpSimTitle":"Similarity","cmpSimLead":"How alike the sets of main branches are: 100% means the same branch shares, 0% means no branch in common. The higher the similarity, the darker the cell. Overall is the mean of Y and mt; if one line is missing, the other is used.","cmpSimSentence":"{a} and {b}:","cmpSimY":"By Y-DNA","cmpSimMt":"By mtDNA","cmpSimAll":"Overall","cmpBranchesTitle":"Main branches","cmpBranchesLead":"Branches with a share of at least {p}% in one of the samples, up to {n} rows. The largest share in a row is in bold.","cmpColBranch":"Branch","cmpSmall":"Small sample (under {n}): {names}. The percentages are shaky.","cmpMixed":"FTDNA and YFull samples are gathered differently (kits and self-description versus samples with a stated language), so comparing across sources is approximate."},"macro":{"y":["R","I","J","E","N","G","Q","T"],"mt":["H","U","T","J","K","V","L","I"]},"cls":{"y":{"R":"c1","I":"c2","J":"c3","E":"c4","N":"c5","G":"c6","Q":"c7","T":"c8"},"mt":{"H":"c1","U":"c2","T":"c3","J":"c4","K":"c5","V":"c6","L":"c7","I":"c8"}}}</script>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-09-25, built 2026-10-02. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

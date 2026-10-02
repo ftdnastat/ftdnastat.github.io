@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сравнить страны и народы по гаплогруппам · ftdnastat</title>
+<meta name="description" content="Сравните до четырёх стран, регионов и народов по составу Y-ДНК или мтДНК: буквы, главные ветви и сходство.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://ftdnastat.github.io/ru/compare/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/compare/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/compare/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/compare/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Сравнить страны и народы по гаплогруппам">
+<meta property="og:description" content="Сравните до четырёх стран, регионов и народов по составу Y-ДНК или мтДНК: буквы, главные ветви и сходство.">
+<meta property="og:url" content="https://ftdnastat.github.io/ru/compare/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — статистика гаплогрупп FTDNA по странам и регионам: стековые полоски макрогрупп Y-ДНК для Дагестана, Турции, Ирландии и Финляндии">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сравнить страны и народы по гаплогруппам">
+<meta name="twitter:description" content="Сравните до четырёх стран, регионов и народов по составу Y-ДНК или мтДНК: буквы, главные ветви и сходство.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-400-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/compare-core.js" defer></script>
+<script src="/assets/compare.js" defer></script>
+</head>
+<body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/ru/">ftdnastat</a>
+<nav class="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/clade/">Ветки</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/pairs/">Y × мт</a><a href="/ru/about/">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" placeholder="Страна, регион или SNP" aria-label="Страна, регион или SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →" data-clades="Ветки Y" data-clades-mt="Ветки мт" data-kits="китов">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
+</form>
+<a class="lang" href="/en/compare/" lang="en" hreflang="en" data-lang-switch="en">English</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>Сравнение стран и народов</h1>
+<p>Выберите до четырёх стран, регионов FTDNA или народов YFull и сравните их гаплогруппы. Выбор хранится в адресе страницы: скопируйте ссылку, и сравнение откроется так же.</p>
+</div>
+<div id="cmp" class="cp">
+<div class="cp-bar-top">
+<div class="cp-pick"><label for="cmp-input">Что сравнить</label><input type="text" id="cmp-input" role="combobox" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="cmp-list" placeholder="Страна, регион или народ">
+<ul id="cmp-list" class="cp-list" role="listbox" aria-label="Что сравнить" hidden></ul>
+</div>
+</div>
+<ul id="cmp-chips" class="cp-chips"></ul>
+<div id="cmp-empty" class="cp-empty">
+<h2 id="выберите-что-сравнить">Выберите, что сравнить <a class="anchor" href="#выберите-что-сравнить" aria-label="Ссылка на раздел «Выберите, что сравнить»">#</a></h2>
+<p>Начните вводить название в поле выше или откройте готовый пример.</p>
+<h3>Примеры</h3>
+<ul class="plain">
+<li><a href="#a=c:russia-dagestan,c:russia-chechnya,c:russia-ingushetia">Дагестан — Чечня — Ингушетия</a></li>
+<li><a href="#a=c:armenia,c:georgia,c:azerbaijan,c:turkey">Армения — Грузия — Азербайджан — Турция</a></li>
+<li><a href="#a=p:che,p:inh">Чеченцы — Ингуши</a></li>
+</ul>
+</div>
+<div id="cmp-out" class="cp-out"></div>
+</div>
+<script type="application/json" id="compare-data">{"lang":"ru","i18n":{"kindY":"Y","kindMt":"мт","other":"прочие","cmpPlaceholder":"Страна, регион или народ","cmpMax":"Выбрано максимум 4","cmpTypeC":"страна/регион FTDNA","cmpTypeP":"народ YFull","cmpSrcC":"киты FTDNA","cmpSrcP":"образцы YFull","cmpRemove":"Убрать: {name}","cmpNoMatch":"Ничего не найдено","cmpNoData":"Нет данных по {kind}","cmpError":"Не удалось загрузить данные для сравнения.","cmpLettersTitle":"Макрогаплогруппы","cmpSimTitle":"Сходство","cmpSimLead":"Насколько похож набор главных ветвей: 100% — доли ветвей одинаковые, 0% — общих ветвей нет. Чем выше сходство, тем темнее ячейка. Общее — среднее по Y и мт; если одной линии нет, берётся та, что есть.","cmpSimSentence":"«{a}» и «{b}»:","cmpSimY":"По Y-ДНК","cmpSimMt":"По мтДНК","cmpSimAll":"Общее","cmpBranchesTitle":"Главные ветви","cmpBranchesLead":"Ветви с долей не меньше {p}% хотя бы в одной выборке, до {n} строк. Жирным выделена наибольшая доля в строке.","cmpColBranch":"Ветвь","cmpSmall":"Малая выборка (меньше {n}): {names}. Проценты случайны.","cmpMixed":"Выборки FTDNA и YFull набраны по-разному (киты и самоописание против образцов с указанным языком), поэтому сравнение между источниками приблизительное."},"macro":{"y":["R","I","J","E","N","G","Q","T"],"mt":["H","U","T","J","K","V","L","I"]},"cls":{"y":{"R":"c1","I":"c2","J":"c3","E":"c4","N":"c5","G":"c6","Q":"c7","T":"c8"},"mt":{"H":"c1","U":"c2","T":"c3","J":"c4","K":"c5","V":"c6","L":"c7","I":"c8"}}}</script>
+</main>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-09-25, сборка 2026-10-02. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});setTimeout(load,3500)})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

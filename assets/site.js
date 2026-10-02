@@ -44,7 +44,9 @@
       if (url !== location.pathname + location.search + location.hash) history.replaceState(null, "", url);
     };
     var count = document.querySelector("[data-count]");
-    var rows = Array.prototype.slice.call(box.tagName === "TABLE" ? box.tBodies[0].rows : box.querySelectorAll("[data-grp]"));
+    // one filter drives every list on the page (the ancient page has a Y and an mt table)
+    var rows = [];
+    document.querySelectorAll("[data-filterable]").forEach(function (b) { rows = rows.concat(Array.prototype.slice.call(b.tagName === "TABLE" ? b.tBodies[0].rows : b.querySelectorAll("[data-grp]"))); });
     var apply = function () {
       var shown = 0;
       rows.forEach(function (tr) {
