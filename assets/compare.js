@@ -308,7 +308,10 @@
     const tb = el("tbody");
     for (const r of rows) {
       const tr = el("tr");
-      tr.appendChild(el("td", "name", r.k));
+      const slug = D.clades && D.clades[kind][r.k];
+      const cell = el("td", "name");
+      if (slug) { const link = el("a", null, r.k); link.href = "/" + lang + (kind === "y" ? "/clade/" : "/mt-clade/") + slug + "/"; cell.appendChild(link); } else cell.textContent = r.k;
+      tr.appendChild(cell);
       r.shares.forEach((v) => {
         const td = el("td", "num" + (v != null && v === r.max ? " top" : ""));
         if (v == null) td.textContent = "—";
