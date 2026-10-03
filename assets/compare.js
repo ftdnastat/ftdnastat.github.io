@@ -374,6 +374,7 @@
   async function renderAll() {
     const my = ++token;
     renderChips();
+    document.documentElement.classList.toggle("cmp-has", state.items.length > 0);
     empty.hidden = state.items.length > 0;
     if (!state.items.length) { out.textContent = ""; return; }
     const entries = state.items.map((x) => byKey.get(keyOf(x)));

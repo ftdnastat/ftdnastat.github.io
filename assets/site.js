@@ -143,15 +143,20 @@
       fetch("/search/" + file + ".json").then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }).then(function (j) { shards[letter] = j; render(); }).catch(function () { delete shards[letter]; });
     };
     var idxLoading = false;
+    // focus already starts the index, so the first keystroke rarely waits for the network
+    var loadIdx = function () {
+      if (idx || idxLoading) return;
+      idxLoading = true;
+      fetch("/search.json").then(function (r) { return r.json(); }).then(function (j) { idx = j; render(); }).catch(function () { idxLoading = false; });
+      fetch("/search/clade-labels.json").then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }).then(function (j) { labels = j; render(); }).catch(function () { idxLoading = false; });
+    };
+    q.addEventListener("focus", loadIdx);
     q.addEventListener("input", function () {
       var snp = snpOf(q.value.trim()), mk = mtKey(q.value.trim());
       if (snp) loadShard(snp[0]);
       if (mk) loadShard(mk);
       render();
-      if (idx || idxLoading) return;
-      idxLoading = true;
-      fetch("/search.json").then(function (r) { return r.json(); }).then(function (j) { idx = j; render(); }).catch(function () { idxLoading = false; });
-      fetch("/search/clade-labels.json").then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }).then(function (j) { labels = j; render(); }).catch(function () { idxLoading = false; });
+      loadIdx();
     });
     // arrows walk the result links; Escape closes and returns to the field
     var move = function (e, dir) {
