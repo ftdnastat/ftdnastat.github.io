@@ -2,7 +2,10 @@
   "use strict";
   var lang = document.body.getAttribute("data-lang") || "en";
 
-  try { localStorage.setItem("ftdnastat_lang", lang); } catch (e) {}
+  // a page prerendered on hover is not a visit yet: remember its language only once it is shown
+  var saveLang = function () { try { localStorage.setItem("ftdnastat_lang", lang); } catch (e) {} };
+  if (document.prerendering) document.addEventListener("prerenderingchange", saveLang, { once: true });
+  else saveLang();
   var sw = document.querySelector("[data-lang-switch]");
   if (sw) sw.addEventListener("click", function () { sw.href = sw.getAttribute("href").split("#")[0] + location.hash; });
 
