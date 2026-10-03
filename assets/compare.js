@@ -13,7 +13,7 @@
   const empty = document.getElementById("cmp-empty");
 
   let state = C.parseHash(location.hash);
-  let index = null, byKey = new Map(), matches = [], active = -1, token = 0;
+  let index = null, byKey = new Map(), matches = [], active = -1, token = 0, simKind = "all";
   const cache = new Map();
 
   const nf = (n) => Math.round(n).toLocaleString(lang === "ru" ? "ru-RU" : "en-US");
@@ -33,6 +33,8 @@
   const nameOf = (e) => e[lang] || e.en;
   const nOf = (e, kind) => (e ? e[kind] : 0);
   const hrefOf = (e) => "/" + lang + (e.t === "c" ? "/c/" : "/ethnic/") + e.id + "/";
+  // numbered columns and one switchable matrix from COMPACT_FROM items
+  const compact = () => state.items.length >= C.COMPACT_FROM;
 
   function syncHash() {
     const h = C.serializeHash(state.items);
@@ -69,6 +71,7 @@
       const e = byKey.get(keyOf(x));
       const name = e ? nameOf(e) : x.id;
       const chip = el("li", "cp-chip");
+      if (compact()) chip.appendChild(el("span", "cp-num", String(i + 1)));
       chip.appendChild(el("span", null, name));
       const b = el("button", "cp-x", "×");
       b.type = "button";
@@ -185,11 +188,12 @@
   }
 
   // datas: { y, mt } loaded files of one item, each null when that line has no data
-  function itemPanel(x, e, datas) {
+  function itemPanel(x, i, e, datas) {
     const p = el("div", "panel");
     const head = el("div", "panel-head");
     const h = el("h3", "p-title");
-    if (e) { const a = el("a", null, nameOf(e)); a.href = hrefOf(e); h.appendChild(a); } else h.textContent = x.id;
+    if (compact()) h.appendChild(el("span", "cp-num", String(i + 1)));
+    if (e) { const a = el("a", null, nameOf(e)); a.href = hrefOf(e); h.appendChild(a); } else h.appendChild(document.createTextNode(x.id));
     head.appendChild(h);
     p.appendChild(head);
     if (e) p.appendChild(el("span", "cp-badge", S[e.t === "c" ? "cmpSrcC" : "cmpSrcP"]));
@@ -246,10 +250,10 @@
 
   const simCell = (tag, v) => el(tag, "num" + simClass(v), v == null ? "—" : pf(v, 0));
 
-  function simMatrix(title, names, m) {
+  function simMatrix(title, names, m, wide) {
     const box = el("div", "cp-sim-box");
-    box.appendChild(el("h3", null, title));
-    const t = el("table", "list cp-tbl cp-sim");
+    if (!wide) box.appendChild(el("h3", null, title));
+    const t = el("table", "list cp-tbl cp-sim" + (wide ? " cp-sim-wide" : ""));
     t.appendChild(el("caption", "sr-only", title));
     const hr = el("tr");
     hr.appendChild(el("th")).appendChild(el("span", "sr-only", title));
@@ -284,6 +288,30 @@
       s.appendChild(p);
       return s;
     }
+    if (compact()) {
+      const ms = { y: [S.cmpSimY, my], mt: [S.cmpSimMt, mmt], all: [S.cmpSimAll, all] };
+      const tabs = el("div", "tabs cp-sim-tabs");
+      tabs.setAttribute("role", "group");
+      tabs.setAttribute("aria-label", S.cmpSimTitle);
+      const slot = el("div");
+      slot.setAttribute("aria-live", "polite");
+      const show = () => {
+        tabs.querySelectorAll(".tab").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === simKind)));
+        slot.textContent = "";
+        slot.appendChild(simMatrix(ms[simKind][0], names, ms[simKind][1], true));
+      };
+      Object.keys(ms).forEach((k) => {
+        const b = el("button", "tab", ms[k][0]);
+        b.type = "button";
+        b.dataset.v = k;
+        b.addEventListener("click", () => { simKind = k; show(); });
+        tabs.appendChild(b);
+      });
+      show();
+      s.appendChild(tabs);
+      s.appendChild(slot);
+      return s;
+    }
     const grid = el("div", "cp-sim-grid");
     grid.appendChild(simMatrix(S.cmpSimY, names, my));
     grid.appendChild(simMatrix(S.cmpSimMt, names, mmt));
@@ -297,13 +325,22 @@
     const s = section(S.cmpBranchesTitle + " · " + kindName(kind), withLead ? fmt(S.cmpBranchesLead, { p: Math.round(100 * C.MIN_SHARE), n: C.TOP_ROWS }) : null);
     if (!rows.length) return s;
     const peak = Math.max(...rows.map((r) => r.max));
-    const t = el("table", "list cp-tbl cp-branches");
+    const t = el("table", "list cp-tbl cp-branches" + (compact() ? " cp-compact" : ""));
     t.appendChild(el("caption", "sr-only", S.cmpBranchesTitle + " · " + kindName(kind)));
     const hr = el("tr");
     const h0 = el("th", null, S.cmpColBranch);
     h0.scope = "col";
     hr.appendChild(h0);
-    names.forEach((n) => { const th = el("th", "num", n); th.scope = "col"; hr.appendChild(th); });
+    names.forEach((n, i) => {
+      const th = el("th", "num");
+      th.scope = "col";
+      if (compact()) {
+        th.appendChild(el("span", "cp-h-name", n));
+        th.appendChild(el("span", "cp-h-num", String(i + 1))).setAttribute("aria-hidden", "true");
+        th.title = n;
+      } else th.textContent = n;
+      hr.appendChild(th);
+    });
     t.appendChild(el("thead")).appendChild(hr);
     const tb = el("tbody");
     for (const r of rows) {
@@ -316,7 +353,9 @@
         const td = el("td", "num" + (v != null && v === r.max ? " top" : ""));
         if (v == null) td.textContent = "—";
         else {
-          td.appendChild(el("span", "cp-v", pf(v)));
+          const txt = pf(v);
+          const val = td.appendChild(el("span", "cp-v", compact() ? txt.slice(0, -1) : txt));
+          if (compact()) val.appendChild(el("span", "cp-pct", "%"));
           const bar = el("span", "cp-bar");
           const i = el("i");
           i.style.width = (100 * v / peak).toFixed(1) + "%";
@@ -343,7 +382,7 @@
     const datas = loaded.map(([y, mt]) => ({ y, mt }));
     out.textContent = "";
     const cols = el("div", "cp-cols");
-    state.items.forEach((x, i) => cols.appendChild(itemPanel(x, entries[i], datas[i])));
+    state.items.forEach((x, i) => cols.appendChild(itemPanel(x, i, entries[i], datas[i])));
     const letters = section(S.cmpLettersTitle);
     letters.appendChild(cols);
     KINDS.forEach((k) => letters.appendChild(legend(k)));

@@ -4,7 +4,8 @@
 })(this, function () {
   "use strict";
 
-  const MAX_ITEMS = 4;
+  const MAX_ITEMS = 8;
+  const COMPACT_FROM = 5;
   const MIN_SHARE = 0.02;
   const TOP_ROWS = 25;
   const SMALL_N = 30;
@@ -81,5 +82,5 @@
     return rows.slice(0, limit);
   }
 
-  return { MAX_ITEMS, MIN_SHARE, TOP_ROWS, SMALL_N, parseHash, serializeHash, shares, cosine, similarityMatrix, combineMatrices, branchRows };
+  return { MAX_ITEMS, COMPACT_FROM, MIN_SHARE, TOP_ROWS, SMALL_N, parseHash, serializeHash, shares, cosine, similarityMatrix, combineMatrices, branchRows };
 });
