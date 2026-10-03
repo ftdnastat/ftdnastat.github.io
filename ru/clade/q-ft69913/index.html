@@ -34,6 +34,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Y-ДНК","item":"https://ftdnastat.github.io/ru/y/"},{"@type":"ListItem","position":2,"name":"Ветки","item":"https://ftdnastat.github.io/ru/clade/"},{"@type":"ListItem","position":3,"name":"Q-YP3957","item":"https://ftdnastat.github.io/ru/clade/q-yp3957/"},{"@type":"ListItem","position":4,"name":"Q-FT69913","item":"https://ftdnastat.github.io/ru/clade/q-ft69913/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="ru">
 <a class="skip" href="#main">К содержимому</a>
@@ -87,6 +91,13 @@
 <h2 id="где-встречается">Где встречается <a class="anchor" href="#где-встречается" aria-label="Ссылка на раздел «Где встречается»">#</a></h2>
 <p>Страны и регионы, которые указали носители ветки. «Доля ветки» — какая часть китов ветки приходится на страну. «Доля страны» — какая часть китов этой страны попадает в ветку; считается только для стран от 50 китов.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Карта: доля Q-FT69913 среди китов каждой страны">
+<div class="tabs cmap-tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет — доля ветки среди китов страны. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 0,1%</span><span><i class="cmap-sw m2"></i>≤ 0,5%</span><span><i class="cmap-sw m3"></i>≤ 1,2%</span><span><i class="cmap-sw m4"></i>≤ 2,1%</span><span><i class="cmap-sw m5"></i>≤ 3,2%</span><span><i class="cmap-sw msm"></i>меньше 50 китов</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"ru","kind":"y","minN":50,"shares":{"russia-chechnya":321,"russian-federation":4,"georgia":16},"edges":[0.001284,0.005136,0.011556,0.020544,0.0321]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Где встречается">
 <table class="list"><caption class="sr-only">Где встречается</caption>
 <thead>

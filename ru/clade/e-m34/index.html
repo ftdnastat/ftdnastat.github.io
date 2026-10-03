@@ -37,6 +37,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Y-ДНК","item":"https://ftdnastat.github.io/ru/y/"},{"@type":"ListItem","position":2,"name":"Ветки","item":"https://ftdnastat.github.io/ru/clade/"},{"@type":"ListItem","position":3,"name":"E-M123","item":"https://ftdnastat.github.io/ru/clade/e-m123/"},{"@type":"ListItem","position":4,"name":"E-M34","item":"https://ftdnastat.github.io/ru/clade/e-m34/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="ru">
 <a class="skip" href="#main">К содержимому</a>
@@ -95,6 +99,13 @@
 <h2 id="где-встречается">Где встречается <a class="anchor" href="#где-встречается" aria-label="Ссылка на раздел «Где встречается»">#</a></h2>
 <p>Страны и регионы, которые указали носители ветки. «Доля ветки» — какая часть китов ветки приходится на страну. «Доля страны» — какая часть китов этой страны попадает в ветку; считается только для стран от 50 китов.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Карта: доля E-M34 среди китов каждой страны">
+<div class="tabs cmap-tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет — доля ветки среди китов страны. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 1,0%</span><span><i class="cmap-sw m2"></i>≤ 4,1%</span><span><i class="cmap-sw m3"></i>≤ 9,3%</span><span><i class="cmap-sw m4"></i>≤ 17%</span><span><i class="cmap-sw m5"></i>≤ 26%</span><span><i class="cmap-sw msm"></i>меньше 50 китов</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"ru","kind":"y","minN":50,"shares":{"saudi-arabia":448,"poland":310,"ukraine":487,"yemen":1110,"germany":91,"russian-federation":197,"belarus":813,"italy":204,"lithuania":641,"kuwait":489,"iraq":343,"united-states":34,"turkey":351,"england":23,"united-arab-emirates":391,"france":77,"armenia":409,"romania":428,"hungary":225,"greece":303,"bahrain":482,"spain":94,"austria":334,"syrian-arab-republic":363,"egypt":455,"united-kingdom":29,"portugal":142,"oman":544,"switzerland":88,"iran":331,"slovakia":256,"latvia":509,"palestinian-territory":358,"lebanon":328,"scotland":15,"czech-republic":85,"ireland":9,"netherlands":83,"sweden":16,"mexico":75,"algeria":320,"eritrea":2586,"qatar":217,"azerbaijan":237,"puerto-rico":203,"bulgaria":124,"israel":453,"tunisia":440,"russia-dagestan":103,"canada":55,"jordan":251,"moldova":469,"brazil":109,"sudan":197,"united-states-native-american":44,"cyprus":864,"georgia":95,"belgium":70,"costa-rica":794,"ethiopia":676,"libya":101,"denmark":24,"south-africa":174,"afghanistan":182,"colombia":99,"croatia":58,"macedonia":180,"morocco":53,"peru":234,"russia-adygea":77,"venezuela":441,"wales":14,"australia":55,"dominican-republic":116,"ecuador":299,"finland":2,"iraq-kurdistan":385,"malta":213,"russia-bashkortostan":198,"russia-chechnya":12,"albania":36,"belgium-flanders":102,"bosnia-and-herzegovina":27,"el-salvador":114,"india":7,"italy-sicily":82,"kazakhstan":13,"kosovo":110,"new-zealand":95,"northern-ireland":3,"norway":2,"pakistan":26,"russia-chuvashia":53,"russia-kabardino-balkaria":128,"russia-karelia":93,"serbia":29,"slovenia":22,"somalia":74,"spain-andalusia":127,"tajikistan":60},"edges":[0.010344,0.041376,0.093096,0.165504,0.2586]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Где встречается">
 <table class="list"><caption class="sr-only">Где встречается</caption>
 <thead>

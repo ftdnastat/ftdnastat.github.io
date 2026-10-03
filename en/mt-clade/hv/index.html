@@ -35,6 +35,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"mtDNA","item":"https://ftdnastat.github.io/en/mt/"},{"@type":"ListItem","position":2,"name":"mt branches","item":"https://ftdnastat.github.io/en/mt-clade/"},{"@type":"ListItem","position":3,"name":"R0","item":"https://ftdnastat.github.io/en/mt-clade/r0/"},{"@type":"ListItem","position":4,"name":"HV","item":"https://ftdnastat.github.io/en/mt-clade/hv/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="en">
 <a class="skip" href="#main">Skip to content</a>
@@ -78,6 +82,13 @@
 <h2 id="where-it-is-found">Where it is found <a class="anchor" href="#where-it-is-found" aria-label="Link to section “Where it is found”">#</a></h2>
 <p>Countries and regions given by the branch's carriers. “Share of branch” is the part of the branch's kits that belongs to the country. “Share of country” is the part of that country's kits that falls into the branch; it is computed only for countries with at least 50 kits.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Map: share of HV among each country's kits">
+<div class="tabs cmap-tabs" role="group" aria-label="Map zoom"><button type="button" class="tab" data-v="world" aria-pressed="true">World</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Europe</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Caucasus</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Colour is the branch's share of the country's kits. Hover over a country or tap it.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 2.2%</span><span><i class="cmap-sw m2"></i>≤ 8.7%</span><span><i class="cmap-sw m3"></i>≤ 19%</span><span><i class="cmap-sw m4"></i>≤ 35%</span><span><i class="cmap-sw m5"></i>≤ 54%</span><span><i class="cmap-sw msm"></i>fewer than 50 kits</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"en","kind":"mt","minN":50,"shares":{"united-states":4431,"england":4960,"germany":5054,"ireland":4894,"sweden":4911,"finland":5028,"france":5078,"united-kingdom":4976,"scotland":4584,"poland":4697,"norway":4964,"italy":4738,"russian-federation":4289,"canada":4946,"ukraine":4461,"netherlands":4968,"switzerland":4841,"spain":3892,"czech-republic":4753,"denmark":4902,"hungary":4684,"lithuania":4356,"wales":4898,"united-states-native-american":1806,"portugal":4690,"austria":4446,"turkey":3683,"northern-ireland":5114,"belarus":4187,"slovakia":4934,"romania":4129,"greece":4585,"bulgaria":5175,"belgium":4529,"australia":4101,"croatia":5118,"slovenia":5412,"russia-chechnya":2691,"latvia":4598,"saudi-arabia":1375,"estonia":4467,"mexico":530,"armenia":3991,"morocco":5119,"serbia":4819,"iran":3785,"brazil":1327,"bosnia-and-herzegovina":4720,"algeria":4530,"lebanon":3355,"moldova":4310,"luxembourg":4839,"iraq":2937,"england-cornish":5062,"macedonia":5132,"south-africa":1379,"syrian-arab-republic":2687,"italy-sicily":5000,"france-alsace":5238,"united-arab-emirates":1988,"cuba":1481,"montenegro":5079,"iceland":4412,"new-zealand":2885,"albania":5000,"russia-chuvashia":4058,"azerbaijan":3059,"israel":2222,"india":672,"puerto-rico":386,"georgia":3143,"kuwait":1401,"qatar":2561,"kazakhstan":2381,"russia-ingushetia":2985,"bahrain":2647,"egypt":1698,"palestinian-territory":2571,"malta":3148,"russia-dagestan":3269,"canada-first-nations":735,"pakistan":1471,"yemen":957,"argentina":808,"china":258,"dominican-republic":727,"chile":426,"jamaica":405,"nicaragua":784,"peru":476,"colombia":141,"ethiopia":333,"sudan":566,"venezuela":476,"ecuador":392,"el-salvador":192,"indonesia":119,"japan":34},"edges":[0.021648,0.086592,0.194832,0.346368,0.5412]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Where it is found">
 <table class="list"><caption class="sr-only">Where it is found</caption>
 <thead>

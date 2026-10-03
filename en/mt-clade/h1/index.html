@@ -35,6 +35,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"mtDNA","item":"https://ftdnastat.github.io/en/mt/"},{"@type":"ListItem","position":2,"name":"mt branches","item":"https://ftdnastat.github.io/en/mt-clade/"},{"@type":"ListItem","position":3,"name":"H","item":"https://ftdnastat.github.io/en/mt-clade/h/"},{"@type":"ListItem","position":4,"name":"H1","item":"https://ftdnastat.github.io/en/mt-clade/h1/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="en">
 <a class="skip" href="#main">Skip to content</a>
@@ -88,6 +92,13 @@
 <h2 id="where-it-is-found">Where it is found <a class="anchor" href="#where-it-is-found" aria-label="Link to section “Where it is found”">#</a></h2>
 <p>Countries and regions given by the branch's carriers. “Share of branch” is the part of the branch's kits that belongs to the country. “Share of country” is the part of that country's kits that falls into the branch; it is computed only for countries with at least 50 kits.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Map: share of H1 among each country's kits">
+<div class="tabs cmap-tabs" role="group" aria-label="Map zoom"><button type="button" class="tab" data-v="world" aria-pressed="true">World</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Europe</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Caucasus</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Colour is the branch's share of the country's kits. Hover over a country or tap it.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 0.8%</span><span><i class="cmap-sw m2"></i>≤ 3.3%</span><span><i class="cmap-sw m3"></i>≤ 7.3%</span><span><i class="cmap-sw m4"></i>≤ 13%</span><span><i class="cmap-sw m5"></i>≤ 20%</span><span><i class="cmap-sw msm"></i>fewer than 50 kits</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"en","kind":"mt","minN":50,"shares":{"united-states":1468,"england":1653,"germany":1569,"sweden":1686,"finland":2034,"ireland":1412,"scotland":1624,"united-kingdom":1637,"france":1507,"norway":1574,"poland":1334,"canada":1505,"russian-federation":1059,"italy":950,"netherlands":1602,"ukraine":1018,"spain":1375,"denmark":1673,"switzerland":1346,"czech-republic":1324,"lithuania":1468,"portugal":1726,"wales":1561,"hungary":1327,"united-states-native-american":557,"austria":1179,"northern-ireland":1547,"belarus":1030,"slovakia":1118,"belgium":1450,"romania":1023,"australia":1217,"croatia":1414,"bulgaria":1024,"estonia":1516,"turkey":335,"greece":611,"morocco":1607,"latvia":996,"slovenia":941,"brazil":509,"mexico":117,"algeria":1624,"russia-chechnya":372,"south-africa":613,"cuba":694,"serbia":904,"bosnia-and-herzegovina":1120,"luxembourg":1398,"moldova":1034,"puerto-rico":193,"france-alsace":1746,"england-cornish":1235,"new-zealand":769,"armenia":314,"iceland":1029,"italy-sicily":1029,"syrian-arab-republic":522,"saudi-arabia":74,"israel":427,"canada-first-nations":294,"chile":284,"jamaica":270,"kazakhstan":476,"lebanon":258,"macedonia":526,"montenegro":635,"russia-dagestan":769,"argentina":303,"india":81,"iran":169,"russia-chuvashia":435,"albania":345,"bahrain":294,"colombia":94,"egypt":189,"iraq":140,"malta":370,"nicaragua":392,"palestinian-territory":286,"sudan":377,"venezuela":317,"azerbaijan":118,"china":32,"dominican-republic":91,"el-salvador":192,"ethiopia":111,"japan":34,"peru":119,"russia-ingushetia":149,"united-arab-emirates":60},"edges":[0.008136,0.032544,0.073224,0.130176,0.2034]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Where it is found">
 <table class="list"><caption class="sr-only">Where it is found</caption>
 <thead>

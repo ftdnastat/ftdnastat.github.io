@@ -37,6 +37,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Y-ДНК","item":"https://ftdnastat.github.io/ru/y/"},{"@type":"ListItem","position":2,"name":"Ветки","item":"https://ftdnastat.github.io/ru/clade/"},{"@type":"ListItem","position":3,"name":"J-M102","item":"https://ftdnastat.github.io/ru/clade/j-m102/"},{"@type":"ListItem","position":4,"name":"J-Z529","item":"https://ftdnastat.github.io/ru/clade/j-z529/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="ru">
 <a class="skip" href="#main">К содержимому</a>
@@ -91,6 +95,13 @@
 <h2 id="где-встречается">Где встречается <a class="anchor" href="#где-встречается" aria-label="Ссылка на раздел «Где встречается»">#</a></h2>
 <p>Страны и регионы, которые указали носители ветки. «Доля ветки» — какая часть китов ветки приходится на страну. «Доля страны» — какая часть китов этой страны попадает в ветку; считается только для стран от 50 китов.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Карта: доля J-Z529 среди китов каждой страны">
+<div class="tabs cmap-tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет — доля ветки среди китов страны. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 0,8%</span><span><i class="cmap-sw m2"></i>≤ 3,2%</span><span><i class="cmap-sw m3"></i>≤ 7,1%</span><span><i class="cmap-sw m4"></i>≤ 13%</span><span><i class="cmap-sw m5"></i>≤ 20%</span><span><i class="cmap-sw msm"></i>меньше 50 китов</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"ru","kind":"y","minN":50,"shares":{"germany":174,"united-states":65,"england":63,"italy":267,"france":149,"poland":129,"russian-federation":133,"ukraine":165,"yemen":415,"switzerland":213,"saudi-arabia":51,"spain":142,"united-kingdom":54,"india":345,"iraq":156,"scotland":34,"albania":1588,"czech-republic":187,"oman":921,"palestinian-territory":639,"hungary":204,"sweden":32,"lithuania":188,"turkey":140,"bulgaria":362,"romania":289,"pakistan":761,"ireland":13,"mexico":123,"portugal":147,"greece":205,"kuwait":120,"armenia":204,"canada":134,"croatia":426,"slovakia":225,"serbia":603,"austria":176,"belarus":105,"kosovo":1978,"syrian-arab-republic":198,"united-arab-emirates":126,"lebanon":238,"brazil":205,"macedonia":838,"norway":31,"bahrain":169,"netherlands":52,"bosnia-and-herzegovina":301,"puerto-rico":186,"russia-mordovia":701,"qatar":145,"united-states-native-american":55,"denmark":55,"iran":119,"italy-sicily":738,"libya":183,"slovenia":198,"azerbaijan":135,"finland":8,"montenegro":421,"georgia":111,"jordan":196,"morocco":124,"belgium":84,"egypt":97,"chile":309,"israel":206,"russia-adygea":128,"sri-lanka":333,"colombia":132,"cuba":185,"dominican-republic":233,"luxembourg":308,"sudan":99,"wales":18,"afghanistan":182,"moldova":156,"northern-ireland":10,"russia-dagestan":31,"spain-andalusia":380,"tajikistan":180,"uzbekistan":112,"algeria":40,"cyprus":247,"kyrgyzstan":217,"latvia":44,"russia-bashkortostan":198,"russia-chuvashia":106,"russia-tatarstan":175,"south-africa":87,"tunisia":80,"vietnam":156,"argentina":78,"belgium-flanders":102,"canada-first-nations":200,"ecuador":149,"ethiopia":135,"france-alsace":137,"guatemala":130,"iraq-kurdistan":192,"italy-aosta-valley":52,"kazakhstan":13,"malta":106,"philippines":24,"russia-chechnya":6,"russia-kabardino-balkaria":128,"venezuela":147},"edges":[0.007912,0.031648,0.071208,0.126592,0.1978]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Где встречается">
 <table class="list"><caption class="sr-only">Где встречается</caption>
 <thead>

@@ -34,6 +34,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Y-ДНК","item":"https://ftdnastat.github.io/ru/y/"},{"@type":"ListItem","position":2,"name":"Ветки","item":"https://ftdnastat.github.io/ru/clade/"},{"@type":"ListItem","position":3,"name":"E-M2","item":"https://ftdnastat.github.io/ru/clade/e-m2/"},{"@type":"ListItem","position":4,"name":"E-M4901","item":"https://ftdnastat.github.io/ru/clade/e-m4901/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="ru">
 <a class="skip" href="#main">К содержимому</a>
@@ -87,6 +91,13 @@
 <h2 id="где-встречается">Где встречается <a class="anchor" href="#где-встречается" aria-label="Ссылка на раздел «Где встречается»">#</a></h2>
 <p>Страны и регионы, которые указали носители ветки. «Доля ветки» — какая часть китов ветки приходится на страну. «Доля страны» — какая часть китов этой страны попадает в ветку; считается только для стран от 50 китов.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Карта: доля E-M4901 среди китов каждой страны">
+<div class="tabs cmap-tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет — доля ветки среди китов страны. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 2,3%</span><span><i class="cmap-sw m2"></i>≤ 9,4%</span><span><i class="cmap-sw m3"></i>≤ 21%</span><span><i class="cmap-sw m4"></i>≤ 38%</span><span><i class="cmap-sw m5"></i>≤ 59%</span><span><i class="cmap-sw msm"></i>меньше 50 китов</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"ru","kind":"y","minN":50,"shares":{"united-states":401,"saudi-arabia":356,"ghana":5863,"united-states-native-american":628,"jamaica":4054,"kuwait":378,"cameroon":2805,"nigeria":2897,"puerto-rico":677,"united-arab-emirates":266,"bahrain":443,"kenya":3505,"england":10,"spain":71,"oman":544,"dominican-republic":1395,"scotland":16,"mexico":92,"qatar":304,"iraq":60,"barbados":2093,"brazil":232,"trinidad-and-tobago":2656,"united-kingdom":18,"morocco":283,"south-africa":696,"ireland":6,"yemen":81,"algeria":220,"france":17,"germany":6,"libya":223,"canada":61,"mali":1724,"portugal":52,"benin":899,"egypt":114,"colombia":197,"costa-rica":952,"cuba":231,"palestinian-territory":78,"panama":794,"syrian-arab-republic":55,"italy":7,"sudan":99,"denmark":18,"georgia":48,"israel":123,"lithuania":16,"romania":28,"senegal":484,"venezuela":441,"australia":55,"austria":19,"azerbaijan":34,"el-salvador":227,"guatemala":260,"kazakhstan":27,"lebanon":30,"malta":213,"tunisia":80,"ukraine":5,"belgium":14,"bulgaria":11,"chile":62,"ethiopia":135,"greece":8,"iran":13,"isle-of-man":70,"netherlands":4,"new-zealand":95,"philippines":24,"portugal-azores":172,"slovakia":10,"spain-andalusia":127,"sweden":1,"turkey":4,"wales":5},"edges":[0.023452,0.093808,0.211068,0.375232,0.5863]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Где встречается">
 <table class="list"><caption class="sr-only">Где встречается</caption>
 <thead>

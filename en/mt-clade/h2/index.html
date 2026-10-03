@@ -35,6 +35,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"mtDNA","item":"https://ftdnastat.github.io/en/mt/"},{"@type":"ListItem","position":2,"name":"mt branches","item":"https://ftdnastat.github.io/en/mt-clade/"},{"@type":"ListItem","position":3,"name":"H","item":"https://ftdnastat.github.io/en/mt-clade/h/"},{"@type":"ListItem","position":4,"name":"H2","item":"https://ftdnastat.github.io/en/mt-clade/h2/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="en">
 <a class="skip" href="#main">Skip to content</a>
@@ -83,6 +87,13 @@
 <h2 id="where-it-is-found">Where it is found <a class="anchor" href="#where-it-is-found" aria-label="Link to section “Where it is found”">#</a></h2>
 <p>Countries and regions given by the branch's carriers. “Share of branch” is the part of the branch's kits that belongs to the country. “Share of country” is the part of that country's kits that falls into the branch; it is computed only for countries with at least 50 kits.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Map: share of H2 among each country's kits">
+<div class="tabs cmap-tabs" role="group" aria-label="Map zoom"><button type="button" class="tab" data-v="world" aria-pressed="true">World</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Europe</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Caucasus</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Colour is the branch's share of the country's kits. Hover over a country or tap it.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 0.4%</span><span><i class="cmap-sw m2"></i>≤ 1.4%</span><span><i class="cmap-sw m3"></i>≤ 3.2%</span><span><i class="cmap-sw m4"></i>≤ 5.6%</span><span><i class="cmap-sw m5"></i>≤ 8.8%</span><span><i class="cmap-sw msm"></i>fewer than 50 kits</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"en","kind":"mt","minN":50,"shares":{"sweden":567,"united-states":244,"ireland":322,"england":255,"finland":422,"germany":281,"norway":499,"united-kingdom":280,"poland":276,"scotland":262,"france":263,"russian-federation":246,"canada":256,"denmark":456,"wales":513,"italy":159,"ukraine":211,"switzerland":317,"netherlands":269,"spain":233,"czech-republic":268,"slovakia":444,"hungary":220,"austria":233,"northern-ireland":309,"saudi-arabia":223,"portugal":177,"united-states-native-american":64,"mexico":78,"belgium":331,"estonia":451,"lithuania":103,"slovenia":431,"australia":212,"russia-chechnya":175,"greece":153,"iceland":882,"latvia":230,"luxembourg":645,"romania":108,"turkey":67,"belarus":68,"bulgaria":135,"dominican-republic":455,"england-cornish":617,"morocco":298,"bosnia-and-herzegovina":320,"croatia":135,"kuwait":255,"russia-chuvashia":580,"armenia":135,"brazil":66,"france-alsace":476,"israel":256,"lebanon":194,"russia-dagestan":577,"russia-ingushetia":448,"serbia":181,"cuba":93,"iran":113,"italy-sicily":294,"montenegro":317,"new-zealand":192,"qatar":244,"albania":172,"algeria":85,"azerbaijan":118,"canada-first-nations":74,"georgia":143,"iraq":70,"kazakhstan":119,"macedonia":132,"moldova":86,"pakistan":147,"palestinian-territory":143,"sudan":189,"united-arab-emirates":60,"venezuela":159},"edges":[0.003528,0.014112,0.031752,0.056448,0.0882]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Where it is found">
 <table class="list"><caption class="sr-only">Where it is found</caption>
 <thead>

@@ -37,6 +37,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"мтДНК","item":"https://ftdnastat.github.io/ru/mt/"},{"@type":"ListItem","position":2,"name":"Ветки мт","item":"https://ftdnastat.github.io/ru/mt-clade/"},{"@type":"ListItem","position":3,"name":"L3","item":"https://ftdnastat.github.io/ru/mt-clade/l3/"}]}</script>
+<script src="/assets/map.js" defer></script>
+<noscript>
+<style>.cmap{display:none}</style>
+</noscript>
 </head>
 <body data-lang="ru">
 <a class="skip" href="#main">К содержимому</a>
@@ -84,6 +88,13 @@
 <h2 id="где-встречается">Где встречается <a class="anchor" href="#где-встречается" aria-label="Ссылка на раздел «Где встречается»">#</a></h2>
 <p>Страны и регионы, которые указали носители ветки. «Доля ветки» — какая часть китов ветки приходится на страну. «Доля страны» — какая часть китов этой страны попадает в ветку; считается только для стран от 50 китов.</p>
 </div>
+<figure class="cmap" id="cmap" aria-label="Карта: доля L3 среди китов каждой страны">
+<div class="tabs cmap-tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет — доля ветки среди китов страны. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend"><span><i class="cmap-sw m0"></i>0</span><span><i class="cmap-sw m1"></i>≤ 4,0%</span><span><i class="cmap-sw m2"></i>≤ 16%</span><span><i class="cmap-sw m3"></i>≤ 36%</span><span><i class="cmap-sw m4"></i>≤ 64%</span><span><i class="cmap-sw m5"></i>≤ 100%</span><span><i class="cmap-sw msm"></i>меньше 50 китов</span></div>
+</figure>
+<script type="application/json" id="map-data">{"lang":"ru","kind":"mt","minN":50,"shares":{"united-states":9618,"england":9986,"germany":9975,"ireland":9988,"sweden":9983,"finland":10000,"scotland":9970,"united-kingdom":9964,"poland":9934,"france":9947,"norway":10000,"italy":9939,"russian-federation":9943,"united-states-native-american":9239,"ukraine":9920,"canada":9986,"mexico":9810,"netherlands":9965,"spain":9590,"switzerland":9985,"czech-republic":9975,"denmark":9982,"hungary":9936,"lithuania":9915,"wales":9979,"turkey":9967,"portugal":9447,"austria":9953,"belarus":9919,"saudi-arabia":9058,"northern-ireland":9967,"slovakia":9951,"puerto-rico":8873,"romania":9856,"russia-chechnya":10000,"greece":9956,"belgium":10000,"australia":10000,"bulgaria":9946,"india":9866,"brazil":8009,"china":10000,"croatia":10000,"japan":10000,"latvia":9885,"slovenia":10000,"estonia":10000,"armenia":9955,"colombia":9531,"philippines":10000,"cuba":8472,"iran":9774,"serbia":9940,"united-arab-emirates":9398,"lebanon":9871,"south-africa":5785,"morocco":8750,"kuwait":9172,"chile":9858,"iraq":9720,"canada-first-nations":10000,"korea":10000,"syrian-arab-republic":9478,"bosnia-and-herzegovina":10000,"moldova":10000,"algeria":9060,"new-zealand":10000,"argentina":10000,"luxembourg":10000,"azerbaijan":10000,"israel":7265,"indonesia":10000,"kazakhstan":10000,"egypt":7830,"england-cornish":10000,"peru":9643,"qatar":9512,"dominican-republic":6909,"macedonia":10000,"yemen":7979,"georgia":10000,"russia-chuvashia":10000,"iceland":10000,"italy-sicily":10000,"pakistan":9853,"russia-ingushetia":10000,"palestinian-territory":9286,"france-alsace":10000,"montenegro":10000,"bahrain":8971,"vietnam":10000,"albania":10000,"venezuela":9048,"russia-dagestan":10000,"jamaica":3446,"malta":9444,"ecuador":9804,"nicaragua":9804,"el-salvador":9423,"ethiopia":5444,"sudan":4906},"edges":[0.04,0.16,0.36,0.64,1]}</script>
 <div class="tablewrap" tabindex="0" role="region" aria-label="Где встречается">
 <table class="list"><caption class="sr-only">Где встречается</caption>
 <thead>
