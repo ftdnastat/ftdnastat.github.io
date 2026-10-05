@@ -63,7 +63,7 @@ small{color:var(--ink-3);font-weight:400}
 .sec-head.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
 .sec-head.row p{flex-basis:100%}
 .clade-link{font-size:13px;line-height:1;white-space:nowrap;margin-left:2px;padding:6px 4px}
-.more{display:inline-block;padding-block:3px}.clade-link{display:inline-block}
+.more{display:inline-block;padding-block:3px}.elsewhere{font-size:14px}.elsewhere a{white-space:nowrap}.clade-link{display:inline-block}
 .tree:not(.compact) .bar-val{white-space:normal}
 .foot a{margin-left:8px}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:6px;color:var(--ink);align-content:start}
