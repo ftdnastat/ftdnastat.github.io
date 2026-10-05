@@ -16,15 +16,15 @@
 {"k":"T-M70*","v":1},
 {"k":"E-M4706*","v":1}
 ],"tree":[
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49217,"oldest":-56385,"youngest":-42929},"n":84,"depth":0},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":67,"depth":1},
-{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":29,"depth":2},
-{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6773,"oldest":-8074,"youngest":-5640},"n":4,"depth":2},
-{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22691,"oldest":-26165,"youngest":-19645},"n":12,"depth":1},
-{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12321,"oldest":-14358,"youngest":-10537},"n":3,"depth":2},
-{"name":"E-M75","label":"E2","shown":"E2","age":{"mean":-35173,"oldest":-40738,"youngest":-30331},"n":3,"depth":1},
-{"name":"A-M13","label":"A1b1","shown":"A1b1","age":{"mean":-10263,"oldest":-12138,"youngest":-8635},"n":7,"depth":0},
-{"name":"B-M181","label":"B","shown":"B","age":{"mean":-83028,"oldest":-95196,"youngest":-72382},"n":3,"depth":0}
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":84,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":67,"depth":1},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3845,"oldest":-4720,"youngest":-3083},"n":29,"depth":2},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6713,"oldest":-8005,"youngest":-5588},"n":4,"depth":2},
+{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22515,"oldest":-25964,"youngest":-19491},"n":12,"depth":1},
+{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12217,"oldest":-14239,"youngest":-10446},"n":3,"depth":2},
+{"name":"E-M75","label":"E2","shown":"E2","age":{"mean":-34932,"oldest":-40459,"youngest":-30123},"n":3,"depth":1},
+{"name":"A-M13","label":"A1b1","shown":"A1b1","age":{"mean":-10179,"oldest":-12041,"youngest":-8562},"n":7,"depth":0},
+{"name":"B-M181","label":"B","shown":"B","age":{"mean":-82478,"oldest":-94567,"youngest":-71901},"n":3,"depth":0}
 ],"terminal":[
 ["E-M2",33],
 ["E-M191",24],

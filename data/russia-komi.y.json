@@ -10,7 +10,7 @@
 {"k":"N-FGC52464","v":1},
 {"k":"J-Z1842","v":1}
 ],"tree":[
-{"name":"N-M178","label":"N1a-M178","shown":"N1a-M178","age":{"mean":-11727,"oldest":-13673,"youngest":-10022},"n":4,"depth":0}
+{"name":"N-M178","label":"N1a-M178","shown":"N1a-M178","age":{"mean":-11631,"oldest":-13564,"youngest":-9938},"n":4,"depth":0}
 ],"terminal":[
 ["N-Y41414",2],
 ["J-ZS11248",1],

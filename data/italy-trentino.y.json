@@ -17,9 +17,9 @@
 {"k":"E-BY3880*","v":1},
 {"k":"G-Z1900*","v":1}
 ],"tree":[
-{"name":"R-L23","label":"R1b-L23","shown":"R1b-L23","age":{"mean":-4345,"oldest":-5243,"youngest":-3558},"n":10,"depth":0},
-{"name":"R-U152","label":"R1b-U152","shown":"U152","age":{"mean":-2632,"oldest":-3300,"youngest":-2048},"n":7,"depth":1},
-{"name":"R-CTS7556","label":"R1b-CTS7556","shown":"CTS7556","age":{"mean":-3080,"oldest":-3853,"youngest":-2409},"n":3,"depth":1}
+{"name":"R-L23","label":"R1b-L23","shown":"R1b-L23","age":{"mean":-4301,"oldest":-5193,"youngest":-3519},"n":10,"depth":0},
+{"name":"R-U152","label":"R1b-U152","shown":"U152","age":{"mean":-2603,"oldest":-3267,"youngest":-2022},"n":7,"depth":1},
+{"name":"R-CTS7556","label":"R1b-CTS7556","shown":"CTS7556","age":{"mean":-3046,"oldest":-3813,"youngest":-2379},"n":3,"depth":1}
 ],"terminal":[
 ["R-BY2151",2],
 ["R-U152",2],

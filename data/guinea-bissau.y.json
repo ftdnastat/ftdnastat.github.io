@@ -7,8 +7,8 @@
 {"k":"E-U174","v":1},
 {"k":"CT-M168*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":25,"depth":0},
-{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":4,"depth":1}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":25,"depth":0},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3845,"oldest":-4720,"youngest":-3083},"n":4,"depth":1}
 ],"terminal":[
 ["E-M2",19],
 ["E-M191",2],

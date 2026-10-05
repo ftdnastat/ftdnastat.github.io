@@ -8,7 +8,7 @@
 {"k":"E-U174","v":1},
 {"k":"E-M191*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":17,"depth":0}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":17,"depth":0}
 ],"terminal":[
 ["E-M2",14],
 ["E-CTS5299",1],

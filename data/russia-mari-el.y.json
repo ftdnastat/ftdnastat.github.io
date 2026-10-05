@@ -7,8 +7,8 @@
 {"k":"N-Tat*","v":1},
 {"k":"N-CTS3103*","v":1}
 ],"tree":[
-{"name":"N-M231","label":"N","shown":"N","age":{"mean":-20804,"oldest":-24019,"youngest":-17986},"n":3,"depth":0},
-{"name":"R-CTS1211","label":"R1a-CTS1211","shown":"R1a-CTS1211","age":{"mean":-2406,"oldest":-3054,"youngest":-1841},"n":3,"depth":0}
+{"name":"N-M231","label":"N","shown":"N","age":{"mean":-20646,"oldest":-23838,"youngest":-17848},"n":3,"depth":0},
+{"name":"R-CTS1211","label":"R1a-CTS1211","shown":"R1a-CTS1211","age":{"mean":-2376,"oldest":-3019,"youngest":-1814},"n":3,"depth":0}
 ],"terminal":[
 ["R-FT388530",2],
 ["N-B523",1],

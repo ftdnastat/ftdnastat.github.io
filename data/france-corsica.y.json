@@ -15,8 +15,8 @@
 {"k":"R-Z8168","v":1},
 {"k":"G-CTS2230*","v":1}
 ],"tree":[
-{"name":"G-P15","label":"G2a","shown":"G2a","age":{"mean":-16311,"oldest":-18913,"youngest":-14033},"n":4,"depth":0},
-{"name":"R-U152","label":"R1b-U152","shown":"R1b-U152","age":{"mean":-2632,"oldest":-3300,"youngest":-2048},"n":4,"depth":0}
+{"name":"G-P15","label":"G2a","shown":"G2a","age":{"mean":-16184,"oldest":-18768,"youngest":-13922},"n":4,"depth":0},
+{"name":"R-U152","label":"R1b-U152","shown":"R1b-U152","age":{"mean":-2603,"oldest":-3267,"youngest":-2022},"n":4,"depth":0}
 ],"terminal":[
 ["G-FT20002",1],
 ["G-FT297145",1],

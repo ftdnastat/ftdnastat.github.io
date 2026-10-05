@@ -16,8 +16,8 @@
 {"k":"I-Z2040","v":1},
 {"k":"J-L858*","v":1}
 ],"tree":[
-{"name":"I-L38","label":"I2-L38","shown":"I2-L38","age":{"mean":-2753,"oldest":-3482,"youngest":-2121},"n":3,"depth":0},
-{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":3,"depth":0}
+{"name":"I-L38","label":"I2-L38","shown":"I2-L38","age":{"mean":-2721,"oldest":-3444,"youngest":-2093},"n":3,"depth":0},
+{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2803,"oldest":-3486,"youngest":-2205},"n":3,"depth":0}
 ],"terminal":[
 ["I-FTD73333",2],
 ["G-Z6414",1],

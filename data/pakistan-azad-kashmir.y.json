@@ -14,10 +14,10 @@
 {"k":"J-M241*","v":1},
 {"k":"J-FGC1723*","v":1}
 ],"tree":[
-{"name":"G-P15","label":"G2a","shown":"G2a","age":{"mean":-16311,"oldest":-18913,"youngest":-14033},"n":5,"depth":0},
-{"name":"L-M27","label":"L-M27","shown":"L-M27","age":{"mean":-6510,"oldest":-7827,"youngest":-5368},"n":4,"depth":0},
-{"name":"J-M304","label":"J","shown":"J","age":{"mean":-27175,"oldest":-31105,"youngest":-23491},"n":3,"depth":0},
-{"name":"R-M479","label":"R2","shown":"R2","age":{"mean":-13442,"oldest":-15726,"youngest":-11451},"n":3,"depth":0}
+{"name":"G-P15","label":"G2a","shown":"G2a","age":{"mean":-16184,"oldest":-18768,"youngest":-13922},"n":5,"depth":0},
+{"name":"L-M27","label":"L-M27","shown":"L-M27","age":{"mean":-6451,"oldest":-7759,"youngest":-5317},"n":4,"depth":0},
+{"name":"J-M304","label":"J","shown":"J","age":{"mean":-26990,"oldest":-30894,"youngest":-23329},"n":3,"depth":0},
+{"name":"R-M479","label":"R2","shown":"R2","age":{"mean":-13336,"oldest":-15605,"youngest":-11359},"n":3,"depth":0}
 ],"terminal":[
 ["G-FGC34416",2],
 ["G-FTG33167",2],

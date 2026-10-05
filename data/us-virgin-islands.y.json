@@ -12,8 +12,8 @@
 {"k":"T-CTS2214*","v":1},
 {"k":"I-M253*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":3,"depth":0},
-{"name":"I-M253","label":"I1","shown":"I1","age":{"mean":-17958,"oldest":-20771,"youngest":-15492},"n":3,"depth":0}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":3,"depth":0},
+{"name":"I-M253","label":"I1","shown":"I1","age":{"mean":-17822,"oldest":-20616,"youngest":-15373},"n":3,"depth":0}
 ],"terminal":[
 ["E-CTS10935",1],
 ["E-L515",1],

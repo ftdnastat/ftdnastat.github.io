@@ -19,8 +19,8 @@
 {"k":"A-PR2921*","v":1},
 {"k":"G-L1259*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15553,"oldest":-18062,"youngest":-13357},"n":16,"depth":0},
-{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3885,"oldest":-4767,"youngest":-3118},"n":3,"depth":1}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":16,"depth":0},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3845,"oldest":-4720,"youngest":-3083},"n":3,"depth":1}
 ],"terminal":[
 ["E-M2",9],
 ["B-FTD99299",1],

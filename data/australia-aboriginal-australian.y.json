@@ -13,9 +13,9 @@
 {"k":"G-L141*","v":1},
 {"k":"R-FTT8*","v":1}
 ],"tree":[
-{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41684,"oldest":-48483,"youngest":-35796},"n":18,"depth":0},
-{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":11,"depth":0},
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":3,"depth":0}
+{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41381,"oldest":-48133,"youngest":-35534},"n":18,"depth":0},
+{"name":"C-M216","label":"C","shown":"C","age":{"mean":-44832,"oldest":-51510,"youngest":-38988},"n":11,"depth":0},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25268,"oldest":-29229,"youngest":-21808},"n":3,"depth":0}
 ],"terminal":[
 ["S-P308",18],
 ["C-M216",9],

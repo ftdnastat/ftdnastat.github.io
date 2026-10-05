@@ -14,7 +14,7 @@
 {"k":"K-M526*","v":1},
 {"k":"O-M324","v":1}
 ],"tree":[
-{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":3,"depth":0}
+{"name":"C-M216","label":"C","shown":"C","age":{"mean":-44832,"oldest":-51510,"youngest":-38988},"n":3,"depth":0}
 ],"terminal":[
 ["C-FT107318",3],
 ["H-M52",1],

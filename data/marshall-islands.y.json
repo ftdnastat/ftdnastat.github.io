@@ -3,7 +3,7 @@
 ],"l2":[
 {"k":"K-M526*","v":3}
 ],"tree":[
-{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41684,"oldest":-48483,"youngest":-35796},"n":3,"depth":0}
+{"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41381,"oldest":-48133,"youngest":-35534},"n":3,"depth":0}
 ],"terminal":[
 ["S-BY97781",1],
 ["S-FTC173",1],
