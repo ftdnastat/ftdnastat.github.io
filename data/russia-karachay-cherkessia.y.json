@@ -1,5 +1,5 @@
-{"name":"Russia (Republic of Karachay-Cherkessia)","slug":"russia-karachay-cherkessia","n":74,"l1":[
-{"k":"R","v":31},
+{"name":"Russia (Republic of Karachay-Cherkessia)","slug":"russia-karachay-cherkessia","n":75,"l1":[
+{"k":"R","v":32},
 {"k":"G","v":29},
 {"k":"J","v":5},
 {"k":"T","v":2},
@@ -9,7 +9,7 @@
 {"k":"N","v":1},
 {"k":"I","v":1}
 ],"l2":[
-{"k":"R-Z2124","v":22},
+{"k":"R-Z2124","v":23},
 {"k":"G-P15*","v":19},
 {"k":"G-Z6779","v":7},
 {"k":"R-Z18*","v":3},
@@ -31,9 +31,9 @@
 {"k":"I-CTS10057*","v":1},
 {"k":"R-CTS7822","v":1}
 ],"tree":[
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":31,"depth":0},
-{"name":"R-Z2124","label":"R1a-Z2124","shown":"R1a-Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":22,"depth":1},
-{"name":"R-Z2123","label":"R1a-Z2123","shown":"Z2123","age":{"mean":-2294,"oldest":-2961,"youngest":-1717},"n":19,"depth":2},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":32,"depth":0},
+{"name":"R-Z2124","label":"R1a-Z2124","shown":"R1a-Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":23,"depth":1},
+{"name":"R-Z2123","label":"R1a-Z2123","shown":"Z2123","age":{"mean":-2294,"oldest":-2961,"youngest":-1717},"n":20,"depth":2},
 {"name":"R-Z18","label":"R1b-Z18","shown":"R1b-Z18","age":{"mean":-2266,"oldest":-2902,"youngest":-1711},"n":5,"depth":1},
 {"name":"G-P15","label":"G2a","shown":"G2a","age":{"mean":-16311,"oldest":-18913,"youngest":-14033},"n":28,"depth":0},
 {"name":"G-Z6552","label":"G2a1-Z6552","shown":"G2a1-Z6552","age":{"mean":-14723,"oldest":-17209,"youngest":-12557},"n":19,"depth":1},
@@ -44,18 +44,17 @@
 ["G-Z6638",6],
 ["R-YP449",6],
 ["G-Z6554",4],
+["R-FGC22473",3],
 ["R-Z18",3],
 ["E-FTH14000",2],
 ["G-FTC9537",2],
 ["G-L1266",2],
 ["J-M172",2],
-["R-FGC22473",2],
 ["R-FGC86165",2],
 ["R-FTG91359",2],
 ["C-F10290",1],
 ["C-Y138418",1],
 ["G-FGC3768",1],
-["G-FT151211",1],
 ["G-FT23146",1],
 ["G-FT245717",1],
 ["G-FT246460",1],
@@ -65,6 +64,7 @@
 ["G-FTC52864",1],
 ["G-FTF62510",1],
 ["G-FTG50018",1],
+["G-FTJ88704",1],
 ["G-M201",1],
 ["G-S11852",1],
 ["G-Y36736",1],

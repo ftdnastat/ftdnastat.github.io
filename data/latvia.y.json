@@ -1,6 +1,6 @@
-{"name":"Latvia","slug":"latvia","n":452,"l1":[
+{"name":"Latvia","slug":"latvia","n":453,"l1":[
 {"k":"R","v":144},
-{"k":"N","v":107},
+{"k":"N","v":108},
 {"k":"J","v":85},
 {"k":"E","v":49},
 {"k":"I","v":24},
@@ -9,7 +9,7 @@
 {"k":"T","v":7},
 {"k":"P","v":1}
 ],"l2":[
-{"k":"N-FGC52464","v":87},
+{"k":"N-FGC52464","v":88},
 {"k":"R-CTS3402*","v":16},
 {"k":"Q-M242*","v":15},
 {"k":"J-M92","v":14},
@@ -129,8 +129,8 @@
 {"name":"R-L51","label":"R1b-L51","shown":"L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":40,"depth":2},
 {"name":"R-P312","label":"R1b-P312","shown":"P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":21,"depth":3},
 {"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2973,"oldest":-3681,"youngest":-2352},"n":17,"depth":3},
-{"name":"N-M178","label":"N1a-M178","shown":"N1a-M178","age":{"mean":-11727,"oldest":-13673,"youngest":-10022},"n":106,"depth":0},
-{"name":"N-CTS2929","label":"N-CTS2929","shown":"N-CTS2929","age":{"mean":-1924,"oldest":-2506,"youngest":-1415},"n":98,"depth":1},
+{"name":"N-M178","label":"N1a-M178","shown":"N1a-M178","age":{"mean":-11727,"oldest":-13673,"youngest":-10022},"n":107,"depth":0},
+{"name":"N-CTS2929","label":"N-CTS2929","shown":"N-CTS2929","age":{"mean":-1924,"oldest":-2506,"youngest":-1415},"n":99,"depth":1},
 {"name":"J-M304","label":"J","shown":"J","age":{"mean":-27175,"oldest":-31105,"youngest":-23491},"n":85,"depth":0},
 {"name":"J-M172","label":"J2","shown":"J2","age":{"mean":-25374,"oldest":-29225,"youngest":-21998},"n":47,"depth":1},
 {"name":"J-M410","label":"J2a","shown":"J2a","age":{"mean":-17822,"oldest":-20620,"youngest":-15370},"n":35,"depth":2},
@@ -145,7 +145,7 @@
 {"name":"G-M201","label":"G","shown":"G","age":{"mean":-25749,"oldest":-29669,"youngest":-22314},"n":19,"depth":0},
 {"name":"Q-M242","label":"Q","shown":"Q","age":{"mean":-27462,"oldest":-31660,"youngest":-23787},"n":16,"depth":0}
 ],"terminal":[
-["N-Z16980",24],
+["N-Z16980",25],
 ["J-M267",12],
 ["J-M172",10],
 ["R-M417",8],
@@ -311,7 +311,6 @@
 ["N-BY127864",1],
 ["N-BY153068",1],
 ["N-BY202983",1],
-["N-BY27598",1],
 ["N-BY63874",1],
 ["N-BY92634",1],
 ["N-CTS2929",1],
@@ -321,6 +320,7 @@
 ["N-FT186274",1],
 ["N-FT197816",1],
 ["N-FT204910",1],
+["N-FT249947",1],
 ["N-FT285712",1],
 ["N-FT377506",1],
 ["N-FT384368",1],

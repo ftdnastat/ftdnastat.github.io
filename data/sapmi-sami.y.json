@@ -1,5 +1,5 @@
-{"name":"Sápmi (Sámi)","slug":"sapmi-sami","n":17,"l1":[
-{"k":"N","v":13},
+{"name":"Sápmi (Sámi)","slug":"sapmi-sami","n":18,"l1":[
+{"k":"N","v":14},
 {"k":"I","v":4}
 ],"l2":[
 {"k":"N-CTS4329*","v":7},
@@ -7,9 +7,10 @@
 {"k":"N-CTS3223*","v":2},
 {"k":"N-Y5004","v":2},
 {"k":"N-VL62*","v":2},
-{"k":"I-BY266","v":2}
+{"k":"I-BY266","v":2},
+{"k":"N-CTS3103*","v":1}
 ],"tree":[
-{"name":"N-Z1936","label":"N-Z1936","shown":"N-Z1936","age":{"mean":-2425,"oldest":-3070,"youngest":-1861},"n":11,"depth":0},
+{"name":"N-Z1936","label":"N-Z1936","shown":"N-Z1936","age":{"mean":-2425,"oldest":-3070,"youngest":-1861},"n":12,"depth":0},
 {"name":"I-DF29","label":"I1-DF29","shown":"I1-DF29","age":{"mean":-2463,"oldest":-3100,"youngest":-1904},"n":4,"depth":0}
 ],"terminal":[
 ["I-FT49841",1],
@@ -26,6 +27,7 @@
 ["N-FT32026",1],
 ["N-FTD84542",1],
 ["N-FTJ26794",1],
+["N-FTJ43252",1],
 ["N-PH1002",1],
 ["N-PH4577",1],
 ["N-Y24001",1]

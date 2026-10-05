@@ -1,5 +1,5 @@
-{"name":"Sudan","slug":"sudan","n":406,"l1":[
-{"k":"J","v":202},
+{"name":"Sudan","slug":"sudan","n":405,"l1":[
+{"k":"J","v":201},
 {"k":"E","v":101},
 {"k":"T","v":27},
 {"k":"R","v":26},
@@ -46,7 +46,6 @@
 {"k":"R-M269*","v":2},
 {"k":"T-Z709","v":2},
 {"k":"J-L858*","v":2},
-{"k":"J-FGC5*","v":2},
 {"k":"R-M12149*","v":2},
 {"k":"J-FGC4422","v":2},
 {"k":"J-FGC4415*","v":2},
@@ -58,6 +57,7 @@
 {"k":"E-U174","v":1},
 {"k":"J-M304*","v":1},
 {"k":"J-M102*","v":1},
+{"k":"J-FGC5*","v":1},
 {"k":"G-Z727*","v":1},
 {"k":"J-FGC1723*","v":1},
 {"k":"I-Y3548","v":1},
@@ -69,9 +69,9 @@
 {"k":"E-PF2546","v":1},
 {"k":"G-P303*","v":1}
 ],"tree":[
-{"name":"J-M304","label":"J","shown":"J","age":{"mean":-27175,"oldest":-31105,"youngest":-23491},"n":202,"depth":0},
-{"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16829,"oldest":-19476,"youngest":-14508},"n":182,"depth":1},
-{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2872,"oldest":-3570,"youngest":-2261},"n":159,"depth":2},
+{"name":"J-M304","label":"J","shown":"J","age":{"mean":-27175,"oldest":-31105,"youngest":-23491},"n":201,"depth":0},
+{"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16829,"oldest":-19476,"youngest":-14508},"n":181,"depth":1},
+{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2872,"oldest":-3570,"youngest":-2261},"n":158,"depth":2},
 {"name":"J-M172","label":"J2","shown":"J2","age":{"mean":-25374,"oldest":-29225,"youngest":-21998},"n":19,"depth":1},
 {"name":"J-L24","label":"J2a-L24","shown":"J2a-L24","age":{"mean":-11317,"oldest":-13231,"youngest":-9643},"n":8,"depth":2},
 {"name":"J-M102","label":"J2b-M102","shown":"J2b-M102","age":{"mean":-13567,"oldest":-15813,"youngest":-11604},"n":5,"depth":2},
@@ -132,7 +132,6 @@
 ["G-CTS342",2],
 ["J-BY144433",2],
 ["J-BY186211",2],
-["J-FGC5",2],
 ["J-FT122344",2],
 ["J-FT134133",2],
 ["J-FT164846",2],
@@ -233,6 +232,7 @@
 ["J-FGC1723",1],
 ["J-FGC38452",1],
 ["J-FGC4423",1],
+["J-FGC5",1],
 ["J-FGC7393",1],
 ["J-FGC8806",1],
 ["J-FT221770",1],

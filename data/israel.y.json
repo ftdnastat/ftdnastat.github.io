@@ -1,6 +1,6 @@
-{"name":"Israel","slug":"israel","n":243,"l1":[
+{"name":"Israel","slug":"israel","n":244,"l1":[
 {"k":"J","v":82},
-{"k":"R","v":68},
+{"k":"R","v":69},
 {"k":"E","v":50},
 {"k":"G","v":16},
 {"k":"I","v":7},
@@ -12,7 +12,7 @@
 {"k":"O","v":1},
 {"k":"N","v":1}
 ],"l2":[
-{"k":"R-Z2124","v":38},
+{"k":"R-Z2124","v":39},
 {"k":"E-M35*","v":22},
 {"k":"J-M172*","v":17},
 {"k":"J-M267*","v":10},
@@ -108,9 +108,9 @@
 {"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16829,"oldest":-19476,"youngest":-14508},"n":35,"depth":1},
 {"name":"J-P58","label":"J1-P58","shown":"P58","age":{"mean":-7731,"oldest":-9109,"youngest":-6524},"n":25,"depth":2},
 {"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2872,"oldest":-3570,"youngest":-2261},"n":11,"depth":3},
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":68,"depth":0},
-{"name":"R-M198","label":"R1a-M198","shown":"R1a-M198","age":{"mean":-6499,"oldest":-7705,"youngest":-5442},"n":43,"depth":1},
-{"name":"R-Z2124","label":"R1a-Z2124","shown":"Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":38,"depth":2},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":69,"depth":0},
+{"name":"R-M198","label":"R1a-M198","shown":"R1a-M198","age":{"mean":-6499,"oldest":-7705,"youngest":-5442},"n":44,"depth":1},
+{"name":"R-Z2124","label":"R1a-Z2124","shown":"Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":39,"depth":2},
 {"name":"R-M269","label":"R1b-M269","shown":"R1b-M269","age":{"mean":-4454,"oldest":-5368,"youngest":-3654},"n":19,"depth":1},
 {"name":"R-L23","label":"R1b-L23","shown":"L23","age":{"mean":-4345,"oldest":-5243,"youngest":-3558},"n":16,"depth":2},
 {"name":"R-L51","label":"R1b-L51","shown":"L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":12,"depth":3},
@@ -259,6 +259,7 @@
 ["R-DF49",1],
 ["R-DF90",1],
 ["R-F1758",1],
+["R-FGC22266",1],
 ["R-FGC32440",1],
 ["R-FGC49649",1],
 ["R-FT123786",1],

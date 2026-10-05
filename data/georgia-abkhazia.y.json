@@ -1,13 +1,13 @@
-{"name":"Georgia (Republic of Abkhazia)","slug":"georgia-abkhazia","n":94,"l1":[
+{"name":"Georgia (Republic of Abkhazia)","slug":"georgia-abkhazia","n":95,"l1":[
 {"k":"G","v":40},
 {"k":"J","v":23},
-{"k":"R","v":20},
+{"k":"R","v":21},
 {"k":"L","v":6},
 {"k":"I","v":4},
 {"k":"E","v":1}
 ],"l2":[
 {"k":"G-Z6779","v":27},
-{"k":"R-Z2124","v":12},
+{"k":"R-Z2124","v":13},
 {"k":"G-P15*","v":10},
 {"k":"J-CTS7683*","v":7},
 {"k":"L-M22","v":5},
@@ -43,8 +43,8 @@
 {"name":"J-Z7671","label":"J2a-Z7671","shown":"Z7671","age":{"mean":-10270,"oldest":-12066,"youngest":-8702},"n":5,"depth":2},
 {"name":"J-Z6049","label":"J2a-Z6049","shown":"Z6049","age":{"mean":-14000,"oldest":-16444,"youngest":-11879},"n":4,"depth":2},
 {"name":"J-L25","label":"J2a-L25","shown":"L25","age":{"mean":-6747,"oldest":-8016,"youngest":-5638},"n":3,"depth":2},
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":20,"depth":0},
-{"name":"R-Z2124","label":"R1a-Z2124","shown":"R1a-Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":12,"depth":1},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":21,"depth":0},
+{"name":"R-Z2124","label":"R1a-Z2124","shown":"R1a-Z2124","age":{"mean":-2507,"oldest":-3180,"youngest":-1920},"n":13,"depth":1},
 {"name":"R-Z2123","label":"R1a-Z2123","shown":"Z2123","age":{"mean":-2294,"oldest":-2961,"youngest":-1717},"n":8,"depth":2},
 {"name":"R-M12149","label":"R1b-Z2103 (M12149)","shown":"R1b-Z2103 (M12149)","age":{"mean":-3679,"oldest":-4512,"youngest":-2952},"n":5,"depth":1},
 {"name":"L-M317","label":"L-M317","shown":"L-M317","age":{"mean":-11566,"oldest":-13633,"youngest":-9771},"n":5,"depth":0},
@@ -111,6 +111,7 @@
 ["L-FTG80942",1],
 ["L-L595",1],
 ["R-CTS4065",1],
+["R-F1345",1],
 ["R-FGC43622",1],
 ["R-FTA27012",1],
 ["R-FTA50400",1],

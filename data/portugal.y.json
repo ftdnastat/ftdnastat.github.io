@@ -1,5 +1,5 @@
-{"name":"Portugal","slug":"portugal","n":1905,"l1":[
-{"k":"R","v":1040},
+{"name":"Portugal","slug":"portugal","n":1906,"l1":[
+{"k":"R","v":1041},
 {"k":"E","v":262},
 {"k":"J","v":245},
 {"k":"I","v":160},
@@ -14,7 +14,7 @@
 {"k":"K","v":1}
 ],"l2":[
 {"k":"R-L151*","v":212},
-{"k":"R-ZZ12_1*","v":190},
+{"k":"R-ZZ12_1*","v":191},
 {"k":"E-PF2546","v":70},
 {"k":"R-FTT1*","v":49},
 {"k":"R-M269*","v":48},
@@ -219,11 +219,11 @@
 {"k":"T-CTS2214*","v":1},
 {"k":"Q-M346*","v":1}
 ],"tree":[
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":1040,"depth":0},
-{"name":"R-L23","label":"R1b-L23","shown":"R1b-L23","age":{"mean":-4345,"oldest":-5243,"youngest":-3558},"n":944,"depth":1},
-{"name":"R-L51","label":"R1b-L51","shown":"L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":920,"depth":2},
-{"name":"R-P312","label":"R1b-P312","shown":"P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":626,"depth":3},
-{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2665,"oldest":-3334,"youngest":-2080},"n":428,"depth":4},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":1041,"depth":0},
+{"name":"R-L23","label":"R1b-L23","shown":"R1b-L23","age":{"mean":-4345,"oldest":-5243,"youngest":-3558},"n":945,"depth":1},
+{"name":"R-L51","label":"R1b-L51","shown":"L51","age":{"mean":-4106,"oldest":-4972,"youngest":-3348},"n":921,"depth":2},
+{"name":"R-P312","label":"R1b-P312","shown":"P312","age":{"mean":-2836,"oldest":-3524,"youngest":-2234},"n":627,"depth":3},
+{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2665,"oldest":-3334,"youngest":-2080},"n":429,"depth":4},
 {"name":"R-L21","label":"R1b-L21","shown":"L21","age":{"mean":-2649,"oldest":-3310,"youngest":-2070},"n":114,"depth":4},
 {"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2560,"oldest":-3209,"youngest":-1991},"n":81,"depth":5},
 {"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2973,"oldest":-3681,"youngest":-2352},"n":72,"depth":3},
@@ -833,6 +833,7 @@
 ["R-BY190103",1],
 ["R-BY190657",1],
 ["R-BY192942",1],
+["R-BY194323",1],
 ["R-BY202532",1],
 ["R-BY20327",1],
 ["R-BY20378",1],
@@ -847,7 +848,6 @@
 ["R-BY3332",1],
 ["R-BY33880",1],
 ["R-BY38478",1],
-["R-BY38819",1],
 ["R-BY38876",1],
 ["R-BY39671",1],
 ["R-BY40243",1],
@@ -922,6 +922,7 @@
 ["R-FT178985",1],
 ["R-FT184738",1],
 ["R-FT203779",1],
+["R-FT204138",1],
 ["R-FT205752",1],
 ["R-FT246174",1],
 ["R-FT2796",1],

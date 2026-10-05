@@ -1,6 +1,6 @@
-{"name":"Kyrgyzstan","slug":"kyrgyzstan","n":92,"l1":[
-{"k":"R","v":33},
-{"k":"C","v":27},
+{"name":"Kyrgyzstan","slug":"kyrgyzstan","n":94,"l1":[
+{"k":"R","v":34},
+{"k":"C","v":28},
 {"k":"J","v":12},
 {"k":"A","v":6},
 {"k":"N","v":6},
@@ -10,9 +10,9 @@
 {"k":"I","v":1}
 ],"l2":[
 {"k":"R-Z2124","v":22},
-{"k":"C-M217","v":18},
+{"k":"C-M217","v":19},
 {"k":"C-M216*","v":9},
-{"k":"R-M173*","v":8},
+{"k":"R-M173*","v":9},
 {"k":"A-PR2921*","v":6},
 {"k":"NO-M214*","v":5},
 {"k":"J-M172*","v":3},
@@ -34,11 +34,11 @@
 {"k":"J-FGC1721*","v":1},
 {"k":"I-M253*","v":1}
 ],"tree":[
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":33,"depth":0},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25455,"oldest":-29444,"youngest":-21971},"n":34,"depth":0},
 {"name":"R-Z2125","label":"R1a-Z2125","shown":"R1a-Z2125","age":{"mean":-2411,"oldest":-3082,"youngest":-1828},"n":21,"depth":1},
 {"name":"R-M73","label":"R1b-M73","shown":"R1b-M73","age":{"mean":-11648,"oldest":-13803,"youngest":-9785},"n":6,"depth":1},
-{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":27,"depth":0},
-{"name":"C-M217","label":"C2","shown":"C2","age":{"mean":-31576,"oldest":-36413,"youngest":-27347},"n":18,"depth":1},
+{"name":"C-M216","label":"C","shown":"C","age":{"mean":-45154,"oldest":-51877,"youngest":-39270},"n":28,"depth":0},
+{"name":"C-M217","label":"C2","shown":"C2","age":{"mean":-31576,"oldest":-36413,"youngest":-27347},"n":19,"depth":1},
 {"name":"J-M304","label":"J","shown":"J","age":{"mean":-27175,"oldest":-31105,"youngest":-23491},"n":12,"depth":0},
 {"name":"J-M172","label":"J2","shown":"J2","age":{"mean":-25374,"oldest":-29225,"youngest":-21998},"n":7,"depth":1},
 {"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16829,"oldest":-19476,"youngest":-14508},"n":5,"depth":1},
@@ -49,8 +49,8 @@
 ["BT-M42",6],
 ["C-M217",4],
 ["R-YP1564",4],
+["C-ZQ31",3],
 ["J-M172",3],
-["C-ZQ31",2],
 ["J-FTC26456",2],
 ["N-M231",2],
 ["R-BY67086",2],
@@ -95,6 +95,7 @@
 ["R-FT268493",1],
 ["R-FT271408",1],
 ["R-FTA47405",1],
+["R-FTB336",1],
 ["R-FTD54755",1],
 ["R-FTG40710",1],
 ["R-FTJ30317",1],
