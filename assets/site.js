@@ -184,4 +184,33 @@
     document.addEventListener("click", function (e) { if (!out.contains(e.target) && e.target !== q) close(); });
     q.form.addEventListener("focusout", function (e) { if (!q.form.contains(e.relatedTarget)) close(); });
   }
+
+  // CSV export: csv.js is fetched on the first click, not with the page
+  var csvBtns = document.querySelectorAll("[data-csv]");
+  if (csvBtns.length) {
+    var csvReady = null;
+    var csvLoad = function () {
+      if (window.FtdnaCsv) return Promise.resolve();
+      return csvReady || (csvReady = new Promise(function (ok, fail) {
+        var s = document.createElement("script");
+        s.src = "/assets/csv.js";
+        s.onload = ok;
+        s.onerror = function () { csvReady = null; fail(); };
+        document.head.appendChild(s);
+      }));
+    };
+    csvBtns.forEach(function (b) {
+      b.hidden = false;
+      var label = b.textContent;
+      b.addEventListener("click", function () {
+        if (b.disabled) return;
+        b.disabled = true;
+        csvLoad().then(function () { return window.FtdnaCsv.downloadCountry(b); }).catch(function (err) {
+          console.error("csv export failed", err);
+          b.textContent = b.getAttribute("data-error");
+          setTimeout(function () { b.textContent = label; }, 3000);
+        }).then(function () { b.disabled = false; });
+      });
+    });
+  }
 })();

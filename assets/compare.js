@@ -226,6 +226,31 @@
     return lg;
   }
 
+  // the file name is fixed when the button is drawn, so a stale button stays consistent with its table
+  function csvButton(table, kind, make) {
+    const F = window.FtdnaCsv;
+    const ids = state.items.map((x) => x.id);
+    const idPart = ids.length > 3 ? ids.slice(0, 3).join("+") + "+" + (ids.length - 3) : ids.join("+");
+    const dy = D.dates.y, dm = D.dates.mt;
+    const date = kind === "y" ? dy : kind === "mt" ? dm : dy > dm ? dy : dm;
+    const b = el("button", "csv-btn csv-sm", S.csvBtn);
+    b.type = "button";
+    b.addEventListener("click", () => {
+      try {
+        const tbl = make();
+        F.downloadTable({
+          header: tbl.header, rows: tbl.rows, ym: D.ym, kind, table,
+          name: F.fileName(["compare", idPart, table, kind, date]),
+        });
+      } catch (err) {
+        console.error("csv export failed", err);
+        b.textContent = S.csvError;
+        setTimeout(() => { b.textContent = S.csvBtn; }, 3000);
+      }
+    });
+    return b;
+  }
+
   function tableWrap(label, table) {
     const w = el("div", "tablewrap");
     w.tabIndex = 0;
@@ -250,7 +275,7 @@
 
   const simCell = (tag, v) => el(tag, "num" + simClass(v), v == null ? "—" : pf(v, 0));
 
-  function simMatrix(title, names, m, wide) {
+  function simMatrix(title, names, m, wide, kind) {
     const box = el("div", "cp-sim-box");
     if (!wide) box.appendChild(el("h3", null, title));
     const t = el("table", "list cp-tbl cp-sim" + (wide ? " cp-sim-wide" : ""));
@@ -270,6 +295,7 @@
     });
     t.appendChild(tb);
     box.appendChild(tableWrap(title, t));
+    if (window.FtdnaCsv) box.appendChild(csvButton("sim", kind, () => window.FtdnaCsv.simTable({ names, matrix: m, title })));
     return box;
   }
 
@@ -298,7 +324,7 @@
       const show = () => {
         tabs.querySelectorAll(".tab").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === simKind)));
         slot.textContent = "";
-        slot.appendChild(simMatrix(ms[simKind][0], names, ms[simKind][1], true));
+        slot.appendChild(simMatrix(ms[simKind][0], names, ms[simKind][1], true, simKind));
       };
       Object.keys(ms).forEach((k) => {
         const b = el("button", "tab", ms[k][0]);
@@ -313,9 +339,9 @@
       return s;
     }
     const grid = el("div", "cp-sim-grid");
-    grid.appendChild(simMatrix(S.cmpSimY, names, my));
-    grid.appendChild(simMatrix(S.cmpSimMt, names, mmt));
-    grid.appendChild(simMatrix(S.cmpSimAll, names, all));
+    grid.appendChild(simMatrix(S.cmpSimY, names, my, false, "y"));
+    grid.appendChild(simMatrix(S.cmpSimMt, names, mmt, false, "mt"));
+    grid.appendChild(simMatrix(S.cmpSimAll, names, all, false, "all"));
     s.appendChild(grid);
     return s;
   }
@@ -368,6 +394,7 @@
     }
     t.appendChild(tb);
     s.appendChild(tableWrap(S.cmpBranchesTitle + " · " + kindName(kind), t));
+    if (window.FtdnaCsv) s.appendChild(csvButton("branches", kind, () => window.FtdnaCsv.branchTable({ names, datas, S })));
     return s;
   }
 

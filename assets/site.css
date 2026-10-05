@@ -265,3 +265,9 @@ details{margin-top:8px}details summary{cursor:pointer;font-weight:500;font-size:
 .cmap-legend i.cmap-sw.msm{background:repeating-linear-gradient(45deg,var(--ink-3) 0 1px,var(--grid) 1px 4px)}
 .cmap-cap{font-size:13px;min-height:1.5em}
 .cmp-has .cp-empty{display:none}.cmp-has .cp-out{min-height:100vh}
+.csv-row{margin:10px 0 0}
+.csv-btn{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:13.5px;cursor:pointer}
+.csv-btn:hover{border-color:currentColor}
+.csv-btn:disabled{opacity:.6;cursor:progress}
+.csv-sm{margin:8px 0 0}
+.p-foot{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}.csv-inline{margin:0}
