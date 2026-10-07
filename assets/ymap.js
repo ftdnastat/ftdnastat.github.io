@@ -161,14 +161,15 @@
     const map = new Map(host, mapOptions(LL(at[0], at[1])));
     let route = null, layer = [], fork = [], runs = [], nodes = [];
     const drop = (xs) => { for (const x of xs) { if (x.setMap) x.setMap(null); else x.map = null; } return []; };
+    let unclamp = null;
     const fit = (focus) => {
+      if (unclamp) unclamp();
       const bounds = new google.maps.LatLngBounds();
       route.path.forEach((p) => { if (!focus || p[2] >= D.now - FOCUS_YEARS) bounds.extend(LL(p[0], p[1])); });
       if (bounds.isEmpty()) route.path.forEach((p) => bounds.extend(LL(p[0], p[1])));
       map.fitBounds(bounds, { top: 40, left: 40, bottom: 40, right: 150 });
     };
     // no closer than FORK_ZOOM (a child's own leg is often a few dozen km); no idle comes when the camera stays, hence the timer
-    let unclamp = null;
     const fitFrom = (i) => {
       const bounds = new google.maps.LatLngBounds();
       route.path.slice(i).forEach((p) => bounds.extend(LL(p[0], p[1])));
@@ -269,7 +270,6 @@
     zoom.addEventListener("click", () => { focused = !focused; renderer.fit(focused); zoom.textContent = focused ? S.ymapFull : S.ymapNear; });
     play.parentNode.insertBefore(zoom, date);
     const trailEl = el("p", "ymap-trail"), kidsEl = el("div", "ymap-kids");
-    trailEl.setAttribute("aria-live", "polite");
     trailEl.hidden = kidsEl.hidden = true;
     const legend = el("ul", "ymap-epochs");
     fig.append(trailEl, kidsEl, el("p", "dim ymap-epochs-lead", S.ymapEpochs), legend);
@@ -303,8 +303,8 @@
       });
     }
 
-    // the clicked chip or crumb is gone with the redraw: keep the keyboard on the map's controls
-    const focusTrail = () => { const b = trailEl.querySelector("b"); if (b && !trailEl.hidden) b.focus({ preventScroll: true }); };
+    // the clicked chip or crumb is gone with the redraw: focus the current crumb, or Start back at the top level
+    const focusTrail = () => { const b = trailEl.querySelector("b"); (b && !trailEl.hidden ? b : play).focus({ preventScroll: true }); };
 
     function setKids() {
       kidsEl.replaceChildren();
@@ -329,8 +329,11 @@
     // a child's own part of the path: from where it leaves the current branch's path to its end; null without one
     const routes = new Map();
     function kidOf(lv, [name, slug, n], file) {
+      if (routes.get(slug) === null) return null;
+      if (!routes.has(slug)) {
+        try { routes.set(slug, route(file.b, geomOf(file))); } catch (e) { console.error("ymap:", slug, e); routes.set(slug, null); return null; }
+      }
       try {
-        if (!routes.has(slug)) routes.set(slug, route(file.b, geomOf(file)));
         const rt = routes.get(slug), at = C.forkAt(lv.rt.names, rt.names);
         if (at >= rt.marks.length - 1) return null;
         D.pages[name] = pageOf(slug);
