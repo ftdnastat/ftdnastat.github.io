@@ -35,6 +35,33 @@
   // both maps open on the last FOCUS_YEARS (where the branch itself lives); "Whole path" zooms out to the origin
   const FOCUS_YEARS = 12000, RUN_SECONDS = 26, START_DWELL = 0.7, ORIGIN_YEARS = 40000, WALKER_STEP = 9;
 
+  // Camera while the clock runs: pans when a walker leaves the inner part of the frame; a drag by the reader
+  // hands the camera back until the next Start
+  function makeFollower(map) {
+    let on = false, panning = false;
+    map.addListener("dragstart", () => { on = false; });
+    map.addListener("idle", () => { panning = false; });
+    // the frame shrunk by 15 % per side; longitudes go through modulo so a view across the antimeridian keeps its width
+    const inner = (b) => {
+      const ne = b.getNorthEast(), sw = b.getSouthWest();
+      const span = ((ne.lng() - sw.lng()) % 360 + 360) % 360 || 360, dLat = (ne.lat() - sw.lat()) * 0.15, dLng = span * 0.15;
+      const wrap = (x) => ((x + 180) % 360 + 360) % 360 - 180;
+      return new google.maps.LatLngBounds({ lat: sw.lat() + dLat, lng: wrap(sw.lng() + dLng) }, { lat: ne.lat() - dLat, lng: wrap(ne.lng() - dLng) });
+    };
+    return {
+      set(v) { on = v; },
+      keep(points) {
+        const b = on && !panning && points.length ? map.getBounds() : null;
+        if (!b || points.every((p) => inner(b).contains(p))) return;
+        panning = true;
+        if (points.length === 1) return map.panTo(points[0]);
+        const nb = new google.maps.LatLngBounds();
+        points.forEach((p) => nb.extend(p));
+        map.panToBounds(nb, 60);
+      },
+    };
+  }
+
   const EP_KEY = { paleo: "ymapEpPaleo", meso: "ymapEpMeso", neo: "ymapEpNeo", chalco: "ymapEpChalco", bronze: "ymapEpBronze", iron: "ymapEpIron", medieval: "ymapEpMedieval", modern: "ymapEpModern" };
   const epColor = (e) => cssVar("--ep-" + C.EPOCHS[e].key);
 
@@ -81,8 +108,9 @@
   }
 
   // Play/stop/slider over a timeline of `total` seconds; the run ends with everything drawn and Start begins again
-  function makeClock({ play, stop, range }, total, onFrame) {
+  function makeClock({ play, stop, range }, total, onFrame, onState) {
     let tau = 0, playing = false, last = 0, raf = 0;
+    const state = (v) => { playing = v; if (onState) onState(v); };
     const render = () => {
       onFrame(tau);
       range.value = Math.round(tau / total * 1000);
@@ -92,19 +120,19 @@
       if (!playing) return;
       tau = Math.min(total, tau + (now - last) / 1000);
       last = now;
-      if (tau >= total) playing = false;
+      if (tau >= total) state(false);
       render();
       if (playing) raf = requestAnimationFrame(tick);
     }
     function start() {
       if (playing) return;
       if (tau >= total) tau = 0;
-      playing = true; last = performance.now();
+      state(true); last = performance.now();
       render();
       raf = requestAnimationFrame(tick);
     }
     play.addEventListener("click", start);
-    stop.addEventListener("click", () => { playing = false; cancelAnimationFrame(raf); render(); });
+    stop.addEventListener("click", () => { state(false); cancelAnimationFrame(raf); render(); });
     range.addEventListener("input", () => { tau = range.value / 1000 * total; render(); });
     // reduced motion: open on the finished picture, the Start button still animates on request
     function settle() {
@@ -147,10 +175,12 @@
     });
     const walkerEl = el("div", "ymap-walker");
     const walker = new AdvancedMarkerElement({ map, position: LL(route.path[0][0], route.path[0][1]), content: walkerEl, zIndex: 100 });
+    const follow = makeFollower(map);
     return {
-      fit,
+      fit, follow,
       draw(pos, d, reached, epoch) {
         walker.position = LL(pos.lat, pos.lng);
+        follow.keep([LL(pos.lat, pos.lng)]);
         walkerEl.style.setProperty("--ep", epColor(epoch));
         for (const r of runs) {
           const n = r.pts.findIndex((p) => p[3] > d);
@@ -205,7 +235,7 @@
       const y = year(pos.t);
       date.textContent = "≈ " + y.era + " · " + y.ago + " · " + S[EP_KEY[C.EPOCHS[epoch].key]];
       km.textContent = fmt(S.ymapKm, { d: C.group(Math.round(s.d)), total: C.group(Math.round(rt.total)) });
-    });
+    }, (playing) => renderer.follow.set(playing));
     clock.settle();
   }
 
@@ -283,9 +313,11 @@
       const m = new AdvancedMarkerElement({ map, position: LL(rt.path[0][0], rt.path[0][1]), content: w, zIndex: 100 + r });
       return { w, m };
     });
+    const follow = makeFollower(map);
     return {
-      fit,
+      fit, follow,
       draw(year, locs) {
+        follow.keep(locs.filter((l) => l.started).map((l) => LL(l.lat, l.lng)));
         locs.forEach((loc, r) => {
           walkers[r].w.style.display = loc.started ? "" : "none";
           walkers[r].m.position = LL(loc.lat, loc.lng);
@@ -331,7 +363,7 @@
         rend.draw(yr, routes.map((rt) => C.locateAt(rt.path, yr)));
         const y = year(yr);
         date.textContent = "≈ " + y.era + " · " + y.ago + " · " + S[EP_KEY[C.EPOCHS[C.epochAt(yr)].key]];
-      });
+      }, (playing) => rend.follow.set(playing));
       clock.settle();
     });
   }
