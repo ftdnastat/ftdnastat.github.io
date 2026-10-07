@@ -238,10 +238,22 @@
     return out;
   }
 
+  // index of the child's path item where it leaves the parent's path (the deepest parent node it passes through)
+  function forkAt(parentNames, childNames) {
+    for (let i = parentNames.length - 1; i >= 0; i--) {
+      const j = childNames.indexOf(parentNames[i]);
+      if (j >= 0) return j;
+    }
+    return 0;
+  }
+
+  // seconds on a route's timeline when the walker stands at item k (0 = the start node)
+  const reachedAt = (tl, k) => (k > 0 && tl.legs[k - 1] ? tl.legs[k - 1].a + tl.legs[k - 1].dur : 0);
+
   // lon/lat polygons of an outline file { p: [[ring, hole…], …] } (rings are encoded polylines) → GeoJSON MultiPolygon
   function outlineGeoJson(file, precision) {
     return { type: "MultiPolygon", coordinates: file.p.map((poly) => poly.map((ring) => decodePolyline(ring, precision).map(([lat, lng]) => [lng, lat]))) };
   }
 
-  return { SCALE_TAU, timeScale, monotonic, locateAt, planRuns, fraction, prefix, outlineGeoJson, PRECISION, haversine, decodePolyline, assemble, smooth, timeline, stateAt, locate, formatYear, group, EPOCHS, epochAt, splitByEpoch, labelSides };
+  return { forkAt, reachedAt, SCALE_TAU, timeScale, monotonic, locateAt, planRuns, fraction, prefix, outlineGeoJson, PRECISION, haversine, decodePolyline, assemble, smooth, timeline, stateAt, locate, formatYear, group, EPOCHS, epochAt, splitByEpoch, labelSides };
 });
