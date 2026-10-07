@@ -1,0 +1,384 @@
+(function () {
+  "use strict";
+  const fig = document.querySelector("figure.ymap");
+  const blobEl = document.getElementById("ymap-data");
+  if (!fig || !blobEl || !window.YmapCore) return;
+  const D = JSON.parse(blobEl.textContent);
+  const C = window.YmapCore;
+  const S = D.s;
+  const frame = fig.querySelector(".ymap-frame");
+  const fold = fig.closest("details");
+  const STORY = "https://discover.familytreedna.com/y-dna/";
+  const fmt = (s, v) => s.replace(/\{(\w+)\}/g, (m, k) => (k in v ? v[k] : m));
+  const year = (y) => C.formatYear(y, D.now, D.lang, { bce: S.ymapBce, ce: S.ymapCe, agoYears: S.ymapAgoYears, agoK: S.ymapAgoK });
+  const accent = () => getComputedStyle(document.documentElement).getPropertyValue("--acc").trim() || "#1f66bd";
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+  // Google clips a polyline at the antimeridian even with noWrap longitudes; geodesic segments between the
+  // closely spaced smoothed points take the short way across it instead
+  const LL = (lat, lng) => ({ lat, lng });
+  const getJson = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url + " " + r.status); return r.json(); });
+
+  // The map engine is the only part that knows about Google; everything else works on the joined path.
+  function loadGoogle(key) {
+    if (window.google && google.maps && google.maps.importLibrary) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      window.__ymapGmapsReady = resolve;
+      const s = document.createElement("script");
+      s.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(key) + "&v=weekly&loading=async&callback=__ymapGmapsReady";
+      s.onerror = () => reject(new Error("Google Maps failed to load"));
+      document.head.appendChild(s);
+    });
+  }
+
+  // both maps open on the last FOCUS_YEARS (where the branch itself lives); "Whole path" zooms out to the origin
+  const FOCUS_YEARS = 12000, RUN_SECONDS = 26, START_DWELL = 0.7, ORIGIN_YEARS = 40000, WALKER_STEP = 9;
+
+  const EP_KEY = { paleo: "ymapEpPaleo", meso: "ymapEpMeso", neo: "ymapEpNeo", chalco: "ymapEpChalco", bronze: "ymapEpBronze", iron: "ymapEpIron", medieval: "ymapEpMedieval", modern: "ymapEpModern" };
+  const epColor = (e) => cssVar("--ep-" + C.EPOCHS[e].key);
+
+  const mapOptions = (center) => ({
+    center, zoom: 4, mapId: D.mapId, mapTypeId: "terrain",
+    zoomControl: true, cameraControl: false, mapTypeControl: false,
+    streetViewControl: false, rotateControl: false, fullscreenControl: true, scaleControl: true, gestureHandling: "cooperative",
+  });
+
+  function makeBar() {
+    const bar = el("div", "ymap-bar");
+    const play = el("button", "tab", "▶ " + S.ymapPlay), stop = el("button", "tab", "■ " + S.ymapStop);
+    play.type = stop.type = "button";
+    const date = el("span", "ymap-date mono"), km = el("span", "ymap-km mono");
+    date.setAttribute("aria-live", "off");
+    const range = el("input", "ymap-range");
+    range.type = "range"; range.min = 0; range.max = 1000; range.value = 0; range.setAttribute("aria-label", S.ymapProgress);
+    bar.append(play, stop, date, km, range);
+    frame.after(bar);
+    return { play, stop, date, km, range };
+  }
+
+  // info card over the map for the picked node: age, epoch and the links; returns show(mark, key)
+  function makeCard() {
+    const card = el("div", "ymap-card");
+    card.hidden = true;
+    frame.appendChild(card);
+    return (m, key) => {
+      if (card.dataset.k === String(key) && !card.hidden) { card.hidden = true; return; }
+      card.dataset.k = key;
+      card.replaceChildren();
+      const close = el("button", "ymap-card-x", "×");
+      close.type = "button"; close.setAttribute("aria-label", S.ymapClose);
+      close.addEventListener("click", () => { card.hidden = true; });
+      const title = el("b", null, m.text);
+      const age = el("div", "mono", m.era + " · " + m.ago);
+      const ep = el("div", "dim", S[EP_KEY[C.EPOCHS[m.epoch].key]]);
+      ep.style.setProperty("--ep", epColor(m.epoch)); ep.prepend(el("i", "ymap-card-ep"));
+      card.append(close, title, age, ep);
+      if (D.pages[m.name]) { const a = el("a", null, S.ymapInfoPage); a.href = D.pages[m.name]; card.appendChild(a); }
+      if (!m.virtual) { const a = el("a", null, S.ymapInfoDiscover); a.href = STORY + encodeURIComponent(m.name) + "/story"; a.target = "_blank"; a.rel = "noopener"; card.appendChild(a); }
+      card.hidden = false;
+    };
+  }
+
+  // Play/stop/slider over a timeline of `total` seconds; the run ends with everything drawn and Start begins again
+  function makeClock({ play, stop, range }, total, onFrame) {
+    let tau = 0, playing = false, last = 0, raf = 0;
+    const render = () => {
+      onFrame(tau);
+      range.value = Math.round(tau / total * 1000);
+      play.disabled = playing; stop.disabled = !playing;
+    };
+    function tick(now) {
+      if (!playing) return;
+      tau = Math.min(total, tau + (now - last) / 1000);
+      last = now;
+      if (tau >= total) playing = false;
+      render();
+      if (playing) raf = requestAnimationFrame(tick);
+    }
+    function start() {
+      if (playing) return;
+      if (tau >= total) tau = 0;
+      playing = true; last = performance.now();
+      render();
+      raf = requestAnimationFrame(tick);
+    }
+    play.addEventListener("click", start);
+    stop.addEventListener("click", () => { playing = false; cancelAnimationFrame(raf); render(); });
+    range.addEventListener("input", () => { tau = range.value / 1000 * total; render(); });
+    // reduced motion: open on the finished picture, the Start button still animates on request
+    function settle() {
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) return start();
+      tau = total; render();
+    }
+    return { start, settle };
+  }
+
+  // ---- one branch: epoch-coloured path, the walker follows the legs ----
+
+  async function googleRenderer(host, route) {
+    const { Map, Polyline } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const map = new Map(host, mapOptions(LL(route.path[0][0], route.path[0][1])));
+    const fit = (focus) => {
+      const bounds = new google.maps.LatLngBounds();
+      route.path.forEach((p) => { if (!focus || p[2] >= D.now - FOCUS_YEARS) bounds.extend(LL(p[0], p[1])); });
+      if (bounds.isEmpty()) route.path.forEach((p) => bounds.extend(LL(p[0], p[1])));
+      map.fitBounds(bounds, { top: 40, left: 40, bottom: 40, right: 150 });
+    };
+    fit(true);
+    // one pair of polylines per epoch run: the faint full run and the walked part on top
+    const runs = route.runs.map((r) => {
+      const color = epColor(r.epoch), ll = r.pts.map((p) => (LL(p[0], p[1])));
+      new Polyline({ map, geodesic: true, path: ll, strokeColor: color, strokeOpacity: 0.35, strokeWeight: 3, clickable: false });
+      return { pts: r.pts, ll, walked: new Polyline({ map, geodesic: true, path: [], strokeColor: color, strokeOpacity: 1, strokeWeight: 5, zIndex: 10, clickable: false }) };
+    });
+    const sides = C.labelSides(route.marks);
+    const nodes = route.marks.map((m, k) => {
+      const node = el("div", "ymap-node ymap-node--" + "rltb"[sides[k]]);
+      node.style.setProperty("--ep", epColor(m.epoch));
+      node.appendChild(el("span", "ymap-dot"));
+      const a = el("button", "ymap-tag", m.text);
+      a.type = "button"; a.title = m.title;
+      a.addEventListener("click", () => route.onPick(k));
+      node.appendChild(a);
+      new AdvancedMarkerElement({ map, position: LL(m.lat, m.lng), content: node, zIndex: 5 + k });
+      return node;
+    });
+    const walkerEl = el("div", "ymap-walker");
+    const walker = new AdvancedMarkerElement({ map, position: LL(route.path[0][0], route.path[0][1]), content: walkerEl, zIndex: 100 });
+    return {
+      fit,
+      draw(pos, d, reached, epoch) {
+        walker.position = LL(pos.lat, pos.lng);
+        walkerEl.style.setProperty("--ep", epColor(epoch));
+        for (const r of runs) {
+          const n = r.pts.findIndex((p) => p[3] > d);
+          r.walked.setPath(n < 0 ? r.ll : n === 0 ? [] : r.ll.slice(0, n).concat([LL(pos.lat, pos.lng)]));
+        }
+        nodes.forEach((n, k) => {
+          n.classList.toggle("is-passed", k <= reached);
+          n.classList.toggle("is-current", k === reached);
+        });
+      },
+    };
+  }
+
+  function route(rec, geom) {
+    const a = C.assemble(rec, geom);
+    const sm = C.smooth(a.path, 8);
+    const items = [a.start, ...a.nodes];
+    const marks = items.map((n, k) => {
+      const i = sm.index[n.i], p = sm.path[i];
+      const text = k === 0 ? n.name : n.name + (n.label ? " (" + n.label + ")" : "");
+      const y = year(n.tmrca);
+      return { name: n.name, virtual: k === 0, lat: p[0], lng: p[1], i, text, era: y.era, ago: y.ago, epoch: C.epochAt(n.tmrca), title: text + ", " + y.era + ", " + y.ago };
+    });
+    return { path: sm.path, marks, runs: C.splitByEpoch(sm.path), total: sm.path[sm.path.length - 1][3] };
+  }
+
+  function mount(rt, renderer) {
+    const tl = C.timeline(rt.path, rt.marks.map((m) => m.i));
+    const { play, stop, date, km, range } = makeBar();
+    const zoom = el("button", "tab", S.ymapFull);
+    zoom.type = "button";
+    let focused = true;
+    zoom.addEventListener("click", () => { focused = !focused; renderer.fit(focused); zoom.textContent = focused ? S.ymapFull : S.ymapNear; });
+    play.parentNode.insertBefore(zoom, date);
+    const legend = el("ul", "ymap-epochs");
+    const present = [...new Set(rt.runs.map((r) => r.epoch))].sort((a, b) => a - b);
+    const chips = new Map(present.map((e) => {
+      const li = el("li");
+      li.style.setProperty("--ep", epColor(e));
+      li.appendChild(el("i"));
+      li.appendChild(el("span", null, S[EP_KEY[C.EPOCHS[e].key]]));
+      legend.appendChild(li);
+      return [e, li];
+    }));
+    fig.append(el("p", "dim ymap-epochs-lead", S.ymapEpochs), legend);
+    const showCard = makeCard();
+    rt.onPick = (k) => showCard(rt.marks[k], k);
+    const clock = makeClock({ play, stop, range }, tl.total, (tau) => {
+      const s = C.stateAt(tl, tau), pos = C.locate(rt.path, s.d), epoch = C.epochAt(pos.t);
+      renderer.draw(pos, s.d, s.reached, epoch);
+      chips.forEach((li, e) => li.classList.toggle("is-current", e === epoch));
+      const y = year(pos.t);
+      date.textContent = "≈ " + y.era + " · " + y.ago + " · " + S[EP_KEY[C.EPOCHS[epoch].key]];
+      km.textContent = fmt(S.ymapKm, { d: C.group(Math.round(s.d)), total: C.group(Math.round(rt.total)) });
+    });
+    clock.settle();
+  }
+
+  // ---- several branches on one map, one calendar clock ----
+
+  const brColor = (i) => cssVar("--br-" + (i % 5));
+
+  function branchRoute(rec, geom) {
+    const a = C.assemble(rec, geom);
+    const sm = C.smooth(a.path, 8);
+    const path = C.monotonic(sm.path);
+    const items = [a.start, ...a.nodes];
+    const idx = items.map((n) => sm.index[n.i]);
+    const marks = items.map((n, k) => {
+      const i = idx[k], p = path[i], y = year(p[2]);
+      const text = k === 0 ? n.name : n.name + (n.label ? " (" + n.label + ")" : "");
+      return { name: n.name, virtual: k === 0, text, lat: p[0], lng: p[1], i, t: p[2], era: y.era, ago: y.ago, epoch: C.epochAt(p[2]), key: (k ? n.name + "|" + rec[2][k - 1][1] : "s|" + n.name) };
+    });
+    return { path, marks, segs: rec[2].map((n, k) => ({ id: n[1], a: idx[k], b: idx[k + 1] })) };
+  }
+
+  async function multiRenderer(host, scene) {
+    const { Map, Polyline } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const map = new Map(host, mapOptions({ lat: 45, lng: 40 }));
+    // the whole path from the deep trunk, or only the Holocene part with the outline (where the branches ended up)
+    const fit = (focus) => {
+      const bounds = new google.maps.LatLngBounds();
+      scene.routes.forEach((r) => r.path.forEach((p) => { if (!focus || p[2] >= D.now - FOCUS_YEARS) bounds.extend(LL(p[0], p[1])); }));
+      if (scene.geometry) scene.geometry.coordinates.forEach((poly) => poly.forEach((ring) => ring.forEach(([lng, lat]) => bounds.extend({ lat, lng }))));
+      map.fitBounds(bounds, { top: 40, left: 40, bottom: 40, right: 60 });
+    };
+    if (scene.geometry) {
+      map.data.addGeoJson({ type: "Feature", geometry: scene.geometry });
+      map.data.setStyle({ fillColor: accent(), fillOpacity: 0.28, strokeColor: accent(), strokeOpacity: 0.95, strokeWeight: 2.5, clickable: false });
+    }
+    fit(true);
+    const line = (pts, color, opacity, weight, z) => new Polyline({ map, geodesic: true, path: pts.map((p) => (LL(p[0], p[1]))), strokeColor: color, strokeOpacity: opacity, strokeWeight: weight, zIndex: z, clickable: false });
+    const trunk = cssVar("--trunk");
+    const shared = scene.plan.shared.map((s) => {
+      const o = s.owners[0], path = scene.routes[o.r].path;
+      line(C.prefix(path, o.a, o.b, 1), trunk, 0.35, 3, 1);
+      return { ...s, walked: line([], trunk, 1, 5, 2) };
+    });
+    const own = scene.plan.own.map((runs, r) => runs.map((run) => {
+      line(C.prefix(scene.routes[r].path, run.a, run.b, 1), brColor(r), 0.4, 3, 3);
+      return { ...run, walked: line([], brColor(r), 1, 5, 4) };
+    }));
+    const place = (content, mark, z) => new AdvancedMarkerElement({ map, position: LL(mark.lat, mark.lng), content, zIndex: z });
+    const dots = scene.dots.map((d) => {
+      const b = el("button", "ymap-pip"); b.type = "button"; b.title = d.mark.text + ", " + d.mark.era;
+      b.style.setProperty("--br", brColor(d.r));
+      b.addEventListener("click", () => scene.onPick(d.mark));
+      place(b, d.mark, 5);
+      return b;
+    });
+    const sides = C.labelSides(scene.ends.map((e) => e.mark));
+    const ends = scene.ends.map((e, k) => {
+      const node = el("div", "ymap-node ymap-node--" + "rltb"[sides[k]] + " ymap-end");
+      node.style.setProperty("--br", brColor(e.r));
+      node.appendChild(el("span", "ymap-dot"));
+      const tag = el("button", "ymap-tag", e.mark.name);
+      tag.type = "button"; tag.title = e.mark.text + ", " + e.mark.era;
+      tag.addEventListener("click", () => scene.onPick(e.mark));
+      node.appendChild(tag);
+      place(node, e.mark, 20 + k);
+      return node;
+    });
+    const n = scene.routes.length;
+    const walkers = scene.routes.map((rt, r) => {
+      const w = el("div", "ymap-walker");
+      w.style.setProperty("--br", brColor(r));
+      w.style.setProperty("--off", (r - (n - 1) / 2) * WALKER_STEP + "px");
+      w.style.display = "none";
+      const m = new AdvancedMarkerElement({ map, position: LL(rt.path[0][0], rt.path[0][1]), content: w, zIndex: 100 + r });
+      return { w, m };
+    });
+    return {
+      fit,
+      draw(year, locs) {
+        locs.forEach((loc, r) => {
+          walkers[r].w.style.display = loc.started ? "" : "none";
+          walkers[r].m.position = LL(loc.lat, loc.lng);
+          for (const run of own[r]) run.walked.setPath(C.prefix(scene.routes[r].path, run.a, run.b, loc.started ? C.fraction(scene.routes[r].path, run.a, run.b, loc.d) : 0).map((p) => (LL(p[0], p[1]))));
+        });
+        for (const s of shared) {
+          const f = Math.max(...s.owners.map((o) => (locs[o.r].started ? C.fraction(scene.routes[o.r].path, o.a, o.b, locs[o.r].d) : 0)));
+          const o = s.owners[0];
+          s.walked.setPath(C.prefix(scene.routes[o.r].path, o.a, o.b, f).map((p) => (LL(p[0], p[1]))));
+        }
+        dots.forEach((d, k) => d.classList.toggle("is-passed", year >= scene.dots[k].mark.t));
+        ends.forEach((e, k) => e.classList.toggle("is-passed", year >= scene.ends[k].mark.t));
+      },
+    };
+  }
+
+  function mountMulti(routes, outline, renderer) {
+    const now = D.now;
+    const y0 = Math.max(Math.min(...routes.map((r) => r.path[0][2])), now - ORIGIN_YEARS);
+    const y1 = Math.max(...routes.map((r) => r.path[r.path.length - 1][2]));
+    const scale = C.timeScale(y0, y1, now);
+    const endNames = new Set(routes.map((r) => r.marks[r.marks.length - 1].name));
+    const seen = new Set(), dots = [];
+    routes.forEach((rt, r) => rt.marks.forEach((m, k) => {
+      if (k === rt.marks.length - 1 || endNames.has(m.name) || seen.has(m.key)) return;
+      seen.add(m.key); dots.push({ r, mark: m });
+    }));
+    const ends = routes.map((rt, r) => ({ r, mark: rt.marks[rt.marks.length - 1] }));
+    const scene = { routes, geometry: outline && C.outlineGeoJson(outline, D.precision), dots, ends, plan: C.planRuns(routes) };
+    const showCard = makeCard();
+    scene.onPick = (m) => showCard(m, m.key);
+    return renderer(scene).then((rend) => {
+      const { play, stop, date, km, range } = makeBar();
+      km.remove();
+      const zoom = el("button", "tab", S.ymapFull);
+      zoom.type = "button";
+      let focused = true;
+      zoom.addEventListener("click", () => { focused = !focused; rend.fit(focused); zoom.textContent = focused ? S.ymapFull : S.ymapFocus; });
+      play.parentNode.insertBefore(zoom, date);
+      const total = START_DWELL + RUN_SECONDS;
+      const clock = makeClock({ play, stop, range }, total, (tau) => {
+        const u = Math.min(1, Math.max(0, (tau - START_DWELL) / RUN_SECONDS)), yr = scale.toYear(u);
+        rend.draw(yr, routes.map((rt) => C.locateAt(rt.path, yr)));
+        const y = year(yr);
+        date.textContent = "≈ " + y.era + " · " + y.ago + " · " + S[EP_KEY[C.EPOCHS[C.epochAt(yr)].key]];
+      });
+      clock.settle();
+    });
+  }
+
+  async function openMulti(gate) {
+    const root = await getJson("/data/ymap-root.json");
+    const [files, outline] = await Promise.all([
+      Promise.all(D.branches.map((b) => getJson("/data/ymap/" + b.slug + ".json"))),
+      D.outline ? getJson("/data/outline/" + D.outline + ".json") : null,
+      loadGoogle(D.key),
+    ]);
+    const routes = files.map((f) => branchRoute(f.b, (id) => f.g[id] || root.g[id]));
+    gate.remove();
+    const host = el("div", "ymap-map");
+    frame.appendChild(host);
+    await mountMulti(routes, outline, (scene) => multiRenderer(host, scene));
+  }
+
+  async function openSingle(gate) {
+    const [file, root] = await Promise.all([getJson("/data/ymap/" + D.slug + ".json"), getJson("/data/ymap-root.json"), loadGoogle(D.key)]);
+    const rt = route(file.b, (id) => file.g[id] || root.g[id]);
+    gate.remove();
+    const host = el("div", "ymap-map");
+    frame.appendChild(host);
+    mount(rt, await googleRenderer(host, rt));
+  }
+
+  async function open() {
+    const gate = frame.querySelector(".ymap-gate");
+    try {
+      await (D.mode === "multi" ? openMulti(gate) : openSingle(gate));
+    } catch (e) {
+      gate.querySelector("p").textContent = S.ymapError;
+      console.error("ymap:", e);
+    }
+  }
+
+  // a key rejected by Google (referrer, quota) arrives after the map was built: replace it with our message
+  window.gm_authFailure = () => {
+    document.querySelectorAll(".ymap-bar, .ymap-card").forEach((e) => e.remove());
+    frame.replaceChildren(el("p", "dim ymap-gate", S.ymapError));
+    console.error("ymap: Google Maps rejected the key");
+  };
+
+  // the inline loader (render-ymap.js) has already unfolded the block; later unfoldings do nothing new
+  let opened = false;
+  const unfolded = () => { if (fold.open && !opened) { opened = true; open(); } };
+  fold.addEventListener("toggle", unfolded);
+  unfolded();
+})();
