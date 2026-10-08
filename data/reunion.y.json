@@ -13,7 +13,7 @@
 {"k":"K-M526*","v":1},
 {"k":"I-CTS2257*","v":1}
 ],"tree":[
-{"name":"R-M269","label":"R1b-M269","shown":"R1b-M269","age":{"mean":-4410,"oldest":-5317,"youngest":-3614},"n":3,"depth":0}
+{"name":"R-M269","label":"R1b-M269","shown":"R1b-M269","age":{"mean":-4447,"oldest":-5359,"youngest":-3647},"n":3,"depth":0}
 ],"terminal":[
 ["E-CTS4257",1],
 ["E-CTS9106",1],

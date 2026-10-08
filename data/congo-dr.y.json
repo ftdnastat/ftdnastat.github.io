@@ -1,24 +1,28 @@
-{"name":"Congo, the Democratic Republic of the ","slug":"congo-dr","n":43,"l1":[
+{"name":"Congo, the Democratic Republic of the ","slug":"congo-dr","n":46,"l1":[
 {"k":"E","v":32},
-{"k":"B","v":10},
-{"k":"A","v":1}
+{"k":"B","v":11},
+{"k":"A","v":1},
+{"k":"T","v":1},
+{"k":"R","v":1}
 ],"l2":[
+{"k":"A-PR2921*","v":12},
 {"k":"E-M191*","v":12},
-{"k":"A-PR2921*","v":11},
 {"k":"E-U175","v":6},
 {"k":"E-U174","v":6},
 {"k":"E-M2*","v":5},
 {"k":"CT-M168*","v":1},
+{"k":"T-M70*","v":1},
 {"k":"E-L485*","v":1},
-{"k":"E-CTS10298*","v":1}
+{"k":"E-CTS10298*","v":1},
+{"k":"R-M173*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":30,"depth":0},
-{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3845,"oldest":-4720,"youngest":-3083},"n":18,"depth":1},
-{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6713,"oldest":-8005,"youngest":-5588},"n":6,"depth":1},
-{"name":"B-M181","label":"B","shown":"B","age":{"mean":-82478,"oldest":-94567,"youngest":-71901},"n":10,"depth":0}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":30,"depth":0},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3877,"oldest":-4757,"youngest":-3111},"n":18,"depth":1},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6761,"oldest":-8059,"youngest":-5629},"n":6,"depth":1},
+{"name":"B-M181","label":"B","shown":"B","age":{"mean":-82962,"oldest":-95121,"youngest":-72325},"n":11,"depth":0}
 ],"terminal":[
 ["E-M191",11],
-["B-M150",5],
+["B-M150",6],
 ["B-M182",3],
 ["E-M2",3],
 ["E-FTJ52002",2],
@@ -39,5 +43,7 @@
 ["E-FTB35365",1],
 ["E-FTC600",1],
 ["E-M200",1],
-["E-Z6003",1]
+["E-Z6003",1],
+["R-L761",1],
+["T-M70",1]
 ]}

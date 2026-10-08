@@ -1,12 +1,14 @@
-{"name":"Spain (La Rioja)","slug":"spain-la-rioja","n":5,"l1":[
-{"k":"R","v":5}
+{"name":"Spain (La Rioja)","slug":"spain-la-rioja","n":6,"l1":[
+{"k":"R","v":6}
 ],"l2":[
 {"k":"R-ZZ12_1*","v":3},
-{"k":"R-Z18*","v":2}
+{"k":"R-Z18*","v":2},
+{"k":"R-Z278","v":1}
 ],"tree":[
-{"name":"R-DF27","label":"R1b-DF27","shown":"R1b-DF27","age":{"mean":-2633,"oldest":-3297,"youngest":-2052},"n":3,"depth":0}
+{"name":"R-DF27","label":"R1b-DF27","shown":"R1b-DF27","age":{"mean":-2655,"oldest":-3322,"youngest":-2071},"n":4,"depth":0}
 ],"terminal":[
 ["R-Z18",2],
+["R-FTG91112",1],
 ["R-Z225",1],
 ["R-Z2556",1],
 ["R-ZZ12_1",1]

@@ -33,17 +33,17 @@
 {"k":"T-CTS2214*","v":1},
 {"k":"J-CTS9721*","v":1}
 ],"tree":[
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":43,"depth":0},
-{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22515,"oldest":-25964,"youngest":-19491},"n":29,"depth":1},
-{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12217,"oldest":-14239,"youngest":-10446},"n":13,"depth":2},
-{"name":"E-V32","label":"E-V32","shown":"V32","age":{"mean":-5200,"oldest":-6344,"youngest":-4211},"n":9,"depth":3},
-{"name":"E-M34","label":"E-M34","shown":"E-M34","age":{"mean":-12880,"oldest":-15008,"youngest":-11017},"n":5,"depth":2},
-{"name":"E-V38","label":"E-V38","shown":"V38","age":{"mean":-37767,"oldest":-43397,"youngest":-32835},"n":8,"depth":1},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":5,"depth":2},
-{"name":"J-L620","label":"J1-L620","shown":"J1-L620","age":{"mean":-12576,"oldest":-14631,"youngest":-10775},"n":14,"depth":0},
-{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2841,"oldest":-3534,"youngest":-2233},"n":8,"depth":1},
-{"name":"A-M13","label":"A1b1","shown":"A1b1","age":{"mean":-10179,"oldest":-12041,"youngest":-8562},"n":5,"depth":0},
-{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25432,"oldest":-29337,"youngest":-22014},"n":5,"depth":0}
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49176,"oldest":-56338,"youngest":-42892},"n":43,"depth":0},
+{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22656,"oldest":-26124,"youngest":-19614},"n":29,"depth":1},
+{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12301,"oldest":-14335,"youngest":-10519},"n":13,"depth":2},
+{"name":"E-V32","label":"E-V32","shown":"V32","age":{"mean":-5231,"oldest":-6380,"youngest":-4239},"n":9,"depth":3},
+{"name":"E-M34","label":"E-M34","shown":"E-M34","age":{"mean":-12965,"oldest":-15106,"youngest":-11092},"n":5,"depth":2},
+{"name":"E-V38","label":"E-V38","shown":"V38","age":{"mean":-38069,"oldest":-43741,"youngest":-33100},"n":8,"depth":1},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":5,"depth":2},
+{"name":"J-L620","label":"J1-L620","shown":"J1-L620","age":{"mean":-12689,"oldest":-14760,"youngest":-10874},"n":14,"depth":0},
+{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2869,"oldest":-3567,"youngest":-2259},"n":8,"depth":1},
+{"name":"A-M13","label":"A1b1","shown":"A1b1","age":{"mean":-10238,"oldest":-12109,"youngest":-8614},"n":5,"depth":0},
+{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25589,"oldest":-29516,"youngest":-22151},"n":5,"depth":0}
 ],"terminal":[
 ["E-M2",4],
 ["E-M96",4],

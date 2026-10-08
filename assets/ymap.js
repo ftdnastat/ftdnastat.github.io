@@ -261,6 +261,17 @@
 
   const pageOf = (slug) => "/" + D.lang + "/clade/" + slug + "/";
 
+  // a child's own part of the path: from where it leaves the parent's path (item names) to its end; null without one
+  function forkOf(parentNames, [name, slug, n], file, rt) {
+    const at = C.forkAt(parentNames, rt.names);
+    if (at >= rt.marks.length - 1) return null;
+    return { name, slug, n, file, rt, at, pts: rt.path.slice(rt.marks[at].i), end: rt.marks[rt.marks.length - 1] };
+  }
+
+  // #ymap=<child>,<grandchild>: the levels opened below the page's branch
+  const HASH_RE = /^#ymap(=|$)/;
+  const hashTrail = () => (HASH_RE.test(location.hash) ? location.hash.slice(6).split(",").filter((x) => /^[a-z0-9-]+$/.test(x)) : []);
+
   // first: { name, slug, file } of the page's branch; files: slug → Promise of /data/ymap/<slug>.json
   function mountSingle(first, renderer, geomOf, files) {
     const { play, stop, date, km, range } = makeBar();
@@ -298,7 +309,7 @@
         if (lv === cur) { const b = el("b", null, lv.name); b.tabIndex = -1; trailEl.appendChild(b); return; }
         const b = el("button", "ymap-crumb", lv.name);
         b.type = "button";
-        b.addEventListener("click", () => { trail.length = i + 1; enter(lv, null); renderer.fit(focused); focusTrail(); });
+        b.addEventListener("click", () => { trail.length = i + 1; enter(lv, null); renderer.fit(focused); focusTrail(); syncHash(); });
         trailEl.appendChild(b);
       });
     }
@@ -326,23 +337,27 @@
       kidsEl.append(el("p", "dim ymap-epochs-lead", S.ymapKids), ul);
     }
 
-    // a child's own part of the path: from where it leaves the current branch's path to its end; null without one
     const routes = new Map();
-    function kidOf(lv, [name, slug, n], file) {
+    function kidOf(lv, k, file) {
+      const slug = k[1];
       if (routes.get(slug) === null) return null;
       if (!routes.has(slug)) {
         try { routes.set(slug, route(file.b, geomOf(file))); } catch (e) { console.error("ymap:", slug, e); routes.set(slug, null); return null; }
       }
       try {
-        const rt = routes.get(slug), at = C.forkAt(lv.rt.names, rt.names);
-        if (at >= rt.marks.length - 1) return null;
-        D.pages[name] = pageOf(slug);
-        return { name, slug, n, file, rt, at, pts: rt.path.slice(rt.marks[at].i), end: rt.marks[rt.marks.length - 1] };
+        const kid = forkOf(lv.rt.names, k, file, routes.get(slug));
+        if (kid) D.pages[kid.name] = pageOf(slug);
+        return kid;
       } catch (e) {
         console.error("ymap:", slug, e);
         return null;
       }
     }
+
+    const kidsOf = (lv) => lv.kids || (lv.kids = loadKids(lv).catch((e) => { lv.kids = null; throw e; }));
+    const syncHash = () => {
+      if (trail.length > 1 || HASH_RE.test(location.hash)) history.replaceState(history.state, "", location.pathname + location.search + "#ymap" + (trail.length > 1 ? "=" + trail.slice(1).map((l) => l.slug).join(",") : ""));
+    };
 
     async function loadKids(lv) {
       const list = lv.file.k || [];
@@ -360,7 +375,7 @@
       kids = []; setKids();
       atEnd = false;
       clock.retime(cur.rt.tl.total, from == null ? cur.rt.tl.total : from, from != null);
-      loadKids(lv).then((ks) => {
+      kidsOf(lv).then((ks) => {
         if (cur !== lv) return;
         kids = ks;
         renderer.setFork(kids, descend, atEnd);
@@ -374,6 +389,7 @@
       enter(lv, C.reachedAt(lv.rt.tl, kid.at));
       renderer.fitFrom(lv.rt.marks[kid.at].i);
       focusTrail();
+      syncHash();
     }
 
     const clock = makeClock({ play, stop, range }, 1, (tau) => {
@@ -388,10 +404,28 @@
       km.textContent = fmt(S.ymapKm, { d: C.group(Math.round(s.d)), total: C.group(Math.round(rt.total)) });
     }, (playing) => renderer.follow.set(playing));
 
+    // a shared link opens on its level, finished; a level that is gone from the data ends the walk down
+    async function restore(slugs) {
+      let last = null;
+      for (const slug of slugs) {
+        const at = cur, kid = (await kidsOf(at)).find((x) => x.slug === slug);
+        if (cur !== at) return;
+        if (!kid) break;
+        const lv = { name: kid.name, slug: kid.slug, file: kid.file, rt: kid.rt };
+        trail.push(lv);
+        enter(lv, null);
+        last = kid;
+      }
+      if (last) renderer.fitFrom(last.rt.marks[last.at].i);
+      syncHash();
+    }
+
     const lv = { name: first.name, slug: first.slug, file: first.file, rt: route(first.file.b, geomOf(first.file)) };
     trail.push(lv);
-    enter(lv, 0);
+    const want = hashTrail();
+    enter(lv, want.length ? null : 0);
     renderer.fit(true);
+    if (want.length) restore(want).catch((e) => console.error("ymap:", e));
   }
 
   // ---- several branches on one map, one calendar clock ----
@@ -409,7 +443,7 @@
       const text = k === 0 ? n.name : n.name + (n.label ? " (" + n.label + ")" : "");
       return { name: n.name, virtual: k === 0, text, lat: p[0], lng: p[1], i, t: p[2], era: y.era, ago: y.ago, epoch: C.epochAt(p[2]), key: (k ? n.name + "|" + rec[2][k - 1][1] : "s|" + n.name) };
     });
-    return { path, marks, segs: rec[2].map((n, k) => ({ id: n[1], a: idx[k], b: idx[k + 1] })) };
+    return { path, marks, names: items.map((n) => n.name), segs: rec[2].map((n, k) => ({ id: n[1], a: idx[k], b: idx[k + 1] })) };
   }
 
   async function multiRenderer(host, scene) {
@@ -420,7 +454,7 @@
     const fit = (focus) => {
       const bounds = new google.maps.LatLngBounds();
       scene.routes.forEach((r) => r.path.forEach((p) => { if (!focus || p[2] >= D.now - FOCUS_YEARS) bounds.extend(LL(p[0], p[1])); }));
-      if (scene.geometry) scene.geometry.coordinates.forEach((poly) => poly.forEach((ring) => ring.forEach(([lng, lat]) => bounds.extend({ lat, lng }))));
+      if (scene.geometry) C.mainPolygons(scene.geometry).forEach((poly) => poly[0].forEach(([lng, lat]) => bounds.extend({ lat, lng })));
       map.fitBounds(bounds, { top: 40, left: 40, bottom: 40, right: 60 });
     };
     if (scene.geometry) {
@@ -469,8 +503,25 @@
       return { w, m };
     });
     const follow = makeFollower(map);
+    // per branch: dashed lines to its children's ends, shown once its walker is parked at the end; a click opens
+    // the branch page walked down into that child
+    const forks = scene.routes.map(() => ({ items: [], shown: false }));
+    // unlabelled on the map (the children of several branches crowd one spot); the labelled list is under the map
+    function setForks(list) {
+      list.forEach(({ r, kid }) => {
+        const color = brColor(r), on = forks[r].shown ? map : null;
+        const lineEl = new Polyline({ map: on, geodesic: true, path: kid.pts.map((p) => LL(p[0], p[1])), strokeOpacity: 0, zIndex: 6, clickable: false,
+          icons: [{ icon: { path: "M 0,-1 0,1", strokeColor: color, strokeOpacity: 0.85, strokeWeight: 3, scale: 2 }, offset: "0", repeat: "10px" }] });
+        const a = el("a", "ymap-pip");
+        a.style.setProperty("--br", color);
+        a.href = kidHref(r, kid);
+        a.title = kid.name + " · " + C.group(kid.n);
+        a.setAttribute("aria-label", fmt(S.ymapKidGo, { name: kid.name }));
+        forks[r].items.push(lineEl, new AdvancedMarkerElement({ map: on, position: LL(kid.end.lat, kid.end.lng), content: a, zIndex: 15 }));
+      });
+    }
     return {
-      fit, follow,
+      fit, follow, setForks,
       draw(year, locs) {
         follow.keep(locs.filter((l) => l.started).map((l) => LL(l.lat, l.lng)));
         locs.forEach((loc, r) => {
@@ -485,11 +536,36 @@
         }
         dots.forEach((d, k) => d.classList.toggle("is-passed", year >= scene.dots[k].mark.t));
         ends.forEach((e, k) => e.classList.toggle("is-passed", year >= scene.ends[k].mark.t));
+        forks.forEach((f, r) => {
+          const p = scene.routes[r].path, on = year >= p[p.length - 1][2];
+          if (on === f.shown) return;
+          f.shown = on;
+          for (const x of f.items) { if (x.setMap) x.setMap(on ? map : null); else x.map = on ? map : null; }
+        });
       },
     };
   }
 
-  function mountMulti(routes, outline, renderer) {
+  const kidHref = (r, kid) => pageOf(D.branches[r].slug) + "#ymap=" + kid.slug;
+
+  // under the map: per branch, its children as links to the branch page walked down into them
+  function forkList(list) {
+    if (!list.length) return;
+    const box = el("div", "ymap-kids"), ul = el("ul", "ymap-branches");
+    for (const { r, kid } of list) {
+      const li = el("li");
+      li.style.setProperty("--br", brColor(r));
+      li.appendChild(el("i"));
+      const a = el("a", null, D.branches[r].name + " → " + kid.name + " · " + C.group(kid.n));
+      a.href = kidHref(r, kid); a.title = fmt(S.ymapKidGo, { name: kid.name });
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+    box.append(el("p", "dim ymap-epochs-lead", S.ymapKidsMulti), ul);
+    fig.querySelector(".ymap-bar").after(box);
+  }
+
+  function mountMulti(routes, outline, renderer, loadForks) {
     const now = D.now;
     const y0 = Math.max(Math.min(...routes.map((r) => r.path[0][2])), now - ORIGIN_YEARS);
     const y1 = Math.max(...routes.map((r) => r.path[r.path.length - 1][2]));
@@ -520,6 +596,7 @@
         date.textContent = "≈ " + y.era + " · " + y.ago + " · " + S[EP_KEY[C.EPOCHS[C.epochAt(yr)].key]];
       }, (playing) => rend.follow.set(playing));
       clock.settle();
+      if (loadForks) loadForks().then((list) => { rend.setForks(list); forkList(list); }).catch((e) => console.error("ymap:", e));
     });
   }
 
@@ -530,11 +607,24 @@
       D.outline ? getJson("/data/outline/" + D.outline + ".json") : null,
       loadGoogle(D.key),
     ]);
-    const routes = files.map((f) => branchRoute(f.b, (id) => f.g[id] || root.g[id]));
+    const geomOf = (f) => (id) => f.g[id] || root.g[id];
+    const routes = files.map((f) => branchRoute(f.b, geomOf(f)));
+    // a child that is itself a branch of this map already has its own path here
+    const onMap = new Set(D.branches.map((b) => b.slug)), cache = new Map();
+    const fetchFile = (slug) => cache.get(slug) || cache.set(slug, getJson("/data/ymap/" + slug + ".json")).get(slug);
+    const loadForks = async () => {
+      const jobs = files.flatMap((f, r) => (f.k || []).filter((k) => !onMap.has(k[1])).map(async (k) => {
+        try {
+          const kf = await fetchFile(k[1]), kid = forkOf(routes[r].names, k, kf, route(kf.b, geomOf(kf)));
+          return kid && { r, kid };
+        } catch (e) { console.error("ymap:", k[1], e); return null; }
+      }));
+      return (await Promise.all(jobs)).filter(Boolean).sort((a, b) => a.r - b.r || b.kid.n - a.kid.n);
+    };
     gate.remove();
     const host = el("div", "ymap-map");
     frame.appendChild(host);
-    await mountMulti(routes, outline, (scene) => multiRenderer(host, scene));
+    await mountMulti(routes, outline, (scene) => multiRenderer(host, scene), loadForks);
   }
 
   async function openSingle(gate) {

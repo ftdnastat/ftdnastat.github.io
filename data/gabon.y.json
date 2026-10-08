@@ -5,8 +5,8 @@
 {"k":"E-U175","v":4},
 {"k":"E-U174","v":2}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":20,"depth":0},
-{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6713,"oldest":-8005,"youngest":-5588},"n":4,"depth":1}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":20,"depth":0},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6761,"oldest":-8059,"youngest":-5629},"n":4,"depth":1}
 ],"terminal":[
 ["E-M2",14],
 ["E-P277",2],

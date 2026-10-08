@@ -22,13 +22,13 @@
 {"k":"I-Z141*","v":1},
 {"k":"R-FGC78762*","v":1}
 ],"tree":[
-{"name":"L-M357","label":"L-M357","shown":"L-M357","age":{"mean":-5509,"oldest":-6642,"youngest":-4524},"n":113,"depth":0},
-{"name":"J-M304","label":"J","shown":"J","age":{"mean":-26990,"oldest":-30894,"youngest":-23329},"n":60,"depth":0},
-{"name":"J-Z7671","label":"J2a-Z7671","shown":"J2a-Z7671","age":{"mean":-10191,"oldest":-11976,"youngest":-8634},"n":31,"depth":1},
-{"name":"J-CTS1460","label":"J1-CTS1460","shown":"J1-CTS1460","age":{"mean":-3791,"oldest":-4684,"youngest":-3016},"n":27,"depth":1},
-{"name":"G-L1264","label":"G2a-L1264","shown":"G2a-L1264","age":{"mean":-2150,"oldest":-2829,"youngest":-1566},"n":7,"depth":0},
-{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4065,"oldest":-4924,"youngest":-3311},"n":3,"depth":0},
-{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12217,"oldest":-14239,"youngest":-10446},"n":3,"depth":0}
+{"name":"L-M357","label":"L-M357","shown":"L-M357","age":{"mean":-5553,"oldest":-6692,"youngest":-4563},"n":113,"depth":0},
+{"name":"J-M304","label":"J","shown":"J","age":{"mean":-27154,"oldest":-31081,"youngest":-23472},"n":60,"depth":0},
+{"name":"J-Z7671","label":"J2a-Z7671","shown":"J2a-Z7671","age":{"mean":-10242,"oldest":-12034,"youngest":-8678},"n":31,"depth":1},
+{"name":"J-CTS1460","label":"J1-CTS1460","shown":"J1-CTS1460","age":{"mean":-3825,"oldest":-4723,"youngest":-3046},"n":27,"depth":1},
+{"name":"G-L1264","label":"G2a-L1264","shown":"G2a-L1264","age":{"mean":-2175,"oldest":-2857,"youngest":-1587},"n":7,"depth":0},
+{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4099,"oldest":-4964,"youngest":-3342},"n":3,"depth":0},
+{"name":"E-M78","label":"E-M78","shown":"E-M78","age":{"mean":-12301,"oldest":-14335,"youngest":-10519},"n":3,"depth":0}
 ],"terminal":[
 ["L-Y6249",41],
 ["L-FTJ2023",5],
@@ -54,7 +54,6 @@
 ["J-FTJ1935",2],
 ["J-FTJ27459",2],
 ["J-FTJ4125",2],
-["J-FTJ66586",2],
 ["J-MF171543",2],
 ["J-Y231938",2],
 ["J-Y231941",2],
@@ -83,6 +82,7 @@
 ["J-FT39737",1],
 ["J-FT4720",1],
 ["J-FT51741",1],
+["J-FT67377",1],
 ["J-FTA41677",1],
 ["J-FTA59345",1],
 ["J-FTA957",1],
@@ -93,6 +93,7 @@
 ["J-FTH33208",1],
 ["J-FTH79452",1],
 ["J-FTJ29463",1],
+["J-FTJ66586",1],
 ["J-FTJ83308",1],
 ["J-Y13637",1],
 ["J-Y73766",1],

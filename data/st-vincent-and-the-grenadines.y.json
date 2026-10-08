@@ -20,9 +20,9 @@
 {"k":"E-V22","v":1},
 {"k":"E-L485*","v":1}
 ],"tree":[
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":11,"depth":0},
-{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3845,"oldest":-4720,"youngest":-3083},"n":5,"depth":1},
-{"name":"Q-M3","label":"Q-M3","shown":"Q-M3","age":{"mean":-11192,"oldest":-13182,"youngest":-9462},"n":3,"depth":0}
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":11,"depth":0},
+{"name":"E-M191","label":"E-M191","shown":"M191","age":{"mean":-3877,"oldest":-4757,"youngest":-3111},"n":5,"depth":1},
+{"name":"Q-M3","label":"Q-M3","shown":"Q-M3","age":{"mean":-11269,"oldest":-13270,"youngest":-9529},"n":3,"depth":0}
 ],"terminal":[
 ["Q-FTD37168",2],
 ["A-BY1807",1],

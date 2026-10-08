@@ -8,7 +8,7 @@
 {"k":"R-Z278","v":1},
 {"k":"R-M12149*","v":1}
 ],"tree":[
-{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2803,"oldest":-3486,"youngest":-2205},"n":4,"depth":0}
+{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2830,"oldest":-3517,"youngest":-2229},"n":4,"depth":0}
 ],"terminal":[
 ["R-DF21",2],
 ["E-Y10547",1],

@@ -15,8 +15,8 @@
 {"k":"J-M410*","v":1},
 {"k":"R-L1029","v":1}
 ],"tree":[
-{"name":"J-M410","label":"J2a","shown":"J2a","age":{"mean":-17690,"oldest":-20469,"youngest":-15254},"n":4,"depth":0},
-{"name":"R-M198","label":"R1a-M198","shown":"R1a-M198","age":{"mean":-6441,"oldest":-7639,"youngest":-5391},"n":4,"depth":0}
+{"name":"J-M410","label":"J2a","shown":"J2a","age":{"mean":-17815,"oldest":-20612,"youngest":-15363},"n":4,"depth":0},
+{"name":"R-M198","label":"R1a-M198","shown":"R1a-M198","age":{"mean":-6491,"oldest":-7696,"youngest":-5435},"n":4,"depth":0}
 ],"terminal":[
 ["R-Y7",2],
 ["E-FGC11450",1],

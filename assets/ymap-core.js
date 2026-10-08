@@ -250,10 +250,30 @@
   // seconds on a route's timeline when the walker stands at item k (0 = the start node)
   const reachedAt = (tl, k) => (k > 0 && tl.legs[k - 1] ? tl.legs[k - 1].a + tl.legs[k - 1].dur : 0);
 
+  // polygons of a MultiPolygon worth fitting the camera to: at least `share` of the largest one's area and within `km`
+  // of its bounding box, so the Azores or French Guiana stay highlighted without pulling the view across the ocean
+  function mainPolygons(geometry, share = 0.1, km = 2000) {
+    const area = (poly) => {
+      const r = poly[0], k = Math.cos(r.reduce((a, c) => a + c[1], 0) / r.length * Math.PI / 180);
+      let s = 0;
+      for (let i = 0, j = r.length - 1; i < r.length; j = i++) s += (r[j][0] - r[i][0]) * (r[j][1] + r[i][1]);
+      return Math.abs(s / 2) * k;
+    };
+    if (!geometry.coordinates.length) return [];
+    const areas = geometry.coordinates.map(area), max = Math.max(...areas);
+    const big = geometry.coordinates[areas.indexOf(max)][0];
+    const lo = [Math.min(...big.map((c) => c[1])), Math.min(...big.map((c) => c[0]))], hi = [Math.max(...big.map((c) => c[1])), Math.max(...big.map((c) => c[0]))];
+    const near = (poly) => {
+      const r = poly[0], c = [r.reduce((a, p) => a + p[1], 0) / r.length, r.reduce((a, p) => a + p[0], 0) / r.length];
+      return haversine(c, [Math.min(hi[0], Math.max(lo[0], c[0])), Math.min(hi[1], Math.max(lo[1], c[1]))]) <= km;
+    };
+    return geometry.coordinates.filter((p, i) => areas[i] === max || (areas[i] >= max * share && near(p)));
+  }
+
   // lon/lat polygons of an outline file { p: [[ring, hole…], …] } (rings are encoded polylines) → GeoJSON MultiPolygon
   function outlineGeoJson(file, precision) {
     return { type: "MultiPolygon", coordinates: file.p.map((poly) => poly.map((ring) => decodePolyline(ring, precision).map(([lat, lng]) => [lng, lat]))) };
   }
 
-  return { forkAt, reachedAt, SCALE_TAU, timeScale, monotonic, locateAt, planRuns, fraction, prefix, outlineGeoJson, PRECISION, haversine, decodePolyline, assemble, smooth, timeline, stateAt, locate, formatYear, group, EPOCHS, epochAt, splitByEpoch, labelSides };
+  return { mainPolygons, forkAt, reachedAt, SCALE_TAU, timeScale, monotonic, locateAt, planRuns, fraction, prefix, outlineGeoJson, PRECISION, haversine, decodePolyline, assemble, smooth, timeline, stateAt, locate, formatYear, group, EPOCHS, epochAt, splitByEpoch, labelSides };
 });

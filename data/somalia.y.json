@@ -1,6 +1,6 @@
-{"name":"Somalia","slug":"somalia","n":136,"l1":[
+{"name":"Somalia","slug":"somalia","n":135,"l1":[
 {"k":"E","v":92},
-{"k":"T","v":22},
+{"k":"T","v":21},
 {"k":"J","v":15},
 {"k":"A","v":2},
 {"k":"B","v":2},
@@ -8,7 +8,7 @@
 {"k":"R","v":1}
 ],"l2":[
 {"k":"E-PF2179*","v":81},
-{"k":"T-CTS931*","v":18},
+{"k":"T-CTS931*","v":17},
 {"k":"J-CTS9721*","v":9},
 {"k":"A-PR2921*","v":4},
 {"k":"E-M35*","v":4},
@@ -28,15 +28,14 @@
 {"k":"J-Z2217*","v":1},
 {"k":"J-FGC7638*","v":1}
 ],"tree":[
-{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22515,"oldest":-25964,"youngest":-19491},"n":91,"depth":0},
-{"name":"E-V32","label":"E-V32","shown":"E-V32","age":{"mean":-5200,"oldest":-6344,"youngest":-4211},"n":81,"depth":1},
-{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25432,"oldest":-29337,"youngest":-22014},"n":22,"depth":0},
-{"name":"J-P58","label":"J1-P58","shown":"J1-P58","age":{"mean":-7666,"oldest":-9034,"youngest":-6467},"n":12,"depth":0},
-{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2841,"oldest":-3534,"youngest":-2233},"n":3,"depth":1}
+{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22656,"oldest":-26124,"youngest":-19614},"n":91,"depth":0},
+{"name":"E-V32","label":"E-V32","shown":"E-V32","age":{"mean":-5231,"oldest":-6380,"youngest":-4239},"n":81,"depth":1},
+{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25589,"oldest":-29516,"youngest":-22151},"n":21,"depth":0},
+{"name":"J-P58","label":"J1-P58","shown":"J1-P58","age":{"mean":-7727,"oldest":-9104,"youngest":-6521},"n":12,"depth":0},
+{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2869,"oldest":-3567,"youngest":-2259},"n":3,"depth":1}
 ],"terminal":[
 ["E-CTS5995",10],
 ["E-V32",4],
-["T-BY181195",4],
 ["E-BY8085",3],
 ["E-CTS10314",3],
 ["E-FT18668",3],
@@ -44,6 +43,7 @@
 ["E-FT414713",3],
 ["E-M35",3],
 ["J-FTE81181",3],
+["T-BY181195",3],
 ["T-FT342370",3],
 ["T-FTE76991",3],
 ["E-BY203531",2],

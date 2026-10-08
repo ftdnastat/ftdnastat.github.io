@@ -12,8 +12,8 @@
 {"k":"I-P37*","v":1},
 {"k":"G-M201*","v":1}
 ],"tree":[
-{"name":"Q-M3","label":"Q-M3","shown":"Q-M3","age":{"mean":-11192,"oldest":-13182,"youngest":-9462},"n":29,"depth":0},
-{"name":"R-M269","label":"R1b-M269","shown":"R1b-M269","age":{"mean":-4410,"oldest":-5317,"youngest":-3614},"n":3,"depth":0}
+{"name":"Q-M3","label":"Q-M3","shown":"Q-M3","age":{"mean":-11269,"oldest":-13270,"youngest":-9529},"n":29,"depth":0},
+{"name":"R-M269","label":"R1b-M269","shown":"R1b-M269","age":{"mean":-4447,"oldest":-5359,"youngest":-3647},"n":3,"depth":0}
 ],"terminal":[
 ["Q-M3",28],
 ["R-M269",3],

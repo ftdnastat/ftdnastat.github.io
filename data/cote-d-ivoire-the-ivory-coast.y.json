@@ -6,8 +6,8 @@
 {"k":"E-M81*","v":1},
 {"k":"E-U174","v":1}
 ],"tree":[
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":26,"depth":0},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":22,"depth":1}
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49176,"oldest":-56338,"youngest":-42892},"n":26,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":22,"depth":1}
 ],"terminal":[
 ["E-M2",21],
 ["E-M132",2],

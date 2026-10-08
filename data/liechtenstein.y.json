@@ -18,7 +18,7 @@
 {"k":"J-Z1296","v":1},
 {"k":"R-Z326*","v":1}
 ],"tree":[
-{"name":"R-U152","label":"R1b-U152","shown":"R1b-U152","age":{"mean":-2603,"oldest":-3267,"youngest":-2022},"n":3,"depth":0}
+{"name":"R-U152","label":"R1b-U152","shown":"R1b-U152","age":{"mean":-2630,"oldest":-3298,"youngest":-2046},"n":3,"depth":0}
 ],"terminal":[
 ["R-M269",2],
 ["E-FGC11457",1],

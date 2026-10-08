@@ -29,10 +29,10 @@
 {"k":"I-Z2535","v":1},
 {"k":"E-U174","v":1}
 ],"tree":[
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":9,"depth":0},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":6,"depth":1},
-{"name":"R-U106","label":"R1b-U106","shown":"R1b-U106","age":{"mean":-2939,"oldest":-3643,"youngest":-2322},"n":3,"depth":0},
-{"name":"I-DF29","label":"I1-DF29","shown":"I1-DF29","age":{"mean":-2432,"oldest":-3065,"youngest":-1878},"n":3,"depth":0}
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49176,"oldest":-56338,"youngest":-42892},"n":9,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":6,"depth":1},
+{"name":"R-U106","label":"R1b-U106","shown":"R1b-U106","age":{"mean":-2967,"oldest":-3674,"youngest":-2347},"n":3,"depth":0},
+{"name":"I-DF29","label":"I1-DF29","shown":"I1-DF29","age":{"mean":-2460,"oldest":-3097,"youngest":-1903},"n":3,"depth":0}
 ],"terminal":[
 ["E-L515",2],
 ["J-M241",2],

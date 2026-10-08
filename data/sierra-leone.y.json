@@ -11,9 +11,9 @@
 {"k":"E-M191*","v":1},
 {"k":"E-L19*","v":1}
 ],"tree":[
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":32,"depth":0},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":29,"depth":1},
-{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6713,"oldest":-8005,"youngest":-5588},"n":4,"depth":2}
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49176,"oldest":-56338,"youngest":-42892},"n":32,"depth":0},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":29,"depth":1},
+{"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6761,"oldest":-8059,"youngest":-5629},"n":4,"depth":2}
 ],"terminal":[
 ["E-M2",23],
 ["E-CTS1433",1],

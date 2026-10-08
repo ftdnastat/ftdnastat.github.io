@@ -14,9 +14,9 @@
 {"k":"R-U106*","v":1},
 {"k":"R-M417*","v":1}
 ],"tree":[
-{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4065,"oldest":-4924,"youngest":-3311},"n":8,"depth":0},
-{"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2939,"oldest":-3643,"youngest":-2322},"n":3,"depth":1},
-{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2528,"oldest":-3173,"youngest":-1964},"n":3,"depth":1}
+{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4099,"oldest":-4964,"youngest":-3342},"n":8,"depth":0},
+{"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2967,"oldest":-3674,"youngest":-2347},"n":3,"depth":1},
+{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2555,"oldest":-3203,"youngest":-1987},"n":3,"depth":1}
 ],"terminal":[
 ["R-BY105622",2],
 ["E-P277",1],

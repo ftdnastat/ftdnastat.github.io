@@ -33,15 +33,15 @@
 {"k":"R-Z39589*","v":1},
 {"k":"G-Z727*","v":1}
 ],"tree":[
-{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4065,"oldest":-4924,"youngest":-3311},"n":16,"depth":0},
-{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2633,"oldest":-3297,"youngest":-2052},"n":6,"depth":1},
-{"name":"E-M96","label":"E","shown":"E","age":{"mean":-48896,"oldest":-56019,"youngest":-42647},"n":13,"depth":0},
-{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22515,"oldest":-25964,"youngest":-19491},"n":6,"depth":1},
-{"name":"E-M81","label":"E-M81","shown":"E-M81","age":{"mean":-2419,"oldest":-3101,"youngest":-1827},"n":3,"depth":2},
-{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15428,"oldest":-17919,"youngest":-13247},"n":5,"depth":1},
-{"name":"I-L38","label":"I2-L38","shown":"I2-L38","age":{"mean":-2721,"oldest":-3444,"youngest":-2093},"n":4,"depth":0},
-{"name":"J-M172","label":"J2","shown":"J2","age":{"mean":-25198,"oldest":-29024,"youngest":-21843},"n":3,"depth":0},
-{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25432,"oldest":-29337,"youngest":-22014},"n":3,"depth":0}
+{"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4099,"oldest":-4964,"youngest":-3342},"n":16,"depth":0},
+{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2655,"oldest":-3322,"youngest":-2071},"n":6,"depth":1},
+{"name":"E-M96","label":"E","shown":"E","age":{"mean":-49176,"oldest":-56338,"youngest":-42892},"n":13,"depth":0},
+{"name":"E-M35","label":"E1b1b-M35","shown":"E1b1b-M35","age":{"mean":-22656,"oldest":-26124,"youngest":-19614},"n":6,"depth":1},
+{"name":"E-M81","label":"E-M81","shown":"E-M81","age":{"mean":-2486,"oldest":-3179,"youngest":-1886},"n":3,"depth":2},
+{"name":"E-M2","label":"E-M2 (E1b1a)","shown":"M2 (E1b1a)","age":{"mean":-15538,"oldest":-18045,"youngest":-13344},"n":5,"depth":1},
+{"name":"I-L38","label":"I2-L38","shown":"I2-L38","age":{"mean":-2746,"oldest":-3473,"youngest":-2115},"n":4,"depth":0},
+{"name":"J-M172","label":"J2","shown":"J2","age":{"mean":-25355,"oldest":-29202,"youngest":-21981},"n":3,"depth":0},
+{"name":"T-M184","label":"T","shown":"T","age":{"mean":-25589,"oldest":-29516,"youngest":-22151},"n":3,"depth":0}
 ],"terminal":[
 ["R-L151",7],
 ["E-PF2546",2],

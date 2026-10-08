@@ -14,7 +14,7 @@
 {"k":"Q-L53*","v":1},
 {"k":"G-P303*","v":1}
 ],"tree":[
-{"name":"R-DF27","label":"R1b-DF27","shown":"R1b-DF27","age":{"mean":-2633,"oldest":-3297,"youngest":-2052},"n":4,"depth":0}
+{"name":"R-DF27","label":"R1b-DF27","shown":"R1b-DF27","age":{"mean":-2655,"oldest":-3322,"youngest":-2071},"n":4,"depth":0}
 ],"terminal":[
 ["G-FTF87185",1],
 ["I-Z110",1],

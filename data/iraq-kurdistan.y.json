@@ -34,17 +34,17 @@
 {"k":"E-M34*","v":1},
 {"k":"T-Z709","v":1}
 ],"tree":[
-{"name":"J-M304","label":"J","shown":"J","age":{"mean":-26990,"oldest":-30894,"youngest":-23329},"n":28,"depth":0},
-{"name":"J-M410","label":"J2a","shown":"J2a","age":{"mean":-17690,"oldest":-20469,"youngest":-15254},"n":14,"depth":1},
-{"name":"J-L25","label":"J2a-L25","shown":"L25","age":{"mean":-6689,"oldest":-7949,"youngest":-5588},"n":5,"depth":2},
-{"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16733,"oldest":-19367,"youngest":-14424},"n":13,"depth":1},
-{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2841,"oldest":-3534,"youngest":-2233},"n":6,"depth":2},
-{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25268,"oldest":-29229,"youngest":-21808},"n":14,"depth":0},
-{"name":"R-M12149","label":"R1b-Z2103 (M12149)","shown":"R1b-Z2103 (M12149)","age":{"mean":-3636,"oldest":-4463,"youngest":-2914},"n":7,"depth":1},
-{"name":"R-Y4364","label":"R1b-Y4364","shown":"Y4364","age":{"mean":-2508,"oldest":-3229,"youngest":-1886},"n":3,"depth":2},
-{"name":"R-Z2125","label":"R1a-Z2125","shown":"R1a-Z2125","age":{"mean":-2381,"oldest":-3048,"youngest":-1802},"n":3,"depth":1},
-{"name":"G-M201","label":"G","shown":"G","age":{"mean":-25558,"oldest":-29451,"youngest":-22147},"n":4,"depth":0},
-{"name":"E-M123","label":"E-M123","shown":"E-M123","age":{"mean":-15540,"oldest":-18041,"youngest":-13350},"n":3,"depth":0}
+{"name":"J-M304","label":"J","shown":"J","age":{"mean":-27154,"oldest":-31081,"youngest":-23472},"n":28,"depth":0},
+{"name":"J-M410","label":"J2a","shown":"J2a","age":{"mean":-17815,"oldest":-20612,"youngest":-15363},"n":14,"depth":1},
+{"name":"J-L25","label":"J2a-L25","shown":"L25","age":{"mean":-6742,"oldest":-8010,"youngest":-5634},"n":5,"depth":2},
+{"name":"J-M267","label":"J1","shown":"J1","age":{"mean":-16823,"oldest":-19469,"youngest":-14502},"n":13,"depth":1},
+{"name":"J-L858","label":"J1-L858","shown":"L858","age":{"mean":-2869,"oldest":-3567,"youngest":-2259},"n":6,"depth":2},
+{"name":"R-M207","label":"R","shown":"R","age":{"mean":-25424,"oldest":-29409,"youngest":-21945},"n":14,"depth":0},
+{"name":"R-M12149","label":"R1b-Z2103 (M12149)","shown":"R1b-Z2103 (M12149)","age":{"mean":-3665,"oldest":-4496,"youngest":-2940},"n":7,"depth":1},
+{"name":"R-Y4364","label":"R1b-Y4364","shown":"Y4364","age":{"mean":-2529,"oldest":-3253,"youngest":-1904},"n":3,"depth":2},
+{"name":"R-Z2125","label":"R1a-Z2125","shown":"R1a-Z2125","age":{"mean":-2409,"oldest":-3080,"youngest":-1826},"n":3,"depth":1},
+{"name":"G-M201","label":"G","shown":"G","age":{"mean":-25717,"oldest":-29632,"youngest":-22286},"n":4,"depth":0},
+{"name":"E-M123","label":"E-M123","shown":"E-M123","age":{"mean":-15641,"oldest":-18157,"youngest":-13438},"n":3,"depth":0}
 ],"terminal":[
 ["J-L1189",3],
 ["J-FTC69978",2],

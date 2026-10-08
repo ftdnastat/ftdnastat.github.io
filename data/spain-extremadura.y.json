@@ -16,9 +16,9 @@
 {"k":"R-Z295*","v":1},
 {"k":"J-Z1296","v":1}
 ],"tree":[
-{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2803,"oldest":-3486,"youngest":-2205},"n":7,"depth":0},
-{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2633,"oldest":-3297,"youngest":-2052},"n":4,"depth":1},
-{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2528,"oldest":-3173,"youngest":-1964},"n":3,"depth":1}
+{"name":"R-P312","label":"R1b-P312","shown":"R1b-P312","age":{"mean":-2830,"oldest":-3517,"youngest":-2229},"n":7,"depth":0},
+{"name":"R-DF27","label":"R1b-DF27","shown":"DF27","age":{"mean":-2655,"oldest":-3322,"youngest":-2071},"n":4,"depth":1},
+{"name":"R-DF13","label":"R1b-DF13","shown":"DF13","age":{"mean":-2555,"oldest":-3203,"youngest":-1987},"n":3,"depth":1}
 ],"terminal":[
 ["E-V12",1],
 ["G-S2808",1],
