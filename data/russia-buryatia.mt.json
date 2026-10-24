@@ -1,0 +1,15 @@
+{"name":"Russia (Republic of Buryatia)","slug":"russia-buryatia","n":2,"l1":[
+{"k":"M","v":1},
+{"k":"H","v":1}
+],"l2":[
+{"k":"M10a","v":1},
+{"k":"H2b","v":1}
+],"tree":[],"cum":[
+[156,1],
+[195,1],
+[425,1],
+[434,1]
+],"cumN":647,"terminal":[
+["H2b",1],
+["M10a1-G16129A!",1]
+]}

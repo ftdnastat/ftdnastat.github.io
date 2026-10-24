@@ -1,0 +1,17 @@
+{"name":"Marshall Islands","slug":"marshall-islands","n":4,"l1":[
+{"k":"B","v":4}
+],"l2":[
+{"k":"B4a","v":4}
+],"tree":[
+{"id":8689,"name":"B4a1a1","label":"B4a1a1","shown":"B4a1a1","age":{"mean":-2564,"oldest":-2905,"youngest":-2236},"n":4,"depth":0}
+],"cum":[
+[31,4],
+[32,4],
+[33,4],
+[34,4],
+[35,4],
+[37,2]
+],"cumN":647,"terminal":[
+["B4a1a1a",2],
+["B4a1a1x",2]
+]}

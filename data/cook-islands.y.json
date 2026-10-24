@@ -1,0 +1,13 @@
+{"name":"Cook Islands","slug":"cook-islands","n":3,"l1":[
+{"k":"C","v":3}
+],"l2":[
+{"k":"C-M216*","v":3}
+],"tree":[
+{"id":1217,"name":"C-M216","label":"C","shown":"C","age":{"mean":-45108,"oldest":-51824,"youngest":-39229},"n":3,"depth":0}
+],"cum":[
+[3,3]
+],"cumN":169,"terminal":[
+["C-FT245596",1],
+["C-FTB49615",1],
+["C-FTC43014",1]
+]}

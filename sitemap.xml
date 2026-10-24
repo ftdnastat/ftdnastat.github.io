@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://ftdnastat.github.io/sitemap-core.xml</loc><lastmod>2026-10-24</lastmod></sitemap>
+<sitemap><loc>https://ftdnastat.github.io/sitemap-countries.xml</loc><lastmod>2026-10-24</lastmod></sitemap>
+<sitemap><loc>https://ftdnastat.github.io/sitemap-clades.xml</loc><lastmod>2026-10-22</lastmod></sitemap>
+<sitemap><loc>https://ftdnastat.github.io/sitemap-mt-clades.xml</loc><lastmod>2026-10-19</lastmod></sitemap>
+<sitemap><loc>https://ftdnastat.github.io/sitemap-ethnic-region.xml</loc><lastmod>2026-10-01</lastmod></sitemap>
+<sitemap><loc>https://ftdnastat.github.io/sitemap-other.xml</loc><lastmod>2026-10-22</lastmod></sitemap>
+</sitemapindex>

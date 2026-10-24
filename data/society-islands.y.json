@@ -1,0 +1,16 @@
+{"name":"Society Islands","slug":"society-islands","n":9,"l1":[
+{"k":"C","v":8},
+{"k":"O","v":1}
+],"l2":[
+{"k":"C-M216*","v":8},
+{"k":"O-M324","v":1}
+],"tree":[
+{"id":1217,"name":"C-M216","label":"C","shown":"C","age":{"mean":-45108,"oldest":-51824,"youngest":-39229},"n":8,"depth":0}
+],"cum":[
+[3,8],
+[103,1],
+[105,1]
+],"cumN":169,"terminal":[
+["C-M38",8],
+["O-Z30986",1]
+]}
