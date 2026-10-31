@@ -1,0 +1,13 @@
+{"name":"Italy (South Tyrol)","slug":"italy-south-tyrol","n":1,"l1":[
+{"k":"HV","v":1}
+],"l2":[
+{"k":"HV0","v":1}
+],"tree":[
+{"id":6937,"name":"HV0-T195C!","label":"HV0-T195C!","shown":"HV0-T195C!","age":null,"n":1,"depth":0}
+],"cum":[
+[280,1],
+[285,1],
+[286,1]
+],"cumN":772,"terminal":[
+["HV0-T195C!",1]
+]}

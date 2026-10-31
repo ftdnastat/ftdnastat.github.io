@@ -1,0 +1,17 @@
+{"name":"Laos","slug":"laos","n":2,"l1":[
+{"k":"O","v":2}
+],"l2":[
+{"k":"O-M175*","v":2}
+],"tree":[
+{"id":1849,"name":"O-M175","label":"O","shown":"O","age":{"mean":-29460,"oldest":-33963,"youngest":-25521},"n":2,"depth":0},
+{"id":1950,"name":"O-M95","label":"O1b-M95","shown":"O1b-M95","age":{"mean":-9279,"oldest":-11066,"youngest":-7734},"n":1,"depth":1},
+{"id":1971,"name":"O-M119","label":"O1a","shown":"O1a","age":{"mean":-13476,"oldest":-15874,"youngest":-11398},"n":1,"depth":1}
+],"cum":[
+[103,2],
+[104,1],
+[107,1],
+[108,1]
+],"cumN":170,"terminal":[
+["O-M307",1],
+["O-Z23668",1]
+]}

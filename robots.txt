@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /search.json
+Disallow: /search/
+Allow: /data/branches.json
+Allow: /data/compare-index.json
+Disallow: /data/
+Sitemap: https://ftdnastat.github.io/sitemap.xml

@@ -1,0 +1,16 @@
+{"name":"Russia (Republic of Altai)","slug":"russia-altai","n":1,"l1":[
+{"k":"H","v":1}
+],"l2":[
+{"k":"H5a","v":1}
+],"tree":[
+{"id":7535,"name":"H5a1a","label":"H5a1a","shown":"H5a1a","age":{"mean":-1998,"oldest":-2335,"youngest":-1675},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[253,1],
+[255,1],
+[256,1],
+[257,1],
+[258,1]
+],"cumN":772,"terminal":[
+["H5a1a",1]
+]}

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Как устроен ftdnastat · ftdnastat</title>
+<meta name="description" content="Как устроен ftdnastat: источники данных, ежедневное обновление и проверки, как считаются доли, возрасты, сравнение с YFull, карты гео-проектов, древняя ДНК и…">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/ru/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/ru/about/how/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/about/how/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/about/how/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/about/how/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Как устроен ftdnastat">
+<meta property="og:description" content="Как устроен ftdnastat: источники данных, ежедневное обновление и проверки, как считаются доли, возрасты, сравнение с YFull, карты гео-проектов, древняя ДНК и…">
+<meta property="og:url" content="https://ftdnastat.github.io/ru/about/how/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — статистика гаплогрупп FTDNA по странам и регионам: составные полоски макрогрупп Y-ДНК для Дагестана, Турции, Ирландии и Финляндии">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как устроен ftdnastat">
+<meta name="twitter:description" content="Как устроен ftdnastat: источники данных, ежедневное обновление и проверки, как считаются доли, возрасты, сравнение с YFull, карты гео-проектов, древняя ДНК и…">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"О данных","item":"https://ftdnastat.github.io/ru/about/"},{"@type":"ListItem","position":2,"name":"Как устроен ftdnastat","item":"https://ftdnastat.github.io/ru/about/how/"}]}</script>
+</head>
+<body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/ru/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Меню</button>
+<nav class="nav" id="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/clade/">Ветки</a><a href="/ru/countries/">Страны</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/culture/">Палео</a><a href="/ru/compare/">Сравнение</a><a href="/ru/pairs/">Пары Y и мт</a><a href="/ru/about/" aria-current="page">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Страна, регион или SNP" aria-label="Страна, регион или SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →" data-clades="Ветки Y" data-clades-mt="Ветки мт" data-cultures="Культуры" data-samples="образец|образца|образцов" data-kits="кит|кита|китов">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
+</form>
+<a class="lang" href="/en/about/how/" lang="en" hreflang="en" data-lang-switch="en">English</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Вы здесь"><a href="/ru/about/">О данных</a><span class="sep">›</span><span>Как устроен ftdnastat</span></nav>
+<div class="head">
+<h1>Как устроен ftdnastat</h1>
+</div>
+<div class="prose how">
+<p>Технический документ: откуда сайт берёт данные, как их обновляет и проверяет, и как считаются числа на страницах. Пороги и правила приведены такими, какими они работают сейчас.</p>
+<h2 id="1-источники">1. Источники <a class="anchor" href="#1-источники" aria-label="Ссылка на раздел «1. Источники»">#</a></h2>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Источник · Что берётся · Как часто">
+<table>
+<thead>
+<tr>
+<th>Источник</th>
+<th>Что берётся</th>
+<th>Как часто</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Публичные деревья Y-DNA и mtDNA Haplotree FamilyTreeDNA</td>
+<td>узлы деревьев, число китов на узле по странам, число Big Y, фамилии</td>
+<td>проверка каждый день, загрузка при новом выпуске</td>
+</tr>
+<tr>
+<td>FamilyTreeDNA Discover</td>
+<td>возраст общего предка (TMRCA) каждой Y-ветки с интервалом; древние образцы с веткой, культурой и датой; пути миграции веток</td>
+<td>проверка каждый день; палеообразцы и пути миграции полностью раз в 30 дней</td>
+</tr>
+<tr>
+<td>Mitotree в FamilyTreeDNA Discover</td>
+<td>возрасты мт-веток, древние мт-образцы с координатами</td>
+<td>при новой версии дерева</td>
+</tr>
+<tr>
+<td>Публичные карты участников гео-проектов FamilyTreeDNA</td>
+<td>место предка, ветка, отметка о подтверждении SNP-тестом</td>
+<td>раз в 30 дней</td>
+</tr>
+<tr>
+<td>Публичные деревья YFull Y и мт</td>
+<td>узлы, образцы со страной, регионом и родным языком, возрасты TMRCA и formed, пометка «new»</td>
+<td>раз в месяц</td>
+</tr>
+<tr>
+<td>TheYtree</td>
+<td>третья оценка возраста Y-веток, сопоставленная по SNP</td>
+<td>редко, вручную</td>
+</tr>
+<tr>
+<td>Население стран и регионов (ООН, перепись-2021, Wikidata)</td>
+<td>число мужчин, для протестированности и поправки на плотность</td>
+<td>вручную</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Все источники публичные. Имена людей с карт гео-проектов на сайт не попадают.</p>
+<h2 id="2-обновление-и-публикация">2. Обновление и публикация <a class="anchor" href="#2-обновление-и-публикация" aria-label="Ссылка на раздел «2. Обновление и публикация»">#</a></h2>
+<p>Раз в сутки проверяется версия каждого источника: дата выпуска дерева, заголовок ответа сервера или итоговые числа корня. Загружается только то, что изменилось. Сайт пересобирается, если изменились данные или код, и в любом случае раз в неделю.</p>
+<p>Перед публикацией сборка проходит приёмку:</p>
+<ul>
+<li>на месте все обязательные файлы, у каждой страницы есть заголовок, канонический адрес и пара на другом языке;</li>
+<li>в тексте нет пустых и нечисловых значений вместо чисел, все адреса карты сайта существуют и не повторяются;</li>
+<li>страниц, китов, стран и карт путей не меньше 95 % опубликованного, Y-дерево не старее опубликованного.</li>
+</ul>
+<p>Сборка, не прошедшая приёмку, не публикуется. Опубликованные сборки сохраняются в архиве.</p>
+<p>Новое Y-дерево FTDNA перед подключением проходит ещё и проверку предиктора гаплогрупп: на тех же данных доля ошибок предсказания по ключевым веткам не должна вырасти.</p>
+<h2 id="3-страны-регионы-и-народы">3. Страны, регионы и народы <a class="anchor" href="#3-страны-регионы-и-народы" aria-label="Ссылка на раздел «3. Страны, регионы и народы»">#</a></h2>
+<p><b>FTDNA.</b> Страна кита — самозаявленное происхождение самого дальнего известного предка по линии. Регионы, которые FTDNA ведёт отдельной строкой («Russia (Republic of Dagestan)»), — отдельные страницы и в страну-родителя не входят. Киты без страны в долях не участвуют.</p>
+<p><b>YFull.</b> Страна и регион образца даны кодами ISO, народ — родным языком из анкеты (ISO 639-3). Коды сопоставлены со странами и регионами FTDNA; регион, у которого есть своя строка в FTDNA, выводит образец из страны так же, как это делает FTDNA. Язык, совпадающий со страной или регионом образца, второй раз не засчитывается.</p>
+<p><b>Сравнимый срез YFull.</b> Для сравнения с FTDNA берутся только клиенты YFull (номер <code>YF…</code>) и только современные образцы: научные публикации и древняя ДНК устроены иначе, чем выборка клиентов.</p>
+<h2 id="4-дерево-ветвей-и-доли">4. Дерево ветвей и доли <a class="anchor" href="#4-дерево-ветвей-и-доли" aria-label="Ссылка на раздел «4. Дерево ветвей и доли»">#</a></h2>
+<p>Доли считаются <b>накопительно</b>: строка ветки включает все киты её подветок. Поэтому вложенные ветки никогда не стоят рядом как соседи, а кит, чей тест не дошёл глубже узла, остаётся на узле и помечается звёздочкой (<code>J-M172*</code>).</p>
+<ul>
+<li><b>Y, крупные ветки.</b> Узел становится крупной веткой, если в его поддереве не меньше 0,4 % китов мира со страной; цепочки, где единственная подветка держит почти всё, схлопываются.</li>
+<li><b>Y, дерево страны.</b> Узлы из словаря подписанных ветвей (J1 → Z1842 → CTS1460), накопительно, от 1 % выборки и не меньше 3 китов; узел, единственная показанная подветка которого держит ≥ 95 % его китов, уступает ей место. До 30 строк на странице, 14 в карточке.</li>
+<li><b>мт.</b> Буква, ветка вида <code>H1a</code>, терминальный узел; дерево — по группам одной буквы.</li>
+<li><b>Малые выборки.</b> Страна с выборкой меньше 50 китов помечена и не участвует в находках; при n &lt; 30 у доли показывается 95-процентный интервал Уилсона.</li>
+</ul>
+<h2 id="5-страница-ветки">5. Страница ветки <a class="anchor" href="#5-страница-ветки" aria-label="Ссылка на раздел «5. Страница ветки»">#</a></h2>
+<p>Страница есть у каждой ветки, в поддереве которой не меньше 50 китов со страной: сейчас это 4 297 Y-веток и 1 182 мт-ветки. Цепочки равнозначных узлов, где единственная подветка держит ≥ 99 % китов (Y) или ≥ 97 % (мт), сводятся к одной странице с перечнем равнозначных имён.</p>
+<ul>
+<li><b>Страны и карта.</b> Доля ветки в каждой стране и доля страны в ветке; карта долей по странам.</li>
+<li><b>Подветки деревом.</b> Подветки со своими страницами: прямые все, вложенные — от 1 % китов ветки (не меньше 3); цепочки сворачиваются по тому же правилу 95 %, до 30 строк.</li>
+<li><b>Возраст.</b> Средняя оценка TMRCA FamilyTreeDNA Discover с интервалом; рядом — YFull (TMRCA и formed — время отделения от родительской ветки, 95-процентные интервалы) и TheYtree, если их узел сопоставлен с веткой. Узел YFull сопоставляется с узлом FTDNA по имени или по общему SNP.</li>
+<li><b>Как ветка разрасталась.</b> Для каждого момента — сколько подветок уже имели своего общего предка (по Discover для Y, по Mitotree для мт), шкала логарифмическая. Подсвечено окно, где число подветок умножилось сильнее всего, при не меньше 5 подветках на его начало; последнее тысячелетие не учитывается, потому что там число подветок определяется тем, сколько родственников сдали тест.</li>
+<li><b>Путь миграции.</b> Модель FamilyTreeDNA Discover: путь наименьшей стоимости между оценками мест предков.</li>
+<li><b>Древние образцы</b> из раскопок в поддереве ветки.</li>
+</ul>
+<h2 id="6-yfull-сравнение-соседи-пары-родня-через-границу">6. YFull: сравнение, соседи, пары, родня через границу <a class="anchor" href="#6-yfull-сравнение-соседи-пары-родня-через-границу" aria-label="Ссылка на раздел «6. YFull: сравнение, соседи, пары, родня через границу»">#</a></h2>
+<ul>
+<li><b>Сравнение с FTDNA.</b> Сравнимый срез YFull раскладывается по тем же узлам дерева FTDNA, что и киты; «согласие» — косинусное сходство долей, «расхождение» — строка дерева с наибольшей разницей.</li>
+<li><b>Похожие народы и регионы.</b> Дивергенция Йенсена–Шеннона долей крупных веток; сосед показывается при сходстве ≥ 80 % и не меньше 150 сравнимых образцов у обеих сторон.</li>
+<li><b>Пары Y × мт.</b> У людей, сдавших оба теста, сочетания отцовской и материнской линий против ожидаемого при независимости линий; значимость — гипергеометрический хвост.</li>
+<li><b>Родня через границу.</b> Молодые ветви Y-дерева (общий предок не старше 500 лет, от двух образцов), объединяющие людей из двух стран или регионов. Число общих ветвей пары сравнивается со случайной пересборкой связей, в которой у каждой страны сохраняется её число связей (1000 раундов): ожидаемое учитывает, насколько страна вообще связана с заграницей. Показываются пары от 5 ветвей, вдвое чаще ожидаемого, p ≤ 0,01.</li>
+<li><b>Новые образцы.</b> YFull сам помечает недавно добавленные образцы и снимает пометку через несколько недель; сайт показывает их по странам, народам и веткам.</li>
+</ul>
+<h2 id="7-гео-проекты-familytreedna">7. Гео-проекты FamilyTreeDNA <a class="anchor" href="#7-гео-проекты-familytreedna" aria-label="Ссылка на раздел «7. Гео-проекты FamilyTreeDNA»">#</a></h2>
+<p>Участники проектов сами включили показ места предка на публичной карте проекта. Один человек может состоять в нескольких проектах: его записи склеиваются в одну.</p>
+<ul>
+<li><b>Вес семьи.</b> Записи с одним и тем же предком, веткой и точкой считаются одной семьёй и вместе весят как один голос.</li>
+<li><b>Ячейки.</b> Место предка округляется до ячейки 1°. В ячейке закрашивается ветка, у которой там не меньше 3 человек; меньшие ячейки учитываются в итогах и в центре, но не рисуются.</li>
+<li><b>Доля ветки в месте</b> — голоса ветки против голосов всех участников ячейки.</li>
+<li><b>Центр ветки и радиус 68 %.</b> Взвешенный центр ячеек в той части света, где у ветки больше всего голосов (иначе диаспора в Америке переносит центр в океан). Голос взвешен по протестированности: вес = √(медианная плотность участников / плотность в его стране или регионе), в пределах от 1/5 до 5, так что страны, где тестируются чаще, не стягивают центр к себе. Радиус — расстояние, внутри которого 68 % взвешенных голосов.</li>
+<li><b>Ветка не на своём месте.</b> Ячейка сравнивается со всеми участниками в радиусе 300 км вокруг: биномиальный хвост для пары «ячейка × ветка», поправка Бенджамини–Хохберга по всем парам, q ≤ 0,05 и не меньше 3 человек. Точки, где много людей разных веток, — это координаты страны или города, а не место предка, и они исключаются.</li>
+<li><b>Древние против современных.</b> Для веток с древними образцами — расстояние каждого образца от центра современных носителей.</li>
+</ul>
+<h2 id="8-древняя-днк-и-культуры">8. Древняя ДНК и культуры <a class="anchor" href="#8-древняя-днк-и-культуры" aria-label="Ссылка на раздел «8. Древняя ДНК и культуры»">#</a></h2>
+<p>Y-образцы — FamilyTreeDNA Discover, мт-образцы — Mitotree и YFull. Дата образца — середина интервала датировки. Культура — запись Discover; разные написания одной культуры склеены.</p>
+<p><b>Сравнение культур.</b> Каждый образец обрезается до своего предка на выбранной глубине дерева или до предка, чья ветка уже существовала к выбранному году (по возрастам Discover). Образец, тест которого не дошёл до этой глубины, остаётся на своей ветке.</p>
+<ul>
+<li><b>«A → B»</b> — доля образцов A, у которых в B есть та же ветка или ветка под ней: неглубокий образец мог относиться к любой своей подветке.</li>
+<li><b>Пересечение частот</b> — сумма меньших долей общих веток; доля неглубокой ветки при этом делится между её подветками пропорционально их долям в обеих культурах вместе.</li>
+</ul>
+<p><b>Цепочки культур</b> показываются, пока сходство соседних культур не ниже 10 %; числа в текстах цепочек сверяются с данными при каждой сборке.</p>
+<h2 id="9-находки">9. Находки <a class="anchor" href="#9-находки" aria-label="Ссылка на раздел «9. Находки»">#</a></h2>
+<p>Пересчитываются при каждой сборке, участвуют страны от 50 китов:</p>
+<ul>
+<li><b>характерные ветки</b> — доля в стране не меньше чем втрое выше мировой и не меньше 10 китов;</li>
+<li><b>похожие страны</b> — дивергенция Йенсена–Шеннона крупных веток, выборки от 100;</li>
+<li><b>кластеры одного узла</b> — ≥ 10 % выборки и ≥ 20 китов на одном узле: обычно это фамильный проект;</li>
+<li><b>молодые широкие</b> ветки (моложе 2000 лет и в 5 странах и больше) и <b>древние сосредоточенные</b> (старше 4000 лет, ≥ 50 % китов в одной стране, ветка от 200 китов);</li>
+<li>отношение мт к Y, расхождение отцовских и материнских соседей, расхождения FTDNA и YFull.</li>
+</ul>
+<h2 id="10-динамика">10. Динамика <a class="anchor" href="#10-динамика" aria-label="Ссылка на раздел «10. Динамика»">#</a></h2>
+<ul>
+<li><b>FTDNA по неделям.</b> При каждом новом выпуске дерева сохраняется компактный срез: узел, родитель, киты по странам. Срезы сравниваются по внутреннему номеру узла, поэтому переименование — не удаление и добавление.</li>
+<li><b>Новое за месяц.</b> Разница двух срезов с интервалом не меньше 30 дней. Узел, исчезнувший из нового дерева, отдаёт свои киты ближайшему сохранившемуся предку, а суммы считаются по поддеревьям: кит, перенесённый в новую подветку, новым не считается.</li>
+<li><b>YFull по месяцам.</b> Образцы сопоставляются по номеру, ветки — по имени; ветка, сменившая имя, но сохранившая ≥ 80 % образцов, считается переименованием.</li>
+</ul>
+<h2 id="11-ограничения">11. Ограничения <a class="anchor" href="#11-ограничения" aria-label="Ссылка на раздел «11. Ограничения»">#</a></h2>
+<ul>
+<li>Это клиенты компаний, а не население: США, Британия и Скандинавия представлены избыточно, а состав зависит от того, кто решил тестироваться.</li>
+<li>Участники гео-проектов сами выбирали, вступать ли и какое место указать.</li>
+<li>Возрасты — модельные оценки; у разных источников разная калибровка, поэтому они показаны рядом, а не усреднены.</li>
+<li>Сопоставление узлов YFull и FTDNA идёт по именам и SNP; часть узлов YFull не имеет пары и поднимается до ближайшего сопоставленного предка.</li>
+</ul>
+</div>
+</main>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 2026-10-29, сборка 2026-10-31. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

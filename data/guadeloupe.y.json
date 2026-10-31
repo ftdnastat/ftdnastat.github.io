@@ -1,0 +1,17 @@
+{"name":"Guadeloupe","slug":"guadeloupe","n":2,"l1":[
+{"k":"E","v":2}
+],"l2":[
+{"k":"E-M2*","v":1},
+{"k":"E-U175","v":1}
+],"tree":[
+{"id":1421,"name":"E-M2","label":"E-M2 (E1b1a)","shown":"E-M2 (E1b1a)","age":{"mean":-15543,"oldest":-18051,"youngest":-13349},"n":2,"depth":0},
+{"id":2692,"name":"E-U175","label":"E-U175","shown":"U175","age":{"mean":-6764,"oldest":-8063,"youngest":-5633},"n":1,"depth":1}
+],"cum":[
+[10,2],
+[24,2],
+[25,2],
+[27,1]
+],"cumN":170,"terminal":[
+["E-CTS6143",1],
+["E-M2",1]
+]}

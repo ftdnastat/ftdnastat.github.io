@@ -1,0 +1,15 @@
+{"name":"Papua New Guinea","slug":"papua-new-guinea","n":2,"l1":[
+{"k":"Q","v":2}
+],"l2":[
+{"k":"Q1","v":1},
+{"k":"Q1a","v":1}
+],"tree":[
+{"id":5775,"name":"Q1'2","label":"Q1'2","shown":"Q1'2","age":null,"n":2,"depth":0},
+{"id":5779,"name":"Q1a1","label":"Q1a1","shown":"Q1a1","age":{"mean":-10756,"oldest":-12261,"youngest":-9335},"n":1,"depth":1}
+],"cum":[
+[585,2],
+[586,1]
+],"cumN":772,"terminal":[
+["Q1'2",1],
+["Q1a1",1]
+]}

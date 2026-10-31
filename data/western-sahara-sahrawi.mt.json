@@ -1,0 +1,24 @@
+{"name":"Western Sahara (Sahrawi)","slug":"western-sahara-sahrawi","n":2,"l1":[
+{"k":"U","v":1},
+{"k":"K","v":1}
+],"l2":[
+{"k":"U6a","v":1},
+{"k":"K1a","v":1}
+],"tree":[
+{"id":9303,"name":"U6a1a","label":"U6a1a","shown":"U6a1a","age":{"mean":-14224,"oldest":-16086,"youngest":-12462},"n":1,"depth":0},
+{"id":9680,"name":"K1a-C150T","label":"K1a-C150T","shown":"K1a-C150T","age":null,"n":1,"depth":0}
+],"cum":[
+[353,1],
+[354,1],
+[355,1],
+[356,1],
+[642,1],
+[730,1],
+[731,1],
+[732,1],
+[733,1],
+[734,1]
+],"cumN":772,"terminal":[
+["K1a-C150T",1],
+["U6a1a",1]
+]}

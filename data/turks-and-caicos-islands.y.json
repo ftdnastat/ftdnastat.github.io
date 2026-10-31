@@ -1,0 +1,19 @@
+{"name":"Turks and Caicos Islands","slug":"turks-and-caicos-islands","n":2,"l1":[
+{"k":"R","v":2}
+],"l2":[
+{"k":"R-Z2959*","v":2}
+],"tree":[
+{"id":2094,"name":"R-M222","label":"R1b-M222","shown":"R1b-M222","age":{"mean":-106,"oldest":-419,"youngest":167},"n":2,"depth":0}
+],"cum":[
+[115,2],
+[131,2],
+[132,2],
+[133,2],
+[134,2],
+[138,2],
+[139,2],
+[143,2],
+[144,2]
+],"cumN":170,"terminal":[
+["R-FTF91685",2]
+]}

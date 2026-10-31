@@ -1,0 +1,13 @@
+{"name":"Namibia","slug":"namibia","n":1,"l1":[
+{"k":"H","v":1}
+],"l2":[
+{"k":"H10e","v":1}
+],"tree":[
+{"id":7751,"name":"H10e","label":"H10e","shown":"H10e","age":{"mean":-2255,"oldest":-2314,"youngest":-2196},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[207,1],
+[208,1]
+],"cumN":772,"terminal":[
+["H10e",1]
+]}

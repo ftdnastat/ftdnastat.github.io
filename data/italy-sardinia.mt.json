@@ -1,0 +1,22 @@
+{"name":"Italy (Sardinia)","slug":"italy-sardinia","n":2,"l1":[
+{"k":"M","v":1},
+{"k":"H","v":1}
+],"l2":[
+{"k":"M1a","v":1},
+{"k":"H1","v":1}
+],"tree":[
+{"id":4985,"name":"M1a1b1a","label":"M1a1b1a","shown":"M1a1b1a","age":{"mean":-3141,"oldest":-4399,"youngest":-2017},"n":1,"depth":0},
+{"id":7027,"name":"H1","label":"H1","shown":"H1","age":{"mean":-5203,"oldest":-5262,"youngest":-5144},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[181,1],
+[505,1],
+[506,1],
+[507,1],
+[508,1],
+[509,1],
+[510,1]
+],"cumN":772,"terminal":[
+["H1",1],
+["M1a1b1a",1]
+]}

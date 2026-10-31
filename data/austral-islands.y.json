@@ -1,0 +1,11 @@
+{"name":"Austral Islands","slug":"austral-islands","n":3,"l1":[
+{"k":"C","v":3}
+],"l2":[
+{"k":"C-M216*","v":3}
+],"tree":[
+{"id":1217,"name":"C-M216","label":"C","shown":"C","age":{"mean":-45118,"oldest":-51836,"youngest":-39238},"n":3,"depth":0}
+],"cum":[
+[3,3]
+],"cumN":170,"terminal":[
+["C-FT405705",3]
+]}

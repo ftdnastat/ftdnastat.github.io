@@ -1,0 +1,23 @@
+{"name":"Italy (Trentino)","slug":"italy-trentino","n":2,"l1":[
+{"k":"H","v":1},
+{"k":"U","v":1}
+],"l2":[
+{"k":"H5t","v":1},
+{"k":"U3a","v":1}
+],"tree":[
+{"id":7609,"name":"H5t","label":"H5t","shown":"H5t","age":{"mean":-876,"oldest":-1513,"youngest":-302},"n":1,"depth":0},
+{"id":9443,"name":"U3a1","label":"U3a1","shown":"U3a1","age":{"mean":-5210,"oldest":-5269,"youngest":-5151},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[253,1],
+[255,1],
+[262,1],
+[642,1],
+[653,1],
+[666,1],
+[667,1],
+[668,1]
+],"cumN":772,"terminal":[
+["H5t",1],
+["U3a1",1]
+]}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>How ftdnastat works · ftdnastat</title>
+<meta name="description" content="How ftdnastat works: data sources, daily updates and checks, how shares, ages, the YFull comparison, project maps, ancient DNA and findings are computed.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/about/how/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/about/how/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/about/how/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/about/how/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="How ftdnastat works">
+<meta property="og:description" content="How ftdnastat works: data sources, daily updates and checks, how shares, ages, the YFull comparison, project maps, ancient DNA and findings are computed.">
+<meta property="og:url" content="https://ftdnastat.github.io/en/about/how/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — FTDNA haplogroup statistics by country and region: stacked bars of Y-DNA macro-haplogroups for Dagestan, Turkey, Ireland and Finland">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How ftdnastat works">
+<meta name="twitter:description" content="How ftdnastat works: data sources, daily updates and checks, how shares, ages, the YFull comparison, project maps, ancient DNA and findings are computed.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"About the data","item":"https://ftdnastat.github.io/en/about/"},{"@type":"ListItem","position":2,"name":"How ftdnastat works","item":"https://ftdnastat.github.io/en/about/how/"}]}</script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/pairs/">Y and mt pairs</a><a href="/en/about/" aria-current="page">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/about/how/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="You are here"><a href="/en/about/">About the data</a><span class="sep">›</span><span>How ftdnastat works</span></nav>
+<div class="head">
+<h1>How ftdnastat works</h1>
+</div>
+<div class="prose how">
+<p>A technical description: where the site gets its data, how it updates and checks it, and how the numbers on its pages are computed. Thresholds and rules are given as they work now.</p>
+<h2 id="1-sources">1. Sources <a class="anchor" href="#1-sources" aria-label="Link to section “1. Sources”">#</a></h2>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Source · What is taken · How often">
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What is taken</th>
+<th>How often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FamilyTreeDNA public Y-DNA and mtDNA Haplotrees</td>
+<td>tree nodes, kits per node by country, Big Y counts, surnames</td>
+<td>checked daily, downloaded on a new release</td>
+</tr>
+<tr>
+<td>FamilyTreeDNA Discover</td>
+<td>the age of the common ancestor (TMRCA) of every Y branch with its range; ancient samples with branch, culture and date; branch migration paths</td>
+<td>checked daily; ancient samples and migration paths in full every 30 days</td>
+</tr>
+<tr>
+<td>Mitotree in FamilyTreeDNA Discover</td>
+<td>mtDNA branch ages, ancient mtDNA samples with coordinates</td>
+<td>on a new tree version</td>
+</tr>
+<tr>
+<td>Public member maps of FamilyTreeDNA geographic projects</td>
+<td>ancestor's place, branch, the SNP-confirmed mark</td>
+<td>every 30 days</td>
+</tr>
+<tr>
+<td>Public YFull Y and mt trees</td>
+<td>nodes, samples with country, region and native language, TMRCA and formed ages, the &quot;new&quot; mark</td>
+<td>monthly</td>
+</tr>
+<tr>
+<td>TheYtree</td>
+<td>a third age estimate for Y branches, matched by SNP</td>
+<td>rarely, by hand</td>
+</tr>
+<tr>
+<td>Population of countries and regions (UN, the 2021 Russian census, Wikidata)</td>
+<td>number of men, for the testing rate and the density correction</td>
+<td>by hand</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All sources are public. Names of people from the project maps never reach the site.</p>
+<h2 id="2-updates-and-publishing">2. Updates and publishing <a class="anchor" href="#2-updates-and-publishing" aria-label="Link to section “2. Updates and publishing”">#</a></h2>
+<p>Once a day the version of every source is checked: the tree's release date, a server response header or the root totals. Only what changed is downloaded. The site is rebuilt when the data or the code changed, and in any case once a week.</p>
+<p>Before publishing, a build has to pass acceptance:</p>
+<ul>
+<li>every required file is in place, every page has a title, a canonical address and a twin in the other language;</li>
+<li>no empty or non-numeric placeholders where numbers belong, every sitemap address exists and appears once;</li>
+<li>pages, kits, countries and migration maps are at least 95% of the published ones, and the Y tree is not older than the published one.</li>
+</ul>
+<p>A build that fails acceptance is not published. Published builds are kept in an archive.</p>
+<p>A new FTDNA Y tree also has to pass the haplogroup predictor check before it is used: on the same data, the prediction error rate for the key branches must not grow.</p>
+<h2 id="3-countries-regions-and-peoples">3. Countries, regions and peoples <a class="anchor" href="#3-countries-regions-and-peoples" aria-label="Link to section “3. Countries, regions and peoples”">#</a></h2>
+<p><b>FTDNA.</b> A kit's country is the self-reported origin of the earliest known ancestor on the line. Regions FTDNA lists separately (&quot;Russia (Republic of Dagestan)&quot;) are pages of their own and are not part of their parent country. Kits without a country are left out of shares.</p>
+<p><b>YFull.</b> A sample's country and region are ISO codes, its people is the native language from the customer form (ISO 639-3). The codes are matched to FTDNA countries and regions; a region that has its own FTDNA entry takes the sample away from the country, as FTDNA does. A language that matches the sample's country or region is not counted a second time.</p>
+<p><b>The comparable YFull slice.</b> Comparisons with FTDNA use YFull customers only (<code>YF…</code> numbers) and modern samples only: published studies and ancient DNA are sampled differently from customers.</p>
+<h2 id="4-branch-tree-and-shares">4. Branch tree and shares <a class="anchor" href="#4-branch-tree-and-shares" aria-label="Link to section “4. Branch tree and shares”">#</a></h2>
+<p>Shares are <b>cumulative</b>: a branch row includes all kits of its sub-branches. So nested branches never stand side by side as neighbours, and a kit whose test did not go below a node stays on that node with an asterisk (<code>J-M172*</code>).</p>
+<ul>
+<li><b>Y, major branches.</b> A node becomes a major branch when its subtree holds at least 0.4% of the world's kits with a country; chains where the only sub-branch holds almost everything are collapsed.</li>
+<li><b>Y, country tree.</b> Nodes from the dictionary of labelled branches (J1 → Z1842 → CTS1460), cumulative, from 1% of the sample and at least 3 kits; a node whose only shown sub-branch holds ≥ 95% of its kits gives way to it. Up to 30 rows on the page, 14 on the card.</li>
+<li><b>mt.</b> Letter, branch such as <code>H1a</code>, terminal node; the tree goes by groups of one letter.</li>
+<li><b>Small samples.</b> A country with fewer than 50 kits is flagged and left out of findings; below n = 30 a share shows its 95% Wilson interval.</li>
+</ul>
+<h2 id="5-branch-pages">5. Branch pages <a class="anchor" href="#5-branch-pages" aria-label="Link to section “5. Branch pages”">#</a></h2>
+<p>Every branch whose subtree holds at least 50 kits with a country has a page: currently 4,297 Y and 1,182 mt branches. Chains of equivalent nodes, where the only sub-branch holds ≥ 99% of the kits (Y) or ≥ 97% (mt), become one page listing the equivalent names.</p>
+<ul>
+<li><b>Countries and map.</b> The branch's share in each country and the country's share of the branch; a map of shares by country.</li>
+<li><b>Sub-branches as a tree.</b> Sub-branches with pages of their own: every direct one, nested ones from 1% of the branch's kits (at least 3); chains collapse by the same 95% rule, up to 30 rows.</li>
+<li><b>Age.</b> The mean TMRCA estimate of FamilyTreeDNA Discover with its range; next to it YFull (TMRCA and formed, the time the branch split from its parent, 95% intervals) and TheYtree, when their node is matched to the branch. A YFull node is matched to an FTDNA node by name or by a shared SNP.</li>
+<li><b>How the branch grew.</b> For every moment, how many sub-branches already had their common ancestor (Discover for Y, Mitotree for mt), on a log scale. Highlighted is the window where the count multiplied most, with at least 5 sub-branches at its start; the last thousand years are left out, because there the count depends on how many relatives took a test.</li>
+<li><b>Migration path.</b> The FamilyTreeDNA Discover model: a least-cost path between the estimated places of the ancestors.</li>
+<li><b>Ancient samples</b> from excavations in the branch's subtree.</li>
+</ul>
+<h2 id="6-yfull-comparison-neighbours-pairs-kin-across-borders">6. YFull: comparison, neighbours, pairs, kin across borders <a class="anchor" href="#6-yfull-comparison-neighbours-pairs-kin-across-borders" aria-label="Link to section “6. YFull: comparison, neighbours, pairs, kin across borders”">#</a></h2>
+<ul>
+<li><b>Comparison with FTDNA.</b> The comparable YFull slice is laid on the same FTDNA tree nodes as the kits; &quot;agreement&quot; is the cosine similarity of the shares, &quot;divergence&quot; the tree row with the largest difference.</li>
+<li><b>Similar peoples and regions.</b> Jensen–Shannon divergence of major-branch shares; a neighbour is shown at ≥ 80% similarity and at least 150 comparable samples on both sides.</li>
+<li><b>Y × mt pairs.</b> For people with both tests, combinations of paternal and maternal lines against what independence of the lines would give; significance from the hypergeometric tail.</li>
+<li><b>Kin across borders.</b> Young Y branches (common ancestor no older than 500 years, at least two samples) joining people from two countries or regions. A pair's number of shared branches is compared with a random rewiring that keeps each country's number of links (1,000 rounds), so the expectation accounts for how connected a country is abroad overall. Shown are pairs with at least 5 branches, twice the expectation, p ≤ 0.01.</li>
+<li><b>New samples.</b> YFull itself marks recently added samples and drops the mark after a few weeks; the site shows them by country, people and branch.</li>
+</ul>
+<h2 id="7-familytreedna-geographic-projects">7. FamilyTreeDNA geographic projects <a class="anchor" href="#7-familytreedna-geographic-projects" aria-label="Link to section “7. FamilyTreeDNA geographic projects”">#</a></h2>
+<p>Project members themselves turned on showing their ancestor's place on the public project map. One person may be in several projects: their records are merged into one.</p>
+<ul>
+<li><b>Family weight.</b> Records with the same ancestor, branch and point count as one family and together weigh one vote.</li>
+<li><b>Cells.</b> An ancestor's place is rounded to a 1° cell. A branch is drawn in a cell where it has at least 3 people; smaller cells count in the totals and the centre but are not drawn.</li>
+<li><b>Branch share at a place</b> — the branch's votes against the votes of all members in the cell.</li>
+<li><b>Branch centre and 68% radius.</b> The weighted centre of the cells in the part of the world where the branch has most votes (otherwise the diaspora in the Americas moves the centre into the ocean). A vote is weighted by the testing rate: weight = √(median member density / density in its country or region), between 1/5 and 5, so countries that test more do not pull the centre towards themselves. The radius is the distance within which 68% of the weighted votes lie.</li>
+<li><b>Branch out of place.</b> A cell is compared with all members within 300 km around it: a binomial tail for each &quot;cell × branch&quot; pair, Benjamini–Hochberg correction over all pairs, q ≤ 0.05 and at least 3 people. Points shared by many people of different branches are the coordinates of a country or town, not an ancestral place, and are left out.</li>
+<li><b>Ancient against modern.</b> For branches with ancient samples, the distance of each sample from the centre of modern carriers.</li>
+</ul>
+<h2 id="8-ancient-dna-and-cultures">8. Ancient DNA and cultures <a class="anchor" href="#8-ancient-dna-and-cultures" aria-label="Link to section “8. Ancient DNA and cultures”">#</a></h2>
+<p>Y samples come from FamilyTreeDNA Discover, mt samples from Mitotree and YFull. A sample's date is the middle of its dating range. The culture is the Discover entry; different spellings of one culture are merged.</p>
+<p><b>Comparing cultures.</b> Each sample is cut to its ancestor at the chosen tree depth, or to the ancestor whose branch already existed by the chosen year (by Discover ages). A sample whose test did not reach that depth stays on its own branch.</p>
+<ul>
+<li><b>&quot;A → B&quot;</b> — the share of A's samples that have the same branch or a branch under it in B: a shallow sample could belong to any of its sub-branches.</li>
+<li><b>Frequency overlap</b> — the sum of the smaller shares of shared branches; the share of a shallow branch is split among its sub-branches in proportion to their shares in both cultures together.</li>
+</ul>
+<p><b>Culture chains</b> are shown while neighbouring cultures stay at least 10% alike; the numbers in chain texts are checked against the data on every build.</p>
+<h2 id="9-findings">9. Findings <a class="anchor" href="#9-findings" aria-label="Link to section “9. Findings”">#</a></h2>
+<p>Recomputed on every build, for countries with at least 50 kits:</p>
+<ul>
+<li><b>signature branches</b> — a share in the country at least three times the world's, at least 10 kits;</li>
+<li><b>similar countries</b> — Jensen–Shannon divergence of major branches, samples of 100 or more;</li>
+<li><b>single-node clusters</b> — ≥ 10% of the sample and ≥ 20 kits on one node: usually a surname project;</li>
+<li><b>young widespread</b> branches (younger than 2,000 years, in 5 countries or more) and <b>old concentrated</b> ones (older than 4,000 years, ≥ 50% of kits in one country, branches of 200 kits or more);</li>
+<li>the mt-to-Y ratio, diverging paternal and maternal neighbours, disagreements between FTDNA and YFull.</li>
+</ul>
+<h2 id="10-changes">10. Changes <a class="anchor" href="#10-changes" aria-label="Link to section “10. Changes”">#</a></h2>
+<ul>
+<li><b>FTDNA by week.</b> Each new tree release leaves a compact slice: node, parent, kits by country. Slices are matched by the internal node number, so a rename is not a removal plus an addition.</li>
+<li><b>New this month.</b> The difference of two slices at least 30 days apart. A node gone from the newer tree hands its kits to its nearest surviving ancestor, and sums are taken over subtrees: a kit moved into a new sub-branch is not counted as new.</li>
+<li><b>YFull by month.</b> Samples are matched by number, branches by name; a branch that changed its name but kept ≥ 80% of its samples counts as a rename.</li>
+</ul>
+<h2 id="11-limitations">11. Limitations <a class="anchor" href="#11-limitations" aria-label="Link to section “11. Limitations”">#</a></h2>
+<ul>
+<li>These are customers of the companies, not a population: the US, Britain and Scandinavia are over-represented, and the make-up depends on who chose to test.</li>
+<li>Geographic project members chose whether to join and which place to give.</li>
+<li>Ages are model estimates; the sources are calibrated differently, so they are shown side by side rather than averaged.</li>
+<li>YFull and FTDNA nodes are matched by names and SNPs; some YFull nodes have no counterpart and go up to the nearest matched ancestor.</li>
+</ul>
+</div>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-10-29, built 2026-10-31. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

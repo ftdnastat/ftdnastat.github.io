@@ -1,0 +1,13 @@
+{"name":"Marshall Islands","slug":"marshall-islands","n":3,"l1":[
+{"k":"S","v":3}
+],"l2":[
+{"k":"K-M526*","v":3}
+],"tree":[
+{"id":11907,"name":"S-Z33355","label":"S","shown":"S","age":{"mean":-41677,"oldest":-48467,"youngest":-35796},"n":3,"depth":0}
+],"cum":[
+[164,3]
+],"cumN":170,"terminal":[
+["S-BY97781",1],
+["S-FTC173",1],
+["S-FTF34",1]
+]}

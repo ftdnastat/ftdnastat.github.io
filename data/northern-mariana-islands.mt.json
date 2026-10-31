@@ -1,0 +1,22 @@
+{"name":"Northern Mariana Islands","slug":"northern-mariana-islands","n":2,"l1":[
+{"k":"E","v":1},
+{"k":"B","v":1}
+],"l2":[
+{"k":"E1a","v":1},
+{"k":"B4a","v":1}
+],"tree":[
+{"id":5538,"name":"E1a1b","label":"E1a1b","shown":"E1a1b","age":{"mean":-3727,"oldest":-4409,"youngest":-3084},"n":1,"depth":0},
+{"id":8689,"name":"B4a1a1","label":"B4a1a1","shown":"B4a1a1","age":{"mean":-2564,"oldest":-2905,"youngest":-2236},"n":1,"depth":0}
+],"cum":[
+[32,1],
+[33,1],
+[34,1],
+[35,1],
+[36,1],
+[139,1],
+[140,1],
+[143,1]
+],"cumN":772,"terminal":[
+["B4a1a1",1],
+["E1a1b",1]
+]}

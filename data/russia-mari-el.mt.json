@@ -1,0 +1,19 @@
+{"name":"Russia (Republic of Mari El)","slug":"russia-mari-el","n":2,"l1":[
+{"k":"V","v":1},
+{"k":"H","v":1}
+],"l2":[
+{"k":"V13","v":1},
+{"k":"H5","v":1}
+],"tree":[
+{"id":6916,"name":"V13","label":"V13","shown":"V13","age":{"mean":-1696,"oldest":-2126,"youngest":-1289},"n":1,"depth":0},
+{"id":7532,"name":"H5","label":"H5","shown":"H5","age":{"mean":-6410,"oldest":-6469,"youngest":-6351},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[253,1],
+[255,1],
+[738,1],
+[740,1]
+],"cumN":772,"terminal":[
+["H5",1],
+["V13",1]
+]}

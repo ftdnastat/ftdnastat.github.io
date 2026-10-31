@@ -1,0 +1,15 @@
+{"name":"Djibouti","slug":"djibouti","n":1,"l1":[
+{"k":"R","v":1}
+],"l2":[
+{"k":"R0a","v":1}
+],"tree":[
+{"id":6846,"name":"R0a2","label":"R0a2","shown":"R0a2","age":{"mean":-10411,"oldest":-11495,"youngest":-9371},"n":1,"depth":0}
+],"cum":[
+[589,1],
+[590,1],
+[591,1],
+[592,1],
+[593,1]
+],"cumN":772,"terminal":[
+["R0a2",1]
+]}

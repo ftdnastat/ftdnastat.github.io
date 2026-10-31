@@ -1,0 +1,14 @@
+{"name":"Saint Barthélemy","slug":"saint-barthelemy","n":1,"l1":[
+{"k":"T","v":1}
+],"l2":[
+{"k":"T2b","v":1}
+],"tree":[
+{"id":8417,"name":"T2b36","label":"T2b36","shown":"T2b36","age":{"mean":-546,"oldest":-923,"youngest":-194},"n":1,"depth":0}
+],"cum":[
+[615,1],
+[628,1],
+[633,1],
+[635,1]
+],"cumN":772,"terminal":[
+["T2b36",1]
+]}

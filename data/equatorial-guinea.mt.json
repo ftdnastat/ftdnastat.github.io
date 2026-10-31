@@ -1,0 +1,26 @@
+{"name":"Equatorial Guinea","slug":"equatorial-guinea","n":2,"l1":[
+{"k":"L","v":1},
+{"k":"K","v":1}
+],"l2":[
+{"k":"L2a","v":1},
+{"k":"K1a","v":1}
+],"tree":[
+{"id":4642,"name":"L2a1b1","label":"L2a1b1","shown":"L2a1b1","age":{"mean":-7375,"oldest":-8478,"youngest":-6332},"n":1,"depth":0},
+{"id":9588,"name":"K1a1","label":"K1a1","shown":"K1a1","age":{"mean":-8592,"oldest":-9371,"youngest":-7839},"n":1,"depth":0}
+],"cum":[
+[353,1],
+[354,1],
+[355,1],
+[357,1],
+[405,1],
+[432,1],
+[433,1],
+[434,1],
+[435,1],
+[436,1],
+[446,1],
+[447,1]
+],"cumN":772,"terminal":[
+["K1a1",1],
+["L2a1b1",1]
+]}

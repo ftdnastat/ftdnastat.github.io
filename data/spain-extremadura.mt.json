@@ -1,0 +1,24 @@
+{"name":"Spain (Extremadura)","slug":"spain-extremadura","n":3,"l1":[
+{"k":"H","v":2},
+{"k":"C","v":1}
+],"l2":[
+{"k":"C1c","v":1},
+{"k":"H1","v":1},
+{"k":"H1a","v":1}
+],"tree":[
+{"id":7027,"name":"H1","label":"H1","shown":"H1","age":{"mean":-5203,"oldest":-5262,"youngest":-5144},"n":2,"depth":0},
+{"id":7259,"name":"H1ak2","label":"H1ak2","shown":"H1ak2","age":{"mean":-530,"oldest":-1094,"youngest":-22},"n":1,"depth":1},
+{"id":5356,"name":"C1c7","label":"C1c7","shown":"C1c7","age":{"mean":-851,"oldest":-1700,"youngest":-110},"n":1,"depth":0}
+],"cum":[
+[84,1],
+[85,1],
+[96,1],
+[98,1],
+[173,2],
+[181,2],
+[197,1]
+],"cumN":772,"terminal":[
+["C1c7",1],
+["H1",1],
+["H1ak2",1]
+]}

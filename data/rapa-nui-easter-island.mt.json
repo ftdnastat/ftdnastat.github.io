@@ -1,0 +1,16 @@
+{"name":"Rapa Nui (Easter Island)","slug":"rapa-nui-easter-island","n":1,"l1":[
+{"k":"B","v":1}
+],"l2":[
+{"k":"B4a","v":1}
+],"tree":[
+{"id":8725,"name":"B4a1a1c","label":"B4a1a1c","shown":"B4a1a1c","age":{"mean":-813,"oldest":-1094,"youngest":-545},"n":1,"depth":0}
+],"cum":[
+[32,1],
+[33,1],
+[34,1],
+[35,1],
+[36,1],
+[41,1]
+],"cumN":772,"terminal":[
+["B4a1a1c",1]
+]}

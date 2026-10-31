@@ -1,0 +1,13 @@
+{"name":"Monaco","slug":"monaco","n":1,"l1":[
+{"k":"H","v":1}
+],"l2":[
+{"k":"H14b","v":1}
+],"tree":[
+{"id":7814,"name":"H14b1","label":"H14b1","shown":"H14b1","age":{"mean":82,"oldest":-150,"youngest":301},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[218,1],
+[220,1]
+],"cumN":772,"terminal":[
+["H14b1",1]
+]}

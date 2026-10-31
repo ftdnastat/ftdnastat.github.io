@@ -1,0 +1,19 @@
+{"name":"French Polynesia","slug":"french-polynesia","n":2,"l1":[
+{"k":"R","v":2}
+],"l2":[
+{"k":"R-L151*","v":1},
+{"k":"R-U152*","v":1}
+],"tree":[
+{"id":2081,"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4103,"oldest":-4968,"youngest":-3345},"n":2,"depth":0},
+{"id":2188,"name":"R-U152","label":"R1b-U152","shown":"U152","age":{"mean":-2629,"oldest":-3297,"youngest":-2045},"n":1,"depth":1}
+],"cum":[
+[115,2],
+[131,2],
+[132,2],
+[133,2],
+[134,1],
+[145,1]
+],"cumN":170,"terminal":[
+["R-BY1823",1],
+["R-L151",1]
+]}

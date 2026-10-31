@@ -1,0 +1,14 @@
+{"name":"French Guiana","slug":"french-guiana","n":1,"l1":[
+{"k":"E","v":1}
+],"l2":[
+{"k":"E-U174","v":1}
+],"tree":[
+{"id":36436,"name":"E-M191","label":"E-M191","shown":"E-M191","age":{"mean":-3881,"oldest":-4762,"youngest":-3114},"n":1,"depth":0}
+],"cum":[
+[10,1],
+[24,1],
+[25,1],
+[26,1]
+],"cumN":170,"terminal":[
+["E-CTS9106",1]
+]}

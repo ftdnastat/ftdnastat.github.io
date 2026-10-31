@@ -1,0 +1,15 @@
+{"name":"Norfolk Island","slug":"norfolk-island","n":1,"l1":[
+{"k":"I","v":1}
+],"l2":[
+{"k":"I-Z141*","v":1}
+],"tree":[
+{"id":1603,"name":"I-Z59","label":"I1-Z59","shown":"I1-Z59","age":{"mean":-2304,"oldest":-2929,"youngest":-1758},"n":1,"depth":0}
+],"cum":[
+[45,1],
+[51,1],
+[52,1],
+[56,1],
+[57,1]
+],"cumN":170,"terminal":[
+["I-Y345123",1]
+]}

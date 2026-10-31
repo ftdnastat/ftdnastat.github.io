@@ -1,0 +1,14 @@
+{"name":"Norfolk Island","slug":"norfolk-island","n":1,"l1":[
+{"k":"I","v":1}
+],"l2":[
+{"k":"I2c","v":1}
+],"tree":[
+{"id":6363,"name":"I2c","label":"I2c","shown":"I2c","age":{"mean":-3078,"oldest":-3491,"youngest":-2680},"n":1,"depth":0}
+],"cum":[
+[302,1],
+[308,1],
+[309,1],
+[310,1]
+],"cumN":772,"terminal":[
+["I2c",1]
+]}

@@ -1,0 +1,16 @@
+{"name":"Cocos Islands","slug":"cocos-islands","n":1,"l1":[
+{"k":"J","v":1}
+],"l2":[
+{"k":"J-L25*","v":1}
+],"tree":[
+{"id":1708,"name":"J-L25","label":"J2a-L25","shown":"J2a-L25","age":{"mean":-6749,"oldest":-8018,"youngest":-5640},"n":1,"depth":0}
+],"cum":[
+[62,1],
+[63,1],
+[69,1],
+[74,1],
+[75,1],
+[76,1]
+],"cumN":170,"terminal":[
+["J-FTE57549",1]
+]}

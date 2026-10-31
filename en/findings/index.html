@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Findings: distinctive branches and similar countries</title>
+<meta name="description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/findings/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/findings/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/findings/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/findings/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Findings: distinctive branches and similar countries">
+<meta property="og:description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta property="og:url" content="https://ftdnastat.github.io/en/findings/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — FTDNA haplogroup statistics by country and region: stacked bars of Y-DNA macro-haplogroups for Dagestan, Turkey, Ireland and Finland">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Findings: distinctive branches and similar countries">
+<meta name="twitter:description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/findings/" aria-current="page">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/pairs/">Y and mt pairs</a><a href="/en/about/">About the data</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/findings/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>Findings</h1>
+<p>What stands out in the data. Recomputed automatically with every update. Remember: these are FTDNA customers, not whole populations. How it is computed is explained under About the data.</p>
+</div>
+<nav class="toc" aria-label="Contents">
+<details open>
+<summary>Contents</summary>
+<ul>
+<li><a href="#most-distinctive-branches">Most distinctive branches</a></li>
+<li><a href="#young-but-widespread-branches">Young but widespread branches</a></li>
+<li><a href="#ancient-branches-that-stayed-home">Ancient branches that stayed home</a></li>
+<li><a href="#countries-whose-male-and-female-lines-point-different-ways">Countries whose male and female lines point different ways</a></li>
+<li><a href="#who-tests-the-father-and-who-tests-the-mother">Who tests the father and who tests the mother</a></li>
+<li><a href="#the-most-tested-countries-and-regions">The most tested countries and regions</a></li>
+<li><a href="#largest-pile-ups-on-a-single-branch">Largest pile-ups on a single branch</a></li>
+<li><a href="#ancient-dna-a-branch-far-from-home">Ancient DNA: a branch far from home</a></li>
+<li><a href="#ancient-dna-at-the-root-of-living-branches">Ancient DNA: at the root of living branches</a></li>
+<li><a href="#ancient-dna-vanished-lines">Ancient DNA: vanished lines</a></li>
+<li><a href="#ancient-dna-the-oldest-in-the-caucasus">Ancient DNA: the oldest in the Caucasus</a></li>
+<li><a href="#ancient-dna-a-sample-older-than-its-branch">Ancient DNA: a sample older than its branch</a></li>
+<li><a href="#branch-ages-yfull-against-ftdna-discover">Branch ages: YFull against FTDNA Discover</a></li>
+<li><a href="#long-single-lineage-trunks">Long single-lineage trunks</a></li>
+<li><a href="#paternal-and-maternal-lines-are-they-linked-and-how-much-of-">Paternal and maternal lines: are they linked, and how much of it is just geography</a></li>
+<li><a href="#recent-kin-across-borders">Recent kin across borders</a></li>
+<li><a href="#fathers-tell-the-people-apart-mothers-do-not">Fathers tell the people apart, mothers do not</a></li>
+<li><a href="#countries-how-far-paternal-and-maternal-lines-stray-from-the">Countries: how far paternal and maternal lines stray from the world mix</a></li>
+<li><a href="#how-deep-into-the-tree-yfull-samples-and-ftdna-kits-reach">How deep into the tree YFull samples and FTDNA kits reach</a></li>
+<li><a href="#where-the-two-companies-show-a-different-picture-of-a-countr">Where the two companies show a different picture of a country</a></li>
+<li><a href="#blind-spots-a-branch-prominent-at-one-company-and-nearly-abs">Blind spots: a branch prominent at one company and nearly absent at the other</a></li>
+<li><a href="#branch-people">Branch = people</a></li>
+<li><a href="#diversity-of-paternal-lines-by-people">Diversity of paternal lines by people</a></li>
+</ul>
+</details>
+</nav>
+<section>
+<div class="sec-head">
+<h2 id="most-distinctive-branches">Most distinctive branches <a class="anchor" href="#most-distinctive-branches" aria-label="Link to section “Most distinctive branches”">#</a></h2>
+<p>Branches that occur many times more often in one region than worldwide. ×10 means ten times the world share. Branches of at least 20 kits are included.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/chile/">Chile</a> · <b>D1g</b> (mt): <span class="unc" title="95% confidence interval: 12–25%">17.7%<span class="sr-only"> (95% confidence interval: 12–25%)</span></span> ×887 · 25 kits</li>
+<li><a href="/en/c/chile/">Chile</a> · <b>B2i</b> (mt): <span class="unc" title="95% confidence interval: 16–30%">22.0%<span class="sr-only"> (95% confidence interval: 16–30%)</span></span> ×782 · 31 kits</li>
+<li><a href="/en/c/nicaragua/">Nicaragua</a> · <a href="/en/mt-clade/a2w/"><b>A2w</b></a> (mt): <span class="unc" title="95% confidence interval: 30–56%">42.3%<span class="sr-only"> (95% confidence interval: 30–56%)</span></span> ×502 · 22 kits</li>
+<li><a href="/en/c/south-africa/">South Africa</a> · <a href="/en/mt-clade/l0d/"><b>L0d</b></a> (mt): <span class="unc" title="95% confidence interval: 16–25%">20.2%<span class="sr-only"> (95% confidence interval: 16–25%)</span></span> ×446 · 53 kits</li>
+<li><a href="/en/c/japan/">Japan</a> · <b>M7a</b> (mt): <span class="unc" title="95% confidence interval: 6–12%">8.4%<span class="sr-only"> (95% confidence interval: 6–12%)</span></span> ×380 · 25 kits</li>
+</ul>
+<details>
+<summary>25 more</summary>
+<ul class="plain">
+<li><a href="/en/c/philippines/">Philippines</a> · <b>E1a</b> (mt): <span class="unc" title="95% confidence interval: 8–18%">12.2%<span class="sr-only"> (95% confidence interval: 8–18%)</span></span> ×376 · 23 kits</li>
+<li><a href="/en/c/colombia/">Colombia</a> · <a href="/en/mt-clade/b2d/"><b>B2d</b></a> (mt): <span class="unc" title="95% confidence interval: 20–32%">25.7%<span class="sr-only"> (95% confidence interval: 20–32%)</span></span> ×369 · 55 kits</li>
+<li><a href="/en/c/new-zealand/">New Zealand</a> · <a href="/en/mt-clade/b4a/"><b>B4a</b></a> (mt): <span class="unc" title="95% confidence interval: 35–54%">44.2%<span class="sr-only"> (95% confidence interval: 35–54%)</span></span> ×253 · 46 kits</li>
+<li><a href="/en/c/japan/">Japan</a> · <b>D4a</b> (mt): <span class="unc" title="95% confidence interval: 5–11%">7.1%<span class="sr-only"> (95% confidence interval: 5–11%)</span></span> ×246 · 21 kits</li>
+<li><a href="/en/c/philippines/">Philippines</a> · <a href="/en/mt-clade/m7c/"><b>M7c</b></a> (mt): <span class="unc" title="95% confidence interval: 9–18%">12.8%<span class="sr-only"> (95% confidence interval: 9–18%)</span></span> ×240 · 24 kits</li>
+<li><a href="/en/c/japan/">Japan</a> · <a href="/en/mt-clade/d4e/"><b>D4e</b></a> (mt): <span class="unc" title="95% confidence interval: 5–11%">7.4%<span class="sr-only"> (95% confidence interval: 5–11%)</span></span> ×205 · 22 kits</li>
+<li><a href="/en/c/japan/">Japan</a> · <a href="/en/mt-clade/d4b/"><b>D4b</b></a> (mt): <span class="unc" title="95% confidence interval: 6–12%">8.1%<span class="sr-only"> (95% confidence interval: 6–12%)</span></span> ×196 · 24 kits</li>
+<li><a href="/en/c/puerto-rico/">Puerto Rico</a> · <a href="/en/mt-clade/a2z/"><b>A2z</b></a> (mt): <span class="unc" title="95% confidence interval: 6–10%">7.5%<span class="sr-only"> (95% confidence interval: 6–10%)</span></span> ×178 · 47 kits</li>
+<li><a href="/en/c/puerto-rico/">Puerto Rico</a> · <a href="/en/mt-clade/a2k/"><b>A2k</b></a> (mt): <span class="unc" title="95% confidence interval: 8–12%">9.8%<span class="sr-only"> (95% confidence interval: 8–12%)</span></span> ×178 · 61 kits</li>
+<li><a href="/en/c/canada-first-nations/">Canada (First Nations)</a> · <a href="/en/clade/c-m217/"><b>C-M217</b></a> <small>C2</small> (Y): <span class="unc" title="95% confidence interval: 63–86%">76.0%<span class="sr-only"> (95% confidence interval: 63–86%)</span></span> ×177 · 38 kits</li>
+<li><a href="/en/c/colombia/">Colombia</a> · <a href="/en/mt-clade/a2w/"><b>A2w</b></a> (mt): <span class="unc" title="95% confidence interval: 10–19%">14.0%<span class="sr-only"> (95% confidence interval: 10–19%)</span></span> ×166 · 30 kits</li>
+<li><a href="/en/c/russia-ingushetia/">Russia (Republic of Ingushetia)</a> · <a href="/en/clade/j-z7675/"><b>J-Z7675</b></a> (Y): <span class="unc" title="95% confidence interval: 52–70%">61.3%<span class="sr-only"> (95% confidence interval: 52–70%)</span></span> ×152 · 73 kits</li>
+<li><a href="/en/c/china/">China</a> · <a href="/en/mt-clade/m7b1a/"><b>M7b</b></a> (mt): <span class="unc" title="95% confidence interval: 5–11%">7.7%<span class="sr-only"> (95% confidence interval: 5–11%)</span></span> ×149 · 24 kits</li>
+<li><a href="/en/c/taiwan/">Taiwan, Province of China</a> · <a href="/en/clade/o-m324/"><b>O-M324</b></a> (Y): <span class="unc" title="95% confidence interval: 48–67%">57.9%<span class="sr-only"> (95% confidence interval: 48–67%)</span></span> ×139 · 55 kits</li>
+<li><a href="/en/c/panama/">Panama</a> · <a href="/en/clade/q-m3/"><b>Q-M3</b></a> <small>Q-M3</small> (Y): <span class="unc" title="95% confidence interval: 52–75%">64.1%<span class="sr-only"> (95% confidence interval: 52–75%)</span></span> ×129 · 41 kits</li>
+<li><a href="/en/c/india/">India</a> · <a href="/en/mt-clade/m5a/"><b>M5a</b></a> (mt): <span class="unc" title="95% confidence interval: 3–8%">5.3%<span class="sr-only"> (95% confidence interval: 3–8%)</span></span> ×127 · 20 kits</li>
+<li><a href="/en/c/mongolia/">Mongolia</a> · <a href="/en/clade/c-m217/"><b>C-M217</b></a> <small>C2</small> (Y): <span class="unc" title="95% confidence interval: 45–54%">49.3%<span class="sr-only"> (95% confidence interval: 45–54%)</span></span> ×115 · 224 kits</li>
+<li><a href="/en/c/russia-dagestan/">Russia (Republic of Dagestan)</a> · <a href="/en/clade/j-z1842/"><b>J-Z1842</b></a> <small>J1-Z1842</small> (Y): <span class="unc" title="95% confidence interval: 50–56%">52.7%<span class="sr-only"> (95% confidence interval: 50–56%)</span></span> ×107 · 550 kits</li>
+<li><a href="/en/c/italy-aosta-valley/">Orstkhoy (reported as Italy · Aosta Valley)</a> · <a href="/en/clade/l-m22/"><b>L-M22</b></a> <small>L-M22</small> (Y): <span class="unc" title="95% confidence interval: 52–66%">58.9%<span class="sr-only"> (95% confidence interval: 52–66%)</span></span> ×103 · 113 kits</li>
+<li><a href="/en/c/peru/">Peru</a> · <a href="/en/mt-clade/b2/"><b>B2</b></a> (mt): <span class="unc" title="95% confidence interval: 17–35%">24.7%<span class="sr-only"> (95% confidence interval: 17–35%)</span></span> ×99 · 21 kits</li>
+<li><a href="/en/c/china/">China</a> · <a href="/en/clade/o-m324/"><b>O-M324</b></a> (Y): <span class="unc" title="95% confidence interval: 38–43%">40.5%<span class="sr-only"> (95% confidence interval: 38–43%)</span></span> ×97 · 434 kits</li>
+<li><a href="/en/c/china/">China</a> · <a href="/en/clade/o-m122/"><b>O-M122</b></a> <small>O2</small> (Y): <span class="unc" title="95% confidence interval: 42–48%">45.4%<span class="sr-only"> (95% confidence interval: 42–48%)</span></span> ×96 · 487 kits</li>
+<li><a href="/en/c/kazakhstan/">Kazakhstan</a> · <a href="/en/clade/c-m217/"><b>C-M217</b></a> <small>C2</small> (Y): <span class="unc" title="95% confidence interval: 36–43%">39.6%<span class="sr-only"> (95% confidence interval: 36–43%)</span></span> ×92 · 296 kits</li>
+<li><a href="/en/c/mongolia/">Mongolia</a> · <a href="/en/clade/c-m216/"><b>C-M216</b></a> <small>C</small> (Y): <span class="unc" title="95% confidence interval: 52–61%">56.8%<span class="sr-only"> (95% confidence interval: 52–61%)</span></span> ×89 · 258 kits</li>
+<li><a href="/en/c/taiwan/">Taiwan, Province of China</a> · <a href="/en/clade/o-m175/"><b>O-M175</b></a> <small>O</small> (Y): <span class="unc" title="95% confidence interval: 79–93%">87.4%<span class="sr-only"> (95% confidence interval: 79–93%)</span></span> ×88 · 83 kits</li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="young-but-widespread-branches">Young but widespread branches <a class="anchor" href="#young-but-widespread-branches" aria-label="Link to section “Young but widespread branches”">#</a></h2>
+<p>The branch's common ancestor lived less than 2,000 years ago, yet the branch already makes up 1% or more in 5 or more countries (each with 100+ kits). This is what a recent expansion, a diaspora, or mistakes in the reported ancestral country look like.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/j-fgc1/"><b>J-FGC1</b></a>: 1,800 years <span class="dim">(1,600–2,100)</span> · 1,478 kits · 17 countries · <a href="/en/c/saudi-arabia/">Saudi Arabia</a>, <a href="/en/c/iraq/">Iraq</a>, <a href="/en/c/kuwait/">Kuwait</a>, <a href="/en/c/united-arab-emirates/">United Arab Emirates</a>, <a href="/en/c/syrian-arab-republic/">Syrian Arab Republic</a>, <a href="/en/c/iran/">Iran</a>, <a href="/en/c/bahrain/">Bahrain</a>, <a href="/en/c/qatar/">Qatar</a></li>
+<li><a href="/en/clade/j-fgc2/"><b>J-FGC2</b></a>: 1,500 years <span class="dim">(1,300–1,800)</span> · 1,129 kits · 15 countries · <a href="/en/c/saudi-arabia/">Saudi Arabia</a>, <a href="/en/c/iraq/">Iraq</a>, <a href="/en/c/kuwait/">Kuwait</a>, <a href="/en/c/united-arab-emirates/">United Arab Emirates</a>, <a href="/en/c/syrian-arab-republic/">Syrian Arab Republic</a>, <a href="/en/c/iran/">Iran</a>, <a href="/en/c/bahrain/">Bahrain</a>, <a href="/en/c/qatar/">Qatar</a></li>
+<li><a href="/en/clade/r-df105/"><b>R-DF105</b></a>: 1,800 years <span class="dim">(1,600–2,100)</span> · 4,799 kits · 10 countries · <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ireland/">Ireland</a>, <a href="/en/c/scotland/">Scotland</a>, <a href="/en/c/united-kingdom/">United Kingdom</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/northern-ireland/">Northern Ireland</a>, <a href="/en/c/australia/">Australia</a>, <a href="/en/c/iceland/">Iceland</a></li>
+<li><a href="/en/clade/j-fgc7/"><b>J-FGC7</b></a>: 2,000 years <span class="dim">(1,700–2,300)</span> · 1,161 kits · 10 countries · <a href="/en/c/saudi-arabia/">Saudi Arabia</a>, <a href="/en/c/iraq/">Iraq</a>, <a href="/en/c/kuwait/">Kuwait</a>, <a href="/en/c/united-arab-emirates/">United Arab Emirates</a>, <a href="/en/c/iran/">Iran</a>, <a href="/en/c/bahrain/">Bahrain</a>, <a href="/en/c/qatar/">Qatar</a>, <a href="/en/c/morocco/">Morocco</a></li>
+<li><a href="/en/clade/r-l1065/"><b>R-L1065</b></a>: 1,800 years <span class="dim">(1,600–2,100)</span> · 2,513 kits · 9 countries · <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ireland/">Ireland</a>, <a href="/en/c/scotland/">Scotland</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/northern-ireland/">Northern Ireland</a>, <a href="/en/c/australia/">Australia</a>, <a href="/en/c/south-africa/">South Africa</a>, <a href="/en/c/jamaica/">Jamaica</a></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/clade/r-s744/"><b>R-S744</b></a>: 1,700 years <span class="dim">(1,400–1,900)</span> · 1,853 kits · 8 countries · <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ireland/">Ireland</a>, <a href="/en/c/scotland/">Scotland</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/northern-ireland/">Northern Ireland</a>, <a href="/en/c/south-africa/">South Africa</a>, <a href="/en/c/jamaica/">Jamaica</a>, <a href="/en/c/new-zealand/">New Zealand</a></li>
+<li><a href="/en/clade/r-zz87/"><b>R-ZZ87</b></a>: 1,800 years <span class="dim">(1,600–2,000)</span> · 3,177 kits · 7 countries · <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ireland/">Ireland</a>, <a href="/en/c/scotland/">Scotland</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/northern-ireland/">Northern Ireland</a>, <a href="/en/c/australia/">Australia</a>, <a href="/en/c/isle-of-man/">Isle of Man</a></li>
+<li><a href="/en/clade/r-df85/"><b>R-DF85</b></a>: 1,700 years <span class="dim">(1,500–2,000)</span> · 1,475 kits · 5 countries · <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ireland/">Ireland</a>, <a href="/en/c/scotland/">Scotland</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/northern-ireland/">Northern Ireland</a></li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="ancient-branches-that-stayed-home">Ancient branches that stayed home <a class="anchor" href="#ancient-branches-that-stayed-home" aria-label="Link to section “Ancient branches that stayed home”">#</a></h2>
+<p>The branch's common ancestor lived more than 4,000 years ago, yet at least 50% of its kits still come from one country (branches with 200+ kits worldwide). These are lineages that never left home in thousands of years.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/n-cts3103/"><b>N-CTS3103</b></a>: 4,700 years <span class="dim">(4,100–5,400)</span> · 8,984 kits · <a href="/en/c/finland/">Finland</a> <span class="unc" title="95% confidence interval: 67–69%">68%<span class="sr-only"> (95% confidence interval: 67–69%)</span></span></li>
+<li><a href="/en/clade/r-fgc12055/"><b>R-FGC12055</b></a>: 4,400 years <span class="dim">(3,800–5,000)</span> · 2,342 kits · <a href="/en/c/ireland/">Ireland</a> <span class="unc" title="95% confidence interval: 55–59%">57%<span class="sr-only"> (95% confidence interval: 55–59%)</span></span></li>
+<li><a href="/en/clade/j-fgc7638/"><b>J-FGC7638</b></a>: 4,700 years <span class="dim">(4,100–5,300)</span> · 9,208 kits · <a href="/en/c/saudi-arabia/">Saudi Arabia</a> <span class="unc" title="95% confidence interval: 51–53%">52%<span class="sr-only"> (95% confidence interval: 51–53%)</span></span></li>
+<li><a href="/en/clade/r-z2961/"><b>R-Z2961</b></a>: 4,100 years <span class="dim">(3,500–4,700)</span> · 7,689 kits · <a href="/en/c/ireland/">Ireland</a> <span class="unc" title="95% confidence interval: 50–53%">52%<span class="sr-only"> (95% confidence interval: 50–53%)</span></span></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="countries-whose-male-and-female-lines-point-different-ways">Countries whose male and female lines point different ways <a class="anchor" href="#countries-whose-male-and-female-lines-point-different-ways" aria-label="Link to section “Countries whose male and female lines point different ways”">#</a></h2>
+<p>Countries whose five most similar neighbours by the paternal line and by the maternal line barely coincide. The male and female lines have different histories here.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/india/">India</a> · shared 0 · Y: <a href="/en/c/sri-lanka/">Sri Lanka</a>, <a href="/en/c/pakistan/">Pakistan</a>, <a href="/en/c/afghanistan/">Afghanistan</a> · mt: <a href="/en/c/united-arab-emirates/">United Arab Emirates</a>, <a href="/en/c/kuwait/">Kuwait</a>, <a href="/en/c/saudi-arabia/">Saudi Arabia</a></li>
+<li><a href="/en/c/jamaica/">Jamaica</a> · shared 0 · Y: <a href="/en/c/united-states/">United States</a>, <a href="/en/c/ghana/">Ghana</a>, <a href="/en/c/south-africa/">South Africa</a> · mt: <a href="/en/c/dominican-republic/">Dominican Republic</a>, <a href="/en/c/israel/">Israel</a>, <a href="/en/c/brazil/">Brazil</a></li>
+<li><a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> · shared 1 · Y: <a href="/en/c/russia-ingushetia/">Russia (Republic of Ingushetia)</a>, <a href="/en/c/italy-aosta-valley/">Orstkhoy (reported as Italy · Aosta Valley)</a>, <a href="/en/c/russia-dagestan/">Russia (Republic of Dagestan)</a> · mt: <a href="/en/c/turkey/">Turkey</a>, <a href="/en/c/greece/">Greece</a>, <a href="/en/c/italy/">Italy</a></li>
+<li><a href="/en/c/bulgaria/">Bulgaria</a> · shared 1 · Y: <a href="/en/c/greece/">Greece</a>, <a href="/en/c/ukraine/">Ukraine</a>, <a href="/en/c/hungary/">Hungary</a> · mt: <a href="/en/c/italy/">Italy</a>, <a href="/en/c/greece/">Greece</a>, <a href="/en/c/czech-republic/">Czech Republic</a></li>
+<li><a href="/en/c/croatia/">Croatia</a> · shared 1 · Y: <a href="/en/c/bosnia-and-herzegovina/">Bosnia and Herzegovina</a>, <a href="/en/c/serbia/">Serbia</a>, <a href="/en/c/slovenia/">Slovenia</a> · mt: <a href="/en/c/czech-republic/">Czech Republic</a>, <a href="/en/c/poland/">Poland</a>, <a href="/en/c/hungary/">Hungary</a></li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/c/morocco/">Morocco</a> · shared 1 · Y: <a href="/en/c/algeria/">Algeria</a>, <a href="/en/c/tunisia/">Tunisia</a>, <a href="/en/c/libya/">Libya</a> · mt: <a href="/en/c/algeria/">Algeria</a>, <a href="/en/c/portugal/">Portugal</a>, <a href="/en/c/spain/">Spain</a></li>
+<li><a href="/en/c/egypt/">Egypt</a> · shared 1 · Y: <a href="/en/c/palestinian-territory/">Palestinian Territory</a>, <a href="/en/c/syrian-arab-republic/">Syrian Arab Republic</a>, <a href="/en/c/iraq/">Iraq</a> · mt: <a href="/en/c/israel/">Israel</a>, <a href="/en/c/saudi-arabia/">Saudi Arabia</a>, <a href="/en/c/algeria/">Algeria</a></li>
+<li><a href="/en/c/algeria/">Algeria</a> · shared 1 · Y: <a href="/en/c/morocco/">Morocco</a>, <a href="/en/c/tunisia/">Tunisia</a>, <a href="/en/c/saudi-arabia/">Saudi Arabia</a> · mt: <a href="/en/c/morocco/">Morocco</a>, <a href="/en/c/portugal/">Portugal</a>, <a href="/en/c/italy/">Italy</a></li>
+<li><a href="/en/c/south-africa/">South Africa</a> · shared 1 · Y: <a href="/en/c/united-states/">United States</a>, <a href="/en/c/canada/">Canada</a>, <a href="/en/c/belgium/">Belgium</a> · mt: <a href="/en/c/united-states/">United States</a>, <a href="/en/c/united-states-native-american/">United States (Native American)</a>, <a href="/en/c/dominican-republic/">Dominican Republic</a></li>
+<li><a href="/en/c/israel/">Israel</a> · shared 1 · Y: <a href="/en/c/romania/">Romania</a>, <a href="/en/c/iran/">Iran</a>, <a href="/en/c/iraq/">Iraq</a> · mt: <a href="/en/c/egypt/">Egypt</a>, <a href="/en/c/portugal/">Portugal</a>, <a href="/en/c/united-states/">United States</a></li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="who-tests-the-father-and-who-tests-the-mother">Who tests the father and who tests the mother <a class="anchor" href="#who-tests-the-father-and-who-tests-the-mother" aria-label="Link to section “Who tests the father and who tests the mother”">#</a></h2>
+<p>mtDNA kits per one Y-DNA kit. 1 means equal numbers, 0.1 means almost only the paternal line is tested. Countries with 150+ kits in each tree.</p>
+</div>
+<div class="two">
+<div>
+<ul class="plain">
+<li><a href="/en/c/united-states-native-american/">United States (Native American)</a> <span class="mono">1.28</span> <small>2,352 / 1,833</small></li>
+<li><a href="/en/c/canada/">Canada</a> <span class="mono">1.28</span> <small>2,118 / 1,658</small></li>
+<li><a href="/en/c/south-africa/">South Africa</a> <span class="mono">1.13</span> <small>263 / 233</small></li>
+<li><a href="/en/c/puerto-rico/">Puerto Rico</a> <span class="mono">1.05</span> <small>625 / 596</small></li>
+<li><a href="/en/c/australia/">Australia</a> <span class="mono">1.04</span> <small>379 / 364</small></li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/c/cuba/">Cuba</a> <span class="mono">1.01</span> <small>218 / 216</small></li>
+<li><a href="/en/c/norway/">Norway</a> <span class="mono">0.85</span> <small>3,859 / 4,562</small></li>
+<li><a href="/en/c/estonia/">Estonia</a> <span class="mono">0.84</span> <small>245 / 293</small></li>
+<li><a href="/en/c/austria/">Austria</a> <span class="mono">0.79</span> <small>857 / 1,085</small></li>
+<li><a href="/en/c/mexico/">Mexico</a> <span class="mono">0.78</span> <small>1,799 / 2,296</small></li>
+</ul>
+</details>
+</div>
+<div>
+<ul class="plain">
+<li><a href="/en/c/saudi-arabia/">Saudi Arabia</a> <span class="mono">0.07</span> <small>812 / 12,030</small></li>
+<li><a href="/en/c/kuwait/">Kuwait</a> <span class="mono">0.07</span> <small>157 / 2,266</small></li>
+<li><a href="/en/c/united-arab-emirates/">United Arab Emirates</a> <span class="mono">0.12</span> <small>167 / 1,367</small></li>
+<li><a href="/en/c/armenia/">Armenia</a> <span class="mono">0.19</span> <small>224 / 1,180</small></li>
+<li><a href="/en/c/northern-ireland/">Northern Ireland</a> <span class="mono">0.21</span> <small>614 / 2,981</small></li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/c/lebanon/">Lebanon</a> <span class="mono">0.23</span> <small>155 / 672</small></li>
+<li><a href="/en/c/iran/">Iran</a> <span class="mono">0.23</span> <small>177 / 758</small></li>
+<li><a href="/en/c/india/">India</a> <span class="mono">0.25</span> <small>374 / 1,485</small></li>
+<li><a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> <span class="mono">0.27</span> <small>463 / 1,706</small></li>
+<li><a href="/en/c/china/">China</a> <span class="mono">0.29</span> <small>310 / 1,072</small></li>
+</ul>
+</details>
+</div>
+</div>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="the-most-tested-countries-and-regions">The most tested countries and regions <a class="anchor" href="#the-most-tested-countries-and-regions" aria-label="Link to section “The most tested countries and regions”">#</a></h2>
+<p>FTDNA kits with a country per 100,000 men; population from the UN, the 2021 Russian census and Wikidata. A kit's country is the ancestor's homeland, so countries of emigration lead: their descendants in the US and Canada test more than anyone. Entities from 50 kits and 50 thousand men; in brackets, kits / men.</p>
+</div>
+<div class="two">
+<div>
+<h3>Countries</h3>
+<ul class="plain">
+<li><a href="/en/c/ireland/">Ireland</a> <span class="mono">867</span> <small>(22,307 / 2,572,588)</small></li>
+<li><a href="/en/c/scotland/">Scotland</a> <span class="mono">537</span> <small>(14,281 / 2,660,732)</small></li>
+<li><a href="/en/c/finland/">Finland</a> <span class="mono">368</span> <small>(10,175 / 2,768,017)</small></li>
+<li><a href="/en/c/northern-ireland/">Northern Ireland</a> <span class="mono">318</span> <small>(2,981 / 936,945)</small></li>
+<li><a href="/en/c/sweden/">Sweden</a> <span class="mono">230</span> <small>(12,216 / 5,313,529)</small></li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/c/norway/">Norway</a> <span class="mono">164</span> <small>(4,562 / 2,780,922)</small></li>
+<li><a href="/en/c/wales/">Wales</a> <span class="mono">143</span> <small>(2,203 / 1,541,705)</small></li>
+<li><a href="/en/c/lithuania/">Lithuania</a> <span class="mono">139</span> <small>(1,864 / 1,345,803)</small></li>
+<li><a href="/en/c/iceland/">Iceland</a> <span class="mono">99.8</span> <small>(198 / 198,429)</small></li>
+<li><a href="/en/c/england/">England</a> <span class="mono">99.6</span> <small>(28,000 / 28,113,456)</small></li>
+</ul>
+</details>
+</div>
+<div>
+<h3>Regions</h3>
+<ul class="plain">
+<li><a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> <span class="mono">225</span> <small>(1,706 / 757,229)</small></li>
+<li><a href="/en/c/russia-adygea/">Russia (Republic of Adygea)</a> <span class="mono">175</span> <small>(408 / 232,796)</small></li>
+<li><a href="/en/c/russia-dagestan/">Russia (Republic of Dagestan)</a> <span class="mono">66.5</span> <small>(1,044 / 1,569,899)</small></li>
+<li><a href="/en/c/portugal-azores/">Portugal (Azores)</a> <span class="mono">52.4</span> <small>(59 / 112,631)</small></li>
+<li><a href="/en/c/russia-mordovia/">Russia (Republic of Mordovia)</a> <span class="mono">47.1</span> <small>(171 / 363,105)</small></li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/c/russia-ingushetia/">Russia (Republic of Ingushetia)</a> <span class="mono">46.9</span> <small>(119 / 253,561)</small></li>
+<li><a href="/en/c/russia-karelia/">Russia (Republic of Karelia)</a> <span class="mono">46.0</span> <small>(110 / 238,996)</small></li>
+<li><a href="/en/c/russia-chuvashia/">Russia (Republic of Chuvashia)</a> <span class="mono">38.9</span> <small>(214 / 549,868)</small></li>
+<li><a href="/en/c/russia-karachay-cherkessia/">Russia (Republic of Karachay-Cherkessia)</a> <span class="mono">34.3</span> <small>(76 / 221,252)</small></li>
+<li><a href="/en/c/russia-kabardino-balkaria/">Russia (Republic of Kabardino-Balkaria)</a> <span class="mono">19.6</span> <small>(84 / 429,062)</small></li>
+</ul>
+</details>
+</div>
+</div>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="largest-pile-ups-on-a-single-branch">Largest pile-ups on a single branch <a class="anchor" href="#largest-pile-ups-on-a-single-branch" aria-label="Link to section “Largest pile-ups on a single branch”">#</a></h2>
+<p>Cases where a single finest branch gathers a large share of a region's kits. Usually one surname or clan project.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/colombia/">Colombia</a> · <a href="/en/mt-clade/b2d/"><b>B2d</b></a> (mt): <span class="unc" title="95% confidence interval: 20–32%">25.7%<span class="sr-only"> (95% confidence interval: 20–32%)</span></span> · 55 kits</li>
+<li><a href="/en/c/puerto-rico/">Puerto Rico</a> · <a href="/en/mt-clade/c1b2/"><b>C1b2</b></a> (mt): <span class="unc" title="95% confidence interval: 14–20%">17.1%<span class="sr-only"> (95% confidence interval: 14–20%)</span></span> · 107 kits</li>
+<li><a href="/en/c/belarus/">Belarus</a> · <a href="/en/mt-clade/k1a1b1a/"><b>K1a1b1a</b></a> (mt): <span class="unc" title="95% confidence interval: 9–14%">11.2%<span class="sr-only"> (95% confidence interval: 9–14%)</span></span> · 83 kits</li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<div class="eyebrow">Discover</div>
+<h2 id="ancient-dna-a-branch-far-from-home">Ancient DNA: a branch far from home <a class="anchor" href="#ancient-dna-a-branch-far-from-home" aria-label="Link to section “Ancient DNA: a branch far from home”">#</a></h2>
+<p>An ancient sample found where its branch is all but absent today: at least 60% of its living carriers sit in one other region of the world. Branches with 40+ kits. “?” means Discover is unsure of the sample's place on the tree.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/n-l708/"><b>N-F1419</b></a>: today 9,158 kits: <a href="/en/c/finland/">Finland</a> 6,087, <a href="/en/c/sweden/">Sweden</a> 837, <a href="/en/c/russian-federation/">Russian Federation</a> 595 · in antiquity: <a href="/en/culture/yumin/">Yumin</a>, <a href="/en/c/china/">China</a>, 6,906 BCE – 5,550 BCE ×5; <a href="/en/culture/sitai/">Sitai</a>, <a href="/en/c/china/">China</a>, 5,745 BCE ×4</li>
+<li><a href="/en/clade/e-fgc79645/"><b>E-FGC79645</b></a>: today 408 kits: <a href="/en/c/saudi-arabia/">Saudi Arabia</a> 313, <a href="/en/c/kuwait/">Kuwait</a> 52, <a href="/en/c/yemen/">Yemen</a> 23 · in antiquity: <a href="/en/culture/bronze-age-caucasian/">Bronze Age Caucasian</a>, <a href="/en/c/armenia/">Armenia</a>, 1,407 BCE; <a href="/en/culture/lchashen-metsamor/">Lchashen–Metsamor culture</a>, <a href="/en/c/armenia/">Armenia</a>, 1,370 BCE – 1,368 BCE ×2; <a href="/en/culture/iron-age-caucasian/">Iron Age Caucasian</a>, <a href="/en/c/armenia/">Armenia</a>, 75 BCE</li>
+<li><a href="/en/clade/q-yp3953/"><b>Q-YP3953</b></a>: today 63 kits: <a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> 57, <a href="/en/c/russian-federation/">Russian Federation</a> 3, <a href="/en/c/spain/">Spain</a> 1 · in antiquity: <a href="/en/culture/iron-age-central-asian/">Iron Age Central Asian</a>, <a href="/en/c/china/">China</a>, 565 BCE ×3; <a href="/en/culture/iron-age-chinese/">Iron Age Chinese</a>, <a href="/en/c/china/">China</a>, 500 BCE</li>
+<li><a href="/en/clade/n-p189/"><b>N-FGC28421</b></a>: today 48 kits: <a href="/en/c/serbia/">Serbia</a> 23, <a href="/en/c/bosnia-and-herzegovina/">Bosnia and Herzegovina</a> 5, <a href="/en/c/croatia/">Croatia</a> 4 · in antiquity: <a href="/en/culture/bronze-age-central-asian/">Bronze Age Central Asian</a>, <a href="/en/c/kazakhstan/">Kazakhstan</a>, 2,378 BCE – 1,854 BCE ×3; <a href="/en/culture/kushan/">Kushan Empire</a>, <a href="/en/c/uzbekistan/">Uzbekistan</a>, 1 BCE</li>
+<li><a href="/en/clade/c-f3830/"><b>C-F3830</b></a>: today 60 kits: <a href="/en/c/kazakhstan/">Kazakhstan</a> 35, <a href="/en/c/poland/">Poland</a> 3, <a href="/en/c/kyrgyzstan/">Kyrgyzstan</a> 3 · in antiquity: <a href="/en/culture/avar/">Avars</a>, <a href="/en/c/austria/">Austria</a>, 700 CE ×58</li>
+</ul>
+<details>
+<summary>5 more</summary>
+<ul class="plain">
+<li><a href="/en/clade/n-p189/"><b>N-P189</b></a>: today 52 kits: <a href="/en/c/serbia/">Serbia</a> 23, <a href="/en/c/bosnia-and-herzegovina/">Bosnia and Herzegovina</a> 5, <a href="/en/c/croatia/">Croatia</a> 4 · in antiquity: <a href="/en/culture/neolithic-central-asian/">Neolithic Central Asian</a>, <a href="/en/c/kazakhstan/">Kazakhstan</a>, 5,350 BCE ×2</li>
+<li><a href="/en/clade/n-l1025/"><b>N-L1025</b></a>: today 1,233 kits: <a href="/en/c/lithuania/">Lithuania</a> 255, <a href="/en/c/poland/">Poland</a> 175, <a href="/en/c/finland/">Finland</a> 154 · in antiquity: <a href="/en/culture/early-slavic/">Slavs, early period</a>, <a href="/en/c/croatia/">Croatia</a>, 790 CE – 795 CE ×2 <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/q-yp4024/"><b>Q-YP4024</b></a>: today 57 kits: <a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> 54, <a href="/en/c/russian-federation/">Russian Federation</a> 2, <a href="/en/c/georgia/">Georgia</a> 1 · in antiquity: <a href="/en/culture/iron-age-central-asian/">Iron Age Central Asian</a>, <a href="/en/c/china/">China</a>, 496 BCE <abbr title="placement on the tree is uncertain">?</abbr>; <a href="/en/culture/polabian-slavic/">Polabian Slavs</a>, <a href="/en/c/germany/">Germany</a>, 1,000 CE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/r-kms133/"><b>R-KMS133</b></a>: today 50 kits: <a href="/en/c/saudi-arabia/">Saudi Arabia</a> 19, <a href="/en/c/kuwait/">Kuwait</a> 8, <a href="/en/c/united-states/">United States</a> 7 · in antiquity: <a href="/en/c/turkmenistan/">Turkmenistan</a>, 852 BCE <abbr title="placement on the tree is uncertain">?</abbr>; <a href="/en/culture/savromo-sarmatian/">Sauromatian culture</a>, <a href="/en/c/kazakhstan/">Kazakhstan</a>, 656 BCE <abbr title="placement on the tree is uncertain">?</abbr>; <a href="/en/culture/medieval-chinese/">Medieval Chinese</a>, <a href="/en/c/china/">China</a>, 1,338 CE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/n-y6058/"><b>N-F3271</b></a>: today 40 kits: <a href="/en/c/kazakhstan/">Kazakhstan</a> 12, <a href="/en/c/uzbekistan/">Uzbekistan</a> 8, <a href="/en/c/turkey/">Turkey</a> 4 · in antiquity: <a href="/en/culture/avar/">Avars</a>, <a href="/en/c/austria/">Austria</a>, 700 CE ×2 <abbr title="placement on the tree is uncertain">?</abbr></li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<div class="eyebrow">Discover</div>
+<h2 id="ancient-dna-at-the-root-of-living-branches">Ancient DNA: at the root of living branches <a class="anchor" href="#ancient-dna-at-the-root-of-living-branches" aria-label="Link to section “Ancient DNA: at the root of living branches”">#</a></h2>
+<p>The sample sits right on the node of a big living branch (1,000+ kits) and is dated within 1,000 years of its common ancestor — one of its first known carriers. “?” means Discover is unsure of the sample's place on the tree.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/r-m269/"><b>R-M269</b></a>: 109,048 kits, common ancestor 4,452 BCE · <a href="/en/culture/eneolithic-steppe/">Eneolithic Steppe</a>, <a href="/en/c/russian-federation/">Russian Federation</a>, 3,714 BCE</li>
+<li><a href="/en/clade/r-l151/"><b>R-L151</b></a>: 100,371 kits, common ancestor 3,024 BCE · <a href="/en/culture/bell-beaker/">Bell Beaker culture</a>, <a href="/en/c/france/">France</a>, 2,500 BCE – 2,453 BCE ×2; <a href="/en/culture/corded-ware/">Corded Ware culture</a>, <a href="/en/c/czech-republic/">Czech Republic</a>, 2,893 BCE – 2,719 BCE ×5 <abbr title="placement on the tree is uncertain">?</abbr> and 11 more</li>
+<li><a href="/en/clade/n-l708/"><b>N-L839</b></a>: 9,157 kits, common ancestor 6,330 BCE · <a href="/en/culture/neolithic-trans-baikal/">Neolithic Trans-Baikal</a>, <a href="/en/c/russian-federation/">Russian Federation</a>, 5,443 BCE</li>
+<li><a href="/en/clade/n-cts3103/"><b>N-M2005</b></a>: 9,034 kits, common ancestor 5,050 BCE · <a href="/en/culture/neolithic-trans-baikal/">Neolithic Trans-Baikal</a>, <a href="/en/c/russian-federation/">Russian Federation</a>, 4,605 BCE</li>
+<li><a href="/en/clade/i-cts4002/"><b>I-S19848</b></a>: 2,813 kits, common ancestor 3,771 BCE · <a href="/en/culture/bronze-age-balkan/">Bronze Age Balkan</a>, <a href="/en/c/bulgaria/">Bulgaria</a>, 2,838 BCE</li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<div class="eyebrow">Discover</div>
+<h2 id="ancient-dna-vanished-lines">Ancient DNA: vanished lines <a class="anchor" href="#ancient-dna-vanished-lines" aria-label="Link to section “Ancient DNA: vanished lines”">#</a></h2>
+<p>A line formed after 3,500 BCE is found among a country's ancient men at 4+ sites and makes up at least 4% of its ancient samples, yet under 0.2% of the country's testers today. Samples with an uncertain place on the tree are left out.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/russian-federation/">Russian Federation</a> · <a href="/en/clade/q-yp3955/"><b>Q-BZ2197</b></a>: 21 of 427 ancient, 16 sites, today 2 of 7,189 kits, 3,583 BCE – 1,981 BCE (<a href="/en/culture/neolithic-cis-baikal/">Neolithic Cis-Baikal</a>, <a href="/en/culture/ust-belaya/">Ust-Belaya</a>, <a href="/en/culture/glazkovo/">Glazkovo culture</a>)</li>
+<li><a href="/en/c/poland/">Poland</a> · <a href="/en/clade/i-l233/"><b>I-L233</b></a>: 13 of 73 ancient, 5 sites, today 3 of 7,390 kits, 1,507 BCE – 1,313 BCE (<a href="/en/culture/trzciniec/">Trzciniec culture</a>)</li>
+<li><a href="/en/c/mongolia/">Mongolia</a> · <a href="/en/clade/q-l330/"><b>Q-BZ181</b></a>: 11 of 78 ancient, 7 sites, today 0 of 454 kits, 2,000 BCE – 5 BCE (<a href="/en/culture/deer-stone-khirgisuur/">Deer Stone-Khirgisuur</a>, <a href="/en/culture/late-xiongnu/">Xiongnu, late period</a>, <a href="/en/culture/bronze-age-central-asian/">Bronze Age Central Asian</a>)</li>
+<li><a href="/en/c/czech-republic/">Czech Republic</a> · <a href="/en/clade/r-pf6287/"><b>R-FTC352</b></a>: 8 of 69 ancient, 5 sites, today 0 of 2,369 kits, 5,250 BCE – 2,655 BCE (<a href="/en/culture/funnel-beaker/">Funnel Beaker culture</a>, <a href="/en/culture/neolithic-central-european/">Neolithic Central European</a>, Chalcolithic Central European)</li>
+<li><a href="/en/c/china/">China</a> · <a href="/en/clade/o-a9459/"><b>O-CTS5308</b></a>: 7 of 134 ancient, 4 sites, today 2 of 1,072 kits, 130 BCE – 1,405 CE (<a href="/en/culture/medieval-tibetan/">Medieval Tibetan</a>, <a href="/en/culture/iron-age-central-asian/">Iron Age Central Asian</a>)</li>
+</ul>
+<details>
+<summary>2 more</summary>
+<ul class="plain">
+<li><a href="/en/c/ukraine/">Ukraine</a> · <a href="/en/clade/i-pf6902/"><b>I-L703</b></a>: 7 of 71 ancient, 4 sites, today 2 of 4,434 kits, 6,676 BCE – 5,056 BCE (<a href="/en/culture/mariupol/">Mariupol culture</a>, <a href="/en/culture/cucuteni-trypillia/">Cucuteni–Trypillia culture</a>, <a href="/en/culture/mesolithic-hunter-gatherer/">Mesolithic Hunter-Gatherer</a>)</li>
+<li><a href="/en/c/mongolia/">Mongolia</a> · <a href="/en/clade/q-f1096/"><b>Q-FT9308</b></a>: 6 of 78 ancient, 5 sites, today 0 of 454 kits, 1,051 BCE – 792 CE (<a href="/en/culture/slab-grave/">Slab-grave culture</a>, <a href="/en/culture/uyghur/">Uyghur Khaganate</a>)</li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<div class="eyebrow">Discover</div>
+<h2 id="ancient-dna-the-oldest-in-the-caucasus">Ancient DNA: the oldest in the Caucasus <a class="anchor" href="#ancient-dna-the-oldest-in-the-caucasus" aria-label="Link to section “Ancient DNA: the oldest in the Caucasus”">#</a></h2>
+<p>The earliest Caucasian sample of every branch with 1,000+ kits. A sample that is the oldest for several nested branches is shown under the narrowest; in grey, the age of the branch's common ancestor. “?” means Discover is unsure of the sample's place on the tree.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/j-m267/"><b>J-M267</b></a> <span class="dim">19k years</span>: Caucasian Hunter-Gatherer, <a href="/en/c/georgia/">Georgia</a>, 11,332 BCE</li>
+<li><a href="/en/clade/j-z529/"><b>J-Z529</b></a> <span class="dim">15k years</span>: <a href="/en/culture/mesolithic-hunter-gatherer/">Mesolithic Hunter-Gatherer</a>, <a href="/en/c/georgia/">Georgia</a>, 7,773 BCE</li>
+<li><a href="/en/clade/j-cts7683/"><b>J-CTS7683</b></a> <span class="dim">19k years</span>: Kotias, <a href="/en/c/georgia/">Georgia</a>, 7,728 BCE</li>
+<li><a href="/en/clade/j-pf5160/"><b>J-PF5160</b></a> <span class="dim">16k years</span>: Neolithic Caucasian, <a href="/en/c/armenia/">Armenia</a>, 5,910 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/j-z1827/"><b>J-Z1827</b></a> <span class="dim">15k years</span>: <a href="/en/culture/shomutepe-shulaveri/">Shulaveri–Shomu culture</a>, <a href="/en/c/azerbaijan/">Azerbaijan</a>, 5,750 BCE</li>
+</ul>
+<details>
+<summary>10 more</summary>
+<ul class="plain">
+<li><a href="/en/clade/r-m207/"><b>R-M207</b></a> <span class="dim">28k years</span>: <a href="/en/culture/shomutepe-shulaveri/">Shulaveri–Shomu culture</a>, <a href="/en/c/georgia/">Georgia</a>, 5,660 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/j-z2227/"><b>J-Z2227</b></a> <span class="dim">15k years</span>: Neolithic Caucasian, <a href="/en/c/armenia/">Armenia</a>, 5,582 BCE</li>
+<li><a href="/en/clade/l-m2357/"><b>L-M2357</b></a> <span class="dim">18k years</span>: <a href="/en/culture/copper-age-caucasian/">Copper Age Caucasian</a>, <a href="/en/c/armenia/">Armenia</a>, 4,206 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/r-l389/"><b>R-L389</b></a> <span class="dim">17k years</span>: <a href="/en/culture/eneolithic-steppe/">Eneolithic Steppe</a>, <a href="/en/c/russia-kabardino-balkaria/">Russia (Republic of Kabardino-Balkaria)</a>, 4,195 BCE</li>
+<li><a href="/en/clade/g-m201/"><b>G-M201</b></a> <span class="dim">28k years</span>: <a href="/en/culture/copper-age-caucasian/">Copper Age Caucasian</a>, <a href="/en/c/azerbaijan/">Azerbaijan</a>, 3,719 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/r-m198/"><b>R-M198</b></a> <span class="dim">8,500 years</span>: <a href="/en/culture/maykop/">Maykop culture</a>, <a href="/en/c/russia-kabardino-balkaria/">Russia (Republic of Kabardino-Balkaria)</a>, 3,495 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/j-z1842/"><b>J-Z1842</b></a> <span class="dim">6,400 years</span>: <a href="/en/culture/bronze-age-caucasian/">Bronze Age Caucasian</a>, <a href="/en/c/georgia/">Georgia</a>, 3,300 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/q-m346/"><b>Q-M346</b></a> <span class="dim">21k years</span>: <a href="/en/culture/maykop/">Maykop culture</a>, <a href="/en/c/russia-kabardino-balkaria/">Russia (Republic of Kabardino-Balkaria)</a>, 3,235 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/g-l156/"><b>G-L156</b></a> <span class="dim">23k years</span>: <a href="/en/culture/kura-araxes/">Kura–Araxes culture</a>, <a href="/en/c/armenia/">Armenia</a>, 3,213 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+<li><a href="/en/clade/j-m241/"><b>J-M241</b></a> <span class="dim">9,500 years</span>: <a href="/en/culture/kura-araxes/">Kura–Araxes culture</a>, <a href="/en/c/georgia/">Georgia</a>, 3,000 BCE <abbr title="placement on the tree is uncertain">?</abbr></li>
+</ul>
+</details>
+</section>
+<section>
+<div class="sec-head">
+<div class="eyebrow">Discover</div>
+<h2 id="ancient-dna-a-sample-older-than-its-branch">Ancient DNA: a sample older than its branch <a class="anchor" href="#ancient-dna-a-sample-older-than-its-branch" aria-label="Link to section “Ancient DNA: a sample older than its branch”">#</a></h2>
+<p>Even the latest possible date of the sample is earlier than the earliest Discover estimate of its parent branch's common ancestor. This points to a dating error, a contaminated sample or a wrong place on the tree. “?” means Discover is unsure of the sample's place on the tree.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/culture/iron-age-central-asian/">Iron Age Central Asian</a>, <a href="/en/c/china/">China</a>, 271 BCE <abbr title="placement on the tree is uncertain">?</abbr> · <a href="/en/clade/c-f5481/"><b>C-FTH935</b></a>: common ancestor of C-FT411734: 1,097 CE, a gap of at least 950 years</li>
+<li><a href="/en/culture/yangshao/">Yangshao culture</a>, <a href="/en/c/china/">China</a>, 4,106 BCE · <a href="/en/clade/q-f1096/"><b>Q-FGC85993</b></a>: common ancestor of Q-Y144860: 1,629 BCE, a gap of at least 800 years</li>
+<li><a href="/en/culture/seima-turbino/">Seima-Turbino culture</a>, <a href="/en/c/russian-federation/">Russian Federation</a>, 2,025 BCE · <a href="/en/clade/q-yp3955/"><b>Q-FTF55436</b></a>: common ancestor of Q-FT131545: 225 BCE, a gap of at least 640 years</li>
+<li><a href="/en/culture/late-argar/">El Argar, late period</a>, <a href="/en/c/spain/">Spain</a>, 1,625 BCE · <a href="/en/clade/r-a7066/"><b>R-FTC604</b></a>: common ancestor of R-BY69029: 119 BCE, a gap of at least 500 years</li>
+<li><a href="/en/culture/iron-age-central-asian/">Iron Age Central Asian</a>, <a href="/en/c/china/">China</a>, 588 BCE · <a href="/en/clade/r-m478/"><b>R-SK2081</b></a>: common ancestor of R-BY40329: 388 CE, a gap of at least 290 years</li>
+</ul>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="branch-ages-yfull-against-ftdna-discover">Branch ages: YFull against FTDNA Discover <a class="anchor" href="#branch-ages-yfull-against-ftdna-discover" aria-label="Link to section “Branch ages: YFull against FTDNA Discover”">#</a></h2>
+<p>Branches with the same name in both trees: 19,012. For each, the age of the common ancestor (TMRCA) estimated by YFull is compared with FTDNA's estimate. On average YFull's estimate is 7% younger; YFull gives a younger age for 67% of branches. For 98% of branches the two estimates stay within each other's margin of error. The date a branch split from its parent (YFull's formed) is not compared here.</p>
+</div>
+<h3>Where the estimates disagree</h3>
+<p>Branches with 100+ YFull samples where the two estimates differ by more than their margins of error allow (the 95% ranges do not overlap).</p>
+<ul class="plain">
+<li><a href="/en/clade/t-y7381/"><b>T-Y7381</b></a>: YFull 1,300 years <small>1,650–950</small> · FTDNA 4,500 years <small>5,232–3,811</small> <span class="dim mono">−72% · n=148</span></li>
+<li><a href="/en/clade/i-l233/"><b>I-L233</b></a>: YFull 2,100 years <small>2,600–1,650</small> · FTDNA 6,600 years <small>7,582–5,698</small> <span class="dim mono">−68.1% · n=171</span></li>
+<li><a href="/en/clade/i-l621/"><b>I-L621</b></a> <small>I2a-L621</small>: YFull 6,400 years <small>7,600–5,300</small> · FTDNA 12k years <small>13,510–10,307</small> <span class="dim mono">−45.8% · n=1,028</span></li>
+<li><a href="/en/clade/r-l1335/"><b>R-L1335</b></a>: YFull 2,700 years <small>3,400–2,200</small> · FTDNA 4,300 years <small>4,968–3,712</small> <span class="dim mono">−37.1% · n=233</span></li>
+<li><a href="/en/clade/i-l161/"><b>I-L161</b></a>: YFull 7,200 years <small>8,200–6,200</small> · FTDNA 11k years <small>12,513–9,479</small> <span class="dim mono">−33.9% · n=179</span></li>
+</ul>
+<details>
+<summary>2 more</summary>
+<ul class="plain">
+<li><a href="/en/clade/q-m378/"><b>Q-M378</b></a>: YFull 9,300 years <small>10,800–7,900</small> · FTDNA 6,200 years <small>7,177–5,389</small> <span class="dim mono">+49.5% · n=168</span></li>
+<li><a href="/en/clade/i-m284/"><b>I-M284</b></a> <small>I2b-M284</small>: YFull 7,100 years <small>8,200–6,000</small> · FTDNA 9,800 years <small>11,223–8,531</small> <span class="dim mono">−27.4% · n=317</span></li>
+</ul>
+</details>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="long-single-lineage-trunks">Long single-lineage trunks <a class="anchor" href="#long-single-lineage-trunks" aria-label="Link to section “Long single-lineage trunks”">#</a></h2>
+<p>Every YFull branch has two dates. The first is when it split from its parent branch. The second is when the common ancestor of its living members lived. In between, the branch ran as a single line: every side branch of that time either died out or has not been found yet. Whether that is thin sampling or a real bottleneck, the data cannot tell. Branches with 50+ samples whose gap exceeds the error margin: 123; 74 of them have a gap of at least 3,000 years, 41 keep it even at the edges of both error ranges. The longest are below; per row: split → common ancestor, the gap and its lower bound from the error ranges.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/clade/a-m32/"><b>A-M32</b></a>: 126k years → 83k years, gap 42,400 years (at least 32,200) <span class="dim mono">n=153</span></li>
+<li><a href="/en/clade/a-m13/"><b>A-M13</b></a> <small>A1b1</small>: 45k years → 11k years, gap 33,300 years (at least 28,600) <span class="dim mono">n=142</span></li>
+<li><a href="/en/clade/e-m132/"><b>E-M132</b></a>: 52k years → 20k years, gap 31,500 years (at least 25,800) <span class="dim mono">n=51</span></li>
+<li><a href="/en/clade/h-m52/"><b>H-M52</b></a>: 39k years → 16k years, gap 22,700 years (at least 18,900) <span class="dim mono">n=89</span></li>
+<li><a href="/en/clade/b-m182/"><b>B-M182</b></a>: 84k years → 59k years, gap 25,700 years (at least 18,500) <span class="dim mono">n=159</span></li>
+</ul>
+<details>
+<summary>7 more</summary>
+<ul class="plain">
+<li><a href="/en/clade/e-m2/"><b>E-M2</b></a> <small>E-M2 (E1b1a)</small>: 40k years → 17k years, gap 22,900 years (at least 18,100) <span class="dim mono">n=714</span></li>
+<li><a href="/en/clade/b-m150/"><b>B-M150</b></a>: 59k years → 38k years, gap 20,900 years (at least 15,200) <span class="dim mono">n=123</span></li>
+<li><a href="/en/clade/q-l275/"><b>Q-L275</b></a>: 29k years → 16k years, gap 13,600 years (at least 9,700) <span class="dim mono">n=193</span></li>
+<li><a href="/en/clade/c-m217/"><b>C-M217</b></a> <small>C2</small>: 49k years → 34k years, gap 14,800 years (at least 9,600) <span class="dim mono">n=378</span></li>
+<li><a href="/en/clade/q-l804/"><b>Q-L804</b></a>: 15k years → 3,200 years, gap 11,600 years (at least 9,400) <span class="dim mono">n=56</span></li>
+<li><a href="/en/clade/q-l527/"><b>Q-L527</b></a>: 16k years → 3,100 years, gap 12,500 years (at least 9,100) <span class="dim mono">n=71</span></li>
+<li><a href="/en/clade/c-m48/"><b>C-M48</b></a> <small>C2-M48</small>: 15k years → 3,700 years, gap 10,500 years (at least 8,500) <span class="dim mono">n=58</span></li>
+</ul>
+</details>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="paternal-and-maternal-lines-are-they-linked-and-how-much-of-">Paternal and maternal lines: are they linked, and how much of it is just geography <a class="anchor" href="#paternal-and-maternal-lines-are-they-linked-and-how-much-of-" aria-label="Link to section “Paternal and maternal lines: are they linked, and how much of it is just geography”">#</a></h2>
+<p>Both lines are known for one person, and they are not independent: knowing the paternal line lets you guess something about the maternal one. The link was measured over 10,630 YFull pairs with a known country (40 countries with 80+ pairs). Knowing only a person's country explains 0% of the whole link between their lines. The region explains even more, 27% (2,389 pairs in 26 regions with 50+ pairs). The finer the geography, the more of the link turns out to be simply “people from the same place”. What remains is structure inside regions, not kinship of the pairs themselves.</p>
+</div>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="recent-kin-across-borders">Recent kin across borders <a class="anchor" href="#recent-kin-across-borders" aria-label="Link to section “Recent kin across borders”">#</a></h2>
+<p>How many young branches of the YFull Y tree (common ancestor no older than 500 years, at least two samples) join customers from two countries or regions, and how many times more often than if each country's links abroad were spread among partners at random. 5,123 such branches in total. Shown are pairs with at least 5 shared branches that occur clearly more often than by chance. This reflects recent migration and shared ancestry, not ethnicity; with small numbers coincidences happen, and much depends on who chose to take a test.</p>
+</div>
+<h3>Countries</h3>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Recent kin across borders · Countries">
+<table class="list pairs kin"><caption class="sr-only">Recent kin across borders · Countries</caption>
+<thead>
+<tr>
+<th scope="col">Pair</th>
+<th scope="col" class="num">shared branches</th>
+<th scope="col" class="num exp">expected</th>
+<th scope="col" class="num">×</th>
+<th scope="col" class="pv">chance?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="pair"><a href="/en/c/saudi-arabia/">Saudi Arabia</a> × <a href="/en/c/kuwait/">Kuwait</a></td>
+<td class="num obs" data-l="shared branches">209</td>
+<td class="num exp" data-l="expected">41.5</td>
+<td class="num ratio">5.0</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-states/">United States</a> × <a href="/en/c/england/">England</a></td>
+<td class="num obs" data-l="shared branches">72</td>
+<td class="num exp" data-l="expected">15.4</td>
+<td class="num ratio">4.7</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-states/">United States</a> × <a href="/en/c/united-kingdom/">United Kingdom</a></td>
+<td class="num obs" data-l="shared branches">71</td>
+<td class="num exp" data-l="expected">18.2</td>
+<td class="num ratio">3.9</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-kingdom/">United Kingdom</a> × <a href="/en/c/england/">England</a></td>
+<td class="num obs" data-l="shared branches">51</td>
+<td class="num exp" data-l="expected">9.6</td>
+<td class="num ratio">5.3</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-states/">United States</a> × <a href="/en/c/scotland/">Scotland</a></td>
+<td class="num obs" data-l="shared branches">48</td>
+<td class="num exp" data-l="expected">11.5</td>
+<td class="num ratio">4.2</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/saudi-arabia/">Saudi Arabia</a> × <a href="/en/c/bahrain/">Bahrain</a></td>
+<td class="num obs" data-l="shared branches">46</td>
+<td class="num exp" data-l="expected">16.3</td>
+<td class="num ratio">2.8</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/kuwait/">Kuwait</a> × <a href="/en/c/qatar/">Qatar</a></td>
+<td class="num obs" data-l="shared branches">43</td>
+<td class="num exp" data-l="expected">14.9</td>
+<td class="num ratio">2.9</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/saudi-arabia/">Saudi Arabia</a> × <a href="/en/c/iraq/">Iraq</a></td>
+<td class="num obs" data-l="shared branches">39</td>
+<td class="num exp" data-l="expected">11.3</td>
+<td class="num ratio">3.5</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/qatar/">Qatar</a> × <a href="/en/c/bahrain/">Bahrain</a></td>
+<td class="num obs" data-l="shared branches">35</td>
+<td class="num exp" data-l="expected">6.0</td>
+<td class="num ratio">5.8</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-states/">United States</a> × <a href="/en/c/ireland/">Ireland</a></td>
+<td class="num obs" data-l="shared branches">34</td>
+<td class="num exp" data-l="expected">10.0</td>
+<td class="num ratio">3.4</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/saudi-arabia/">Saudi Arabia</a> × <a href="/en/c/qatar/">Qatar</a></td>
+<td class="num obs" data-l="shared branches">34</td>
+<td class="num exp" data-l="expected">16.5</td>
+<td class="num ratio">2.1</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/kuwait/">Kuwait</a> × <a href="/en/c/bahrain/">Bahrain</a></td>
+<td class="num obs" data-l="shared branches">33</td>
+<td class="num exp" data-l="expected">14.8</td>
+<td class="num ratio">2.2</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/united-kingdom/">United Kingdom</a> × <a href="/en/c/scotland/">Scotland</a></td>
+<td class="num obs" data-l="shared branches">31</td>
+<td class="num exp" data-l="expected">7.3</td>
+<td class="num ratio">4.2</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/kuwait/">Kuwait</a> × <a href="/en/c/united-arab-emirates/">United Arab Emirates</a></td>
+<td class="num obs" data-l="shared branches">30</td>
+<td class="num exp" data-l="expected">11.5</td>
+<td class="num ratio">2.6</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/c/kuwait/">Kuwait</a> × <a href="/en/c/iraq/">Iraq</a></td>
+<td class="num obs" data-l="shared branches">29</td>
+<td class="num exp" data-l="expected">10.2</td>
+<td class="num ratio">2.8</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Regions</h3>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Recent kin across borders · Regions">
+<table class="list pairs kin"><caption class="sr-only">Recent kin across borders · Regions</caption>
+<thead>
+<tr>
+<th scope="col">Pair</th>
+<th scope="col" class="num">shared branches</th>
+<th scope="col" class="num exp">expected</th>
+<th scope="col" class="num">×</th>
+<th scope="col" class="pv">chance?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="pair"><a href="/en/region/sa-01/"><span lang="en">Ar Riyad</span></a> × <a href="/en/region/sa-05/"><span lang="en">Al Qasim</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">83</td>
+<td class="num exp" data-l="expected">12.4</td>
+<td class="num ratio">6.7</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-01/"><span lang="en">Ar Riyad</span></a> × <a href="/en/region/sa-04/"><span lang="en">Ash Sharqiyah</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">59</td>
+<td class="num exp" data-l="expected">16.3</td>
+<td class="num ratio">3.6</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-01/"><span lang="en">Ar Riyad</span></a> × <a href="/en/region/kw-ku/"><span lang="en">Al Kuwayt (Al Asimah)</span></a></td>
+<td class="num obs" data-l="shared branches">49</td>
+<td class="num exp" data-l="expected">15.6</td>
+<td class="num ratio">3.1</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/kw-ku/"><span lang="en">Al Kuwayt (Al Asimah)</span></a> × <a href="/en/region/kw-ha/"><span lang="en">Hawalli</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">29</td>
+<td class="num exp" data-l="expected">4.7</td>
+<td class="num ratio">6.2</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-04/"><span lang="en">Ash Sharqiyah</span></a> × <a href="/en/region/kw-ku/"><span lang="en">Al Kuwayt (Al Asimah)</span></a></td>
+<td class="num obs" data-l="shared branches">29</td>
+<td class="num exp" data-l="expected">11.1</td>
+<td class="num ratio">2.6</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-01/"><span lang="en">Ar Riyad</span></a> × <a href="/en/region/sa-06/"><span lang="en">Ha'il</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">27</td>
+<td class="num exp" data-l="expected">5.3</td>
+<td class="num ratio">5.1</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-05/"><span lang="en">Al Qasim</span></a> × <a href="/en/region/kw-ku/"><span lang="en">Al Kuwayt (Al Asimah)</span></a></td>
+<td class="num obs" data-l="shared branches">27</td>
+<td class="num exp" data-l="expected">8.7</td>
+<td class="num ratio">3.1</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-05/"><span lang="en">Al Qasim</span></a> × <a href="/en/region/sa-06/"><span lang="en">Ha'il</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">19</td>
+<td class="num exp" data-l="expected">3.0</td>
+<td class="num ratio">6.3</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/sa-02/"><span lang="en">Makkah</span></a> × <a href="/en/region/sa-03/"><span lang="en">Al Madinah</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">18</td>
+<td class="num exp" data-l="expected">1.1</td>
+<td class="num ratio">16.8</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+<tr>
+<td class="pair"><a href="/en/region/kw-ku/"><span lang="en">Al Kuwayt (Al Asimah)</span></a> × <a href="/en/region/kw-mu/"><span lang="en">Mubarak al Kabir</span></a> <small class="dim">same country</small></td>
+<td class="num obs" data-l="shared branches">18</td>
+<td class="num exp" data-l="expected">3.3</td>
+<td class="num ratio">5.5</td>
+<td class="dim pv">not chance <small class="dim mono">p &lt; 0.001</small></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="fathers-tell-the-people-apart-mothers-do-not">Fathers tell the people apart, mothers do not <a class="anchor" href="#fathers-tell-the-people-apart-mothers-do-not" aria-label="Link to section “Fathers tell the people apart, mothers do not”">#</a></h2>
+<p>Do paternal and maternal lines paint the same picture of a people? For each people 40 YFull samples were drawn at random and the number of distinct major branches among them counted, for Y and for mt separately. Percentages are how much that is of the whole world's diversity in FTDNA data. Of 14 peoples the most uniform by mothers keeps 90% of the world's diversity, the most uniform by fathers only 35%: by mothers, peoples can hardly be told apart.</p>
+</div>
+<h3>Most homogeneous by fathers</h3>
+<ul class="plain">
+<li><a href="/en/ethnic/che/">Chechens</a>: by fathers 35% (4.8 branches) · by mothers 95% (26.8) <span class="dim mono">n=818 / 283</span></li>
+<li><a href="/en/ethnic/ady/">Adyghe</a>: by fathers 40% (8.1 branches) · by mothers 98% (28.5) <span class="dim mono">n=145 / 133</span></li>
+<li><a href="/en/ethnic/srp/">Serbs</a>: by fathers 46% (10.5 branches) · by mothers 97% (28.2) <span class="dim mono">n=252 / 141</span></li>
+<li><a href="/en/ethnic/ara/">Arabs</a>: by fathers 54% (10.9 branches) · by mothers 97% (28.0) <span class="dim mono">n=936 / 152</span></li>
+<li><a href="/en/ethnic/swe/">Swedes</a>: by fathers 54% (10.8 branches) · by mothers 94% (25.1) <span class="dim mono">n=133 / 57</span></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/ethnic/fin/">Finns</a>: by fathers 59% (10.7 branches) · by mothers 93% (24.6) <span class="dim mono">n=99 / 82</span></li>
+<li><a href="/en/ethnic/rus/">Russians</a>: by fathers 65% (13.4 branches) · by mothers 96% (27.4) <span class="dim mono">n=513 / 364</span></li>
+<li><a href="/en/ethnic/pol/">Poles</a>: by fathers 69% (13.7 branches) · by mothers 96% (27.4) <span class="dim mono">n=226 / 131</span></li>
+</ul>
+</details>
+<h3>Most diverse by fathers</h3>
+<ul class="plain">
+<li><a href="/en/ethnic/eng/">English</a>: by fathers 97% (28.4 branches) · by mothers 100% (29.7) <span class="dim mono">n=472 / 496</span></li>
+<li><a href="/en/ethnic/fra/">French</a>: by fathers 88% (21.6 branches) · by mothers 90% (24.0) <span class="dim mono">n=42 / 80</span></li>
+<li><a href="/en/ethnic/deu/">Germans</a>: by fathers 86% (21.1 branches) · by mothers 97% (28.0) <span class="dim mono">n=118 / 120</span></li>
+<li><a href="/en/ethnic/hun/">Hungarians</a>: by fathers 78% (17.2 branches) · by mothers 103% (31.6) <span class="dim mono">n=51 / 49</span></li>
+<li><a href="/en/ethnic/spa/">Spaniards</a>: by fathers 77% (17.5 branches) · by mothers 94% (25.9) <span class="dim mono">n=64 / 101</span></li>
+</ul>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="countries-how-far-paternal-and-maternal-lines-stray-from-the">Countries: how far paternal and maternal lines stray from the world mix <a class="anchor" href="#countries-how-far-paternal-and-maternal-lines-stray-from-the" aria-label="Link to section “Countries: how far paternal and maternal lines stray from the world mix”">#</a></h2>
+<p>How far a country's mix of major branches is from the world mix, separately for the paternal and the maternal line. The number is the difference in percent: 0% is the world mix, 100% is nothing in common. FTDNA kits, 49 countries with 150+ kits on each line. In 44 of 49 countries the paternal line is the more distinctive one.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/croatia/">Croatia</a>: by fathers 61% · by mothers 13% <span class="dim mono">Δ +47 · n=226 / 279</span></li>
+<li><a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a>: by fathers 80% · by mothers 37% <span class="dim mono">Δ +44 · n=1,166 / 429</span></li>
+<li><a href="/en/c/finland/">Finland</a>: by fathers 58% · by mothers 16% <span class="dim mono">Δ +41 · n=6,026 / 7,378</span></li>
+<li><a href="/en/c/norway/">Norway</a>: by fathers 44% · by mothers 5% <span class="dim mono">Δ +39 · n=2,044 / 3,702</span></li>
+<li><a href="/en/c/slovenia/">Slovenia</a>: by fathers 55% · by mothers 16% <span class="dim mono">Δ +39 · n=181 / 241</span></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/c/estonia/">Estonia</a>: by fathers 53% · by mothers 16% <span class="dim mono">Δ +37 · n=164 / 241</span></li>
+<li><a href="/en/c/slovakia/">Slovakia</a>: by fathers 43% · by mothers 6% <span class="dim mono">Δ +37 · n=378 / 580</span></li>
+<li><a href="/en/c/lithuania/">Lithuania</a>: by fathers 51% · by mothers 16% <span class="dim mono">Δ +35 · n=685 / 1,052</span></li>
+</ul>
+</details>
+<h3>The rare exceptions: the maternal line is the more distinctive one</h3>
+<ul class="plain">
+<li><a href="/en/c/puerto-rico/">Puerto Rico</a>: by fathers 54% · by mothers 66% <span class="dim mono">Δ −12 · n=164 / 594</span></li>
+<li><a href="/en/c/brazil/">Brazil</a>: by fathers 34% · by mothers 43% <span class="dim mono">Δ −8 · n=247 / 444</span></li>
+<li><a href="/en/c/iran/">Iran</a>: by fathers 58% · by mothers 62% <span class="dim mono">Δ −3 · n=163 / 168</span></li>
+<li><a href="/en/c/kuwait/">Kuwait</a>: by fathers 64% · by mothers 66% <span class="dim mono">Δ −3 · n=741 / 153</span></li>
+<li><a href="/en/c/mexico/">Mexico</a>: by fathers 54% · by mothers 57% <span class="dim mono">Δ −3 · n=1,047 / 1,783</span></li>
+</ul>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="how-deep-into-the-tree-yfull-samples-and-ftdna-kits-reach">How deep into the tree YFull samples and FTDNA kits reach <a class="anchor" href="#how-deep-into-the-tree-yfull-samples-and-ftdna-kits-reach" aria-label="Link to section “How deep into the tree YFull samples and FTDNA kits reach”">#</a></h2>
+<p>YFull samples are placed on the FTDNA tree, so depth can be compared directly. In the typical one of 66 countries a YFull sample sits 37.1 branchings from the root, an FTDNA kit 31.5. 34% of YFull samples reached the finest branch, against 24% of FTDNA kits. That is why the same country looks different at the two companies: YFull's whole-genome tests go deeper. On the maternal line there is no gap: in the typical one of 27 countries the depth differs by only −0.1 branchings, against +4.6 for Y-DNA. Both companies read the whole mitochondrial DNA.</p>
+</div>
+<h3>Largest gap</h3>
+<ul class="plain">
+<li><a href="/en/c/india/">India</a>: 33.8 / 22.5 (+11.4) <span class="dim mono">on leaves 33% / 9% · n=210 / 1,485</span></li>
+<li><a href="/en/c/russian-federation/">Russian Federation</a>: 39.1 / 29.8 (+9.2) <span class="dim mono">on leaves 42% / 18% · n=1,481 / 7,189</span></li>
+<li><a href="/en/c/jordan/">Jordan</a>: 40.3 / 31.8 (+8.5) <span class="dim mono">on leaves 48% / 29% · n=188 / 362</span></li>
+<li><a href="/en/c/sudan/">Sudan</a>: 38.2 / 29.7 (+8.5) <span class="dim mono">on leaves 47% / 28% · n=146 / 409</span></li>
+<li><a href="/en/c/belarus/">Belarus</a>: 39.0 / 30.9 (+8.1) <span class="dim mono">on leaves 40% / 20% · n=328 / 1,717</span></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/c/lithuania/">Lithuania</a>: 39.1 / 31.1 (+8) <span class="dim mono">on leaves 32% / 19% · n=225 / 1,864</span></li>
+<li><a href="/en/c/syrian-arab-republic/">Syrian Arab Republic</a>: 37.8 / 29.8 (+8) <span class="dim mono">on leaves 36% / 30% · n=488 / 914</span></li>
+<li><a href="/en/c/china/">China</a>: 28.2 / 20.5 (+7.7) <span class="dim mono">on leaves 30% / 7% · n=1,396 / 1,072</span></li>
+</ul>
+</details>
+<h3>Nearly equal</h3>
+<ul class="plain">
+<li><a href="/en/c/northern-ireland/">Northern Ireland</a>: 42.4 / 42.0 (+0.4) <span class="dim mono">on leaves 30% / 36% · n=240 / 2,981</span></li>
+<li><a href="/en/c/canada/">Canada</a>: 37.4 / 36.4 (+1) <span class="dim mono">on leaves 26% / 20% · n=147 / 1,658</span></li>
+<li><a href="/en/c/united-states/">United States</a>: 38.7 / 37.4 (+1.3) <span class="dim mono">on leaves 26% / 31% · n=2,583 / 30,845</span></li>
+<li><a href="/en/c/united-arab-emirates/">United Arab Emirates</a>: 39.0 / 36.8 (+2.1) <span class="dim mono">on leaves 41% / 44% · n=662 / 1,367</span></li>
+<li><a href="/en/c/finland/">Finland</a>: 43.8 / 41.3 (+2.5) <span class="dim mono">on leaves 24% / 35% · n=1,294 / 10,175</span></li>
+</ul>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="where-the-two-companies-show-a-different-picture-of-a-countr">Where the two companies show a different picture of a country <a class="anchor" href="#where-the-two-companies-show-a-different-picture-of-a-countr" aria-label="Link to section “Where the two companies show a different picture of a country”">#</a></h2>
+<p>For each country the major-branch shares at FTDNA and YFull were compared (starred branches left out). Part of the difference is just the chance of small samples: it was estimated by comparing two random samples of the same size 120 times, then subtracted. The number in a row is the difference beyond chance, in percent; hover to see the total difference and the chance level. Then the branch that contributes most (FTDNA share → YFull share). 30 countries with 150+ samples at both companies, typical difference beyond chance 2.4%.</p>
+</div>
+<h3>Disagree most</h3>
+<ul class="plain">
+<li><a href="/en/c/scotland/">Scotland</a>: <span class="mono">8.1%</span> <small class="dim mono">observed 10.9% · chance 2.8%</small> · <a href="/en/clade/i-l137/"><b>I-L137</b></a> 5% → 12%</li>
+<li><a href="/en/c/china/">China</a>: <span class="mono">7.1%</span> <small class="dim mono">observed 8.3% · chance 1.2%</small> · <a href="/en/clade/o-m324/"><b>O-M324</b></a> 82% → 57%</li>
+<li><a href="/en/c/ireland/">Ireland</a>: <span class="mono">6.4%</span> <small class="dim mono">observed 9.1% · chance 2.7%</small> · <a href="/en/clade/r-a541/"><b>R-A541</b></a> 14% → 6%</li>
+<li><a href="/en/c/england/">England</a>: <span class="mono">6.4%</span> <small class="dim mono">observed 8.0% · chance 1.7%</small> · <a href="/en/clade/r-z31644/"><b>R-Z31644</b></a> 3% → 7%</li>
+<li><a href="/en/c/russian-federation/">Russian Federation</a>: <span class="mono">5.7%</span> <small class="dim mono">observed 7.5% · chance 1.8%</small> · <a href="/en/clade/r-y2898/"><b>R-Y2898</b></a> 13% → 22%</li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/c/united-arab-emirates/">United Arab Emirates</a>: <span class="mono">4.6%</span> <small class="dim mono">observed 5.9% · chance 1.3%</small> · <a href="/en/clade/t-z709/"><b>T-Z709</b></a> 40% → 19%</li>
+<li><a href="/en/c/bahrain/">Bahrain</a>: <span class="mono">4.1%</span> <small class="dim mono">observed 7.1% · chance 3.1%</small> · <a href="/en/clade/t-z709/"><b>T-Z709</b></a> 25% → 9%</li>
+<li><a href="/en/c/belarus/">Belarus</a>: <span class="mono">4.1%</span> <small class="dim mono">observed 8.8% · chance 4.8%</small> · <a href="/en/clade/j-m92/"><b>J-M92</b></a> <small>J2a-M92</small> 11% → 3%</li>
+</ul>
+</details>
+<h3>Agree</h3>
+<ul class="plain">
+<li><a href="/en/c/oman/">Oman</a>: <span class="mono">-0.8%</span> <small class="dim mono">observed 1.8% · chance 2.6%</small> · <a href="/en/clade/j-fgc2/"><b>J-FGC2</b></a> 44% → 57%</li>
+<li><a href="/en/c/armenia/">Armenia</a>: <span class="mono">-0.5%</span> <small class="dim mono">observed 2.4% · chance 3.0%</small> · <a href="/en/clade/j-z7675/"><b>J-Z7675</b></a> 8% → 13%</li>
+<li><a href="/en/c/yemen/">Yemen</a>: <span class="mono">-0.2%</span> <small class="dim mono">observed 1.9% · chance 2.1%</small> · <a href="/en/clade/j-ysc0000076/"><b>J-YSC0000076</b></a> 1% → 4%</li>
+<li><a href="/en/c/ukraine/">Ukraine</a>: <span class="mono">0.0%</span> <small class="dim mono">observed 4.4% · chance 4.4%</small> · <a href="/en/clade/r-z2124/"><b>R-Z2124</b></a> <small>R1a-Z2124</small> 9% → 5%</li>
+<li><a href="/en/c/bosnia-and-herzegovina/">Bosnia and Herzegovina</a>: <span class="mono">0.3%</span> <small class="dim mono">observed 4.1% · chance 3.8%</small> · <a href="/en/clade/i-y3548/"><b>I-Y3548</b></a> 50% → 56%</li>
+</ul>
+<details>
+<summary>1 more</summary>
+<ul class="plain">
+<li><a href="/en/c/qatar/">Qatar</a>: <span class="mono">0.4%</span> <small class="dim mono">observed 2.8% · chance 2.5%</small> · <a href="/en/clade/j-fgc2/"><b>J-FGC2</b></a> 15% → 25%</li>
+</ul>
+</details>
+<h3>The same for mtDNA</h3>
+<p>The same for the maternal line. Under-typed samples with a bare letter (H, U, J with no digit) are left out; branches under 0.5% at both companies are lumped into “other”. 16 countries.</p>
+<ul class="plain">
+<li><a href="/en/c/ireland/">Ireland</a>: <span class="mono">13.5%</span> <small class="dim mono">observed 21.9% · chance 8.3%</small> · <b>X2b</b> 1% → 5%</li>
+<li><a href="/en/c/italy/">Italy</a>: <span class="mono">13.0%</span> <small class="dim mono">observed 24.2% · chance 11.2%</small> · <b>K1a</b> 5% → 8%</li>
+<li><a href="/en/c/norway/">Norway</a>: <span class="mono">8.0%</span> <small class="dim mono">observed 17.1% · chance 9.1%</small> · <b>T2b</b> 4% → 1%</li>
+<li><a href="/en/c/ukraine/">Ukraine</a>: <span class="mono">6.1%</span> <small class="dim mono">observed 11.8% · chance 5.7%</small> · <b>K1a</b> 12% → 4%</li>
+<li><a href="/en/c/russian-federation/">Russian Federation</a>: <span class="mono">5.8%</span> <small class="dim mono">observed 7.8% · chance 2.0%</small> · <b>K1a</b> 8% → 1%</li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/c/turkey/">Turkey</a>: <span class="mono">5.1%</span> <small class="dim mono">observed 13.5% · chance 8.3%</small> · <b>J1b</b> 4% → 1%</li>
+<li><a href="/en/c/china/">China</a>: <span class="mono">4.5%</span> <small class="dim mono">observed 13.1% · chance 8.5%</small> · <b>D5a</b> 1% → 5%</li>
+<li><a href="/en/c/poland/">Poland</a>: <span class="mono">4.3%</span> <small class="dim mono">observed 7.1% · chance 2.8%</small> · <b>K1a</b> 8% → 4%</li>
+</ul>
+</details>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="blind-spots-a-branch-prominent-at-one-company-and-nearly-abs">Blind spots: a branch prominent at one company and nearly absent at the other <a class="anchor" href="#blind-spots-a-branch-prominent-at-one-company-and-nearly-abs" aria-label="Link to section “Blind spots: a branch prominent at one company and nearly absent at the other”">#</a></h2>
+<p>The branch makes up at least 4% at one company, and the gap between the companies is too large to be chance: at least 4 times the expected random scatter. Usually the mark of one large project or of the different routes by which customers reach each company.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/c/china/">China</a> · <a href="/en/clade/o-m324/"><b>O-M324</b></a>: 81.9% → 57.2% (−24.7) <small class="dim mono">z=-9.2</small> <span class="dim mono">n=530 / 694</span></li>
+<li><a href="/en/c/united-arab-emirates/">United Arab Emirates</a> · <a href="/en/clade/t-z709/"><b>T-Z709</b></a>: 39.8% → 18.9% (−20.9) <small class="dim mono">z=-6.5</small> <span class="dim mono">n=558 / 333</span></li>
+<li><a href="/en/c/bahrain/">Bahrain</a> · <a href="/en/clade/t-z709/"><b>T-Z709</b></a>: 25.4% → 9.4% (−16.1) <small class="dim mono">z=-4.2</small> <span class="dim mono">n=287 / 171</span></li>
+<li><a href="/en/c/kuwait/">Kuwait</a> · <a href="/en/clade/j-fgc2/"><b>J-FGC2</b></a>: 20.2% → 34.2% (+13.9) <small class="dim mono">z=6.0</small> <span class="dim mono">n=741 / 717</span></li>
+<li><a href="/en/c/china/">China</a> · <a href="/en/clade/c-m217/"><b>C-M217</b></a> <small>C2</small>: 17.2% → 29.0% (+11.8) <small class="dim mono">z=4.8</small> <span class="dim mono">n=530 / 694</span></li>
+</ul>
+<details>
+<summary>7 more</summary>
+<ul class="plain">
+<li><a href="/en/c/russia-chechnya/">Russia (Republic of Chechnya)</a> · <a href="/en/clade/l-m22/"><b>L-M22</b></a>: 28.1% → 16.6% (−11.5) <small class="dim mono">z=-6.0</small> <span class="dim mono">n=1,166 / 826</span></li>
+<li><a href="/en/c/sweden/">Sweden</a> · <a href="/en/clade/i-by266/"><b>I-BY266</b></a>: 16.5% → 28.0% (+11.5) <small class="dim mono">z=7.9</small> <span class="dim mono">n=5,619 / 786</span></li>
+<li><a href="/en/c/russian-federation/">Russian Federation</a> · <a href="/en/clade/r-y2898/"><b>R-Y2898</b></a>: 13.1% → 21.8% (+8.7) <small class="dim mono">z=6.2</small> <span class="dim mono">n=2,782 / 859</span></li>
+<li><a href="/en/c/albania/">Albania</a> · <a href="/en/clade/i-s2077/"><b>I-S2077</b></a>: 10.6% → 2.2% (−8.4) <small class="dim mono">z=-4.3</small> <span class="dim mono">n=151 / 416</span></li>
+<li><a href="/en/c/ireland/">Ireland</a> · <a href="/en/clade/r-a541/"><b>R-A541</b></a>: 13.5% → 5.9% (−7.6) <small class="dim mono">z=-4.5</small> <span class="dim mono">n=7,306 / 421</span></li>
+<li><a href="/en/c/scotland/">Scotland</a> · <a href="/en/clade/i-l137/"><b>I-L137</b></a>: 4.7% → 11.9% (+7.2) <small class="dim mono">z=6.6</small> <span class="dim mono">n=5,140 / 454</span></li>
+<li><a href="/en/c/ireland/">Ireland</a> · <a href="/en/clade/i-l137/"><b>I-L137</b></a>: 4.9% → 11.9% (+7) <small class="dim mono">z=6.2</small> <span class="dim mono">n=7,306 / 421</span></li>
+</ul>
+</details>
+<h3>The same for mtDNA</h3>
+<ul class="plain">
+<li><a href="/en/c/russian-federation/">Russian Federation</a> · <b>K1a</b>: 7.6% → 1.2% (−6.3) <small class="dim mono">z=-6.3</small> <span class="dim mono">n=2,739 / 726</span></li>
+<li><a href="/en/c/ireland/">Ireland</a> · <b>X2b</b>: 0.9% → 5.1% (+4.2) <small class="dim mono">z=5.3</small> <span class="dim mono">n=9,938 / 158</span></li>
+<li><a href="/en/c/poland/">Poland</a> · <b>U4a</b>: 2.0% → 5.3% (+3.2) <small class="dim mono">z=4.2</small> <span class="dim mono">n=4,294 / 417</span></li>
+</ul>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="branch-people">Branch = people <a class="anchor" href="#branch-people" aria-label="Link to section “Branch = people”">#</a></h2>
+<p>Branches of the YFull tree where almost every sample with a reported native language is from one people. Conditions: at least 80% of those who gave a language, with at least 10 such samples, and a language given for at least 25% of the branch's samples. The top-most such branches are shown. Only one customer in four reports a language, so the list reflects project activity as much as genetics.</p>
+</div>
+<ul class="plain">
+<li><b>J-FGC4415</b>: <a href="/en/ethnic/ara/">Arabs</a> 454 / 481 (94%) <span class="dim mono">samples in branch 1,085 · TMRCA 2,900 years</span></li>
+<li><b>J-Y7291</b> <small>J-BY1147</small>: <a href="/en/ethnic/che/">Chechens</a> 238 / 293 (81%) <span class="dim mono">samples in branch 296 · TMRCA 2,000 years</span></li>
+<li><b>E-CTS10880</b>: <a href="/en/ethnic/ara/">Arabs</a> 138 / 172 (80%) <span class="dim mono">samples in branch 344 · TMRCA 13k years</span></li>
+<li><b>L-Y6288</b>: <a href="/en/ethnic/che/">Chechens</a> 128 / 148 (86%) <span class="dim mono">samples in branch 167 · TMRCA 7,200 years</span></li>
+<li><b>J-FGC39213</b>: <a href="/en/ethnic/ara/">Arabs</a> 124 / 124 (100%) <span class="dim mono">samples in branch 180 · TMRCA 2,200 years</span></li>
+</ul>
+<details>
+<summary>7 more</summary>
+<ul class="plain">
+<li><b>J-CTS7188</b>: <a href="/en/ethnic/che/">Chechens</a> 111 / 136 (82%) <span class="dim mono">samples in branch 146 · TMRCA 5,600 years</span></li>
+<li><b>J-V2639</b> <small>J-Y13637</small>: <a href="/en/ethnic/che/">Chechens</a> 96 / 111 (86%) <span class="dim mono">samples in branch 112 · TMRCA 9,900 years</span></li>
+<li><b>J-FT6639</b>: <a href="/en/ethnic/che/">Chechens</a> 91 / 94 (97%) <span class="dim mono">samples in branch 94 · TMRCA 1,500 years</span></li>
+<li><b>J-FGC4453</b>: <a href="/en/ethnic/ara/">Arabs</a> 90 / 104 (87%) <span class="dim mono">samples in branch 251 · TMRCA 1,900 years</span></li>
+<li><b>J-CTS1460a</b>: <a href="/en/ethnic/che/">Chechens</a> 87 / 100 (87%) <span class="dim mono">samples in branch 116 · TMRCA 5,900 years</span></li>
+<li><b>I-FT14506</b>: <a href="/en/ethnic/srp/">Serbs</a> 85 / 106 (80%) <span class="dim mono">samples in branch 152 · TMRCA 1,600 years</span></li>
+<li><b>J-Y11149</b>: <a href="/en/ethnic/inh/">Ingush</a> 85 / 88 (97%) <span class="dim mono">samples in branch 96 · TMRCA 1,400 years</span></li>
+</ul>
+</details>
+</section>
+<section class="yf-find">
+<div class="sec-head">
+<div class="eyebrow">YFull</div>
+<h2 id="diversity-of-paternal-lines-by-people">Diversity of paternal lines by people <a class="anchor" href="#diversity-of-paternal-lines-by-people" aria-label="Link to section “Diversity of paternal lines by people”">#</a></h2>
+<p>How varied a people's paternal lines are. So that large peoples do not win by size alone, 40 samples were drawn at random from each and the number of distinct major branches among them counted. The number in a row is that count per 40 people: 1 means everyone is in one branch, higher is more varied.</p>
+</div>
+<h3>Most uniform</h3>
+<ul class="plain">
+<li><a href="/en/ethnic/inh/">Ingush</a>: <span class="mono">3.1</span> branches <small class="dim mono">0.55 bits</small> · <a href="/en/clade/j-z7675/"><b>J-Z7675</b></a> 90% <span class="dim mono">n=163</span></li>
+<li><a href="/en/ethnic/acw/">Hijazi Arabs</a>: <span class="mono">6.1</span> branches <small class="dim mono">1.55 bits</small> · <a href="/en/clade/j-fgc7/"><b>J-FGC7</b></a> 66% <span class="dim mono">n=97</span></li>
+<li><a href="/en/ethnic/abk/">Abkhazians</a>: <span class="mono">6.0</span> branches <small class="dim mono">1.58 bits</small> · <a href="/en/clade/g-z6779/"><b>G-Z6779</b></a> 68% <span class="dim mono">n=40</span></li>
+<li><a href="/en/ethnic/che/">Chechens</a>: <span class="mono">4.8</span> branches <small class="dim mono">1.70 bits</small> · <a href="/en/clade/j-z7675/"><b>J-Z7675</b></a> 46% <span class="dim mono">n=818</span></li>
+<li><a href="/en/ethnic/ars/">Najdi Arabs</a>: <span class="mono">6.1</span> branches <small class="dim mono">1.72 bits</small> · <a href="/en/clade/j-fgc7/"><b>J-FGC7</b></a> 62% <span class="dim mono">n=81</span></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/ethnic/ady/">Adyghe</a>: <span class="mono">8.1</span> branches <small class="dim mono">1.90 bits</small> · <a href="/en/clade/g-z6779/"><b>G-Z6779</b></a> 57% <span class="dim mono">n=145</span></li>
+<li><a href="/en/ethnic/krc/">Karachay-Balkars</a>: <span class="mono">9.9</span> branches <small class="dim mono">1.99 bits</small> · <a href="/en/clade/r-z2124/"><b>R-Z2124</b></a> <small>R1a-Z2124</small> 64% <span class="dim mono">n=67</span></li>
+<li><a href="/en/ethnic/srp/">Serbs</a>: <span class="mono">10.5</span> branches <small class="dim mono">2.23 bits</small> · <a href="/en/clade/i-y3548/"><b>I-Y3548</b></a> 58% <span class="dim mono">n=252</span></li>
+</ul>
+</details>
+<h3>Most diverse</h3>
+<ul class="plain">
+<li><a href="/en/ethnic/eng/">English</a>: <span class="mono">28.4</span> branches <small class="dim mono">4.67 bits</small> · <a href="/en/clade/r-z287/"><b>R-Z287</b></a> 5% <span class="dim mono">n=472</span></li>
+<li><a href="/en/ethnic/fra/">French</a>: <span class="mono">21.6</span> branches <small class="dim mono">4.23 bits</small> · <a href="/en/clade/r-z205/"><b>R-Z205</b></a> 12% <span class="dim mono">n=42</span></li>
+<li><a href="/en/ethnic/deu/">Germans</a>: <span class="mono">21.1</span> branches <small class="dim mono">4.14 bits</small> · <a href="/en/clade/r-l1029/"><b>R-L1029</b></a> 12% <span class="dim mono">n=118</span></li>
+<li><a href="/en/ethnic/hun/">Hungarians</a>: <span class="mono">17.2</span> branches <small class="dim mono">3.77 bits</small> · <a href="/en/clade/i-y3548/"><b>I-Y3548</b></a> 16% <span class="dim mono">n=51</span></li>
+<li><a href="/en/ethnic/spa/">Spaniards</a>: <span class="mono">17.5</span> branches <small class="dim mono">3.72 bits</small> · <a href="/en/clade/e-s2979/"><b>E-S2979</b></a> 22% <span class="dim mono">n=64</span></li>
+</ul>
+<details>
+<summary>3 more</summary>
+<ul class="plain">
+<li><a href="/en/ethnic/bul/">Bulgarians</a>: <span class="mono">17.3</span> branches <small class="dim mono">3.69 bits</small> · <a href="/en/clade/i-y3548/"><b>I-Y3548</b></a> 24% <span class="dim mono">n=49</span></li>
+<li><a href="/en/ethnic/tur/">Turks</a>: <span class="mono">16.3</span> branches <small class="dim mono">3.66 bits</small> · <a href="/en/clade/j-z1842/"><b>J-Z1842</b></a> <small>J1-Z1842</small> 20% <span class="dim mono">n=44</span></li>
+<li><a href="/en/ethnic/tat/">Tatars</a>: <span class="mono">14.7</span> branches <small class="dim mono">3.51 bits</small> · <a href="/en/clade/r-z2124/"><b>R-Z2124</b></a> <small>R1a-Z2124</small> 18% <span class="dim mono">n=160</span></li>
+</ul>
+</details>
+</section>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 2026-10-29, built 2026-10-31. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{"name":"Russia (Republic of Komi)","slug":"russia-komi","n":1,"l1":[
+{"k":"T","v":1}
+],"l2":[
+{"k":"T2a","v":1}
+],"tree":[
+{"id":8320,"name":"T2a1a","label":"T2a1a","shown":"T2a1a","age":{"mean":-2986,"oldest":-3045,"youngest":-2927},"n":1,"depth":0}
+],"cum":[
+[615,1],
+[628,1],
+[629,1]
+],"cumN":772,"terminal":[
+["T2a1a",1]
+]}

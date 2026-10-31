@@ -1,0 +1,17 @@
+{"name":"Congo, Republic of the","slug":"congo-republic","n":1,"l1":[
+{"k":"L","v":1}
+],"l2":[
+{"k":"L1c","v":1}
+],"tree":[
+{"id":4554,"name":"L1c1a1","label":"L1c1a1","shown":"L1c1a1","age":{"mean":-38559,"oldest":-43813,"youngest":-33621},"n":1,"depth":0}
+],"cum":[
+[405,1],
+[406,1],
+[415,1],
+[416,1],
+[417,1],
+[418,1],
+[419,1]
+],"cumN":772,"terminal":[
+["L1c1a1",1]
+]}

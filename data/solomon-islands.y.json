@@ -1,0 +1,11 @@
+{"name":"Solomon Islands","slug":"solomon-islands","n":1,"l1":[
+{"k":"M","v":1}
+],"l2":[
+{"k":"K-M526*","v":1}
+],"tree":[
+{"id":1803,"name":"M-PAGES00093","label":"M","shown":"M","age":{"mean":-40989,"oldest":-48023,"youngest":-34935},"n":1,"depth":0}
+],"cum":[
+[96,1]
+],"cumN":170,"terminal":[
+["M-FTB12290",1]
+]}

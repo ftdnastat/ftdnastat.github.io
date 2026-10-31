@@ -1,0 +1,20 @@
+{"name":"Russia (Republic of Buryatia)","slug":"russia-buryatia","n":2,"l1":[
+{"k":"M","v":1},
+{"k":"H","v":1}
+],"l2":[
+{"k":"M10a","v":1},
+{"k":"H2b","v":1}
+],"tree":[
+{"id":5562,"name":"M10a1-G16129A!","label":"M10a1-G16129A!","shown":"M10a1-G16129A!","age":null,"n":1,"depth":0},
+{"id":7389,"name":"H2b","label":"H2b","shown":"H2b","age":{"mean":-3613,"oldest":-4143,"youngest":-3108},"n":1,"depth":0}
+],"cum":[
+[173,1],
+[222,1],
+[233,1],
+[505,1],
+[516,1],
+[517,1]
+],"cumN":772,"terminal":[
+["H2b",1],
+["M10a1-G16129A!",1]
+]}

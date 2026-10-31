@@ -1,0 +1,22 @@
+{"name":"New Caledonia","slug":"new-caledonia","n":2,"l1":[
+{"k":"R","v":2}
+],"l2":[
+{"k":"R-L20","v":1},
+{"k":"R-U106*","v":1}
+],"tree":[
+{"id":2081,"name":"R-L51","label":"R1b-L51","shown":"R1b-L51","age":{"mean":-4103,"oldest":-4968,"youngest":-3345},"n":2,"depth":0},
+{"id":2189,"name":"R-L2","label":"R1b-L2","shown":"L2","age":{"mean":-2629,"oldest":-3302,"youngest":-2042},"n":1,"depth":1},
+{"id":2300,"name":"R-U106","label":"R1b-U106","shown":"U106","age":{"mean":-2971,"oldest":-3679,"youngest":-2351},"n":1,"depth":1}
+],"cum":[
+[115,2],
+[131,2],
+[132,2],
+[133,2],
+[134,1],
+[145,1],
+[146,1],
+[148,1]
+],"cumN":170,"terminal":[
+["R-L20",1],
+["R-U106",1]
+]}

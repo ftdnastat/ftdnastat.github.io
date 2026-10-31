@@ -1,0 +1,15 @@
+{"name":"Canada (Inuit)","slug":"canada-inuit","n":1,"l1":[
+{"k":"I","v":1}
+],"l2":[
+{"k":"I-S7660","v":1}
+],"tree":[
+{"id":4660,"name":"I-Z2338","label":"I1-Z2338","shown":"I1-Z2338","age":{"mean":-1818,"oldest":-2376,"youngest":-1331},"n":1,"depth":0}
+],"cum":[
+[45,1],
+[51,1],
+[52,1],
+[53,1],
+[54,1]
+],"cumN":170,"terminal":[
+["I-S14887",1]
+]}

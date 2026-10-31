@@ -1,0 +1,24 @@
+{"name":"New Zealand (Māori)","slug":"new-zealand-maori","n":27,"l1":[
+{"k":"B","v":27}
+],"l2":[
+{"k":"B4a","v":27}
+],"tree":[
+{"id":8689,"name":"B4a1a1","label":"B4a1a1","shown":"B4a1a1","age":{"mean":-2564,"oldest":-2905,"youngest":-2236},"n":27,"depth":0},
+{"id":8725,"name":"B4a1a1c","label":"B4a1a1c","shown":"B4a1a1c","age":{"mean":-813,"oldest":-1094,"youngest":-545},"n":13,"depth":1},
+{"id":8737,"name":"B4a1a1m1","label":"B4a1a1m1","shown":"B4a1a1m1","age":{"mean":154,"oldest":-24,"youngest":324},"n":4,"depth":1}
+],"cum":[
+[32,27],
+[33,27],
+[34,27],
+[35,27],
+[36,27],
+[37,2],
+[41,13],
+[43,4]
+],"cumN":772,"terminal":[
+["B4a1a1c",13],
+["B4a1a1",6],
+["B4a1a1m1",4],
+["B4a1a1-T16126C",2],
+["B4a1a1n",2]
+]}
