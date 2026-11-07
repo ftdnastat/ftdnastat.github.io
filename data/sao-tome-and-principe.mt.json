@@ -1,0 +1,15 @@
+{"name":"Sao Tome and Principe","slug":"sao-tome-and-principe","n":1,"l1":[
+{"k":"L","v":1}
+],"l2":[
+{"k":"L1b","v":1}
+],"tree":[
+{"id":4531,"name":"L1b1a7","label":"L1b1a7","shown":"L1b1a7","age":{"mean":-5721,"oldest":-6437,"youngest":-5037},"n":1,"depth":0}
+],"cum":[
+[436,1],
+[437,1],
+[438,1],
+[439,1],
+[444,1]
+],"cumN":844,"terminal":[
+["L1b1a7",1]
+]}

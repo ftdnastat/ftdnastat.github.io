@@ -1,0 +1,26 @@
+{"name":"Russia (Republic of Buryatia)","slug":"russia-buryatia","n":3,"l1":[
+{"k":"H","v":2},
+{"k":"M","v":1}
+],"l2":[
+{"k":"M10a","v":1},
+{"k":"H2b","v":1},
+{"k":"H3w","v":1}
+],"tree":[
+{"id":7026,"name":"H","label":"H","shown":"H","age":{"mean":-8068,"oldest":-8786,"youngest":-7373},"n":2,"depth":0},
+{"id":7389,"name":"H2b","label":"H2b","shown":"H2b","age":{"mean":-3613,"oldest":-4143,"youngest":-3108},"n":1,"depth":1},
+{"id":7464,"name":"H3w","label":"H3w","shown":"H3w","age":{"mean":-218,"oldest":-642,"youngest":170},"n":1,"depth":1},
+{"id":5562,"name":"M10a1-G16129A!","label":"M10a1-G16129A!","shown":"M10a1-G16129A!","age":null,"n":1,"depth":0}
+],"cum":[
+[184,2],
+[242,1],
+[254,1],
+[261,1],
+[268,1],
+[542,1],
+[554,1],
+[555,1]
+],"cumN":844,"terminal":[
+["H2b",1],
+["H3w",1],
+["M10a1-G16129A!",1]
+]}

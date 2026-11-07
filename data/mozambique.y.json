@@ -1,0 +1,16 @@
+{"name":"Mozambique","slug":"mozambique","n":1,"l1":[
+{"k":"R","v":1}
+],"l2":[
+{"k":"R-ZZ12_1*","v":1}
+],"tree":[
+{"id":2645,"name":"R-DF27","label":"R1b-DF27","shown":"R1b-DF27","age":{"mean":-2658,"oldest":-3325,"youngest":-2074},"n":1,"depth":0}
+],"cum":[
+[119,1],
+[135,1],
+[136,1],
+[137,1],
+[138,1],
+[140,1]
+],"cumN":175,"terminal":[
+["R-FT143445",1]
+]}
