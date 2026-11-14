@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Findings: distinctive branches and similar countries</title>
+<meta name="description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/findings/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/findings/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/findings/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/findings/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Findings: distinctive branches and similar countries">
+<meta property="og:description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta property="og:url" content="https://ftdnastat.github.io/en/findings/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og/findings-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Findings: findings from FamilyTreeDNA and YFull data">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Findings: distinctive branches and similar countries">
+<meta name="twitter:description" content="Automatic findings from FTDNA data: distinctive branches, similar countries, pile-ups on one branch, young and ancient branches.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og/findings-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script>(function(){var m={"самые-характерные-ветки":"/en/findings/branches/#signature","most-distinctive-branches":"/en/findings/branches/#signature","молодые-но-широко-расселившиеся-ветки":"/en/findings/branches/#young-wide","young-but-widespread-branches":"/en/findings/branches/#young-wide","древние-ветки-не-покинувшие-родину":"/en/findings/branches/#old-home","ancient-branches-that-stayed-home":"/en/findings/branches/#old-home","звёздные-расширения":"/en/findings/branches/#bursts","star-like-expansions":"/en/findings/branches/#bursts","ветки-которые-долго-шли-одной-линией-по-датам-discover":"/en/findings/branches/#bottlenecks","branches-that-long-ran-as-a-single-line-by-discover-dates":"/en/findings/branches/#bottlenecks","развилки-одна-ветка-ушла-от-остальных":"/en/findings/branches/#splits","splits-one-branch-left-the-others":"/en/findings/branches/#splits","долгие-одиночные-стволы-по-датам-yfull":"/en/findings/branches/#trunks","long-single-lineage-trunks-by-yfull-dates":"/en/findings/branches/#trunks","возраст-по-str-против-возраста-по-snp":"/en/findings/branches/#str-age","str-ages-against-snp-ages":"/en/findings/branches/#str-age","скачки-str-в-молодых-ветках":"/en/findings/branches/#str-jumps","str-jumps-in-young-branches":"/en/findings/branches/#str-jumps","толщина-веток-древние-и-современные":"/en/findings/branches/#thickness","branch-thickness-ancient-and-modern":"/en/findings/branches/#thickness","где-одна-ветка-собрала-заметную-долю-образцов":"/en/findings/branches/#pileups","where-one-branch-holds-a-large-share-of-kits":"/en/findings/branches/#pileups","ветки-скученные-на-карте":"/en/findings/branches/#clusters","branches-crowded-on-the-map":"/en/findings/branches/#clusters","страны-где-отцовская-и-материнская-линии-расходятся":"/en/findings/countries/#sex-bias","countries-where-paternal-and-maternal-lines-part-ways":"/en/findings/countries/#sex-bias","кто-проверяет-отцовскую-линию-а-кто-материнскую":"/en/findings/countries/#ratio","who-tests-the-father-and-who-tests-the-mother":"/en/findings/countries/#ratio","самые-протестированные-страны-и-регионы":"/en/findings/countries/#tested","the-most-tested-countries-and-regions":"/en/findings/countries/#tested","страны-насколько-отцовские-и-материнские-линии-отличаются-от":"/en/findings/countries/#skew","countries-how-far-paternal-and-maternal-lines-stray-from-the":"/en/findings/countries/#skew","отцовская-и-материнская-линии-связаны-ли-они-и-насколько-это":"/en/findings/countries/#y-mt","paternal-and-maternal-lines-are-they-linked-and-how-much-of-":"/en/findings/countries/#y-mt","по-отцам-народ-узнаётся-по-матерям-нет":"/en/findings/countries/#peoples","fathers-tell-the-people-apart-mothers-do-not":"/en/findings/countries/#peoples","разные-языки-близкие-отцовские-линии":"/en/findings/countries/#lang-pairs","different-languages-close-paternal-lines":"/en/findings/countries/#lang-pairs","ветки-одного-народа":"/en/findings/countries/#mono","branch-people":"/en/findings/countries/#mono","разнообразие-отцовских-линий-у-народов":"/en/findings/countries/#diversity","diversity-of-paternal-lines-by-people":"/en/findings/countries/#diversity","фамилии-одной-ветки":"/en/findings/countries/#surnames","surnames-that-cluster-in-one-branch":"/en/findings/countries/#surnames","где-у-мужчин-больше-всего-близкой-родни":"/en/findings/kin/#str-kin","where-men-have-the-most-close-kin":"/en/findings/kin/#str-kin","недавняя-родня-в-разных-странах-и-регионах":"/en/findings/kin/#border","recent-kin-in-different-countries-and-regions":"/en/findings/kin/#border","древняя-днк-ветка-далеко-от-родины":"/en/findings/ancient/#far","ancient-dna-a-branch-far-from-home":"/en/findings/ancient/#far","древняя-днк-у-корня-живых-веток":"/en/findings/ancient/#roots","ancient-dna-at-the-root-of-living-branches":"/en/findings/ancient/#roots","древняя-днк-линии-которых-сегодня-почти-нет":"/en/findings/ancient/#vanished","ancient-dna-lines-all-but-absent-today":"/en/findings/ancient/#vanished","древняя-днк-древнейшие-на-кавказе":"/en/findings/ancient/#caucasus","ancient-dna-the-oldest-in-the-caucasus":"/en/findings/ancient/#caucasus","древняя-днк-образец-старше-своей-ветки":"/en/findings/ancient/#too-old","ancient-dna-a-sample-older-than-its-branch":"/en/findings/ancient/#too-old","культуры-где-по-мт-общих-линий-намного-больше-чем-по-y":"/en/findings/ancient/#turnover","cultures-that-share-far-more-mt-lines-than-y-lines":"/en/findings/ancient/#turnover","возраст-веток-yfull-против-ftdna-discover":"/en/findings/sources/#ages","branch-ages-yfull-against-ftdna-discover":"/en/findings/sources/#ages","как-глубоко-в-дерево-заходят-образцы-yfull-и-образцы-ftdna":"/en/findings/sources/#depth","how-deep-into-the-tree-yfull-samples-and-ftdna-kits-reach":"/en/findings/sources/#depth","где-две-компании-показывают-разную-картину-страны":"/en/findings/sources/#two-views","where-the-two-companies-show-a-different-picture-of-a-countr":"/en/findings/sources/#two-views","слепые-пятна-ветка-заметна-у-одной-компании-и-почти-отсутств":"/en/findings/sources/#blind-spots","blind-spots-a-branch-prominent-at-one-company-and-nearly-abs":"/en/findings/sources/#blind-spots"},h=location.hash.slice(1);try{h=decodeURIComponent(h)}catch(e){}if(Object.prototype.hasOwnProperty.call(m,h))location.replace(m[h])})()</script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/map/">Map</a><a href="/en/findings/" aria-current="page">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/pairs/">Pairs</a><a href="/en/about/">About</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-peoples="Peoples" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/findings/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>Findings</h1>
+<p>What stands out in the data. These are FTDNA customers, not whole populations. How we count is under About the data.</p>
+</div>
+<section>
+<div class="sec-head">
+<h2 id="branches"><a href="/en/findings/branches/">Branches</a></h2>
+<p>Branches that stand out: typical of a country, young yet spread across the world, old and still at home, sudden bursts, long single-line stretches, splits where one branch went far from the rest.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/findings/branches/#signature">Most distinctive branches</a></li>
+<li><a href="/en/findings/branches/#young-wide">Young but widespread branches</a></li>
+<li><a href="/en/findings/branches/#old-home">Ancient branches that stayed home</a></li>
+<li><a href="/en/findings/branches/#bursts">Star-like expansions</a></li>
+<li><a href="/en/findings/branches/#bottlenecks">Branches that long ran as a single line, by Discover dates</a></li>
+<li><a href="/en/findings/branches/#splits">Splits: one branch left the others</a></li>
+<li><a href="/en/findings/branches/#trunks">Long single-lineage trunks by YFull dates</a></li>
+<li><a href="/en/findings/branches/#str-age">STR ages against SNP ages</a></li>
+<li><a href="/en/findings/branches/#str-jumps">STR jumps in young branches</a></li>
+<li><a href="/en/findings/branches/#thickness">Branch thickness: ancient and modern</a></li>
+<li><a href="/en/findings/branches/#pileups">Where one branch holds a large share of kits</a></li>
+<li><a href="/en/findings/branches/#clusters">Branches crowded on the map</a></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="countries"><a href="/en/findings/countries/">Countries and peoples</a></h2>
+<p>How countries and peoples differ from each other and from the world: where paternal and maternal lines part ways, who tests which line, which branches mark a people, which surnames keep to one branch.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/findings/countries/#sex-bias">Countries where paternal and maternal lines part ways</a></li>
+<li><a href="/en/findings/countries/#ratio">Who tests the father and who tests the mother</a></li>
+<li><a href="/en/findings/countries/#tested">The most tested countries and regions</a></li>
+<li><a href="/en/findings/countries/#skew">Countries: how far paternal and maternal lines stray from the world mix</a></li>
+<li><a href="/en/findings/countries/#y-mt">Paternal and maternal lines: are they linked, and how much of it is just geography</a></li>
+<li><a href="/en/findings/countries/#peoples">Fathers tell the people apart, mothers do not</a></li>
+<li><a href="/en/findings/countries/#lang-pairs">Different languages, close paternal lines</a></li>
+<li><a href="/en/findings/countries/#mono">Branch = people</a></li>
+<li><a href="/en/findings/countries/#diversity">Diversity of paternal lines by people</a></li>
+<li><a href="/en/findings/countries/#surnames">Surnames that cluster in one branch</a></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="kin"><a href="/en/findings/kin/">Kin</a></h2>
+<p>Where men have the most close kin on 37 markers, and where recent kin from different countries and regions live.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/findings/kin/#str-kin">Where men have the most close kin</a></li>
+<li><a href="/en/findings/kin/#border">Recent kin in different countries and regions</a></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="ancient"><a href="/en/findings/ancient/">Ancient DNA</a></h2>
+<p>Ancient samples against today's carriers of the same branches: far from home, at the root of living branches, lines that died out, and cultures where the male lines changed.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/findings/ancient/#far">Ancient DNA: a branch far from home</a></li>
+<li><a href="/en/findings/ancient/#roots">Ancient DNA: at the root of living branches</a></li>
+<li><a href="/en/findings/ancient/#vanished">Ancient DNA: lines all but absent today</a></li>
+<li><a href="/en/findings/ancient/#caucasus">Ancient DNA: the oldest in the Caucasus</a></li>
+<li><a href="/en/findings/ancient/#too-old">Ancient DNA: a sample older than its branch</a></li>
+<li><a href="/en/findings/ancient/#turnover">Cultures that share far more mt lines than Y lines</a></li>
+</ul>
+</section>
+<section>
+<div class="sec-head">
+<h2 id="sources"><a href="/en/findings/sources/">YFull and FTDNA</a></h2>
+<p>Two companies see the same branches differently: where ages disagree, how deep into the tree samples reach, and where a branch shows up at only one of them.</p>
+</div>
+<ul class="plain">
+<li><a href="/en/findings/sources/#ages">Branch ages: YFull against FTDNA Discover</a></li>
+<li><a href="/en/findings/sources/#depth">How deep into the tree YFull samples and FTDNA kits reach</a></li>
+<li><a href="/en/findings/sources/#two-views">Where the two companies show a different picture of a country</a></li>
+<li><a href="/en/findings/sources/#blind-spots">Blind spots: a branch prominent at one company and nearly absent at the other</a></li>
+</ul>
+</section>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 12 November 2026, built 2026-11-14. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

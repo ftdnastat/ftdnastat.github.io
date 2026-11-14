@@ -1,0 +1,16 @@
+{"name":"San Marino","slug":"san-marino","n":1,"l1":[
+{"k":"J","v":1}
+],"l2":[
+{"k":"J-Z1296","v":1}
+],"tree":[
+{"id":10118,"name":"J-Z600","label":"J2b-Z600","shown":"J2b-Z600","age":{"mean":-3326,"oldest":-4127,"youngest":-2630},"n":1,"depth":0}
+],"cum":[
+[64,1],
+[65,1],
+[66,1],
+[68,1],
+[69,1],
+[70,1]
+],"cumN":175,"terminal":[
+["J-PH3120",1]
+]}

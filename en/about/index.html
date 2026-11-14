@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>About the data: sources and method · ftdnastat</title>
+<meta name="description" content="Sources, method and caveats of FTDNA haplogroup statistics by country.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/about/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/about/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/about/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/about/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="About the data: sources and method">
+<meta property="og:description" content="Sources, method and caveats of FTDNA haplogroup statistics by country.">
+<meta property="og:url" content="https://ftdnastat.github.io/en/about/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — FTDNA haplogroup statistics by country and region: stacked bars of Y-DNA macro-haplogroups for Dagestan, Turkey, Ireland and Finland">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About the data: sources and method">
+<meta name="twitter:description" content="Sources, method and caveats of FTDNA haplogroup statistics by country.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-latin.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"FamilyTreeDNA haplogroups by country and people","description":"Sources, method and caveats of FTDNA haplogroup statistics by country.","url":"https://ftdnastat.github.io/en/about/","inLanguage":"en","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","publisher":{"@type":"Organization","name":"ftdnastat","url":"https://ftdnastat.github.io/en/"},"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://ftdnastat.github.io/data/branches.json"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://ftdnastat.github.io/data/compare-index.json"}]}</script>
+<script src="/assets/eqearth.js" defer></script>
+<script src="/assets/branch-map.js" defer></script>
+<noscript>
+<style>.bmap{display:none}</style>
+</noscript>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/map/">Map</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/pairs/">Pairs</a><a href="/en/about/" aria-current="page">About</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-peoples="Peoples" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/about/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>About the data</h1>
+<p><a class="more" href="/en/about/how/">How the site works: sources, updates and calculations in detail →</a></p>
+</div>
+<div class="prose">
+<p>Where the data comes from: the public FamilyTreeDNA trees, Y-DNA Haplotree and mtDNA (mitochondrial DNA) Haplotree, and the FTDNA Discover service, which gives branch ages. Copies of the trees are downloaded weekly; after a check, the site is rebuilt from scratch.</p>
+<p>A kit is one FTDNA test, nearly always one person; the word is FTDNA's own name for a test. A sample is a YFull entry or ancient DNA; neither has an FTDNA kit. A branch is a node of the haplogroup tree with all its sub-branches; a branch page's heading calls it a haplogroup, as people usually search for it.</p>
+<p>A kit's country is the homeland of the earliest known ancestor on that line, and the FTDNA customer enters it themselves. It is not a place of residence and not a random sample of the population. The US, Britain and Scandinavia are over-represented, Africa and Asia are nearly empty, and some countries are skewed by diaspora. For example, on the maternal line Spain is roughly 18% Native American because Latin Americans report their colonial ancestors' country; Belarus and Lithuania are 15–20% Ashkenazi.</p>
+<p>Kits with no country, or marked Unknown Origin, are not counted: 61% of all Y-DNA kits and 73% of mtDNA kits. They contain more African lineages than kits with a country, so the world share of haplogroup L on this site is understated.</p>
+<p>One country is deliberately relabelled: “Italy (Aosta Valley)” is shown as Orstkhoy, a people closely related to the Chechens and Ingush who report this region because of a similar flag. Details on its page.</p>
+<p>Regions are counted separately from their country: “Russia (Republic of Dagestan)” is not part of “Russian Federation”, “Spain (Catalonia)” is not part of “Spain”. A region's page links to its country.</p>
+<p>A short name with no refinement (J-M172, H, I2) means the test did not reach the fine branches: on Y-DNA an STR test or an old SNP pack, on mtDNA an HVR test without a full read. In the major-branch list such kits are gathered under an asterisk: they sit on the branch but fall into none of its major sub-branches.</p>
+<p>A branch and its sub-branch never stand in one list as equals. Either it is a tree, where a branch includes all its sub-branches, or a list where every kit is counted once and the remainder on the branch itself is marked with an asterisk.</p>
+<p>Branch age is how many years ago the common ancestor of all its testers lived (TMRCA), as estimated by FTDNA Discover. We take the midpoint of the estimate and round it to a hundred years; above 10,000 years we round up to a whole thousand. mt branch ages come from FTDNA's Mitotree where the branch exists there.</p>
+<p>One set of thresholds for the whole site: countries under 50 kits are flagged as small and left out of the findings; similar countries are computed from 100 kits; a distinctive branch needs at least 10 kits.</p>
+<p>Where a branch is “most often” found is not decided by the bare share. A country must give at least 5 of the branch's kits, and countries are compared by the lower bound of the 95% Wilson interval, so a sample of a hundred and fifty kits does not beat a large one at an almost equal share. On the bars of country pages and in the country table of a branch page, shares of small samples (under 100 kits) are rounded to whole percent, and where a country has fewer than 5 of the branch's kits a count is shown: “1 of 52”.</p>
+<details class="about-colors">
+<summary>Macro-haplogroup colours</summary>
+<p>Colour marks the macro-haplogroup, the haplogroup's first letter; rare ones are grey.</p>
+<p class="eyebrow kind">Y-DNA</p>
+<div class="legend"><span><i class="c1"></i>R</span><span><i class="c2"></i>I</span><span><i class="c3"></i>J</span><span><i class="c4"></i>E</span><span><i class="c5"></i>N</span><span><i class="c6"></i>G</span><span><i class="c7"></i>Q</span><span><i class="c8"></i>T</span><span><i class="c9"></i>O</span><span><i class="c10"></i>C</span><span><i class="c11"></i>L</span><span><i class="c12"></i>D</span><span><i class="c13"></i>A</span><span><i class="c14"></i>B</span><span><i class="c15"></i>H</span><span><i class="c16"></i>K</span><span><i class="c17"></i>F</span><span><i class="c18"></i>S</span><span><i class="c19"></i>M</span><span><i class="c20"></i>P</span><span><i class="c0"></i>other</span></div>
+<p class="eyebrow kind">mtDNA</p>
+<div class="legend"><span><i class="c1"></i>H</span><span><i class="c2"></i>U</span><span><i class="c3"></i>T</span><span><i class="c4"></i>J</span><span><i class="c5"></i>K</span><span><i class="c6"></i>V</span><span><i class="c7"></i>L</span><span><i class="c8"></i>I</span><span><i class="c9"></i>A</span><span><i class="c10"></i>B</span><span><i class="c11"></i>D</span><span><i class="c12"></i>HV</span><span><i class="c13"></i>C</span><span><i class="c14"></i>N</span><span><i class="c15"></i>M</span><span><i class="c16"></i>X</span><span><i class="c17"></i>F</span><span><i class="c18"></i>R</span><span><i class="c19"></i>W</span><span><i class="c20"></i>Z</span><span><i class="c0"></i>other</span></div>
+</details>
+<h2 id="population">Population <a class="anchor" href="#population" aria-label="Link to section “Population”">#</a></h2>
+<p>The “kits per 100,000 men” card on a country or region page divides the kits with a country by the male population: countries from the UN (World Population Prospects 2024, estimate for 2023), Russian regions from the 2021 census, other regions from Wikidata with their country's share of men. A region's kits also count towards its country here, since the country's population includes them; England, Scotland and Wales stand among the countries. It measures how well a country's branches are covered by tests, not the share of residents who tested: descendants of emigrants also name the ancestor's homeland, so countries of emigration rank higher than their own population would give. No card for entities under 50 kits or 50,000 people, nor for FTDNA samples without a territory of their own — First Nations, Druze, Cornish.</p>
+<figure class="cmap gmap bmap" id="bmap" aria-label="Map: Y-DNA kits per 100,000 men and the ancestors' places of geographic project members">
+<div class="gmap-tabs">
+<div class="tabs bmap-layers" role="group" aria-label="What the map shows"><button type="button" class="tab" data-layer="countries" aria-pressed="true">Kits per 100,000 men</button><button type="button" class="tab" data-layer="count" aria-pressed="false">Where ancestors lived</button></div>
+<div class="tabs" role="group" aria-label="Map zoom"><button type="button" class="tab" data-v="world" aria-pressed="true">World</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Europe</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Caucasus</button></div>
+</div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Colour is Y-DNA kits per 100,000 men. Hover over a country or tap it.</figcaption>
+<div class="legend cmap-legend gmap-legend bmap-legend"></div>
+<p class="dim bmap-note" hidden>Where the ancestors of FamilyTreeDNA geographic project members lived, from the Y-DNA maps as of 2026-10-20. 101,795 people in all. Cells of 1° with fewer than three members are left blank; they hold 1,907.</p>
+</figure>
+<script type="application/json" id="bmap-data">{"lang":"en","kind":"y","value":"rate","shares":{"united-states":18.99,"england":99.66,"ireland":868.15,"germany":42.12,"sweden":230.19,"scotland":537.33,"finland":369.36,"united-kingdom":28.86,"saudi-arabia":59.72,"poland":39.45,"france":20.39,"russian-federation":17.04,"italy":21.35,"norway":164.15,"ukraine":25.35,"spain":18.73,"switzerland":67.67,"mexico":3.65,"canada":8.77,"netherlands":25.72,"northern-ireland":318.48,"czech-republic":44.48,"turkey":5.84,"iraq":14.47,"wales":142.96,"hungary":41.31,"lithuania":138.73,"portugal":39.95,"denmark":55.3,"belarus":40.53,"kuwait":76.64,"russia-chechnya":225.82,"austria":24.17,"india":0.2,"greece":26.57,"yemen":8.11,"romania":11.66,"slovakia":36.45,"united-arab-emirates":20.13,"armenia":86.5,"china":0.15,"bulgaria":26.91,"puerto-rico":38.89,"brazil":0.71,"russia-dagestan":67.84,"belgium":14.57,"syrian-arab-republic":7.78,"iran":1.65,"bahrain":80.25,"croatia":28.74,"kazakhstan":7.56,"lebanon":24.05,"japan":0.87,"qatar":32.71,"palestinian-territory":25.33,"australia":3.03,"morocco":3.01,"egypt":1.08,"georgia":42.04,"latvia":52.3,"slovenia":43.24,"indonesia":0.44,"azerbaijan":12.16,"algeria":2.15,"philippines":0.72,"estonia":44.97,"libya":13.35,"oman":15.35,"serbia":10.88,"colombia":1.18,"south-africa":0.76,"bosnia-and-herzegovina":24.36,"sudan":1.66,"mongolia":26.51,"pakistan":0.33,"ghana":2.51,"russia-adygea":177.84,"cuba":3.97,"jordan":6.13,"jamaica":15.87,"korea":0.91,"israel":5.32,"albania":20.14,"moldova":13.67,"chile":1.68,"tunisia":4.18,"uzbekistan":1.51,"russia-chuvashia":39.65,"dominican-republic":3.12,"cameroon":1.74,"iceland":99.78,"montenegro":63.96,"macedonia":18.86,"argentina":0.58,"luxembourg":38.84,"peru":0.76,"new-zealand":5.95,"russia-mordovia":52.33,"afghanistan":0.8,"italy-sicily":5.05,"vietnam":0.26,"russia-ingushetia":46.93,"sri-lanka":1.35,"tajikistan":3.33,"ethiopia":0.11,"nigeria":0.13,"somalia":1.5,"malta":33.99,"russia-tatarstan":6.26,"el-salvador":2.94,"france-alsace":8,"russia-karelia":46.03,"belgium-flanders":2.9,"kosovo":11,"venezuela":0.49,"barbados":63.53,"guatemala":0.86,"russia-bashkortostan":5.38,"taiwan":0.82,"kenya":0.35,"ecuador":0.75,"cyprus":11.95,"kyrgyzstan":2.72,"spain-andalusia":1.87,"costa-rica":2.5,"portugal-azores":52.38,"trinidad-and-tobago":8.61,"bahamas":26.19,"panama":2.87,"russia-kabardino-balkaria":19.58,"honduras":0.93,"benin":1.26,"russia-karachay-cherkessia":34.8,"malaysia":0.33,"papua-new-guinea":1.48,"eritrea":3.39,"bangladesh":0.08,"senegal":0.67,"mali":0.48,"iraq-kurdistan":2.38,"russia-north-ossetia-alania":16.22},"edges":[1.35,5.84,20.14,43.24,868.15],"view":"world","geo":{"src":"/data/geo-all-y.json","layers":["count"]},"s":{"small":"fewer than 50 kits or 50,000 people","rate":"{v} per 100,000 men","mapHint":"Colour is Y-DNA kits per 100,000 men. Hover over a country or tap it.","hint":"Hover over or tap a patch to see the numbers.","cell":"{lat}, {lon}: {n} project members","n":"N","s":"S","e":"E","w":"W"}}</script>
+<h2 id="yfull" data-old="yfull-data">YFull data <a class="anchor" href="#yfull" aria-label="Link to section “YFull data”">#</a></h2>
+<p>The second source is the public YFull trees (Y and mt), copy of 2 November 2026, refreshed monthly. YFull is a paid analysis of the full Y chromosome and the full mtDNA, so its customers are even more of enthusiasts and project members than FTDNA's. Saudi Arabia, for example, contributes more samples there than any other country.</p>
+<p>Comparisons with FTDNA use only YFull customers (samples with a YF number) and only living people. Ancient DNA and samples from scientific papers and the GenBank database are excluded, because FTDNA counts customers only. For mtDNA fewer than a third of YFull samples qualify, so maternal-line comparisons are thinner.</p>
+<p>The YFull and FTDNA trees branch differently and name branches after different mutations. To compare them, every YFull sample is placed on the FTDNA tree by mutations the two trees share: 87% of YFull branches find their FTDNA branch directly, the rest through the nearest branch above for which a match was found. Shares are then computed the same way as for FTDNA kits.</p>
+<p>Country and region on YFull, as on FTDNA, are given by the tested person. YFull regions are linked to FTDNA pages by hand: republics of Russia, Spanish autonomies (through provinces), regions of Italy, parts of the United Kingdom. Samples from a region that has its own FTDNA page are taken out of the country.</p>
+<p>Language on YFull is what the tested person named as their native language (ISO 639-3 code); FTDNA has no such field. Language is not the same as people or region: Chechens of Jordan are counted with Chechens of Chechnya, and “Arabic” spans every Arab country.</p>
+<h2 id="theytree">TheYtree <a class="anchor" href="#theytree" aria-label="Link to section “TheYtree”">#</a></h2>
+<p>A third age estimate for Y branches comes from the Chinese tree TheYtree (theytree.com), copy of 14 November 2026. It holds 43,033 samples, and the branches of haplogroup O are far better covered there than at FamilyTreeDNA and YFull. A branch of this site is matched to a TheYtree node by SNP, so the node name may differ. Its age and sample count appear on the branch page when the node holds more than 50 samples.</p>
+<h2 id="volume" data-old="how-much-data">How much data <a class="anchor" href="#volume" aria-label="Link to section “How much data”">#</a></h2>
+<h3>FamilyTreeDNA: Y tree of 12 November 2026, mt tree of 11 November 2026</h3>
+<ul class="plain">
+<li>Y-DNA: 717,606 kits, every test from STR to Big Y. Big Y: 155,198 (22%); country given: 276,967 (39%). The tree has 111,261 nodes with 904,690 SNPs, 864,478 unique: one mutation can sit on several branches. 4,320 branches have a page.</li>
+<li>mtDNA: 509,921 kits, every test including HVR; 279,422 full sequences. Country given: 135,331 (27%). The tree has 5,469 nodes: 1,181 have a page of their own, the other 4,229 are rows on the page of the nearest branch. The same lists hold another 40,903 branches from Mitotree that the public tree lacks.</li>
+<li>Countries and regions: 288.</li>
+</ul>
+<h3>FTDNA Discover</h3>
+<ul class="plain">
+<li>Discover Y tree (version 2026.11.8, copy of 13 November 2026): 110,982 tree nodes, 105,339 of them with a known common-ancestor age; 166,660 Big Y-level samples, 16,635 ancient, 381 notable people.</li>
+<li>Discover's branch pages also count samples outside the public tree, mostly from academic studies: 729,255 modern samples at the root against 717,606 kits in the public FTDNA tree (copy of 2026-11-13; most in Italy (Sardinia), Thailand, China, Vietnam, Turkey).</li>
+<li>Mitotree (version 2026.10.28, copy of 11 November 2026): 323,481 samples with a full sequence, 170,381 of them with a country; 27,105 ancient samples; ages went to the branches the public mt tree names as well: 5,028.</li>
+<li>Of the ancient samples the site uses those with a branch and a place: 11,430 samples by Y-DNA and 6,019 samples by mtDNA; archaeological cultures and ancient peoples: 518.</li>
+</ul>
+<h3>Maps of the FTDNA geographic projects: copy of 20 October 2026</h3>
+<ul class="plain">
+<li>98,414 people put a point by Y-DNA and 47,352 by mtDNA in 243 countries and regions of the site. A person in several projects counts once.</li>
+</ul>
+<h3>YFull: copy of 2 November 2026, trees YTree 14.07.00 and MTree 1.02.24111</h3>
+<ul class="plain">
+<li>Y-DNA: 59,023 samples, 50,858 (86%) of them with a country, 40,164 with a region, 14,045 with a people or language, 2,466 ancient; 43,998 tree nodes, 42,932 with an age.</li>
+<li>mtDNA: 104,420 samples, 66,648 (64%) of them with a country, 27,018 with a region, 9,768 with a people or language, 6,019 ancient; 28,077 tree nodes, 26,822 with an age.</li>
+<li>16,366 people with both tests; 167 peoples and languages; 332 world regions; 230 countries and regions matched to FTDNA.</li>
+</ul>
+<h3>TheYtree: copy of 14 November 2026</h3>
+<ul class="plain">
+<li>43,033 samples, 51,279 nodes in the tree; of the 4,320 Y branches of this site, 3,469 are matched to a TheYtree node and 881 show its age.</li>
+</ul>
+<h3>Y-tree nodes by haplogroup</h3>
+<p>A node belongs to the haplogroup its name starts with: R-M269 to R, A00 to A. Trunk nodes named by several letters (BT, CT, GHIJK) get a row of their own.</p>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Y-tree nodes by haplogroup">
+<table class="list letters"><caption class="sr-only">Y-tree nodes by haplogroup</caption>
+<thead>
+<tr>
+<th scope="col">Haplogroup</th>
+<th scope="col" class="num">FamilyTreeDNA</th>
+<th scope="col" class="num">Discover</th>
+<th scope="col" class="num">YFull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">A</th>
+<td class="num">363</td>
+<td class="num">362</td>
+<td class="num">186</td>
+</tr>
+<tr>
+<th scope="row">B</th>
+<td class="num">352</td>
+<td class="num">351</td>
+<td class="num">172</td>
+</tr>
+<tr>
+<th scope="row">C</th>
+<td class="num">1,077</td>
+<td class="num">1,077</td>
+<td class="num">578</td>
+</tr>
+<tr>
+<th scope="row">D</th>
+<td class="num">208</td>
+<td class="num">207</td>
+<td class="num">137</td>
+</tr>
+<tr>
+<th scope="row">E</th>
+<td class="num">8,633</td>
+<td class="num">8,599</td>
+<td class="num">5,070</td>
+</tr>
+<tr>
+<th scope="row">F</th>
+<td class="num">40</td>
+<td class="num">40</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<th scope="row">G</th>
+<td class="num">3,691</td>
+<td class="num">3,675</td>
+<td class="num">1,845</td>
+</tr>
+<tr>
+<th scope="row">H</th>
+<td class="num">484</td>
+<td class="num">481</td>
+<td class="num">302</td>
+</tr>
+<tr>
+<th scope="row">I</th>
+<td class="num">16,393</td>
+<td class="num">16,373</td>
+<td class="num">5,616</td>
+</tr>
+<tr>
+<th scope="row">J</th>
+<td class="num">16,111</td>
+<td class="num">16,066</td>
+<td class="num">10,777</td>
+</tr>
+<tr>
+<th scope="row">K</th>
+<td class="num">28</td>
+<td class="num">28</td>
+<td class="num">14</td>
+</tr>
+<tr>
+<th scope="row">L</th>
+<td class="num">926</td>
+<td class="num">923</td>
+<td class="num">598</td>
+</tr>
+<tr>
+<th scope="row">M</th>
+<td class="num">60</td>
+<td class="num">60</td>
+<td class="num">12</td>
+</tr>
+<tr>
+<th scope="row">N</th>
+<td class="num">4,954</td>
+<td class="num">4,934</td>
+<td class="num">1,510</td>
+</tr>
+<tr>
+<th scope="row">O</th>
+<td class="num">1,926</td>
+<td class="num">1,925</td>
+<td class="num">1,650</td>
+</tr>
+<tr>
+<th scope="row">P</th>
+<td class="num">26</td>
+<td class="num">26</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<th scope="row">Q</th>
+<td class="num">1,716</td>
+<td class="num">1,709</td>
+<td class="num">746</td>
+</tr>
+<tr>
+<th scope="row">R</th>
+<td class="num">52,632</td>
+<td class="num">52,512</td>
+<td class="num">13,816</td>
+</tr>
+<tr>
+<th scope="row">S</th>
+<td class="num">93</td>
+<td class="num">93</td>
+<td class="num">12</td>
+</tr>
+<tr>
+<th scope="row">T</th>
+<td class="num">1,537</td>
+<td class="num">1,530</td>
+<td class="num">932</td>
+</tr>
+<tr>
+<th scope="row">Trunk</th>
+<td class="num">11</td>
+<td class="num">11</td>
+<td class="num">11</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th scope="row">Total</th>
+<td class="num">111,261</td>
+<td class="num">110,982</td>
+<td class="num">43,998</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<h2 id="predictor" data-old="the-ypredictor-tool">The ypredictor tool <a class="anchor" href="#predictor" aria-label="Link to section “The ypredictor tool”">#</a></h2>
+<p>Sister project <a href="https://ypredictor.github.io/?lang=en">ypredictor.github.io</a>: paste your FTDNA STR markers to get a predicted Y-tree branch and your closest matches. Match countries there link back to pages of this site.</p>
+<h2 id="predictor-accuracy" data-old="how-accurate-the-predictor-is">How accurate the predictor is <a class="anchor" href="#predictor-accuracy" aria-label="Link to section “How accurate the predictor is”">#</a></h2>
+<p>Before each release the predictor is checked on the five clades it is tuned for. If errors pass a threshold, the new version does not go out. Latest check, 11 November 2026:</p>
+<ul class="plain">
+<li><a href="/en/clade/j-z1842/"><b>J-Z1842</b></a>: right line for 98.6% of 557 kits; on geographic project maps: 97.4% of 724</li>
+<li><a href="/en/clade/j-m172/"><b>J-M172</b></a>: right line for 97.1% of 1,739 kits; on geographic project maps: 97.1% of 1,760</li>
+<li><a href="/en/clade/r-m269/"><b>R-M269</b></a>: right line for 97.2% of 109 kits; on geographic project maps: 95.5% of 111</li>
+<li><a href="/en/clade/r-m417/"><b>R-M417</b></a>: right line for 91.1% of 90 kits; on geographic project maps: 91.1% of 90</li>
+<li><a href="/en/clade/g-p15/"><b>G-P15</b></a>: right line for 95.3% of 128 kits; on geographic project maps: 95.3% of 129</li>
+</ul>
+<details class="note small">
+<summary>How we searched</summary>
+<p>We take the clade's kits whose lab branch is at least 5 tree steps deep. For each we remove the kit itself from the voters and predict its branch from its marker neighbours by the predictor's own rule, knowing from the lab answer that the kit is from this clade. The kit's relatives stay in the base and vote, so for a stranger with no kin in the base accuracy is lower. An answer is right when it lies on the lab branch's line: the same branch, above or below it; another line is an error. The second check compares with FTDNA geographic project maps, where a member's branch is confirmed; short confirmed branches count there too, so the kits of the two checks differ.</p>
+</details>
+<p>The data is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: take it, rework it, just credit ftdnastat.</p>
+</div>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 12 November 2026, built 2026-11-14. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

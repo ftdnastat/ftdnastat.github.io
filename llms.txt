@@ -1,0 +1,40 @@
+# ftdnastat
+
+> Y-DNA and mtDNA haplogroup statistics by country, region, people and tree branch, built from public FamilyTreeDNA and YFull data. Every page exists in Russian (/ru/) and English (/en/) at the same path. Build 20261114-18dba71, 2026-11-14. The numbers change with every build; cite the date.
+
+## Where the numbers come from
+
+- FamilyTreeDNA public Y-DNA tree: customers per branch and country of origin, as the customers listed it. Tree of 2026-11-12; 276,967 Y-DNA customers with a known country.
+- FamilyTreeDNA public mtDNA tree, fetched 2026-11-11; 135,331 mtDNA customers with a known country.
+- FamilyTreeDNA Discover: branch ages (TMRCA), ancient samples and migration paths, fetched 2026-11-13. Mitotree for mtDNA ages.
+- YFull public Y and mtDNA trees (samples by country, region and language), snapshot of 2026-11-02 (YTree v14.07.00, MTree v1.02.24111).
+- Maps of FamilyTreeDNA geographic projects (members' ancestral places), snapshot of 2026-10-20.
+- Note: a share on a page is a share of these customers or samples, not of a whole population.
+
+## URL patterns
+
+Replace `{lang}` with `ru` or `en`:
+
+- `https://ftdnastat.github.io/{lang}/c/{slug}/` — country or region by FamilyTreeDNA customers (294 pages), e.g. `/en/c/georgia/`, `/ru/c/russia-chechnya/`
+- `https://ftdnastat.github.io/{lang}/c/{slug}/ancient/` — ancient samples found in that territory, where available
+- `https://ftdnastat.github.io/{lang}/region/{code}/` — region by YFull samples (lowercase ISO 3166-2 code), e.g. `/en/region/am-lo/`
+- `https://ftdnastat.github.io/{lang}/ethnic/{code}/` — people by YFull samples (ISO 639-3 language code), e.g. `/en/ethnic/che/`
+- `https://ftdnastat.github.io/{lang}/clade/{branch}/` — Y-DNA branch (lowercase FamilyTreeDNA name), e.g. `/en/clade/j-m267/`
+- `https://ftdnastat.github.io/{lang}/mt-clade/{branch}/` — mtDNA branch, e.g. `/en/mt-clade/h1/`
+- `https://ftdnastat.github.io/{lang}/culture/{slug}/` — archaeological culture with ancient Y-DNA, e.g. `/en/culture/yamnaya/`
+- `https://ftdnastat.github.io/{lang}/compare/#a=c:georgia,c:turkey` — side-by-side comparison of countries and regions (`c:`) and peoples (`p:`)
+
+## How to cite
+
+Cite as: `ftdnastat, "<page title>", <URL>, data of 2026-11-14`. Link to the specific page rather than the home page. Country, region, people and branch pages end with a citation line and the sources they count. Each source comes with its date and number of kits or samples.
+
+## Key indexes
+
+- [Sitemap](https://ftdnastat.github.io/sitemap.xml): index of all page lists
+- [Countries and regions](https://ftdnastat.github.io/en/countries/): all countries and regions with Y-DNA and mtDNA shares
+- [Y-DNA tree](https://ftdnastat.github.io/en/tree/): major paternal branches with ages
+- [mtDNA tree](https://ftdnastat.github.io/en/mt-tree/): major maternal branches with ages
+- [World map](https://ftdnastat.github.io/en/map/): branch frequencies on the map
+- [Findings](https://ftdnastat.github.io/en/findings/): what stands out in the data, with methods
+- [Changes](https://ftdnastat.github.io/en/changes/): what changed this week and month
+- [About the data](https://ftdnastat.github.io/en/about/): sources and methods

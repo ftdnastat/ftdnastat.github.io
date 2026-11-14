@@ -1,0 +1,14 @@
+{"name":"Liberia","slug":"liberia","n":1,"l1":[
+{"k":"L","v":1}
+],"l2":[
+{"k":"L2e","v":1}
+],"tree":[
+{"id":4752,"name":"L2e","label":"L2e","shown":"L2e","age":{"mean":-34058,"oldest":-40067,"youngest":-28505},"n":1,"depth":0}
+],"cum":[
+[436,1],
+[463,1],
+[464,1],
+[497,1]
+],"cumN":844,"terminal":[
+["L2e",1]
+]}

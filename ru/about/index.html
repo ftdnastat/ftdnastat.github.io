@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>О данных: источники и методика · ftdnastat</title>
+<meta name="description" content="Откуда данные, как мы считаем и чего статистика не показывает.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/ru/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/ru/about/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/about/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/about/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/about/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="О данных: источники и методика">
+<meta property="og:description" content="Откуда данные, как мы считаем и чего статистика не показывает.">
+<meta property="og:url" content="https://ftdnastat.github.io/ru/about/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ftdnastat — статистика гаплогрупп FTDNA по странам и регионам: составные полоски макрогрупп Y-ДНК для Дагестана, Турции, Ирландии и Финляндии">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="О данных: источники и методика">
+<meta name="twitter:description" content="Откуда данные, как мы считаем и чего статистика не показывает.">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og-ru.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/IBMPlexSans-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FiraSansCondensed-600-cyrillic.woff2">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Гаплогруппы FamilyTreeDNA по странам и народам","description":"Откуда данные, как мы считаем и чего статистика не показывает.","url":"https://ftdnastat.github.io/ru/about/","inLanguage":"ru","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","publisher":{"@type":"Organization","name":"ftdnastat","url":"https://ftdnastat.github.io/ru/"},"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://ftdnastat.github.io/data/branches.json"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://ftdnastat.github.io/data/compare-index.json"}]}</script>
+<script src="/assets/eqearth.js" defer></script>
+<script src="/assets/branch-map.js" defer></script>
+<noscript>
+<style>.bmap{display:none}</style>
+</noscript>
+</head>
+<body data-lang="ru">
+<a class="skip" href="#main">К содержимому</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/ru/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Меню</button>
+<nav class="nav" id="nav" aria-label="Разделы"><a href="/ru/y/">Y-ДНК</a><a href="/ru/mt/">мтДНК</a><a href="/ru/clade/">Ветки</a><a href="/ru/countries/">Страны</a><a href="/ru/map/">Карта</a><a href="/ru/findings/">Находки</a><a href="/ru/changes/">Динамика</a><a href="/ru/ethnic/">Народы</a><a href="/ru/culture/">Палео</a><a href="/ru/compare/">Сравнение</a><a href="/ru/pairs/">Пары</a><a href="/ru/about/" aria-current="page">О данных</a></nav>
+<form class="search" action="/ru/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Страна, регион или SNP" aria-label="Страна, регион или SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Ничего не найдено" data-all="Все страны →" data-clades="Ветки Y" data-clades-mt="Ветки мт" data-cultures="Культуры" data-peoples="Народы" data-samples="образец|образца|образцов" data-kits="образец|образца|образцов">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Результаты поиска" hidden></div>
+</form>
+<a class="lang" href="/en/about/" lang="en" hreflang="en" data-lang-switch="en">English</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>О данных</h1>
+<p><a class="more" href="/ru/about/how/">Как устроен сайт: источники, обновление и расчёты подробно →</a></p>
+</div>
+<div class="prose">
+<p>Откуда данные: публичные деревья FamilyTreeDNA — Y-DNA Haplotree и mtDNA Haplotree — и сервис FTDNA Discover, который даёт возраст веток. Раз в неделю мы скачиваем копии деревьев, проверяем их и пересобираем сайт.</p>
+<p>Образец (kit) — один тест FTDNA, почти всегда один человек; у FTDNA он называется kit. Образцы YFull и древние образцы приходят из своих баз. Ветка — узел дерева гаплогрупп со всеми его подветками; в заголовке страницы ветки она названа гаплогруппой, как её обычно ищут.</p>
+<p>Страна человека — это родина самого дальнего известного предка по этой линии, и указывает её сам клиент FTDNA. Это не место жительства и не случайная выборка населения. США, Британия и Скандинавия представлены с избытком, Африка и Азия почти пусты, а некоторые страны искажены диаспорой. Например, по материнской линии Испания примерно на 18% индейская, потому что латиноамериканцы указывают страну предков-колонистов; Беларусь и Литва на 15–20% ашкеназские.</p>
+<p>Образцы без страны или с пометкой Unknown Origin не учитываются: по Y-ДНК это 61% всех образцов, по мтДНК (митохондриальная ДНК) 73%. Среди них африканских линий больше, чем среди указавших страну, поэтому мировая доля гаплогруппы L на сайте занижена.</p>
+<p>Одна страна переименована намеренно: «Italy (Aosta Valley)» показана как орстхой — народ, близкий чеченцам и ингушам, который указывает этот регион из-за похожего флага. Подробности на её странице.</p>
+<p>Регионы считаются отдельно от своей страны: «Russia (Republic of Dagestan)» не входит в «Russian Federation», «Spain (Catalonia)» не входит в «Spain». Ссылка на страну есть на странице региона.</p>
+<p>Короткое имя без уточнений (J-M172, H, I2) значит, что тест не дошёл до мелких веток: по Y-ДНК это STR-тест или старый набор SNP, по мтДНК — тест HVR без полного прочтения. В списке крупных веток такие образцы собраны под звёздочкой: они стоят на ветке, но не попали ни в одну из её крупных подветок.</p>
+<p>Ветка и её подветка никогда не стоят в одном списке как равные. Либо это дерево, где ветка включает все свои подветки, либо список, где каждый образец посчитан один раз, а остаток на самой ветке помечен звёздочкой.</p>
+<p>Возраст ветки — сколько лет назад жил общий предок всех её тестируемых (TMRCA), по оценке FTDNA Discover. Берём середину оценки и округляем до ста лет; если больше 10 тысяч лет — вверх до тысячи. Возраст мт-веток берём из Mitotree FTDNA, если он там есть.</p>
+<p>Единые пороги для всего сайта: страны меньше 50 образцов помечены как малые и не попадают в находки; похожие страны считаются от 100 образцов; характерная ветка — от 10 образцов.</p>
+<p>Где ветка «чаще всего встречается», решает не голая доля. Страна должна дать не меньше 5 образцов ветки, а страны сравниваются по нижней границе 95-процентного интервала Уилсона: выборка в полторы сотни образцов не обгоняет большую при почти равной доле. На шкалах страны и в таблице стран на странице ветки доли малых выборок (до 100 образцов) округлены до целых, а если в стране у ветки меньше 5 образцов, показано число: «1 из 52».</p>
+<details class="about-colors">
+<summary>Цвета макрогрупп</summary>
+<p>Цвет — макрогруппа, первая буква гаплогруппы; редкие серые.</p>
+<p class="eyebrow kind">Y-ДНК</p>
+<div class="legend"><span><i class="c1"></i>R</span><span><i class="c2"></i>I</span><span><i class="c3"></i>J</span><span><i class="c4"></i>E</span><span><i class="c5"></i>N</span><span><i class="c6"></i>G</span><span><i class="c7"></i>Q</span><span><i class="c8"></i>T</span><span><i class="c9"></i>O</span><span><i class="c10"></i>C</span><span><i class="c11"></i>L</span><span><i class="c12"></i>D</span><span><i class="c13"></i>A</span><span><i class="c14"></i>B</span><span><i class="c15"></i>H</span><span><i class="c16"></i>K</span><span><i class="c17"></i>F</span><span><i class="c18"></i>S</span><span><i class="c19"></i>M</span><span><i class="c20"></i>P</span><span><i class="c0"></i>прочие</span></div>
+<p class="eyebrow kind">мтДНК</p>
+<div class="legend"><span><i class="c1"></i>H</span><span><i class="c2"></i>U</span><span><i class="c3"></i>T</span><span><i class="c4"></i>J</span><span><i class="c5"></i>K</span><span><i class="c6"></i>V</span><span><i class="c7"></i>L</span><span><i class="c8"></i>I</span><span><i class="c9"></i>A</span><span><i class="c10"></i>B</span><span><i class="c11"></i>D</span><span><i class="c12"></i>HV</span><span><i class="c13"></i>C</span><span><i class="c14"></i>N</span><span><i class="c15"></i>M</span><span><i class="c16"></i>X</span><span><i class="c17"></i>F</span><span><i class="c18"></i>R</span><span><i class="c19"></i>W</span><span><i class="c20"></i>Z</span><span><i class="c0"></i>прочие</span></div>
+</details>
+<h2 id="population" data-old="население">Население <a class="anchor" href="#population" aria-label="Ссылка на раздел «Население»">#</a></h2>
+<p>Карточка «образцов на 100 тыс. мужчин» на странице страны или региона делит число образцов с указанной страной на мужское население: страны — ООН (World Population Prospects 2024, оценка на 2023), регионы России — перепись 2021, остальные регионы — Wikidata с долей мужчин своей страны. Образцы региона засчитаны и его стране: население страны включает жителей региона. Англия, Шотландия и Уэльс стоят в ряду стран. Это мера того, насколько ветки страны покрыты тестами, а не доля жителей, сдавших тест. Родину предка указывают и потомки эмигрантов, поэтому страны эмиграции стоят выше, чем дало бы их собственное население. Карточки нет у стран и регионов меньше 50 образцов или 50 тыс. человек и у выборок FTDNA без своей территории — First Nations, друзов, корнцев.</p>
+<figure class="cmap gmap bmap" id="bmap" aria-label="Карта: образцы Y-ДНК на 100 тыс. мужчин и места предков участников гео-проектов">
+<div class="gmap-tabs">
+<div class="tabs bmap-layers" role="group" aria-label="Что показать на карте"><button type="button" class="tab" data-layer="countries" aria-pressed="true">Образцов на 100 тыс. мужчин</button><button type="button" class="tab" data-layer="count" aria-pressed="false">Где жили предки</button></div>
+<div class="tabs" role="group" aria-label="Масштаб карты"><button type="button" class="tab" data-v="world" aria-pressed="true">Мир</button><button type="button" class="tab" data-v="europe" aria-pressed="false">Европа</button><button type="button" class="tab" data-v="caucasus" aria-pressed="false">Кавказ</button></div>
+</div>
+<div class="cmap-frame"></div>
+<figcaption class="cmap-cap dim" aria-live="polite">Цвет показывает, сколько образцов Y-ДНК приходится на 100 тыс. мужчин. Наведите на страну или нажмите на неё.</figcaption>
+<div class="legend cmap-legend gmap-legend bmap-legend"></div>
+<p class="dim bmap-note" hidden>Где жили предки участников гео-проектов FamilyTreeDNA, по картам Y-ДНК на 2026-10-20. Всего 101 795 человек. Клетки по 1°, где участников меньше трёх, не закрашены: в них 1 907.</p>
+</figure>
+<script type="application/json" id="bmap-data">{"lang":"ru","kind":"y","value":"rate","shares":{"united-states":18.99,"england":99.66,"ireland":868.15,"germany":42.12,"sweden":230.19,"scotland":537.33,"finland":369.36,"united-kingdom":28.86,"saudi-arabia":59.72,"poland":39.45,"france":20.39,"russian-federation":17.04,"italy":21.35,"norway":164.15,"ukraine":25.35,"spain":18.73,"switzerland":67.67,"mexico":3.65,"canada":8.77,"netherlands":25.72,"northern-ireland":318.48,"czech-republic":44.48,"turkey":5.84,"iraq":14.47,"wales":142.96,"hungary":41.31,"lithuania":138.73,"portugal":39.95,"denmark":55.3,"belarus":40.53,"kuwait":76.64,"russia-chechnya":225.82,"austria":24.17,"india":0.2,"greece":26.57,"yemen":8.11,"romania":11.66,"slovakia":36.45,"united-arab-emirates":20.13,"armenia":86.5,"china":0.15,"bulgaria":26.91,"puerto-rico":38.89,"brazil":0.71,"russia-dagestan":67.84,"belgium":14.57,"syrian-arab-republic":7.78,"iran":1.65,"bahrain":80.25,"croatia":28.74,"kazakhstan":7.56,"lebanon":24.05,"japan":0.87,"qatar":32.71,"palestinian-territory":25.33,"australia":3.03,"morocco":3.01,"egypt":1.08,"georgia":42.04,"latvia":52.3,"slovenia":43.24,"indonesia":0.44,"azerbaijan":12.16,"algeria":2.15,"philippines":0.72,"estonia":44.97,"libya":13.35,"oman":15.35,"serbia":10.88,"colombia":1.18,"south-africa":0.76,"bosnia-and-herzegovina":24.36,"sudan":1.66,"mongolia":26.51,"pakistan":0.33,"ghana":2.51,"russia-adygea":177.84,"cuba":3.97,"jordan":6.13,"jamaica":15.87,"korea":0.91,"israel":5.32,"albania":20.14,"moldova":13.67,"chile":1.68,"tunisia":4.18,"uzbekistan":1.51,"russia-chuvashia":39.65,"dominican-republic":3.12,"cameroon":1.74,"iceland":99.78,"montenegro":63.96,"macedonia":18.86,"argentina":0.58,"luxembourg":38.84,"peru":0.76,"new-zealand":5.95,"russia-mordovia":52.33,"afghanistan":0.8,"italy-sicily":5.05,"vietnam":0.26,"russia-ingushetia":46.93,"sri-lanka":1.35,"tajikistan":3.33,"ethiopia":0.11,"nigeria":0.13,"somalia":1.5,"malta":33.99,"russia-tatarstan":6.26,"el-salvador":2.94,"france-alsace":8,"russia-karelia":46.03,"belgium-flanders":2.9,"kosovo":11,"venezuela":0.49,"barbados":63.53,"guatemala":0.86,"russia-bashkortostan":5.38,"taiwan":0.82,"kenya":0.35,"ecuador":0.75,"cyprus":11.95,"kyrgyzstan":2.72,"spain-andalusia":1.87,"costa-rica":2.5,"portugal-azores":52.38,"trinidad-and-tobago":8.61,"bahamas":26.19,"panama":2.87,"russia-kabardino-balkaria":19.58,"honduras":0.93,"benin":1.26,"russia-karachay-cherkessia":34.8,"malaysia":0.33,"papua-new-guinea":1.48,"eritrea":3.39,"bangladesh":0.08,"senegal":0.67,"mali":0.48,"iraq-kurdistan":2.38,"russia-north-ossetia-alania":16.22},"edges":[1.35,5.84,20.14,43.24,868.15],"view":"world","geo":{"src":"/data/geo-all-y.json","layers":["count"]},"s":{"small":"меньше 50 образцов или 50 тыс. человек","rate":"{v} на 100 тыс. мужчин","mapHint":"Цвет показывает, сколько образцов Y-ДНК приходится на 100 тыс. мужчин. Наведите на страну или нажмите на неё.","hint":"Наведите на пятно или нажмите на него, чтобы увидеть числа.","cell":"{lat}, {lon}: участников проектов — {n}","n":"с. ш.","s":"ю. ш.","e":"в. д.","w":"з. д."}}</script>
+<h2 id="yfull" data-old="данные-yfull">Данные YFull <a class="anchor" href="#yfull" aria-label="Ссылка на раздел «Данные YFull»">#</a></h2>
+<p>Второй источник — публичные деревья YFull (Y и мт), копия от 2 ноября 2026, обновляется раз в месяц. YFull — платная расшифровка полной Y-хромосомы и полной мтДНК, поэтому среди её клиентов ещё больше энтузиастов и участников проектов, чем у FTDNA. Например, из Саудовской Аравии там больше образцов, чем из любой другой страны.</p>
+<p>В сравнениях с FTDNA участвуют только клиенты YFull (образцы с номером YF) и только современные люди. Древняя ДНК и образцы из научных статей и базы GenBank исключены, потому что у FTDNA считаются только клиенты. По мтДНК таких образцов у YFull меньше трети, поэтому сравнения по материнской линии беднее.</p>
+<p>Деревья YFull и FTDNA ветвятся по-разному и называют ветки разными мутациями. Чтобы их сравнивать, каждый образец YFull поставлен на дерево FTDNA по мутациям, общим для обоих деревьев: 87% веток YFull находят свою ветку FTDNA напрямую, остальные — через ближайшую ветку выше, для которой соответствие нашлось. Дальше доли считаются так же, как для образцов FTDNA.</p>
+<p>Страну и регион на YFull, как и на FTDNA, указывает сам тестируемый. Регионы YFull привязаны к страницам FTDNA вручную: республики России, автономии Испании (через провинции), области Италии, части Соединённого Королевства. Образцы из региона, у которого на FTDNA есть своя страница, из страны вычтены.</p>
+<p>Язык на YFull — то, что тестируемый сам назвал родным языком (код ISO 639-3); у FTDNA такого поля нет. Язык — не то же самое, что народ или регион: чеченцы Иордании считаются вместе с чеченцами Чечни, а «арабский» объединяет все арабские страны.</p>
+<h2 id="theytree">TheYtree <a class="anchor" href="#theytree" aria-label="Ссылка на раздел «TheYtree»">#</a></h2>
+<p>Третья оценка возраста веток Y — китайское дерево TheYtree (theytree.com), копия от 14 ноября 2026. В нём 43 033 образца, и ветки гаплогруппы O представлены намного шире, чем у FamilyTreeDNA и YFull. Ветка сайта сопоставляется с узлом TheYtree по SNP, поэтому название узла может отличаться. Возраст и число образцов показаны на странице ветки, если в узле больше 50 образцов.</p>
+<h2 id="volume" data-old="объём-данных">Объём данных <a class="anchor" href="#volume" aria-label="Ссылка на раздел «Объём данных»">#</a></h2>
+<h3>FamilyTreeDNA: Y-дерево от 12 ноября 2026, мт-дерево от 11 ноября 2026</h3>
+<ul class="plain">
+<li>Y-ДНК: 717 606 образцов — все тесты, от STR до Big Y. Big Y у 155 198 (22%), страна указана у 276 967 (39%). Узлов дерева 111 261, SNP на них 904 690, уникальных 864 478: одна мутация бывает на нескольких ветках. Веток со своей страницей 4 320.</li>
+<li>мтДНК: 509 921 образец — все тесты, включая HVR; полных последовательностей 279 422. Страна указана у 135 331 (27%). Узлов дерева 5 469: у 1 181 своя страница, остальные 4 229 стоят строками на странице ближайшей ветки. Там же — ещё 40 903 ветки из Mitotree, которых нет в публичном дереве.</li>
+<li>Стран и регионов: 288.</li>
+</ul>
+<h3>FTDNA Discover</h3>
+<ul class="plain">
+<li>Y-дерево Discover (версия 2026.11.8, копия от 13 ноября 2026): узлов дерева 110 982, у 105 339 из них известен возраст общего предка; образцов уровня Big Y 166 660, древних 16 635, известных людей 381.</li>
+<li>Discover на страницах веток считает и образцы вне публичного дерева, в основном научные выборки: у корня 729 255 современных образцов против 717 606 образцов публичного дерева FTDNA (копия от 2026-11-13; больше всего — Италия · Сардиния, Таиланд, Китай, Вьетнам, Турция).</li>
+<li>Mitotree (версия 2026.10.28, копия от 11 ноября 2026): 323 481 образец с полной последовательностью, из них с указанной страной 170 381; древних образцов 27 105; возраст получили ветки, чьи имена есть и в публичном мт-дереве: 5 028.</li>
+<li>Мы берём только древние образцы, у которых известны ветка и место находки: 11 430 образцов по Y-ДНК и 6 019 образцов по мтДНК; археологических культур и древних народов: 518.</li>
+</ul>
+<h3>Карты географических проектов FTDNA: копия от 20 октября 2026</h3>
+<ul class="plain">
+<li>98 414 человек поставили точку по Y-ДНК и 47 352 по мтДНК в 243 странах и регионах сайта. Человек из нескольких проектов учтён один раз.</li>
+</ul>
+<h3>YFull: копия от 2 ноября 2026, деревья YTree 14.07.00 и MTree 1.02.24111</h3>
+<ul class="plain">
+<li>Y-ДНК: 59 023 образца, из них с указанной страной 50 858 (86%), с регионом 40 164, с народом или языком 14 045, древних 2 466; узлов дерева 43 998, с возрастом 42 932.</li>
+<li>мтДНК: 104 420 образцов, из них с указанной страной 66 648 (64%), с регионом 27 018, с народом или языком 9 768, древних 6 019; узлов дерева 28 077, с возрастом 26 822.</li>
+<li>Людей с обоими тестами — 16 366; народов и языков 167; регионов мира 332; стран и регионов, сопоставленных с FTDNA, 230.</li>
+</ul>
+<h3>TheYtree: копия от 14 ноября 2026</h3>
+<ul class="plain">
+<li>43 033 образца, узлов в дереве 51 279; из 4 320 Y-веток сайта с узлом TheYtree сопоставлены 3 469, возраст показан у 881.</li>
+</ul>
+<h3>Узлы Y-деревьев по гаплогруппам</h3>
+<p>Узел относится к гаплогруппе по первой букве имени: R-M269 — к R, A00 — к A. Узлы ствола с именами из нескольких букв (BT, CT, GHIJK) стоят отдельной строкой.</p>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Узлы Y-деревьев по гаплогруппам">
+<table class="list letters"><caption class="sr-only">Узлы Y-деревьев по гаплогруппам</caption>
+<thead>
+<tr>
+<th scope="col">Гаплогруппа</th>
+<th scope="col" class="num">FamilyTreeDNA</th>
+<th scope="col" class="num">Discover</th>
+<th scope="col" class="num">YFull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">A</th>
+<td class="num">363</td>
+<td class="num">362</td>
+<td class="num">186</td>
+</tr>
+<tr>
+<th scope="row">B</th>
+<td class="num">352</td>
+<td class="num">351</td>
+<td class="num">172</td>
+</tr>
+<tr>
+<th scope="row">C</th>
+<td class="num">1 077</td>
+<td class="num">1 077</td>
+<td class="num">578</td>
+</tr>
+<tr>
+<th scope="row">D</th>
+<td class="num">208</td>
+<td class="num">207</td>
+<td class="num">137</td>
+</tr>
+<tr>
+<th scope="row">E</th>
+<td class="num">8 633</td>
+<td class="num">8 599</td>
+<td class="num">5 070</td>
+</tr>
+<tr>
+<th scope="row">F</th>
+<td class="num">40</td>
+<td class="num">40</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<th scope="row">G</th>
+<td class="num">3 691</td>
+<td class="num">3 675</td>
+<td class="num">1 845</td>
+</tr>
+<tr>
+<th scope="row">H</th>
+<td class="num">484</td>
+<td class="num">481</td>
+<td class="num">302</td>
+</tr>
+<tr>
+<th scope="row">I</th>
+<td class="num">16 393</td>
+<td class="num">16 373</td>
+<td class="num">5 616</td>
+</tr>
+<tr>
+<th scope="row">J</th>
+<td class="num">16 111</td>
+<td class="num">16 066</td>
+<td class="num">10 777</td>
+</tr>
+<tr>
+<th scope="row">K</th>
+<td class="num">28</td>
+<td class="num">28</td>
+<td class="num">14</td>
+</tr>
+<tr>
+<th scope="row">L</th>
+<td class="num">926</td>
+<td class="num">923</td>
+<td class="num">598</td>
+</tr>
+<tr>
+<th scope="row">M</th>
+<td class="num">60</td>
+<td class="num">60</td>
+<td class="num">12</td>
+</tr>
+<tr>
+<th scope="row">N</th>
+<td class="num">4 954</td>
+<td class="num">4 934</td>
+<td class="num">1 510</td>
+</tr>
+<tr>
+<th scope="row">O</th>
+<td class="num">1 926</td>
+<td class="num">1 925</td>
+<td class="num">1 650</td>
+</tr>
+<tr>
+<th scope="row">P</th>
+<td class="num">26</td>
+<td class="num">26</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<th scope="row">Q</th>
+<td class="num">1 716</td>
+<td class="num">1 709</td>
+<td class="num">746</td>
+</tr>
+<tr>
+<th scope="row">R</th>
+<td class="num">52 632</td>
+<td class="num">52 512</td>
+<td class="num">13 816</td>
+</tr>
+<tr>
+<th scope="row">S</th>
+<td class="num">93</td>
+<td class="num">93</td>
+<td class="num">12</td>
+</tr>
+<tr>
+<th scope="row">T</th>
+<td class="num">1 537</td>
+<td class="num">1 530</td>
+<td class="num">932</td>
+</tr>
+<tr>
+<th scope="row">Ствол</th>
+<td class="num">11</td>
+<td class="num">11</td>
+<td class="num">11</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th scope="row">Всего</th>
+<td class="num">111 261</td>
+<td class="num">110 982</td>
+<td class="num">43 998</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<h2 id="predictor" data-old="предиктор-ypredictor">Предиктор ypredictor <a class="anchor" href="#predictor" aria-label="Ссылка на раздел «Предиктор ypredictor»">#</a></h2>
+<p>Родственный проект <a href="https://ypredictor.github.io/?lang=ru">ypredictor.github.io</a>: вставьте STR-маркеры из FTDNA — получите предсказанную ветку Y-дерева и ближайших совпаденцев. Страны совпаденцев там ведут на страницы этого сайта.</p>
+<h2 id="predictor-accuracy" data-old="насколько-точен-предиктор">Насколько точен предиктор <a class="anchor" href="#predictor-accuracy" aria-label="Ссылка на раздел «Насколько точен предиктор»">#</a></h2>
+<p>Перед каждой публикацией предиктор проходит проверку на пяти кладах, для которых его настроили. Если ошибок станет больше порога, новая версия не выйдет. Последний замер — 11 ноября 2026:</p>
+<ul class="plain">
+<li><a href="/ru/clade/j-z1842/"><b>J-Z1842</b></a>: ветку на верной линии назвали у 98,6% из 557 китов; по картам гео-проектов — у 97,4% из 724</li>
+<li><a href="/ru/clade/j-m172/"><b>J-M172</b></a>: ветку на верной линии назвали у 97,1% из 1 739 китов; по картам гео-проектов — у 97,1% из 1 760</li>
+<li><a href="/ru/clade/r-m269/"><b>R-M269</b></a>: ветку на верной линии назвали у 97,2% из 109 китов; по картам гео-проектов — у 95,5% из 111</li>
+<li><a href="/ru/clade/r-m417/"><b>R-M417</b></a>: ветку на верной линии назвали у 91,1% из 90 китов; по картам гео-проектов — у 91,1% из 90</li>
+<li><a href="/ru/clade/g-p15/"><b>G-P15</b></a>: ветку на верной линии назвали у 95,3% из 128 китов; по картам гео-проектов — у 95,3% из 129</li>
+</ul>
+<details class="note small">
+<summary>Как искали</summary>
+<p>Берём китов клады, у которых лаборатория определила ветку не короче 5 шагов дерева. Для каждого убираем его самого из голосующих и предсказываем ветку по соседям по маркерам — тем же правилом, что в предикторе, зная из лабораторного ответа, что кит из этой клады. Родня кита в базе остаётся и голосует, так что для чужого кита без родни в базе точность ниже. Ответ верен, если лежит на линии лабораторной ветки: совпадает с ней, выше или ниже неё; другая линия — ошибка. Вторая проверка сверяет с картами гео-проектов FTDNA, где ветка участника подтверждена; там в счёт идут и короткие подтверждённые ветки, поэтому киты двух проверок не совпадают.</p>
+</details>
+<p>Данные открыты по лицензии <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: берите и переделывайте, только сошлитесь на ftdnastat.</p>
+</div>
+</main>
+<footer class="wrap foot">Данные FamilyTreeDNA, обработка ftdnastat. Y-дерево от 12 ноября 2026, сборка 2026-11-14. <a href="https://ypredictor.github.io/?lang=ru">Предиктор гаплогруппы по STR — ypredictor</a></footer>
+<script src="/assets/site.js" defer></script>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

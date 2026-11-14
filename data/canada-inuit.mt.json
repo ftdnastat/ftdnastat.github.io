@@ -1,0 +1,20 @@
+{"name":"Canada (Inuit)","slug":"canada-inuit","n":2,"l1":[
+{"k":"H","v":2}
+],"l2":[
+{"k":"H6a","v":1},
+{"k":"H76","v":1}
+],"tree":[
+{"id":7026,"name":"H","label":"H","shown":"H","age":{"mean":-8025,"oldest":-8709,"youngest":-7362},"n":2,"depth":0},
+{"id":7635,"name":"H6a1b","label":"H6a1b","shown":"H6a1b","age":{"mean":-5268,"oldest":-5916,"youngest":-4648},"n":1,"depth":1},
+{"id":7972,"name":"H76","label":"H76","shown":"H76","age":{"mean":-1889,"oldest":-2250,"youngest":-1544},"n":1,"depth":1}
+],"cum":[
+[184,2],
+[288,1],
+[289,1],
+[290,1],
+[295,1],
+[301,1]
+],"cumN":844,"terminal":[
+["H6a1b",1],
+["H76",1]
+]}
