@@ -1,0 +1,13 @@
+{"name":"Maldives","slug":"maldives","n":1,"l1":[
+{"k":"U","v":1}
+],"l2":[
+{"k":"U1a","v":1}
+],"tree":[
+{"id":9055,"name":"U1a","label":"U1a","shown":"U1a","age":{"mean":-23845,"oldest":-26567,"youngest":-21257},"n":1,"depth":0}
+],"cum":[
+[695,1],
+[696,1],
+[697,1]
+],"cumN":843,"terminal":[
+["U1a",1]
+]}
