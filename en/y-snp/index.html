@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Y-DNA branch from a SNP list · ftdnastat</title>
+<meta name="description" content="Paste a SNP list with pluses and minuses as FTDNA shows it: the site finds the Y tree branch, shows which SNPs contradict it and which branches below are…">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/y-snp/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/y-snp/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/y-snp/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/y-snp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="Y-DNA branch from a SNP list">
+<meta property="og:description" content="Paste a SNP list with pluses and minuses as FTDNA shows it: the site finds the Y tree branch, shows which SNPs contradict it and which branches below are…">
+<meta property="og:url" content="https://ftdnastat.github.io/en/y-snp/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og/y-snp-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Y-DNA branch from a SNP list: what to paste and the branch it gives">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Y-DNA branch from a SNP list">
+<meta name="twitter:description" content="Paste a SNP list with pluses and minuses as FTDNA shows it: the site finds the Y tree branch, shows which SNPs contradict it and which branches below are…">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og/y-snp-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/y-snp-core.js" defer></script>
+<script src="/assets/y-snp.js" defer></script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/map/">Map</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/y-snp/" aria-current="page">Branch from SNPs</a><a href="/en/mt-fasta/">Branch from FASTA or HVR</a><a href="/en/pairs/">Pairs</a><a href="/en/about/">About</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-peoples="Peoples" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/y-snp/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>Y-DNA branch from a SNP list</h1>
+<p>Paste a SNP list as FTDNA shows it in a project's SNP table: “M96+, PF1016+, AF4-”, separated by spaces or commas. The site finds the branch of the FTDNA tree of 20 November 2026 whose path holds the most of your positive SNPs.</p>
+</div>
+<div id="ys" class="mf"><label for="ys-text">SNP list</label><textarea id="ys-text" rows="6" spellcheck="false" autocomplete="off" placeholder="CTS10003+, M96+, M123+, AF4-"></textarea>
+<div id="ys-out" class="mf-out" aria-live="polite"></div>
+</div>
+<script type="application/json" id="ys-data">{"lang":"en","i18n":{"formsKits":["kit","kits"],"ysLoading":"Loading the tree…","ysNoData":"The tree did not load. Reload the page.","ysNone":"No SNPs found. A list looks like “M96+, PF1016+, AF4-”.","ysNoBranch":"None of the positive SNPs is in the FTDNA tree.","ysBest":"Your branch","ysScore":"positive SNPs on the path: {hits} of {pos}, negative: {neg}","ysPage":"The branch on the site","ysPageUp":"Nearest ancestor on the site: {name}","ysAgainst":"Negative SNPs on the path","ysAgainstLead":"Every carrier of the branch has these SNPs, yet yours are negative: usually a read error, less often a back mutation.","ysOff":"Positive SNPs of other branches","ysOffLead":"They are off the path to the branch: the same mutation arising on another line, or read errors.","ysBelow":"Branches below","ysBelowLead":"Grey marks branches a negative SNP rules out. Big Y or a SNP test for their mutations checks the rest.","ysBelowMore":"and {n} more","ysUnknown":"SNPs missing from the FTDNA tree","ysPath":"Path from the root","ysBoth":"Given with both plus and minus, left out:","ysBad":"Could not read, left out:"}}</script>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 20 November 2026, built 2026-11-28. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

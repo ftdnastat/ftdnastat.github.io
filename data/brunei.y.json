@@ -1,0 +1,12 @@
+{"name":"Brunei","slug":"brunei","n":1,"l1":[
+{"k":"O","v":1}
+],"l2":[
+{"k":"O-M175*","v":1}
+],"tree":[
+{"id":1971,"name":"O-M119","label":"O1a","shown":"O1a","age":{"mean":-13460,"oldest":-15855,"youngest":-11385},"n":1,"depth":0}
+],"cum":[
+[107,1],
+[108,1]
+],"cumN":175,"terminal":[
+["O-F560",1]
+]}

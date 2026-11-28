@@ -1,0 +1,12 @@
+{"name":"Palau","slug":"palau","n":1,"l1":[
+{"k":"P","v":1}
+],"l2":[
+{"k":"P1d","v":1}
+],"tree":[
+{"id":9029,"name":"P1d1","label":"P1d1","shown":"P1d1","age":{"mean":-17828,"oldest":-19831,"youngest":-15920},"n":1,"depth":0}
+],"cum":[
+[626,1],
+[628,1]
+],"cumN":847,"terminal":[
+["P1d1",1]
+]}

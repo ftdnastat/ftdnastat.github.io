@@ -1,0 +1,13 @@
+{"name":"Brunei","slug":"brunei","n":1,"l1":[
+{"k":"M","v":1}
+],"l2":[
+{"k":"M20","v":1}
+],"tree":[
+{"id":5023,"name":"M20","label":"M20","shown":"M20","age":{"mean":-7459,"oldest":-8662,"youngest":-6327},"n":1,"depth":0}
+],"cum":[
+[543,1],
+[544,1],
+[554,1]
+],"cumN":847,"terminal":[
+["M20",1]
+]}

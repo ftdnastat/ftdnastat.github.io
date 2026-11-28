@@ -1,0 +1,14 @@
+{"name":"Burundi","slug":"burundi","n":1,"l1":[
+{"k":"L","v":1}
+],"l2":[
+{"k":"L0f","v":1}
+],"tree":[
+{"id":4399,"name":"L0f2a1","label":"L0f2a1","shown":"L0f2a1","age":{"mean":-6579,"oldest":-8353,"youngest":-4970},"n":1,"depth":0}
+],"cum":[
+[414,1],
+[415,1],
+[416,1],
+[429,1]
+],"cumN":847,"terminal":[
+["L0f2a1",1]
+]}

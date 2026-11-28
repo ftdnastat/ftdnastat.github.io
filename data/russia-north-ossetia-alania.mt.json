@@ -1,0 +1,12 @@
+{"name":"Russia (Republic of North Ossetia-Alania)","slug":"russia-north-ossetia-alania","n":1,"l1":[
+{"k":"W","v":1}
+],"l2":[
+{"k":"W1","v":1}
+],"tree":[
+{"id":6437,"name":"W1-T119C","label":"W1-T119C","shown":"W1-T119C","age":null,"n":1,"depth":0}
+],"cum":[
+[812,1],
+[821,1]
+],"cumN":847,"terminal":[
+["W1-T119C",1]
+]}

@@ -1,0 +1,15 @@
+{"name":"Spain (Navarre)","slug":"spain-navarre","n":1,"l1":[
+{"k":"H","v":1}
+],"l2":[
+{"k":"H2a","v":1}
+],"tree":[
+{"id":7383,"name":"H2a5a1a","label":"H2a5a1a","shown":"H2a5a1a","age":{"mean":262,"oldest":-95,"youngest":587},"n":1,"depth":0}
+],"cum":[
+[184,1],
+[243,1],
+[244,1],
+[253,1],
+[254,1]
+],"cumN":847,"terminal":[
+["H2a5a1a",1]
+]}

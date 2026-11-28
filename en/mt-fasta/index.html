@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>mtDNA branch from FASTA or HVR1/HVR2 mutations · ftdnastat</title>
+<meta name="description" content="Paste a full mtDNA FASTA, pick a file or paste an FTDNA HVR mutation list: the site finds the Mitotree branch that shares the most mutations with you and…">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" href="/en/feed.xml">
+<link rel="canonical" href="https://ftdnastat.github.io/en/mt-fasta/">
+<link rel="alternate" hreflang="ru" href="https://ftdnastat.github.io/ru/mt-fasta/">
+<link rel="alternate" hreflang="en" href="https://ftdnastat.github.io/en/mt-fasta/">
+<link rel="alternate" hreflang="x-default" href="https://ftdnastat.github.io/en/mt-fasta/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ftdnastat">
+<meta property="og:title" content="mtDNA branch from FASTA or HVR1/HVR2 mutations">
+<meta property="og:description" content="Paste a full mtDNA FASTA, pick a file or paste an FTDNA HVR mutation list: the site finds the Mitotree branch that shares the most mutations with you and…">
+<meta property="og:url" content="https://ftdnastat.github.io/en/mt-fasta/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://ftdnastat.github.io/assets/og/mt-fasta-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="mtDNA branch from FASTA or HVR1 and HVR2 mutations: what to paste and the branch it gives">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mtDNA branch from FASTA or HVR1/HVR2 mutations">
+<meta name="twitter:description" content="Paste a full mtDNA FASTA, pick a file or paste an FTDNA HVR mutation list: the site finds the Mitotree branch that shares the most mutations with you and…">
+<meta name="twitter:image" content="https://ftdnastat.github.io/assets/og/mt-fasta-en.png">
+<script>(function(d){d.documentElement.classList.add("js");function set(t,b,o){t.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".menu-btn");if(b){var t=b.closest(".top");set(t,b,!t.classList.contains("open"))}});d.addEventListener("keydown",function(e){var t=d.querySelector(".top.open");if(e.key==="Escape"&&t&&t.contains(e.target)&&!e.target.closest(".search")){var b=t.querySelector(".menu-btn");set(t,b,false);b.focus()}})})(document)</script>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/data/*","/assets/*","/search/*","/*.json","/*.xml","/*.png","/*.webmanifest","/*/c/*/ancient/","/*/countries/","/*/culture/","/*/culture/compare/","/*/culture/compare/*","/*/y/","/*/mt/"]}}]},"eagerness":"moderate"}]}</script>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/mt-fasta-core.js" defer></script>
+<script src="/assets/mt-fasta.js" defer></script>
+</head>
+<body data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap topin">
+<a class="brand" href="/en/">ftdnastat</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="/en/y/">Y-DNA</a><a href="/en/mt/">mtDNA</a><a href="/en/clade/">Branches</a><a href="/en/countries/">Countries</a><a href="/en/map/">Map</a><a href="/en/findings/">Findings</a><a href="/en/changes/">Changes</a><a href="/en/ethnic/">Peoples</a><a href="/en/culture/">Ancient DNA</a><a href="/en/compare/">Compare</a><a href="/en/y-snp/">Branch from SNPs</a><a href="/en/mt-fasta/" aria-current="page">Branch from FASTA or HVR</a><a href="/en/pairs/">Pairs</a><a href="/en/about/">About</a></nav>
+<form class="search" action="/en/countries/" role="search"><input type="search" id="q" name="q" role="combobox" aria-autocomplete="list" placeholder="Country, region or SNP" aria-label="Country, region or SNP" autocomplete="off" aria-controls="q-out" aria-expanded="false" data-none="Nothing found" data-all="All countries →" data-clades="Y branches" data-clades-mt="mt branches" data-cultures="Cultures" data-peoples="Peoples" data-samples="sample|samples" data-kits="kit|kits">
+<div id="q-out" class="q-out" role="region" aria-live="polite" aria-label="Search results" hidden></div>
+</form>
+<a class="lang" href="/ru/mt-fasta/" lang="ru" hreflang="ru" data-lang-switch="ru">Русский</a>
+</div>
+</header>
+<main class="wrap" id="main">
+<div class="head">
+<h1>mtDNA branch from FASTA or HVR1 and HVR2 mutations</h1>
+<p>Paste a full mtDNA (mitochondrial DNA) sequence in FASTA format or pick a file. A mutation list as FTDNA prints it works too: “A16129G, T16187C, 315.1C”, even with only HVR1 and HVR2. The site finds the branch of the Mitotree, version 2026.11.16 (Beta Release 14), that shares the most mutations with you.</p>
+</div>
+<div id="mf" class="mf"><label for="mf-text">FASTA sequence or mutation list</label><textarea id="mf-text" rows="6" spellcheck="false" autocomplete="off" placeholder="&gt;sample
+GATCACAGGTCTATCACCCTATTAACCACTCACGGG…"></textarea>
+<p class="mf-file"><label for="mf-file">or a file:</label> <input type="file" id="mf-file" accept=".fasta,.fa,.fas,.fna,.txt,text/plain"></p>
+<div id="mf-out" class="mf-out" aria-live="polite"></div>
+</div>
+<script type="application/json" id="mf-data">{"lang":"en","i18n":{"formsSamples":["sample","samples"],"formsBases":["base","bases"],"mfLoading":"Loading the tree…","mfNoData":"The tree did not load. Reload the page.","mfNotFasta":"No sequence or mutation list found. FASTA starts with a “>” line followed by the letters A, C, G, T. A list looks like “A16129G, T16187C”.","mfPartial":"The sequence has {n}; a full mtDNA has about 16,570.","mfNoAlign":"The sequence did not align to rCRS. Check that it is mtDNA.","mfBest":"Your branch","mfScore":"matched: {hits}, missing: {miss}","mfPage":"The branch on the site","mfPageUp":"Nearest ancestor on the site: {name}","mfMissing":"Branch mutations you lack","mfExtras":"Mutations the branch lacks","mfExtrasLead":"They are not on the path to the branch: private mutations of your line, future sub-branches or read errors.","mfAlt":"Other close branches","mfPath":"Path from the root","mfPathLead":"✓ present, ✗ absent, ? not read. Grey marks unstable positions and mutations overridden further down the path.","mfRead":"“{name}”, {mm} differences from rCRS","mfHvrBest":"From {regions}, no deeper than","mfAnd":"and","mfHvrLead":"Many mutations that tell branches apart lie outside HVR. Below are the best-fitting branches with their mutations outside HVR: only a full sequence can check them.","mfHvrAlt":"Best fits","mfList":"mutations in the list: {n}"}}</script>
+</main>
+<footer class="wrap foot">Data by FamilyTreeDNA, processing by ftdnastat. Y tree of 20 November 2026, built 2026-11-28. <a href="https://ypredictor.github.io/?lang=en">STR haplogroup predictor — ypredictor</a></footer>
+<script>window.ftdYmId=113127384;(function(){var done=false;function load(){if(done)return;done=true;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.ym(113127384,"init",{trackLinks:true,accurateTrackBounce:true})}function arm(){["click","mousedown","mousemove","touchstart","scroll","keydown"].forEach(function(ev){window.addEventListener(ev,load,{passive:true,once:true})});function later(){setTimeout(load,5000)}if(document.readyState==="complete")later();else window.addEventListener("load",later,{once:true})}if(document.prerendering)document.addEventListener("prerenderingchange",arm,{once:true});else arm()})()</script>
+<noscript>
+<div><img class="ym" src="https://mc.yandex.ru/watch/113127384" alt=""></div>
+</noscript>
+</body>
+</html>

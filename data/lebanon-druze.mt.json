@@ -1,0 +1,14 @@
+{"name":"Lebanon (Druze)","slug":"lebanon-druze","n":1,"l1":[
+{"k":"K","v":1}
+],"l2":[
+{"k":"K1a","v":1}
+],"tree":[
+{"id":9695,"name":"K1a17a","label":"K1a17a","shown":"K1a17a","age":{"mean":-8289,"oldest":-9145,"youngest":-7466},"n":1,"depth":0}
+],"cum":[
+[382,1],
+[383,1],
+[384,1],
+[393,1]
+],"cumN":847,"terminal":[
+["K1a17a",1]
+]}
